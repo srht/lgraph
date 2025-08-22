@@ -1,0 +1,68 @@
+{
+    "Ödünç_Yayın_Alma_Sayısı": {
+      "Öğretim Elemanı": {
+        "Toplam Yayın": 30,
+        "Kitap": 30,
+        "Görsel-İşitsel": 3,
+        "Rezerv": 3,
+        "Kütüphanelerarası": 10,
+        "Not": 10
+      },
+      "İdari Personel": {
+        "Toplam Yayın": 10,
+        "Kitap": 10,
+        "Görsel-İşitsel": 3,
+        "Rezerv": 3,
+        "Kütüphanelerarası": 5,
+        "Not": 3
+      },
+      "Y.Lisans/Doktora Öğrencisi": {
+        "Toplam Yayın": 15,
+        "Kitap": 15,
+        "Görsel-İşitsel": 3,
+        "Rezerv": 3,
+        "Kütüphanelerarası": 5,
+        "Not": 3
+      },
+      "Lisans Öğrencisi": {
+        "Toplam Yayın": 10,
+        "Kitap": 10,
+        "Görsel-İşitsel": 3,
+        "Rezerv": 3,
+        "Kütüphanelerarası": 5,
+        "Not": 3
+      },
+      "İTÜ Emekli Personeli": {
+        "Toplam Yayın": 5,
+        "Kitap": 5,
+        "Görsel-İşitsel": 3,
+        "Rezerv": 3,
+        "Kütüphanelerarası": "Ödünç Verilmez",
+        "Not": "Ödünç Verilmez"
+      }
+    },
+    "Ödünç_Yayın_Alma_Süresi": {
+      "Kitap": {
+        "Öğretim Elemanı": { "Süre": "1 ay", "Uzatma": 4 },
+        "İdari Personel": { "Süre": "1 ay", "Uzatma": 3 },
+        "Y.Lisans/Doktora": { "Süre": "15 gün", "Uzatma": 3 },
+        "Lisans": { "Süre": "15 gün", "Uzatma": 3 },
+        "İTÜ Emekli Personeli": { "Süre": "1 ay", "Uzatma": 3 }
+      },
+      "Süreli Yayınlar": "Kütüphane içinde kullanılır",
+      "Referans Bölümündeki Yayınlar": "Kütüphane içinde kullanılır",
+      "Rezerv Yayınlar": {
+        "Öğretim Elemanı": { "Süre": "2 saat / 1 Dönem", "Uzatma": "Yapılmaz" },
+        "Diğer Kullanıcılar": { "Süre": "2 saat / 1 gün", "Uzatma": "Yapılmaz" }
+      },
+      "Görsel-İşitsel Materyal": {
+        "Öğretim Elemanı": { "Süre": "3 gün", "Uzatma": "Yapılmaz" },
+        "Diğer Kullanıcılar": { "Süre": "3 gün", "Uzatma": "Yapılmaz" }
+      },
+      "Tezler": "Kütüphane içinde kullanılır",
+      "Nadir Eserler/Arşiv Kopyaları/Sanat Koleksiyonu/Haritalar": "Kütüphane içinde kullanılır",
+      "Notalar (ciltli ve urtext)": "Kütüphane içinde kullanılır",
+      "Nota": { "Süre": "7 gün", "Uzatma": "Yapılmaz" }
+    }
+  }
+  

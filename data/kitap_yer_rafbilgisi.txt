@@ -1,0 +1,4 @@
+KÜTÜPHANEDEKİ KİTAPLARIN YER NUMARASINA GÖRE BULUNDUĞU KİTAPLAR
+A ile P harfleri arasında başlayan yer numaraları giriş katında.
+Q ile başlayan kitap koleksiyonu giriş katında sol koridorda (bina arka cephesinde yer alan raf bloğu) 
+R ile başlayan Z’ye kadar devam eden kitap koleksiyonu sağ koridorda (bina ön cephesinde yer alan raf bloğu) yer almaktadır.

@@ -1,0 +1,32 @@
+{
+  "name": "lgraph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.mjs",
+  "scripts": {
+    "start": "node app.mjs",
+    "dev": "node --watch app.mjs",
+    "server": "node app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@langchain/community": "^0.3.53",
+    "@langchain/core": "^0.3.72",
+    "@langchain/google-genai": "^0.2.16",
+    "@langchain/langgraph": "^0.4.6",
+    "@langchain/openai": "^0.6.9",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "langchain": "^0.2.0",
+    "mammoth": "^1.6.0",
+    "patch-package": "^8.0.0",
+    "pdf-parse": "^1.1.1",
+    "xlsx": "^0.18.5",
+    "zod": "^3.25.76"
+  }
+}
