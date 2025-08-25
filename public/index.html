@@ -45,6 +45,28 @@
             opacity: 0.9;
         }
 
+        .nav-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
         .chat-container {
             height: 500px;
             overflow-y: auto;
@@ -205,6 +227,11 @@
         <div class="header">
             <h1>📚 Kütüphane AI Asistanı</h1>
             <p>Kütüphane hakkında sorularınızı sorun, size yardımcı olayım!</p>
+            <div class="nav-links">
+                <a href="/logs.html" class="nav-link">📊 Konuşma Logları</a>
+                <a href="/tools" class="nav-link">🔧 Mevcut Toollar</a>
+                <a href="/health" class="nav-link">💚 Sistem Durumu</a>
+            </div>
         </div>
 
         <div class="status" id="status">
@@ -316,11 +343,44 @@
 
                 const data = await response.json();
                 
-                if (data.success) {
-                    addMessage(data.response, 'ai');
-                } else {
-                    addMessage('Üzgünüm, bir hata oluştu: ' + data.error, 'ai');
-                }
+                                 if (data.success) {
+                     let responseText = data.response;
+                     
+                     // Tool kullanım bilgilerini ekle
+                     if (data.toolDetails && data.toolDetails.length > 0) {
+                         responseText += '\n\n🔧 **Tool Kullanımı:**\n';
+                         data.toolDetails.forEach(tool => {
+                             if (tool.name === 'no_tool_used') {
+                                 responseText += `• Direkt cevap verildi\n`;
+                             } else {
+                                 let toolInfo = `• ${tool.name}: ${tool.status}`;
+                                 if (tool.messageIndex !== undefined) {
+                                     toolInfo += ` (Mesaj #${tool.messageIndex})`;
+                                 }
+                                 if (tool.executionTime) {
+                                     toolInfo += ` (${tool.executionTime}ms)`;
+                                 }
+                                 responseText += toolInfo + '\n';
+                             }
+                         });
+                     }
+                     
+                     // Token kullanım bilgilerini ekle
+                     if (data.llmCalls && data.llmCalls > 0) {
+                         responseText += '\n\n🧠 **LLM Kullanımı:**\n';
+                         responseText += `• ${data.llmCalls} LLM çağrısı yapıldı\n`;
+                         // Token bilgisi varsa ekle
+                         if (data.tokenUsage) {
+                             responseText += `• Input Token: ${data.tokenUsage.input || 'Bilinmiyor'}\n`;
+                             responseText += `• Output Token: ${data.tokenUsage.output || 'Bilinmiyor'}\n`;
+                             responseText += `• Toplam Token: ${data.tokenUsage.total || 'Bilinmiyor'}\n`;
+                         }
+                     }
+                     
+                     addMessage(responseText, 'ai');
+                 } else {
+                     addMessage('Üzgünüm, bir hata oluştu: ' + data.error, 'ai');
+                 }
             } catch (error) {
                 console.error('Chat error:', error);
                 addMessage('Bağlantı hatası oluştu. Lütfen tekrar deneyin.', 'ai');

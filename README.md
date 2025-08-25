@@ -10,6 +10,9 @@ Bu proje, ITU Kütüphanesi için LangGraph ve ESM import/export uyumlu araçlar
 - **Hata Yönetimi**: Kapsamlı hata yakalama ve fallback mekanizmaları
 - **Otomatik Veri Yükleme**: Uygulama başlatıldığında data klasöründeki dosyalar otomatik işlenir
 - **Çoklu Dosya Desteği**: PDF, Excel (.xlsx, .xls), TXT ve JSON dosyaları desteklenir
+- **📊 Kapsamlı Loglama**: Tüm konuşmalar, tool kullanımları ve LLM çağrıları otomatik loglanır
+- **🔍 Log Arama ve Analiz**: Web arayüzü ile logları arama, filtreleme ve analiz etme
+- **📈 Performance Monitoring**: Response time, tool usage ve error rate takibi
 
 ## 📁 Proje Yapısı
 
@@ -18,6 +21,7 @@ lgraph/
 ├── helpers/
 │   ├── systemPrompt.js          # Sistem prompt'u (ESM)
 │   ├── documentProcessor.mjs    # Belge işleme motoru
+│   ├── logger.js                # Kapsamlı loglama sistemi
 │   └── ...
 ├── tools/
 │   ├── index.mjs               # Tüm araçların merkezi export'u
@@ -31,12 +35,15 @@ lgraph/
 │   ├── *.xlsx, *.xls          # Excel dosyaları
 │   ├── *.txt                  # Metin dosyaları
 │   └── *.json                 # JSON dosyaları
+├── logs/                       # Log dosyaları (otomatik oluşturulur)
+│   └── conversations_*.json   # Günlük konuşma logları
 ├── app.mjs                     # Ana uygulama (otomatik veri yükleme ile)
 ├── example-usage.mjs           # Kullanım örnekleri
 ├── setup.sh                    # Linux/Mac kurulum scripti
 ├── setup.bat                   # Windows kurulum scripti
 ├── config.example.js           # Konfigürasyon örneği
 ├── package.json                # ESM modül tipi
+├── LOGGING_README.md           # Loglama sistemi detayları
 └── README.md                   # Bu dosya
 ```
 
@@ -66,6 +73,31 @@ lgraph/
 - **Açıklama**: Yüklenen belgelerden bilgi arar
 - **Giriş**: Doğal dilde soru
 - **Çıkış**: Belgelerden çıkarılan bilgiler
+
+## 📊 Loglama Sistemi
+
+Proje, kapsamlı bir loglama sistemi içerir:
+
+### 🔍 Loglanan Bilgiler
+- **Kullanıcı Mesajları**: Gelen tüm sorular
+- **Agent Cevapları**: AI'ın verdiği tüm cevaplar
+- **Tool Kullanımı**: Hangi toolların ne zaman ve nasıl kullanıldığı
+- **LLM Çağrıları**: Model çağrıları, input/output, execution time
+- **Execution Steps**: LangGraph'ın çalışma adımları
+- **Hata Logları**: Tüm hatalar ve stack trace'ler
+
+### 🌐 Log Yönetimi
+- **Web Arayüzü**: `/logs.html` - Logları görüntüleme ve arama
+- **API Endpoints**: Log okuma, arama ve istatistikler
+- **Otomatik Temizlik**: Eski logları otomatik temizleme
+
+### 📈 Monitoring
+- Real-time performance metrics
+- Tool usage analytics
+- Error rate tracking
+- Response time monitoring
+
+Detaylı bilgi için [LOGGING_README.md](LOGGING_README.md) dosyasına bakın.
 
 ## 📦 Kurulum
 

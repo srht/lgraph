@@ -1,323 +1,320 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-class ChatLogger {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+class ConversationLogger {
   constructor() {
-    this.logDir = path.join(__dirname, '..', 'logs');
-    this.logFile = path.join(this.logDir, 'chat_logs.txt');
-    this.jsonLogFile = path.join(this.logDir, 'chat_logs.json');
-    this.ensureLogDirectory();
+    this.logsDir = path.join(__dirname, '..', 'logs');
+    this.ensureLogsDirectory();
   }
 
-  ensureLogDirectory() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
-    
-    // JSON log dosyasını başlat
-    this.initializeJsonLogFile();
-  }
-
-  initializeJsonLogFile() {
-    if (!fs.existsSync(this.jsonLogFile)) {
-      fs.writeFileSync(this.jsonLogFile, JSON.stringify([], null, 2));
+  ensureLogsDirectory() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
     }
   }
 
-  formatTimestamp() {
-    const now = new Date();
-    return now.toISOString().replace('T', ' ').replace('Z', '');
+  getLogFileName() {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `conversations_${year}-${month}-${day}.json`;
   }
 
-  logChat(userQuery, agentResponse, toolsUsed = [], executionTime = null, error = null, additionalInfo = {}) {
-    const timestamp = this.formatTimestamp();
+  getLogFilePath() {
+    return path.join(this.logsDir, this.getLogFileName());
+  }
+
+  loadExistingLogs() {
+    const logFilePath = this.getLogFilePath();
+    if (fs.existsSync(logFilePath)) {
+      try {
+        const content = fs.readFileSync(logFilePath, 'utf8');
+        return JSON.parse(content);
+      } catch (error) {
+        console.error('Log dosyası okunamadı:', error);
+        return [];
+      }
+    }
+    return [];
+  }
+
+  saveLogs(logs) {
+    const logFilePath = this.getLogFilePath();
+    try {
+      fs.writeFileSync(logFilePath, JSON.stringify(logs, null, 2), 'utf8');
+    } catch (error) {
+      console.error('Log dosyası yazılamadı:', error);
+    }
+  }
+
+  logConversation(conversationData) {
+    const logs = this.loadExistingLogs();
     
-    // JSON formatında detaylı log entry oluştur
-    const jsonLogEntry = {
-      type: 'chat',
-      timestamp: timestamp,
-      userQuery: userQuery,
-      toolsUsed: toolsUsed,
-      executionTime: executionTime,
-      error: error,
-      agentResponse: agentResponse,
-      chainExecution: additionalInfo.intermediateSteps > 0 ? {
-        totalSteps: additionalInfo.intermediateSteps,
-        toolDetails: additionalInfo.toolDetails || [],
-        model: additionalInfo.model,
-        timestamp: additionalInfo.timestamp,
-        log: additionalInfo.log || null,
-        chainLogs: additionalInfo.chainLogs || []
-      } : null,
-      additionalInfo: additionalInfo
+    const logEntry = {
+      id: this.generateId(),
+      timestamp: new Date().toISOString(),
+      ...conversationData
     };
 
-    // TXT formatında da kaydet (backward compatibility)
-    let logEntry = `\n=== CHAT LOG ENTRY ===\n`;
-    logEntry += `Timestamp: ${timestamp}\n`;
-    logEntry += `User Query: ${userQuery}\n`;
+    logs.push(logEntry);
+    this.saveLogs(logs);
     
-    if (toolsUsed.length > 0) {
-      logEntry += `Tools Used: ${toolsUsed.join(', ')}\n`;
-    }
-    
-    if (executionTime !== null) {
-      logEntry += `Execution Time: ${executionTime}ms\n`;
-    }
-    
-    if (error) {
-      logEntry += `Error: ${error}\n`;
-    }
-    
-    // Chain Execution Details
-    if (additionalInfo.intermediateSteps > 0) {
-      logEntry += `Chain Execution:\n`;
-      logEntry += `  Total Steps: ${additionalInfo.intermediateSteps}\n`;
-      
-      if (additionalInfo.toolDetails && additionalInfo.toolDetails.length > 0) {
-        logEntry += `  Tool Execution Details:\n`;
-        additionalInfo.toolDetails.forEach((toolDetail, index) => {
-          logEntry += `    Step ${toolDetail.step}:\n`;
-          logEntry += `      Tool: ${toolDetail.tool}\n`;
-          logEntry += `      Input: ${toolDetail.input}\n`;
-          logEntry += `      Observation: ${this.formatObservation(toolDetail.observation)}\n`;
-          if (toolDetail.log) {
-            logEntry += `      Log: ${this.formatObservation(toolDetail.log)}\n`;
-          }
-        });
+    return logEntry.id;
+  }
+
+  generateId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  }
+
+  // Ana loglama fonksiyonu
+  logAgentInteraction(data) {
+    const {
+      userMessage,
+      agentResponse,
+      steps = [],
+      toolsUsed = [],
+      llmCalls = [],
+      errors = [],
+      metadata = {}
+    } = data;
+
+    const conversationData = {
+      userMessage: {
+        content: userMessage,
+        timestamp: new Date().toISOString()
+      },
+      agentResponse: {
+        content: agentResponse,
+        timestamp: new Date().toISOString()
+      },
+      executionSteps: steps,
+      toolsUsed: toolsUsed,
+      llmCalls: llmCalls,
+      errors: errors,
+      metadata: {
+        ...metadata,
+        totalSteps: steps.length,
+        totalToolsUsed: toolsUsed.length,
+        totalLLMCalls: llmCalls.length,
+        hasErrors: errors.length > 0
       }
-      
-      // Log field'ını da ekle
-      if (additionalInfo.log) {
-        logEntry += `  Log: ${this.formatObservation(additionalInfo.log)}\n`;
-      }
-      
-      // Chain Logları ekle
-      if (additionalInfo.chainLogs && additionalInfo.chainLogs.length > 0) {
-        logEntry += `  Chain Logs:\n`;
-        additionalInfo.chainLogs.forEach((chainLog, index) => {
-          logEntry += `    ${index + 1}. ${chainLog.type} (${chainLog.timestamp}):\n`;
-          logEntry += `       Run ID: ${chainLog.runId}\n`;
-          if (chainLog.parentRunId) {
-            logEntry += `       Parent Run ID: ${chainLog.parentRunId}\n`;
-          }
-          if (chainLog.chainName) {
-            logEntry += `       Chain: ${chainLog.chainName}\n`;
-          }
-          if (chainLog.llmName) {
-            logEntry += `       LLM: ${chainLog.llmName}\n`;
-          }
-          if (chainLog.toolName) {
-            logEntry += `       Tool: ${chainLog.toolName}\n`;
-          }
-          if (chainLog.inputs) {
-            logEntry += `       Inputs: ${JSON.stringify(chainLog.inputs)}\n`;
-          }
-          if (chainLog.outputs) {
-            logEntry += `       Outputs: ${JSON.stringify(chainLog.outputs)}\n`;
-          }
-          if (chainLog.action) {
-            logEntry += `       Action: ${JSON.stringify(chainLog.action)}\n`;
-          }
-          if (chainLog.text) {
-            logEntry += `       Text: ${JSON.stringify(chainLog.text)}\n`;
-          }
-          logEntry += `\n`;
-        });
-      }
-    }
+    };
+
+    return this.logConversation(conversationData);
+  }
+
+  // LangGraph step loglama
+  logStep(stepData) {
+    const {
+      nodeName,
+      input,
+      output,
+      timestamp = new Date().toISOString(),
+      metadata = {}
+    } = stepData;
+
+    return {
+      nodeName,
+      input,
+      output,
+      timestamp,
+      metadata
+    };
+  }
+
+  // Tool kullanım loglama
+  logToolUsage(toolData) {
+    const {
+      toolName,
+      toolDescription,
+      input,
+      output,
+      executionTime,
+      success,
+      error,
+      status,
+      messageIndex,
+      messageType,
+      timestamp = new Date().toISOString()
+    } = toolData;
+
+    return {
+      toolName,
+      toolDescription,
+      input,
+      output,
+      executionTime,
+      success,
+      error,
+      status,
+      messageIndex,
+      messageType,
+      timestamp
+    };
+  }
+
+  // LLM çağrısı loglama
+  logLLMCall(llmData) {
+    const {
+      model,
+      input,
+      output,
+      tokens,
+      executionTime,
+      temperature,
+      inputTokens,
+      outputTokens,
+      totalTokens,
+      timestamp = new Date().toISOString()
+    } = llmData;
+
+    return {
+      model,
+      input,
+      output,
+      tokens,
+      executionTime,
+      temperature,
+      inputTokens,
+      outputTokens,
+      totalTokens,
+      timestamp
+    };
+  }
+
+  // Hata loglama
+  logError(errorData) {
+    const {
+      error,
+      context,
+      stack,
+      timestamp = new Date().toISOString()
+    } = errorData;
+
+    return {
+      error: error.message || error,
+      context,
+      stack: error.stack,
+      timestamp
+    };
+  }
+
+  // Logları okuma
+  getConversations(limit = 100, offset = 0) {
+    const logs = this.loadExistingLogs();
+    return logs.slice(offset, offset + limit);
+  }
+
+  getConversationById(id) {
+    const logs = this.loadExistingLogs();
+    return logs.find(log => log.id === id);
+  }
+
+  searchConversations(query) {
+    const logs = this.loadExistingLogs();
+    const searchTerm = query.toLowerCase();
     
-    // Model Information
-    if (additionalInfo.model) {
-      logEntry += `Model: ${additionalInfo.model}\n`;
-    }
+    return logs.filter(log => 
+      log.userMessage.content.toLowerCase().includes(searchTerm) ||
+      log.agentResponse.content.toLowerCase().includes(searchTerm) ||
+      log.toolsUsed.some(tool => 
+        tool.toolName.toLowerCase().includes(searchTerm)
+      )
+    );
+  }
+
+  getConversationStats() {
+    const logs = this.loadExistingLogs();
     
-    // Additional Info
-    if (Object.keys(additionalInfo).length > 0) {
-      logEntry += `Additional Info:\n`;
-      Object.entries(additionalInfo).forEach(([key, value]) => {
-        // Skip already processed fields
-        if (!['intermediateSteps', 'toolDetails', 'model'].includes(key)) {
-          logEntry += `  ${key}: ${JSON.stringify(value)}\n`;
+    if (logs.length === 0) {
+      return {
+        totalConversations: 0,
+        totalMessages: 0,
+        totalToolsUsed: 0,
+        totalLLMCalls: 0,
+        averageResponseTime: 0,
+        mostUsedTools: [],
+        errorRate: 0
+      };
+    }
+
+    const totalConversations = logs.length;
+    const totalMessages = logs.length * 2; // user + agent
+    const totalToolsUsed = logs.reduce((sum, log) => sum + log.toolsUsed.length, 0);
+    const totalLLMCalls = logs.reduce((sum, log) => sum + log.llmCalls.length, 0);
+    
+    // Tool kullanım istatistikleri
+    const toolUsage = {};
+    const toolStatusStats = { requested: 0, executed: 0, direct_response: 0 };
+    
+    logs.forEach(log => {
+      log.toolsUsed.forEach(tool => {
+        // Tool adına göre sayım
+        toolUsage[tool.toolName] = (toolUsage[tool.toolName] || 0) + 1;
+        
+        // Status'a göre sayım
+        if (tool.status) {
+          toolStatusStats[tool.status] = (toolStatusStats[tool.status] || 0) + 1;
         }
       });
-    }
-    
-    logEntry += `Agent Response: ${agentResponse}\n`;
-    logEntry += `=== END LOG ENTRY ===\n`;
-
-    // TXT dosyasına yazma işlemi
-    fs.appendFile(this.logFile, logEntry, (err) => {
-      if (err) {
-        console.error('Log yazma hatası:', err);
-      }
     });
 
-    // JSON dosyasına yazma işlemi
-    this.appendToJsonLog(jsonLogEntry);
+    const mostUsedTools = Object.entries(toolUsage)
+      .sort(([,a], [,b]) => b - a)
+      .slice(0, 5)
+      .map(([name, count]) => ({ name, count }));
 
-    // Konsola da yazdır
-    console.log(logEntry);
-  }
-
-  formatObservation(observation) {
-    if (!observation) return 'No observation';
+    // Hata oranı
+    const totalErrors = logs.reduce((sum, log) => sum + log.errors.length, 0);
+    const errorRate = (totalErrors / totalConversations) * 100;
     
-    // Observation çok uzunsa kısalt
-    const obsStr = typeof observation === 'string' ? observation : JSON.stringify(observation);
-    if (obsStr.length > 500) {
-      return obsStr.substring(0, 500) + '... [truncated]';
-    }
-    return obsStr;
-  }
-
-  logError(error, context = '') {
-    const timestamp = this.formatTimestamp();
+    // Token istatistikleri
+    let totalInputTokens = 0;
+    let totalOutputTokens = 0;
+    let totalTokens = 0;
     
-    // JSON formatında detaylı error entry oluştur
-    const jsonErrorEntry = {
-      type: 'error',
-      timestamp: timestamp,
-      context: context,
-      error: error instanceof Error ? {
-        type: error.constructor.name,
-        name: error.name,
-        message: error.message,
-        code: error.code,
-        cause: error.cause,
-        stack: error.stack,
-        additionalProperties: Object.getOwnPropertyNames(error).filter(prop => 
-          !['name', 'message', 'stack', 'code', 'cause'].includes(prop)
-        ).reduce((acc, prop) => {
-          try {
-            const value = error[prop];
-            if (value !== undefined) {
-              acc[prop] = value;
-            }
-          } catch (e) {
-            acc[prop] = '[Circular or non-serializable]';
-          }
-          return acc;
-        }, {})
-      } : {
-        type: typeof error,
-        value: error
-      }
+    logs.forEach(log => {
+      log.llmCalls?.forEach(llmCall => {
+        totalInputTokens += llmCall.inputTokens || 0;
+        totalOutputTokens += llmCall.outputTokens || 0;
+        totalTokens += llmCall.totalTokens || 0;
+      });
+    });
+
+    return {
+      totalConversations,
+      totalMessages,
+      totalToolsUsed,
+      totalLLMCalls,
+      averageResponseTime: 0, // TODO: Implement response time calculation
+      mostUsedTools,
+      toolStatusStats,
+      totalInputTokens,
+      totalOutputTokens,
+      totalTokens,
+      errorRate: Math.round(errorRate * 100) / 100
     };
+  }
 
-    // TXT formatında da kaydet (backward compatibility)
-    let errorLog = `\n=== ERROR LOG ===\n`;
-    errorLog += `Timestamp: ${timestamp}\n`;
-    errorLog += `Context: ${context}\n`;
-    
-    // Error details
-    if (error instanceof Error) {
-      errorLog += `Error Type: ${error.constructor.name}\n`;
-      errorLog += `Error Name: ${error.name}\n`;
-      errorLog += `Error Message: ${error.message}\n`;
-      
-      // Error code if available
-      if (error.code) {
-        errorLog += `Error Code: ${error.code}\n`;
-      }
-      
-      // Error cause if available (Node.js 16+)
-      if (error.cause) {
-        errorLog += `Error Cause: ${JSON.stringify(error.cause)}\n`;
-      }
-      
-      // Stack trace
-      if (error.stack) {
-        errorLog += `Stack Trace:\n${error.stack}\n`;
-      }
-      
-      // Additional properties
-      const additionalProps = Object.getOwnPropertyNames(error).filter(prop => 
-        !['name', 'message', 'stack', 'code', 'cause'].includes(prop)
-      );
-      
-      if (additionalProps.length > 0) {
-        errorLog += `Additional Properties:\n`;
-        additionalProps.forEach(prop => {
-          try {
-            const value = error[prop];
-            if (value !== undefined) {
-              errorLog += `  ${prop}: ${JSON.stringify(value)}\n`;
-            }
-          } catch (e) {
-            errorLog += `  ${prop}: [Circular or non-serializable]\n`;
-          }
-        });
-      }
-    } else {
-      // Non-Error objects
-      errorLog += `Error Type: ${typeof error}\n`;
-      errorLog += `Error Value: ${JSON.stringify(error)}\n`;
-    }
-    
-    errorLog += `=== END ERROR LOG ===\n`;
+  // Log dosyalarını temizleme
+  cleanupOldLogs(daysToKeep = 30) {
+    const logs = this.loadExistingLogs();
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - daysToKeep);
 
-    // TXT dosyasına yazma işlemi
-    fs.appendFile(this.logFile, errorLog, (err) => {
-      if (err) {
-        console.error('Error log yazma hatası:', err);
-      }
+    const filteredLogs = logs.filter(log => {
+      const logDate = new Date(log.timestamp);
+      return logDate > cutoffDate;
     });
 
-    // JSON dosyasına yazma işlemi
-    this.appendToJsonLog(jsonErrorEntry);
-
-    console.error(errorLog);
-  }
-
-  getLogs(limit = 100) {
-    try {
-      // JSON dosyasından oku (ana kaynak)
-      if (fs.existsSync(this.jsonLogFile)) {
-        const jsonData = JSON.parse(fs.readFileSync(this.jsonLogFile, 'utf8'));
-        return jsonData.slice(-limit);
-      }
-      
-      // JSON dosyası yoksa boş array döndür
-      return [];
-    } catch (error) {
-      console.error('JSON log okuma hatası:', error);
-      return [];
-    }
-  }
-
-  clearLogs() {
-    try {
-      // TXT dosyasını temizle
-      if (fs.existsSync(this.logFile)) {
-        fs.writeFileSync(this.logFile, '');
-        console.log('TXT log dosyası temizlendi.');
-      }
-      
-      // JSON dosyasını temizle
-      if (fs.existsSync(this.jsonLogFile)) {
-        fs.writeFileSync(this.jsonLogFile, JSON.stringify([], null, 2));
-        console.log('JSON log dosyası temizlendi.');
-      }
-    } catch (error) {
-      console.error('Log temizleme hatası:', error);
-    }
-  }
-
-  appendToJsonLog(entry) {
-    try {
-      const existingData = JSON.parse(fs.readFileSync(this.jsonLogFile, 'utf8'));
-      existingData.push(entry);
-      fs.writeFileSync(this.jsonLogFile, JSON.stringify(existingData, null, 2));
-    } catch (error) {
-      if (error.code === 'ENOENT') {
-        // If file doesn't exist, create it with the first entry
-        fs.writeFileSync(this.jsonLogFile, JSON.stringify([entry], null, 2));
-      } else {
-        console.error('JSON log dosyasına yazma hatası:', error);
-      }
-    }
+    this.saveLogs(filteredLogs);
+    return logs.length - filteredLogs.length;
   }
 }
 
-module.exports = ChatLogger;
+export default ConversationLogger;
