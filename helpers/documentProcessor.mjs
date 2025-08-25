@@ -13,7 +13,7 @@ import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import createChatModel from "./modelSelector.js";
-
+import { getPageContent, getPersonelPage, getPlainPage } from "./functions/readPage.js";
 // __dirname eşleniği (ESM)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -233,6 +233,97 @@ export default class DocumentProcessor {
         await new Promise((r) => setTimeout(r, 1000));
       }
     }
+  }
+
+  async processWebPage(url) {
+    let text;
+    try {
+      text = await getPageContent(url);
+      if (!text || text.trim().length === 0) {
+        throw new Error("Çıkarılan metin boş.");
+      }
+
+      console.log(`Web sayfasından metin çıkarıldı: ${text}`);
+    } catch (error) {
+      console.error(
+        `Dosya '${url}' metin çıkarılırken hata oluştu:`,
+        error.message
+      );
+      throw error; // Hatayı yukarı fırlat
+    }
+
+    const docs = await this.textSplitter.createDocuments([text], {
+      source: url,
+    });
+    const documents = docs.map(
+      (doc) =>
+        new Document({ pageContent: doc.pageContent, metadata: doc.metadata })
+    );
+    console.log(
+      `${url} Web sayfasından ${documents.length} belge parçası oluşturuldu.`
+    );
+    await this.addDocumentsInBatches(documents);
+  }
+
+  async processPlainWebPage(url) {
+    let text;
+    try {
+      text = await getPlainPage(url);
+      if (!text || text.trim().length === 0) {
+        throw new Error("Çıkarılan metin boş.");
+      }
+
+      console.log(`Web sayfasından metin çıkarıldı: ${text}`);
+    } catch (error) {
+      console.error(
+        `Dosya '${url}' metin çıkarılırken hata oluştu:`,
+        error.message
+      );
+      throw error; // Hatayı yukarı fırlat
+    }
+
+    const docs = await this.textSplitter.createDocuments([text], {
+      source: url,
+    });
+    const documents = docs.map(
+      (doc) =>
+        new Document({ pageContent: doc.pageContent, metadata: doc.metadata })
+    );
+    console.log(
+      `${url} Web sayfasından ${documents.length} belge parçası oluşturuldu.`
+    );
+    await this.addDocumentsInBatches(documents);
+  }
+
+  async processPersonelPage() {
+    let text;
+    const url = "https://kutuphane.itu.edu.tr/hakkimizda/personel-ve-bolumler";
+    try {
+      text = await getPersonelPage(url);
+      if (!text || text.trim().length === 0) {
+        throw new Error("Çıkarılan metin boş.");
+      }
+
+      console.log(`Web sayfasından metin çıkarıldı: ${text}`);
+    } catch (error) {
+      console.error(
+        `Dosya '${url}' metin çıkarılırken hata oluştu:`,
+        error.message
+      );
+      throw error; // Hatayı yukarı fırlat
+    }
+
+    const docs = await this.textSplitter.createDocuments([text], {
+      source: url,
+    });
+    const documents = docs.map(
+      (doc) =>
+        new Document({ pageContent: doc.pageContent, metadata: doc.metadata })
+    );
+    console.log(
+      `${url} Web sayfasından ${documents.length} belge parçası oluşturuldu.`
+    );
+    await this.addDocumentsInBatches(documents);
   }
 
   /**

@@ -73,6 +73,8 @@ async function loadDataFiles() {
         // Continue with other files even if one fails
       }
     }
+
+    await documentProcessor.processPersonelPage();
     VectorStore = documentProcessor.getVectorStore();
     console.log("\n🎉 Tüm dosyalar işlendi!");
     return documentProcessor;
