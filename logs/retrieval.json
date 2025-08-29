@@ -1,0 +1,988 @@
+[
+  {
+    "timestamp": "2025-08-29T08:18:13.692Z",
+    "data": {
+      "query": "test sorgusu",
+      "resultsCount": 2,
+      "results": [
+        {
+          "source": "test.pdf",
+          "page": 1,
+          "contentLength": 65,
+          "content": "Bu bir test dokümanıdır. İçerisinde örnek bilgiler bulunmaktadır...."
+        },
+        {
+          "source": "test2.pdf",
+          "page": 2,
+          "contentLength": 46,
+          "content": "İkinci test dokümanı. Daha fazla bilgi içerir...."
+        }
+      ],
+      "metadata": {
+        "method": "hybrid",
+        "duration": 150
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:35.158Z",
+    "data": {
+      "query": "pinimi unuttum nasıl alabilirim",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 224,
+          "content": "Birim Yetkilisinin\nAdı-Soyadı / Unvanı : ..............................................................................\nİmzası                  : ........................................................."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 147,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 60: 96. Bir araştırma sorusunu nasıl formüle edebilirim?..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 170,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 46: 81. Geri bildirim veya şikayette nasıl bulunabilirim? Kılavuzda cevabı var...."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 172,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 224,
+          "content": "Birim Yetkilisinin\nAdı-Soyadı / Unvanı : ..............................................................................\nİmzası                  : ........................................................."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 576,
+          "content": "Onaylayanın\nAdı Soyadı : ............................................................................................................................\nÜnvanı       : ......................................"
+        },
+        {
+          "contentLength": 417,
+          "content": "ve hizmetleri duyuran, üniversitelerin ilgili bölümlerinde öğrenim gören öğrencilere uygulama ve staj programları\nhazırlayan, sosyal medya hesaplarını yöneten birim.\n5) Bilgi İşlem Bölümü:\nKütüphaneni..."
+        },
+        {
+          "contentLength": 694,
+          "content": "Diğer\nKullanıcılar\n3 gün Uzatma yapılmaz\nTezler\nKütüphane içinde kullanılır\nNadir Eserler/ Arşiv Kopyaları/ Sanat\nKoleksiyonu/ Haritalar\n\nKütüphane içinde kullanılır.\nNotalar (ciltli ve urtext)\nKütüph..."
+        },
+        {
+          "contentLength": 987,
+          "content": "Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini Kullanıcı Hesabım bağlantısını\nkullanarak uzatma işleminizi yapabilirsiniz.\n\nGecikme Cezası\n\nÖdünç alınan ve  iade süre..."
+        },
+        {
+          "contentLength": 846,
+          "content": "Anahtar  sözcük,  konu,  başlık, yazar  vb taraması yaptıktan sonra tarama sonuçlarını materyal türü, yayının\nbulunduğu yer, yayının dili, yayının yılı ya da başlıkta geçen kelimelere göre sınırlandır..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:38.730Z",
+    "data": {
+      "query": "kütüphane kartı şifremi unuttum",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 480,
+          "content": "KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI\n\nKütüphanede  bulunan  tarama  terminalleri  yalnızca kütüphane koleksiyonu  ile  ilgili  araştırmalarda\nkullanılabilir.  İTÜ mensupları, İTÜ mail adresi ve şif..."
+        },
+        {
+          "contentLength": 906,
+          "content": "B. İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin\nyüksek lisans ve doktora öğrencileri ile öğretim elemanları Üniversite Yönetim\nKurulu (ÜYK) kararı ile belirlenen k..."
+        },
+        {
+          "contentLength": 519,
+          "content": "9\n\n5. Kullanıcıların  şube  kütüphaneleri  kapanmadan  15  dakika  önce  ödünç  alma\nişlemlerini yaptırmaları gerekir.\n6. Emekli Personel ve Misafir üyeler ödünç verme hizmetinden yararlanamazlar.\n\nKu..."
+        },
+        {
+          "contentLength": 665,
+          "content": "Yer Numarası : (Kütüphane\nkoleksiyonunda yer alan\nyayınlar için)\n\n25\n\nDEPO, TEZ, ESKİ TEKNİK ESERLER, İTÜ YAYINLARI ARŞİVİ, SANAT KOLEKSİYONU VE KAPALI\nALANDA  BULUNAN HARİTALAR İÇİN  İSTEK\nFORMU\n\nYay..."
+        },
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 480,
+          "content": "KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI\n\nKütüphanede  bulunan  tarama  terminalleri  yalnızca kütüphane koleksiyonu  ile  ilgili  araştırmalarda\nkullanılabilir.  İTÜ mensupları, İTÜ mail adresi ve şif..."
+        },
+        {
+          "contentLength": 673,
+          "content": "m) Kütüphane kapanmadan (şube kütüphaneler) 15 dakika önce kapanış uyarıları başlatılır.\nn) Kütüphanedeki bilgisayarlar sadece eğitim-öğretim ve araştırmaya yönelik kullanılır.\no) Bu kurallara uymayan..."
+        },
+        {
+          "contentLength": 38,
+          "content": "Mustafa İnan Kütüphanesi 7/24 açıktır...."
+        },
+        {
+          "contentLength": 610,
+          "content": "standartlar, nadir eserler ve arşiv kopyaları ile Daire Başkanlığı tarafından belirlenen\nve kütüphane dışına çıkarılması uygun görülmeyen yayınlar ödünç verilmez.\n12. Ödünç alınan yayının kaybedilmesi..."
+        },
+        {
+          "contentLength": 934,
+          "content": "c) Kütüphanenin kendi hazırladığı form ile yapılabilir.\n7. İstekler kütüphaneye kargo ile gönderilir. Bu hizmet karşılığı doğacak tüm masraflar,\nistekte    bulunan  kütüphane tarafından karşılanır. (b..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 960,
+          "content": "Kareller:\nKütüphanenin ikinci katında bireysel  kullanım için açık olarak tasarlanmış 25 adet karel bulunmaktadır.\nKarellerden herkes yararlanabilir. Açık olarak düzenlenmiş kareller tek kişiliktir. K..."
+        },
+        {
+          "contentLength": 654,
+          "content": "Kütüphane  kullanımı konusunda  karşılaşacağınız  sorunları  Mustafa  İnan  Kütüphanesi Giriş  Katı’ndaki\nDanışma  Masası’nda  görev  yapan referans kütüphanecilerinden,  Şube  Kütüphanelerinde  de  u..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:47.156Z",
+    "data": {
+      "query": "öğrenci ödünç alma kuralları",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 519,
+          "content": "9\n\n5. Kullanıcıların  şube  kütüphaneleri  kapanmadan  15  dakika  önce  ödünç  alma\nişlemlerini yaptırmaları gerekir.\n6. Emekli Personel ve Misafir üyeler ödünç verme hizmetinden yararlanamazlar.\n\nKu..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 706,
+          "content": "19\n\n3.7.4 Rezerv yayınlar koleksiyonu ödünç verme kuralları\n1. Rezerv Koleksiyonu’ndaki yayınlar iki saatlik ve 1 günlük ödünç verilebilir.\n2. Öğretim üyesi sadece kendi dersine ait ders yayınını döne..."
+        },
+        {
+          "contentLength": 665,
+          "content": "31\n\nÖdünç Verme ;\nMadde 5 - Ödünç verme kuralları Daire Başkanlığı tarafından belirlenir.\na)  İTÜ Öğretim elemanları, idari personel, öğrenciler, sözleşmeli akademik ve idari personel kütüphanelerden ..."
+        },
+        {
+          "contentLength": 925,
+          "content": "e-posta adreslerindeki değişiklikleri kütüphanelerin ödünç verme bankolarına veya\nkutuphane@itu.edu.tr adresine bildirmeleri gerekir.\n8. İstekte  bulunulan  yayınlar  için  sağlayıcı  kütüphanenin  öd..."
+        },
+        {
+          "contentLength": 519,
+          "content": "9\n\n5. Kullanıcıların  şube  kütüphaneleri  kapanmadan  15  dakika  önce  ödünç  alma\nişlemlerini yaptırmaları gerekir.\n6. Emekli Personel ve Misafir üyeler ödünç verme hizmetinden yararlanamazlar.\n\nKu..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 534,
+          "content": "edilmeyen odalar için para cezası uygulanır.\n4. Grup  çalışma  odalarına kütüphanenin diğer  bölümlerinde  olduğu  gibi  yiyecek  ve  içecek\ngetirilmesi, sigara içilmesi ve cep telefonu kullanılması y..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 432,
+          "content": "kullanıcı olmadığı takdirde kullanım süresi kütüphane hesabı üzerinden uzatılabilir.\nZamanında teslim edilmeyen odalar için para cezası uygulanır.\n4. Grup çalışma odalarına kütüphanenin diğer bölümler..."
+        },
+        {
+          "contentLength": 886,
+          "content": "3.2 Ödünç Verme\nAmaç:\nİTÜ mensuplarının eğitim-öğretim, araştırma, bilimsel faaliyet ve kültürel ihtiyaçlarını\nkarşılamak amacı ile kütüphanedeki yayınların belli kurallar çerçevesinde kütüphane içi v..."
+        },
+        {
+          "contentLength": 944,
+          "content": "1) Öğrenci;\n Mezun olacak ve kayıtları silinecek olan öğrenciler kütüphaneden ilişik kesme belgesi almak zorundadırlar. Bu\nöğrencilerin isimleri Öğrenci İşleri Daire Başkanlığı tarafından mezuniyetler..."
+        },
+        {
+          "contentLength": 922,
+          "content": "Kütüphanelerarası Ödünç Yayın / Belge Sağlama İsteğinde Bulunmaya Yetkili 1. Personelin\nAdı Soyadı : ...............................................................................\nTel.             : ..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:57.920Z",
+    "data": {
+      "query": "kitap rezervasyon nasıl yapılır",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 835,
+          "content": "doğrultusunda kütüphane tarafından belirlenir.\n4. Öğretim üyesi sahip olduğu bilgi kaynağını öğrencilerin kullanımına sunmak amacı\nile Rezerv Koleksiyonu’nda bulundurabilir. Bu kaynaklar dönem sonunda..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 186,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 44: 79. Kütüphane koleksiyonu için kitap satın almayı nasıl önerebilirim? Kılavuzda cevabı var...."
+        },
+        {
+          "contentLength": 849,
+          "content": "Filmler:  DVD,  VCD,  CD-Rom formatındaki sinema filmi, belgesel, dil eğitim setleri Görsel İşitsel Merkez’de\nbulunmaktadır.  Bu  koleksiyondan  birimde   bulunan   karellerden   yararlanabileceğiniz ..."
+        },
+        {
+          "contentLength": 957,
+          "content": "3.9.3 Konferans ve toplantı salonları\n\nMustafa İnan Kütüphanesinin zemin katında bir adet toplantı salonu ve bir adet konferans\nsalonu bulunmaktadır. Toplantı salonu 22, konferans salonu 80 kişiliktir..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 835,
+          "content": "doğrultusunda kütüphane tarafından belirlenir.\n4. Öğretim üyesi sahip olduğu bilgi kaynağını öğrencilerin kullanımına sunmak amacı\nile Rezerv Koleksiyonu’nda bulundurabilir. Bu kaynaklar dönem sonunda..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 956,
+          "content": "3.7 Rezerv Yayınlar (Ders Kitapları) Koleksiyonu’ndan Yararlandırma ve Ödünç Verme\nKuralları\n\nAmaç:\n\nİTÜ Kütüphanelerindeki rezerv hizmeti, eğitim programlarını desteklemek amacı ile\nöğretim üyeleri t..."
+        },
+        {
+          "contentLength": 38,
+          "content": "Mustafa İnan Kütüphanesi 7/24 açıktır...."
+        },
+        {
+          "contentLength": 849,
+          "content": "Filmler:  DVD,  VCD,  CD-Rom formatındaki sinema filmi, belgesel, dil eğitim setleri Görsel İşitsel Merkez’de\nbulunmaktadır.  Bu  koleksiyondan  birimde   bulunan   karellerden   yararlanabileceğiniz ..."
+        },
+        {
+          "contentLength": 462,
+          "content": "Tüm Kullanıcılar  5 TL  10 TL\n\n5. Rezerv (ders) yayınlarda geciken  her saat için 2 TL gecikme cezası uygulanır.\nAyrıca kullanıcı 1 hafta süre ile ödünç verme hizmetlerinden yararlanamaz.\n6. Zamanında..."
+        },
+        {
+          "contentLength": 934,
+          "content": "c) Kütüphanenin kendi hazırladığı form ile yapılabilir.\n7. İstekler kütüphaneye kargo ile gönderilir. Bu hizmet karşılığı doğacak tüm masraflar,\nistekte    bulunan  kütüphane tarafından karşılanır. (b..."
+        },
+        {
+          "contentLength": 630,
+          "content": "16\n\n1. Kullanıcılar bu yayınların dijitalleştirilmiş kopyalarına web sayfasından İTÜ\nKütüphaneleriAraştırma-Sayısal Koleksiyon  bağlantılarını  izleyerek\nerişebilirler.\n2. Henüz dijitalleştirilmemiş n..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:25.332Z",
+    "data": {
+      "query": "pinimi unuttum nasıl alabilirim",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 224,
+          "content": "Birim Yetkilisinin\nAdı-Soyadı / Unvanı : ..............................................................................\nİmzası                  : ........................................................."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 147,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 60: 96. Bir araştırma sorusunu nasıl formüle edebilirim?..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 170,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 46: 81. Geri bildirim veya şikayette nasıl bulunabilirim? Kılavuzda cevabı var...."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 172,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 224,
+          "content": "Birim Yetkilisinin\nAdı-Soyadı / Unvanı : ..............................................................................\nİmzası                  : ........................................................."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 576,
+          "content": "Onaylayanın\nAdı Soyadı : ............................................................................................................................\nÜnvanı       : ......................................"
+        },
+        {
+          "contentLength": 417,
+          "content": "ve hizmetleri duyuran, üniversitelerin ilgili bölümlerinde öğrenim gören öğrencilere uygulama ve staj programları\nhazırlayan, sosyal medya hesaplarını yöneten birim.\n5) Bilgi İşlem Bölümü:\nKütüphaneni..."
+        },
+        {
+          "contentLength": 694,
+          "content": "Diğer\nKullanıcılar\n3 gün Uzatma yapılmaz\nTezler\nKütüphane içinde kullanılır\nNadir Eserler/ Arşiv Kopyaları/ Sanat\nKoleksiyonu/ Haritalar\n\nKütüphane içinde kullanılır.\nNotalar (ciltli ve urtext)\nKütüph..."
+        },
+        {
+          "contentLength": 987,
+          "content": "Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini Kullanıcı Hesabım bağlantısını\nkullanarak uzatma işleminizi yapabilirsiniz.\n\nGecikme Cezası\n\nÖdünç alınan ve  iade süre..."
+        },
+        {
+          "contentLength": 846,
+          "content": "Anahtar  sözcük,  konu,  başlık, yazar  vb taraması yaptıktan sonra tarama sonuçlarını materyal türü, yayının\nbulunduğu yer, yayının dili, yayının yılı ya da başlıkta geçen kelimelere göre sınırlandır..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:28.737Z",
+    "data": {
+      "query": "kütüphane kartı şifremi unuttum",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 480,
+          "content": "KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI\n\nKütüphanede  bulunan  tarama  terminalleri  yalnızca kütüphane koleksiyonu  ile  ilgili  araştırmalarda\nkullanılabilir.  İTÜ mensupları, İTÜ mail adresi ve şif..."
+        },
+        {
+          "contentLength": 906,
+          "content": "B. İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin\nyüksek lisans ve doktora öğrencileri ile öğretim elemanları Üniversite Yönetim\nKurulu (ÜYK) kararı ile belirlenen k..."
+        },
+        {
+          "contentLength": 519,
+          "content": "9\n\n5. Kullanıcıların  şube  kütüphaneleri  kapanmadan  15  dakika  önce  ödünç  alma\nişlemlerini yaptırmaları gerekir.\n6. Emekli Personel ve Misafir üyeler ödünç verme hizmetinden yararlanamazlar.\n\nKu..."
+        },
+        {
+          "contentLength": 665,
+          "content": "Yer Numarası : (Kütüphane\nkoleksiyonunda yer alan\nyayınlar için)\n\n25\n\nDEPO, TEZ, ESKİ TEKNİK ESERLER, İTÜ YAYINLARI ARŞİVİ, SANAT KOLEKSİYONU VE KAPALI\nALANDA  BULUNAN HARİTALAR İÇİN  İSTEK\nFORMU\n\nYay..."
+        },
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 480,
+          "content": "KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI\n\nKütüphanede  bulunan  tarama  terminalleri  yalnızca kütüphane koleksiyonu  ile  ilgili  araştırmalarda\nkullanılabilir.  İTÜ mensupları, İTÜ mail adresi ve şif..."
+        },
+        {
+          "contentLength": 673,
+          "content": "m) Kütüphane kapanmadan (şube kütüphaneler) 15 dakika önce kapanış uyarıları başlatılır.\nn) Kütüphanedeki bilgisayarlar sadece eğitim-öğretim ve araştırmaya yönelik kullanılır.\no) Bu kurallara uymayan..."
+        },
+        {
+          "contentLength": 38,
+          "content": "Mustafa İnan Kütüphanesi 7/24 açıktır...."
+        },
+        {
+          "contentLength": 610,
+          "content": "standartlar, nadir eserler ve arşiv kopyaları ile Daire Başkanlığı tarafından belirlenen\nve kütüphane dışına çıkarılması uygun görülmeyen yayınlar ödünç verilmez.\n12. Ödünç alınan yayının kaybedilmesi..."
+        },
+        {
+          "contentLength": 934,
+          "content": "c) Kütüphanenin kendi hazırladığı form ile yapılabilir.\n7. İstekler kütüphaneye kargo ile gönderilir. Bu hizmet karşılığı doğacak tüm masraflar,\nistekte    bulunan  kütüphane tarafından karşılanır. (b..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 960,
+          "content": "Kareller:\nKütüphanenin ikinci katında bireysel  kullanım için açık olarak tasarlanmış 25 adet karel bulunmaktadır.\nKarellerden herkes yararlanabilir. Açık olarak düzenlenmiş kareller tek kişiliktir. K..."
+        },
+        {
+          "contentLength": 654,
+          "content": "Kütüphane  kullanımı konusunda  karşılaşacağınız  sorunları  Mustafa  İnan  Kütüphanesi Giriş  Katı’ndaki\nDanışma  Masası’nda  görev  yapan referans kütüphanecilerinden,  Şube  Kütüphanelerinde  de  u..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:34.877Z",
+    "data": {
+      "query": "öğrenci ödünç alma kuralları",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 519,
+          "content": "9\n\n5. Kullanıcıların  şube  kütüphaneleri  kapanmadan  15  dakika  önce  ödünç  alma\nişlemlerini yaptırmaları gerekir.\n6. Emekli Personel ve Misafir üyeler ödünç verme hizmetinden yararlanamazlar.\n\nKu..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 706,
+          "content": "19\n\n3.7.4 Rezerv yayınlar koleksiyonu ödünç verme kuralları\n1. Rezerv Koleksiyonu’ndaki yayınlar iki saatlik ve 1 günlük ödünç verilebilir.\n2. Öğretim üyesi sadece kendi dersine ait ders yayınını döne..."
+        },
+        {
+          "contentLength": 665,
+          "content": "31\n\nÖdünç Verme ;\nMadde 5 - Ödünç verme kuralları Daire Başkanlığı tarafından belirlenir.\na)  İTÜ Öğretim elemanları, idari personel, öğrenciler, sözleşmeli akademik ve idari personel kütüphanelerden ..."
+        },
+        {
+          "contentLength": 925,
+          "content": "e-posta adreslerindeki değişiklikleri kütüphanelerin ödünç verme bankolarına veya\nkutuphane@itu.edu.tr adresine bildirmeleri gerekir.\n8. İstekte  bulunulan  yayınlar  için  sağlayıcı  kütüphanenin  öd..."
+        },
+        {
+          "contentLength": 519,
+          "content": "9\n\n5. Kullanıcıların  şube  kütüphaneleri  kapanmadan  15  dakika  önce  ödünç  alma\nişlemlerini yaptırmaları gerekir.\n6. Emekli Personel ve Misafir üyeler ödünç verme hizmetinden yararlanamazlar.\n\nKu..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 534,
+          "content": "edilmeyen odalar için para cezası uygulanır.\n4. Grup  çalışma  odalarına kütüphanenin diğer  bölümlerinde  olduğu  gibi  yiyecek  ve  içecek\ngetirilmesi, sigara içilmesi ve cep telefonu kullanılması y..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 432,
+          "content": "kullanıcı olmadığı takdirde kullanım süresi kütüphane hesabı üzerinden uzatılabilir.\nZamanında teslim edilmeyen odalar için para cezası uygulanır.\n4. Grup çalışma odalarına kütüphanenin diğer bölümler..."
+        },
+        {
+          "contentLength": 886,
+          "content": "3.2 Ödünç Verme\nAmaç:\nİTÜ mensuplarının eğitim-öğretim, araştırma, bilimsel faaliyet ve kültürel ihtiyaçlarını\nkarşılamak amacı ile kütüphanedeki yayınların belli kurallar çerçevesinde kütüphane içi v..."
+        },
+        {
+          "contentLength": 944,
+          "content": "1) Öğrenci;\n Mezun olacak ve kayıtları silinecek olan öğrenciler kütüphaneden ilişik kesme belgesi almak zorundadırlar. Bu\nöğrencilerin isimleri Öğrenci İşleri Daire Başkanlığı tarafından mezuniyetler..."
+        },
+        {
+          "contentLength": 922,
+          "content": "Kütüphanelerarası Ödünç Yayın / Belge Sağlama İsteğinde Bulunmaya Yetkili 1. Personelin\nAdı Soyadı : ...............................................................................\nTel.             : ..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:44.697Z",
+    "data": {
+      "query": "kitap rezervasyon nasıl yapılır",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 835,
+          "content": "doğrultusunda kütüphane tarafından belirlenir.\n4. Öğretim üyesi sahip olduğu bilgi kaynağını öğrencilerin kullanımına sunmak amacı\nile Rezerv Koleksiyonu’nda bulundurabilir. Bu kaynaklar dönem sonunda..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 186,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 44: 79. Kütüphane koleksiyonu için kitap satın almayı nasıl önerebilirim? Kılavuzda cevabı var...."
+        },
+        {
+          "contentLength": 849,
+          "content": "Filmler:  DVD,  VCD,  CD-Rom formatındaki sinema filmi, belgesel, dil eğitim setleri Görsel İşitsel Merkez’de\nbulunmaktadır.  Bu  koleksiyondan  birimde   bulunan   karellerden   yararlanabileceğiniz ..."
+        },
+        {
+          "contentLength": 957,
+          "content": "3.9.3 Konferans ve toplantı salonları\n\nMustafa İnan Kütüphanesinin zemin katında bir adet toplantı salonu ve bir adet konferans\nsalonu bulunmaktadır. Toplantı salonu 22, konferans salonu 80 kişiliktir..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 835,
+          "content": "doğrultusunda kütüphane tarafından belirlenir.\n4. Öğretim üyesi sahip olduğu bilgi kaynağını öğrencilerin kullanımına sunmak amacı\nile Rezerv Koleksiyonu’nda bulundurabilir. Bu kaynaklar dönem sonunda..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 956,
+          "content": "3.7 Rezerv Yayınlar (Ders Kitapları) Koleksiyonu’ndan Yararlandırma ve Ödünç Verme\nKuralları\n\nAmaç:\n\nİTÜ Kütüphanelerindeki rezerv hizmeti, eğitim programlarını desteklemek amacı ile\nöğretim üyeleri t..."
+        },
+        {
+          "contentLength": 38,
+          "content": "Mustafa İnan Kütüphanesi 7/24 açıktır...."
+        },
+        {
+          "contentLength": 849,
+          "content": "Filmler:  DVD,  VCD,  CD-Rom formatındaki sinema filmi, belgesel, dil eğitim setleri Görsel İşitsel Merkez’de\nbulunmaktadır.  Bu  koleksiyondan  birimde   bulunan   karellerden   yararlanabileceğiniz ..."
+        },
+        {
+          "contentLength": 462,
+          "content": "Tüm Kullanıcılar  5 TL  10 TL\n\n5. Rezerv (ders) yayınlarda geciken  her saat için 2 TL gecikme cezası uygulanır.\nAyrıca kullanıcı 1 hafta süre ile ödünç verme hizmetlerinden yararlanamaz.\n6. Zamanında..."
+        },
+        {
+          "contentLength": 934,
+          "content": "c) Kütüphanenin kendi hazırladığı form ile yapılabilir.\n7. İstekler kütüphaneye kargo ile gönderilir. Bu hizmet karşılığı doğacak tüm masraflar,\nistekte    bulunan  kütüphane tarafından karşılanır. (b..."
+        },
+        {
+          "contentLength": 630,
+          "content": "16\n\n1. Kullanıcılar bu yayınların dijitalleştirilmiş kopyalarına web sayfasından İTÜ\nKütüphaneleriAraştırma-Sayısal Koleksiyon  bağlantılarını  izleyerek\nerişebilirler.\n2. Henüz dijitalleştirilmemiş n..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:06.320Z",
+    "data": {
+      "query": "kütüphane çalışma saatleri",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 310,
+          "content": "4\n\nİ.  Kamera,  fotoğraf makinesi vb. ile kütüphane içinde izin almadan çekim yapmak\nyasaktır.\n\nJ. Kütüphane içinde, ‘Sesli Çalışma Salonu’ dışında grup çalışması yapmak ve sesli\nolarak çalışmak yasak..."
+        },
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 203,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3: 2. Hafta sonu çalışma saatleriniz nedir? Mustafa İnan Merkez Kütüphanesi Resmi Tatiller dışında 7/24 açıkt..."
+        },
+        {
+          "contentLength": 815,
+          "content": "Elektronik Kaynaklar ve Akademik Araştırma Hizmetleri\n\nİTÜ Kütüphanelerinde araştırma yaparken referans kütüphanecilerinden yardım alabilirsiniz. Mustafa İnan\nKütüphanesi’nin giriş katında bulunan Ödü..."
+        },
+        {
+          "contentLength": 951,
+          "content": "Mustafa İnan Kütüphanesinin ikinci katında tek kişilik çalışma olanağı sağlayan 25 adet\nkarel bulunmaktadır. Bu karellerden isteyen bütün kullanıcılar yararlanabilmektedir. Açık\nolarak düzenlenen kare..."
+        },
+        {
+          "contentLength": 310,
+          "content": "4\n\nİ.  Kamera,  fotoğraf makinesi vb. ile kütüphane içinde izin almadan çekim yapmak\nyasaktır.\n\nJ. Kütüphane içinde, ‘Sesli Çalışma Salonu’ dışında grup çalışması yapmak ve sesli\nolarak çalışmak yasak..."
+        },
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 38,
+          "content": "Mustafa İnan Kütüphanesi 7/24 açıktır...."
+        },
+        {
+          "contentLength": 610,
+          "content": "standartlar, nadir eserler ve arşiv kopyaları ile Daire Başkanlığı tarafından belirlenen\nve kütüphane dışına çıkarılması uygun görülmeyen yayınlar ödünç verilmez.\n12. Ödünç alınan yayının kaybedilmesi..."
+        },
+        {
+          "contentLength": 524,
+          "content": "12\n\nKütüphanelerarası Ödünç Yayın / Belge Sağlama Hizmeti: Kütüphane koleksiyonlarında bulamadığınız ancak\nkısa  süreliğine  kullanmak  istediğiniz kitapları,  diğer  kurumlardan  belli  bir  süreliği..."
+        },
+        {
+          "contentLength": 673,
+          "content": "m) Kütüphane kapanmadan (şube kütüphaneler) 15 dakika önce kapanış uyarıları başlatılır.\nn) Kütüphanedeki bilgisayarlar sadece eğitim-öğretim ve araştırmaya yönelik kullanılır.\no) Bu kurallara uymayan..."
+        },
+        {
+          "contentLength": 734,
+          "content": "1\n\nKÜTÜPHANE HİZMETLERİ VE YARARLANMA KOŞULLARI\n\nİstanbul  Teknik  Üniversitesi  eğitim, öğretim,  araştırma  ve  bilimsel  faaliyetlerini  5  ayrı  yerleşkede\nsürdürmektedir. Buna bağlı olarak Kütüph..."
+        },
+        {
+          "contentLength": 960,
+          "content": "D. Kütüphane tesislerine ve materyallerine zarar veren kullanıcılar hakkında yasal\nişlem yapılır.\n\nE. Kütüphaneye yiyecek ve içecek ile girilmesi, tütün mamullerinin içilmesi kesinlikle\nyasaktır. Kull..."
+        },
+        {
+          "contentLength": 432,
+          "content": "kullanıcı olmadığı takdirde kullanım süresi kütüphane hesabı üzerinden uzatılabilir.\nZamanında teslim edilmeyen odalar için para cezası uygulanır.\n4. Grup çalışma odalarına kütüphanenin diğer bölümler..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:10.357Z",
+    "data": {
+      "query": "veritabanı erişimi nasıl sağlanır",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 846,
+          "content": "Anahtar  sözcük,  konu,  başlık, yazar  vb taraması yaptıktan sonra tarama sonuçlarını materyal türü, yayının\nbulunduğu yer, yayının dili, yayının yılı ya da başlıkta geçen kelimelere göre sınırlandır..."
+        },
+        {
+          "contentLength": 894,
+          "content": "7\n\naboneliği  pahalıya  mal  olduğundan,  oluşturulan  işbirlikleri  ile  bir  yayıncının  bütün\ndergilerine abonelik yoluyla erişim olanağı sağlanmıştır.\n1. Elektronik veri tabanı abonelikleri yapılı..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 808,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 14: 41. Bir makalenin etki faktörünü (impact factor) nasıl öğrenirim? Elbette, Scopus veritabanı üzerinden bi..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 1586,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım? 29. Belirli bir makaleye tam metin olarak nasıl ..."
+        },
+        {
+          "contentLength": 423,
+          "content": "süre ile,\nb) Disiplin kurullarından ceza alan kullanıcıların 2 ay süre ile,\nc) İTÜ kimlik kartını başkasına kullandıran veya üzerinde tahrifat yapanların üyeliği\n1 ay süre ile askıya alınır ve hizmetl..."
+        },
+        {
+          "contentLength": 846,
+          "content": "Anahtar  sözcük,  konu,  başlık, yazar  vb taraması yaptıktan sonra tarama sonuçlarını materyal türü, yayının\nbulunduğu yer, yayının dili, yayının yılı ya da başlıkta geçen kelimelere göre sınırlandır..."
+        },
+        {
+          "contentLength": 894,
+          "content": "7\n\naboneliği  pahalıya  mal  olduğundan,  oluşturulan  işbirlikleri  ile  bir  yayıncının  bütün\ndergilerine abonelik yoluyla erişim olanağı sağlanmıştır.\n1. Elektronik veri tabanı abonelikleri yapılı..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 632,
+          "content": "13\n\nELEKTRONİK KAYNAKLAR\n\nVeritabanları\n\nVeritabanları, farklı disiplinlerde hazırlanmış elektronik yayınları (makale, dergi, kitap, standart vb.) içerirler.\nBir kısmı yalnızca yayın künyesi ve  özet,..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 868,
+          "content": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı\nkullanılmalıdır.\n\nElektronik Dergilerin Kullanımı\n\nElektronik   dergiler,   hakemli,   bilimsel ..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 955,
+          "content": "KULLANICI HESABI\n\nKütüphaneye  üye olduğunuz andan itibaren adınıza bir hesap oluşturulur. Bu hesapta üyelik bilgileriniz,\nödünç aldığınız yayınlar, cezalar, yayın ayırtmalarınız kaydedilir. Kütüphane..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 339,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 37: 72. Veritabanı kullanımı üzerine bir atölye çalışması düzenliyor musunuz? Bilgi Okuryazarlığı Talep Formu..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 455,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 17: 44. [Herhangi bir] veritabanında \"yapay sinir ağları\" üzerine son bir yılda yazılmış makaleleri bul. Doğr..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:15.205Z",
+    "data": {
+      "query": "referans kütüphaneci iletişim",
+      "resultsCount": 15,
+      "results": [
+        {
+          "contentLength": 815,
+          "content": "Elektronik Kaynaklar ve Akademik Araştırma Hizmetleri\n\nİTÜ Kütüphanelerinde araştırma yaparken referans kütüphanecilerinden yardım alabilirsiniz. Mustafa İnan\nKütüphanesi’nin giriş katında bulunan Ödü..."
+        },
+        {
+          "contentLength": 654,
+          "content": "Kütüphane  kullanımı konusunda  karşılaşacağınız  sorunları  Mustafa  İnan  Kütüphanesi Giriş  Katı’ndaki\nDanışma  Masası’nda  görev  yapan referans kütüphanecilerinden,  Şube  Kütüphanelerinde  de  u..."
+        },
+        {
+          "contentLength": 706,
+          "content": "19\n\n3.7.4 Rezerv yayınlar koleksiyonu ödünç verme kuralları\n1. Rezerv Koleksiyonu’ndaki yayınlar iki saatlik ve 1 günlük ödünç verilebilir.\n2. Öğretim üyesi sadece kendi dersine ait ders yayınını döne..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 596,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 52: 88. Sci-Hub yasal mı? Neden kullanmamalıyım? Size bu konuda yardımcı olmak çok isterdim ancak maalesef bu..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 602,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 59: 95. Kütüphanenin en çok ödünç alınan 10 kitabını listele. Size bu konuda yardımcı olmak çok isterdim anca..."
+        },
+        {
+          "contentLength": 654,
+          "content": "Kütüphane  kullanımı konusunda  karşılaşacağınız  sorunları  Mustafa  İnan  Kütüphanesi Giriş  Katı’ndaki\nDanışma  Masası’nda  görev  yapan referans kütüphanecilerinden,  Şube  Kütüphanelerinde  de  u..."
+        },
+        {
+          "contentLength": 706,
+          "content": "19\n\n3.7.4 Rezerv yayınlar koleksiyonu ödünç verme kuralları\n1. Rezerv Koleksiyonu’ndaki yayınlar iki saatlik ve 1 günlük ödünç verilebilir.\n2. Öğretim üyesi sadece kendi dersine ait ders yayınını döne..."
+        },
+        {
+          "contentLength": 815,
+          "content": "Elektronik Kaynaklar ve Akademik Araştırma Hizmetleri\n\nİTÜ Kütüphanelerinde araştırma yaparken referans kütüphanecilerinden yardım alabilirsiniz. Mustafa İnan\nKütüphanesi’nin giriş katında bulunan Ödü..."
+        },
+        {
+          "contentLength": 809,
+          "content": "*işaretli kısım kütüphaneci tarafından, kendi adına doldurulacaktır.\n\n26\n\nİTÜ KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI TOPLANTI ve KONFERANS SALONU\nREZERVASYON FORMU\n\nTarih : ..../..../........\nAd ..."
+        },
+        {
+          "contentLength": 38,
+          "content": "Mustafa İnan Kütüphanesi 7/24 açıktır...."
+        },
+        {
+          "contentLength": 630,
+          "content": "16\n\n1. Kullanıcılar bu yayınların dijitalleştirilmiş kopyalarına web sayfasından İTÜ\nKütüphaneleriAraştırma-Sayısal Koleksiyon  bağlantılarını  izleyerek\nerişebilirler.\n2. Henüz dijitalleştirilmemiş n..."
+        },
+        {
+          "contentLength": 835,
+          "content": "doğrultusunda kütüphane tarafından belirlenir.\n4. Öğretim üyesi sahip olduğu bilgi kaynağını öğrencilerin kullanımına sunmak amacı\nile Rezerv Koleksiyonu’nda bulundurabilir. Bu kaynaklar dönem sonunda..."
+        },
+        {
+          "contentLength": 734,
+          "content": "1\n\nKÜTÜPHANE HİZMETLERİ VE YARARLANMA KOŞULLARI\n\nİstanbul  Teknik  Üniversitesi  eğitim, öğretim,  araştırma  ve  bilimsel  faaliyetlerini  5  ayrı  yerleşkede\nsürdürmektedir. Buna bağlı olarak Kütüph..."
+        },
+        {
+          "contentLength": 934,
+          "content": "c) Kütüphanenin kendi hazırladığı form ile yapılabilir.\n7. İstekler kütüphaneye kargo ile gönderilir. Bu hizmet karşılığı doğacak tüm masraflar,\nistekte    bulunan  kütüphane tarafından karşılanır. (b..."
+        },
+        {
+          "contentLength": 900,
+          "content": "materyal çıkarmaya teşebbüs edenler için gerekli tedbirler alınarak yasal yollara başvurulur.\nh) Kütüphane binasına, yiyecek ve içecekle girilmez, tütün mamullerinin içilmesi yasaktır.\ni) Kullanıcılar..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:25.307Z",
+    "data": {
+      "query": "uzaktan erişim nasıl yapılır",
+      "resultsCount": 16,
+      "results": [
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 694,
+          "content": "Diğer\nKullanıcılar\n3 gün Uzatma yapılmaz\nTezler\nKütüphane içinde kullanılır\nNadir Eserler/ Arşiv Kopyaları/ Sanat\nKoleksiyonu/ Haritalar\n\nKütüphane içinde kullanılır.\nNotalar (ciltli ve urtext)\nKütüph..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 1586,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım? 29. Belirli bir makaleye tam metin olarak nasıl ..."
+        },
+        {
+          "source": "Chatbot Soruları ve Cevapları.xlsx",
+          "contentLength": 362,
+          "content": "Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 19: 46. Patent ve standartlara nasıl erişim sağlayabilirim? Kütüphanenin veritabanları sayfasını ziyaret edeb..."
+        },
+        {
+          "contentLength": 978,
+          "content": "3.9.5 Bilgisayar kullanımı ve kablosuz (wireless) internet erişimi\n1. Kullanıcılar, kütüphane içindeki bilgisayarlara, İTÜ kullanıcı hesapları (İTÜ e-posta\nadresi ve şifresi) ile giriş yapabilirler.\n2..."
+        },
+        {
+          "contentLength": 383,
+          "content": "aldığı yayının kötü kullanım sonucu meydana gelen yıpranma ve hasarını tazmin etmekle yükümlüdür. Yıpranma\nve hasar sonucu kullanılamaz hale geldiği belirlenen yayın hakkında kaybedilmiş yayınlara ili..."
+        },
+        {
+          "contentLength": 694,
+          "content": "Diğer\nKullanıcılar\n3 gün Uzatma yapılmaz\nTezler\nKütüphane içinde kullanılır\nNadir Eserler/ Arşiv Kopyaları/ Sanat\nKoleksiyonu/ Haritalar\n\nKütüphane içinde kullanılır.\nNotalar (ciltli ve urtext)\nKütüph..."
+        },
+        {
+          "contentLength": 398,
+          "content": "kalanlardan, güncelliğini yitirmiş olanlar bağış olarak kabul edilmez.\n3. Koleksiyon  Geliştirme  Bölümü  tarafından  kütüphane  koleksiyonu  için  uygun\nolduğuna karar verilen yayınlar teknik işlemle..."
+        },
+        {
+          "contentLength": 560,
+          "content": "1. Kullanıcılar ödünç aldıkları yayınları korumak ve zarar vermemekle yükümlüdürler.\n2. Kaybedilen yayının baskısı mevcut olanlar için;\n Kullanıcı 15 gün içinde yayının son baskısını temin etmek ve i..."
+        },
+        {
+          "contentLength": 731,
+          "content": "çalıştaylarının düzenlenmesi\n İhtiyaç duyulması halinde literatür tarama hizmeti sunulması,\n Kullanıcıların araştırma yaparken karşılaştıkları sorunlarla ilgili rehberlik ve\ndanışmanlık yapılması,\n..."
+        },
+        {
+          "contentLength": 722,
+          "content": "➢ İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin  yüksek  lisans  ve\ndoktora öğrencileri ile öğretim elemanları Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen..."
+        },
+        {
+          "contentLength": 541,
+          "content": "Ödünç  almış olduğunuz bir yayını iade etmeniz gereken son tarihe kadar, aldığınız kütüphanenin ödünç\nverme  bankosuna  iade  etmeniz gerekir. Zamanında iade edilmeyen yayınlar  için  her  materyal  t..."
+        },
+        {
+          "contentLength": 846,
+          "content": "Anahtar  sözcük,  konu,  başlık, yazar  vb taraması yaptıktan sonra tarama sonuçlarını materyal türü, yayının\nbulunduğu yer, yayının dili, yayının yılı ya da başlıkta geçen kelimelere göre sınırlandır..."
+        },
+        {
+          "contentLength": 757,
+          "content": "Ödünç Verilmez\n\nÖdünç\nverilmez\nYayın Tipi Ödünç verme Süresi\nKitap Öğretim Elemanı 1 ay 4 uzatma\n\nİdari Personel 1 ay 3 uzatma\nY.Lisans/Doktora 15 gün 3 uzatma\nLisans 15 gün 3 uzatma\nİTÜ Emekli Person..."
+        },
+        {
+          "contentLength": 987,
+          "content": "Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini Kullanıcı Hesabım bağlantısını\nkullanarak uzatma işleminizi yapabilirsiniz.\n\nGecikme Cezası\n\nÖdünç alınan ve  iade süre..."
+        }
+      ],
+      "metadata": {
+        "hybridUsed": true,
+        "vectorK": 3,
+        "lexicalK": 3,
+        "minScore": 0.1
+      }
+    }
+  }
+]

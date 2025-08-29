@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2025-08-29T08:18:13.657Z",
+    "data": {
+      "message": "Test JSON verisi",
+      "number": 42,
+      "array": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:18:13.659Z",
+    "data": {
+      "user": "test-user",
+      "action": "search",
+      "query": "test query"
+    }
+  }
+]

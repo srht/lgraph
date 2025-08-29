@@ -1,0 +1,147 @@
+[
+  {
+    "timestamp": "2025-08-29T08:18:13.694Z",
+    "data": {
+      "operation": "document_search",
+      "duration": 1250,
+      "details": {
+        "vectorResults": 5,
+        "bm25Results": 3,
+        "totalDocs": 8,
+        "minScore": 0.1
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:36.994Z",
+    "data": {
+      "operation": "retriever_test_1",
+      "duration": 3323,
+      "details": {
+        "query": "pinimi unuttum nasıl alabilirim",
+        "resultLength": 140,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:45.418Z",
+    "data": {
+      "operation": "retriever_test_2",
+      "duration": 7369,
+      "details": {
+        "query": "kütüphane kartı şifremi unuttum",
+        "resultLength": 519,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:22:56.230Z",
+    "data": {
+      "operation": "retriever_test_3",
+      "duration": 9787,
+      "details": {
+        "query": "öğrenci ödünç alma kuralları",
+        "resultLength": 1566,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:26.859Z",
+    "data": {
+      "operation": "retriever_test_1",
+      "duration": 2978,
+      "details": {
+        "query": "pinimi unuttum nasıl alabilirim",
+        "resultLength": 140,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:33.181Z",
+    "data": {
+      "operation": "retriever_test_2",
+      "duration": 5300,
+      "details": {
+        "query": "kütüphane kartı şifremi unuttum",
+        "resultLength": 344,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:27:42.899Z",
+    "data": {
+      "operation": "retriever_test_3",
+      "duration": 8706,
+      "details": {
+        "query": "öğrenci ödünç alma kuralları",
+        "resultLength": 1566,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:04.569Z",
+    "data": {
+      "operation": "retriever_test_4",
+      "duration": 20651,
+      "details": {
+        "query": "kitap rezervasyon nasıl yapılır",
+        "resultLength": 140,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:08.614Z",
+    "data": {
+      "operation": "retriever_test_5",
+      "duration": 3014,
+      "details": {
+        "query": "kütüphane çalışma saatleri",
+        "resultLength": 306,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:13.515Z",
+    "data": {
+      "operation": "retriever_test_6",
+      "duration": 3887,
+      "details": {
+        "query": "veritabanı erişimi nasıl sağlanır",
+        "resultLength": 777,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:23.550Z",
+    "data": {
+      "operation": "retriever_test_7",
+      "duration": 9018,
+      "details": {
+        "query": "referans kütüphaneci iletişim",
+        "resultLength": 1061,
+        "success": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-29T08:28:42.792Z",
+    "data": {
+      "operation": "retriever_test_8",
+      "duration": 18224,
+      "details": {
+        "query": "uzaktan erişim nasıl yapılır",
+        "resultLength": 1576,
+        "success": true
+      }
+    }
+  }
+]

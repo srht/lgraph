@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "createdAt": "2025-08-29T11:31:53.409Z",
+  "embeddingProvider": "GoogleGenerativeAIEmbeddings",
+  "embeddingModel": "embedding-001",
+  "totalVectors": 212,
+  "totalDocuments": 212,
+  "sourceFiles": [
+    {
+      "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\Chatbot Soruları ve Cevapları.xlsx",
+      "hash": "b60d061dedc39b1dcd187ecbbb7c3a36",
+      "size": 37361,
+      "lastModified": "2025-08-26T07:54:26.368Z"
+    },
+    {
+      "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\kilavuz2025_1.pdf",
+      "hash": "95d9b178d9f779e4df64e388cc2e101d",
+      "size": 879053,
+      "lastModified": "2025-08-11T09:42:19.190Z"
+    },
+    {
+      "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\kitap_yer_rafbilgisi.txt",
+      "hash": "93839a89db9ed44972ab6254d3ceb288",
+      "size": 385,
+      "lastModified": "2025-08-20T13:25:14.667Z"
+    },
+    {
+      "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\kutuphane_ekstra_bilgiler.txt",
+      "hash": "3df4c403b58caa885d196cf41dcf6f89",
+      "size": 47,
+      "lastModified": "2025-08-21T12:49:13.487Z"
+    },
+    {
+      "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\oduncvermesartlari.json",
+      "hash": "574550eded1778987f1452d208d58018",
+      "size": 2361,
+      "lastModified": "2025-08-21T13:31:55.885Z"
+    },
+    {
+      "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\yararlanmakosullari2025.pdf",
+      "hash": "10177f8b1d595189dfd9f033f320249f",
+      "size": 1161379,
+      "lastModified": "2025-08-21T08:07:40.518Z"
+    }
+  ]
+}

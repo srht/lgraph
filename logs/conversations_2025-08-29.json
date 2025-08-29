@@ -1,0 +1,1970 @@
+[
+  {
+    "id": "mewj2ac095p34gt8wqw",
+    "timestamp": "2025-08-29T07:44:59.856Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T07:44:59.855Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T07:44:59.856Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"pinimi unuttum nasıl alabilirim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"pinimi unuttum nasıl alabilirim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"pinimi unuttum nasıl alabilirim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"pinimi unuttum nasıl alabilirim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T07:44:59.855Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 23136,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewjmmgq6x4d3oolsa",
+    "timestamp": "2025-08-29T08:00:48.698Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T08:00:48.697Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have found information regarding forgotten PINs/passwords in the documents. The response provides clear instructions on how to resolve this issue. I can now formulate the final answer.\nFinal Answer: <p><b>PIN/Şifre Sorunu İçin:</b><br>Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br><ul><li>Kütüphane danışma masasına başvurun</li><li>Kimliğinizle birlikte kütüphaneye gelin</li><li>Veya kütüphane web sitesindeki canlı destek hattını kullanın</li></ul><br><b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+      "timestamp": "2025-08-29T08:00:48.697Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:00:48.696Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:00:48.696Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:00:48.696Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:00:48.696Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 3292,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewjnhayun4n5zwmxm",
+    "timestamp": "2025-08-29T08:01:28.666Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T08:01:28.665Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have found information regarding forgotten PINs/passwords in the documents. The response provides clear steps on how to resolve this issue. I can now present this information to the user.\nFinal Answer: <p><b>PIN/Şifre Sorunu İçin:</b><br>Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br><ul><li>Kütüphane danışma masasına başvurun</li><li>Kimliğinizle birlikte kütüphaneye gelin</li><li>Veya kütüphane web sitesindeki canlı destek hattını kullanın</li></ul><br><b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+      "timestamp": "2025-08-29T08:01:28.665Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:01:28.665Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:01:28.665Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:01:28.665Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:01:28.665Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 3510,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewk09fif6yihus21fg",
+    "timestamp": "2025-08-29T08:11:24.990Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T08:11:24.988Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have found information regarding forgotten PINs/passwords in the documents. The response provides clear steps on how to resolve this issue. I can now present this information to the user.\nFinal Answer: <p><b>PIN/Şifre Sorunu İçin:</b><br>Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br><ul><li>Kütüphane danışma masasına başvurun</li><li>Kimliğinizle birlikte kütüphaneye gelin</li><li>Veya kütüphane web sitesindeki canlı destek hattını kullanın</li></ul><br><b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+      "timestamp": "2025-08-29T08:11:24.988Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:11:24.987Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:11:24.987Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:11:24.987Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:11:24.987Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 2798,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewk47ob4wlpdhjm184",
+    "timestamp": "2025-08-29T08:14:29.339Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T08:14:29.338Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have found information regarding forgotten PINs/passwords in the documents. The response provides clear steps on how to resolve this issue. I can now present this information to the user.\nFinal Answer: <p><b>PIN/Şifre Sorunu İçin:</b><br>Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br><ul><li>Kütüphane danışma masasına başvurun</li><li>Kimliğinizle birlikte kütüphaneye gelin</li><li>Veya kütüphane web sitesindeki canlı destek hattını kullanın</li></ul><br><b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+      "timestamp": "2025-08-29T08:14:29.338Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:14:29.338Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:14:29.338Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:14:29.338Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "output": "<p><b>PIN/Şifre Sorunu İçin:</b><br>\n                  Kütüphane kartı PIN'inizi unuttuysanız veya şifre sorunuz varsa:<br>\n                  • Kütüphane danışma masasına başvurun<br>\n                  • Kimliğinizle birlikte kütüphaneye gelin<br>\n                  • Veya kütüphane web sitesindeki canlı destek hattını kullanın<br><br>\n                  <b>İletişim:</b> Kütüphane personeli size yardımcı olacaktır.</p>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:14:29.338Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6317,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewk59qk0dngox2s3bhm",
+    "timestamp": "2025-08-29T08:15:18.668Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T08:15:18.666Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T08:15:18.666Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:15:18.666Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:15:18.666Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T08:15:18.666Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T08:15:18.666Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6716,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewm2ob2vzrncwncdd8",
+    "timestamp": "2025-08-29T09:09:16.814Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T09:09:16.813Z"
+    },
+    "agentResponse": {
+      "content": "<p>PIN kodunuzu unuttuysanız, kütüphane web sayfasındaki <b>PIN İşlemleri</b> alanından kendiniz yeni bir şifre oluşturabilirsiniz. Şifreler e-posta veya telefon aracılığıyla verilmemektedir. İstenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir bağlantı gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam bulunan PIN'inizi oluşturabilirsiniz.</p>",
+      "timestamp": "2025-08-29T09:09:16.813Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:09:16.813Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "PIN kodunuzu hatırlamıyorsanız, kütüphane web sayfasındaki PIN İşlemleri alanından şifrenizi kendiniz oluşturabilirsiniz. Şifreler e-posta ya da telefonla verilemez. Sizden istenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam olan PIN'inizi oluşturabilirsiniz.\n\nKaynaklar:\n- KULLANICI HESABI (sayfa 13)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "PIN kodunuzu hatırlamıyorsanız, kütüphane web sayfasındaki PIN İşlemleri alanından şifrenizi kendiniz oluşturabilirsiniz. Şifreler e-posta ya da telefonla verilemez. Sizden istenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam olan PIN'inizi oluşturabilirsiniz.\n\nKaynaklar:\n- KULLANICI HESABI (sayfa 13)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:09:16.813Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:09:16.813Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "PIN kodunuzu hatırlamıyorsanız, kütüphane web sayfasındaki PIN İşlemleri alanından şifrenizi kendiniz oluşturabilirsiniz. Şifreler e-posta ya da telefonla verilemez. Sizden istenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam olan PIN'inizi oluşturabilirsiniz.\n\nKaynaklar:\n- KULLANICI HESABI (sayfa 13)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "PIN kodunuzu hatırlamıyorsanız, kütüphane web sayfasındaki PIN İşlemleri alanından şifrenizi kendiniz oluşturabilirsiniz. Şifreler e-posta ya da telefonla verilemez. Sizden istenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam olan PIN'inizi oluşturabilirsiniz.\n\nKaynaklar:\n- KULLANICI HESABI (sayfa 13)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:09:16.813Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 8543,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewm3f9urtgxo9fiquh",
+    "timestamp": "2025-08-29T09:09:51.762Z",
+    "userMessage": {
+      "content": "journal of mechanicse üye misiniz",
+      "timestamp": "2025-08-29T09:09:51.761Z"
+    },
+    "agentResponse": {
+      "content": "<p><b>Arama Hatası:</b> \"journal of mechanics\" dergisi için arama yapılırken bir hata oluştu. Lütfen dergi adını kontrol ederek tekrar deneyin veya kütüphane personeli ile iletişime geçin.</p>\n<p>EBSCO ana sayfasına şu adresten ulaşabilirsiniz: <a href=\"https://publications.ebsco.com/\">https://publications.ebsco.com/</a></p>",
+      "timestamp": "2025-08-29T09:09:51.761Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "journal_subscription_search",
+        "toolDescription": "EBSCO veritabanında dergi aboneliği sorgular. '[dergi ismi] dergisine aboneliğiniz var mı?' gibi sorulara cevap verir. Belirli bir dergiye kütüphanenin aboneliği olup olmadığını kontrol eder ve erişim durumunu bildirir.",
+        "input": {
+          "journalName": "journal of mechanics"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:09:51.761Z"
+      },
+      {
+        "toolName": "journal_subscription_search",
+        "toolDescription": "EBSCO veritabanında dergi aboneliği sorgular. '[dergi ismi] dergisine aboneliğiniz var mı?' gibi sorulara cevap verir. Belirli bir dergiye kütüphanenin aboneliği olup olmadığını kontrol eder ve erişim durumunu bildirir.",
+        "input": "❌ **Arama Hatası**: \"journal of mechanics\" dergisi için arama yapılırken hata oluştu.\n\n🔍 **Hata Detayı**: Request failed with status code 400\n\n💡 **Öneriler**:\n• Dergi adını kontrol edin\n• Kütüphane personeli ile iletişime geçin\n• Manuel olarak EBSCO sitesini ziyaret edin\n\n🔗 **EBSCO Ana Sayfa**: [https://publications.ebsco.com/](https://publications.ebsco.com/)",
+        "output": "❌ **Arama Hatası**: \"journal of mechanics\" dergisi için arama yapılırken hata oluştu.\n\n🔍 **Hata Detayı**: Request failed with status code 400\n\n💡 **Öneriler**:\n• Dergi adını kontrol edin\n• Kütüphane personeli ile iletişime geçin\n• Manuel olarak EBSCO sitesini ziyaret edin\n\n🔗 **EBSCO Ana Sayfa**: [https://publications.ebsco.com/](https://publications.ebsco.com/)",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:09:51.761Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "journal_subscription_search",
+        "toolDescription": "EBSCO veritabanında dergi aboneliği sorgular. '[dergi ismi] dergisine aboneliğiniz var mı?' gibi sorulara cevap verir. Belirli bir dergiye kütüphanenin aboneliği olup olmadığını kontrol eder ve erişim durumunu bildirir.",
+        "input": {
+          "journalName": "journal of mechanics"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:09:51.761Z"
+      },
+      {
+        "toolName": "journal_subscription_search",
+        "toolDescription": "EBSCO veritabanında dergi aboneliği sorgular. '[dergi ismi] dergisine aboneliğiniz var mı?' gibi sorulara cevap verir. Belirli bir dergiye kütüphanenin aboneliği olup olmadığını kontrol eder ve erişim durumunu bildirir.",
+        "input": "❌ **Arama Hatası**: \"journal of mechanics\" dergisi için arama yapılırken hata oluştu.\n\n🔍 **Hata Detayı**: Request failed with status code 400\n\n💡 **Öneriler**:\n• Dergi adını kontrol edin\n• Kütüphane personeli ile iletişime geçin\n• Manuel olarak EBSCO sitesini ziyaret edin\n\n🔗 **EBSCO Ana Sayfa**: [https://publications.ebsco.com/](https://publications.ebsco.com/)",
+        "output": "❌ **Arama Hatası**: \"journal of mechanics\" dergisi için arama yapılırken hata oluştu.\n\n🔍 **Hata Detayı**: Request failed with status code 400\n\n💡 **Öneriler**:\n• Dergi adını kontrol edin\n• Kütüphane personeli ile iletişime geçin\n• Manuel olarak EBSCO sitesini ziyaret edin\n\n🔗 **EBSCO Ana Sayfa**: [https://publications.ebsco.com/](https://publications.ebsco.com/)",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:09:51.761Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 4442,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewm45esfcepqfm2ts",
+    "timestamp": "2025-08-29T09:10:25.637Z",
+    "userMessage": {
+      "content": "apa stilinde kaynakça nasıl hazırlarım",
+      "timestamp": "2025-08-29T09:10:25.636Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T09:10:25.636Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl hazırlanır adım adım"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "APA stilinde kaynakça hazırlama rehberi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"APA stilinde kaynakça hazırlama rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"APA stilinde kaynakça hazırlama rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl hazırlanır adım adım"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "APA stilinde kaynakça hazırlama rehberi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"APA stilinde kaynakça hazırlama rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"APA stilinde kaynakça hazırlama rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:10:25.635Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 10889,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewm93t2i42yr9xc9s9",
+    "timestamp": "2025-08-29T09:14:16.838Z",
+    "userMessage": {
+      "content": "apa stilinde kaynakça nasıl",
+      "timestamp": "2025-08-29T09:14:16.837Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T09:14:16.837Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl oluşturulur adım adım"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "APA stilinde kaynakça oluşturma rehberi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"APA stilinde kaynakça oluşturma rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"APA stilinde kaynakça oluşturma rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl oluşturulur adım adım"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "APA stilinde kaynakça oluşturma rehberi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"APA stilinde kaynakça oluşturma rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"APA stilinde kaynakça oluşturma rehberi\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **Mustafa İnan Kimdir**\n   🔗 [https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir](https://kutuphane.itu.edu.tr/hakkimizda/mustafa-inan-kimdir)\n   💡 **Önemli Bilgiler:**\n      • İstanbul Teknik Üniversitesi\n      • +90 212 285 35 96\n      • PROF. DR. MUSTAFA İNAN KİMDİR?\n      • Bu sayfadan İ.T.Ü. Merkez Kütüphanesi'ne adı verilen sayın Prof. Dr. Mustafa İnan hakkında bilgi edinebilirsiniz. Tüm bilgiler Oğuz Atay'ın İletişim Yayınevinden çıkan \"Bir Bilim Adamının Romanı\" adlı kitabından alınmıştır.\n      • Bir İnsan Olarak Mustafa İnan\n      • Mustafa İnan, seyyar posta memuru Hüseyin Avni Bey ile ev hanımı Rabia Hanım'ın çocuğu olarak 1911 tarihinde Adana'da dünyaya geldi. Kurtuluş Savaşı'nın başlamasıyla Fransız saldırısı sonucu 2.5 yıl kalacakları Konya'ya ailesi ile göç etti. Mustafa İnan orada Şehit Muhtar Bey mektebine gönderildi.\n      • Kurtuluş Savaşı bittikten sonra döndükleri Adana'da ilkokulu ve ortaokulu bitirdi. Ortaokul son sınıfta leyli meccani (parasız yatılı) sınavını kazanarak Adana'da yatılı okudu. Yatılı okuldaki lakabı 'Riyaziyeci (matematikçi) Mustafa' idi. 1931 yılında yatılı okulu birincilikle bitirdi.\n      • Ailesinin maddi durumunun kötü olmasından dolayı hayata hemen atılmak için kaydolduğu Fen Fakültesinden, üniversite hocası olma niyetiyle kaydını geri alarak, Mühendis Mektebine (şimdiki İTÜ) kayıt için başvurdu. Kayıt için yapılan giriş sınavında 1. olarak Mühendis Mektebine girdi.\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:14:16.836Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 22736,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewme0jqshuaz9u371",
+    "timestamp": "2025-08-29T09:18:05.894Z",
+    "userMessage": {
+      "content": "apa stilinde kaynakça nasıl yazılır",
+      "timestamp": "2025-08-29T09:18:05.892Z"
+    },
+    "agentResponse": {
+      "content": "<p>İTÜ'de kaynak gösterme biçimi olarak <b>APA 6th Ed.</b> kullanılmaktadır. APA'ya göre hazırlanmış kaynak örneklerini <b>İTÜ LEE Tez Yazım Şablonu</b>'nda bulabilirsiniz.</p>",
+      "timestamp": "2025-08-29T09:18:05.892Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl yazılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:18:05.892Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:18:05.892Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl yazılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:18:05.892Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:18:05.892Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6937,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewmec2xlkseiyfabll",
+    "timestamp": "2025-08-29T09:18:20.842Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T09:18:20.840Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T09:18:20.840Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:18:20.840Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:18:20.840Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:18:20.840Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:18:20.840Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 5064,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewmz9g9s107gnw52e",
+    "timestamp": "2025-08-29T09:34:37.209Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T09:34:37.208Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T09:34:37.208Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:34:37.207Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:34:37.207Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:34:37.207Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:34:37.207Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6223,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewmzk7k48x0jyr07m2",
+    "timestamp": "2025-08-29T09:34:51.152Z",
+    "userMessage": {
+      "content": "apa stilinde kaynakça nasıl yazılır",
+      "timestamp": "2025-08-29T09:34:51.150Z"
+    },
+    "agentResponse": {
+      "content": "<p>İTÜ'de kaynak gösterme biçimi olarak <b>APA 6th Ed.</b> kullanılmaktadır. APA'ya göre hazırlanmış kaynak örneklerini <b>İTÜ LEE Tez Yazım Şablonu</b>'nda bulabilirsiniz.</p>",
+      "timestamp": "2025-08-29T09:34:51.150Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl yazılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:34:51.150Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:34:51.150Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl yazılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:34:51.150Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. APA'ya göre hazırlanmış kaynak örneklerini İTÜ LEE Tez Yazım Şablonu'nda görebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:34:51.150Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 5630,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewn1ojw53d6kjve1r7",
+    "timestamp": "2025-08-29T09:36:30.092Z",
+    "userMessage": {
+      "content": "pinimi unuttum nasıl alabilirim",
+      "timestamp": "2025-08-29T09:36:30.089Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T09:36:30.089Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:36:30.089Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:36:30.089Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum nasıl alabilirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T09:36:30.089Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T09:36:30.089Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 5344,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewr8n3twos4isp2mj",
+    "timestamp": "2025-08-29T11:33:53.273Z",
+    "userMessage": {
+      "content": "pinimi unuttum",
+      "timestamp": "2025-08-29T11:33:53.271Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T11:33:53.271Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T11:33:53.271Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T11:33:53.271Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T11:33:53.271Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T11:33:53.271Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 5998,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewv32a66dv28bgsqsk",
+    "timestamp": "2025-08-29T13:21:31.470Z",
+    "userMessage": {
+      "content": "pinimi unuttum",
+      "timestamp": "2025-08-29T13:21:31.445Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T13:21:31.445Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:21:31.445Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:21:31.445Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "pinimi unuttum"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:21:31.445Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:21:31.445Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6787,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewv3m1ykd783exirrd",
+    "timestamp": "2025-08-29T13:21:57.094Z",
+    "userMessage": {
+      "content": "görsel işitsel materyaller ödünç alınabiliyor mu",
+      "timestamp": "2025-08-29T13:21:57.093Z"
+    },
+    "agentResponse": {
+      "content": "<p><b>Görsel-işitsel materyaller (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) ödünç alınabilmektedir.</b></p><p><b>Ödünç verme kuralları şunlardır:</b></p><ul><li>Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.</li><li>Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır. Ancak, son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.</li><li>Materyalin kaybolması veya zarar görmesi durumunda kayıp materyal işlemi uygulanır.</li><li>Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.</li><li>Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini <a href=\"Kullanıcı Hesabım\">Kullanıcı Hesabım</a> bağlantısını kullanarak uzatma işleminizi yapabilirsiniz.</li></ul>",
+      "timestamp": "2025-08-29T13:21:57.093Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "görsel işitsel materyaller ödünç alma"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:21:57.093Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Görsel-işitsel materyaller (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) basılı olmayan materyallerden oluşmaktadır. Bu bölümün amacı, üniversitedeki eğitim-öğretim programları, araştırmacılar ve kullanıcıların kültürel ihtiyaçlarını desteklemek ve bu materyallerin kullanımı için ihtiyaç duyulan araç ve gereçleri kullanıcı hizmetine sunmaktır.\n\nGörsel-işitsel materyallerden yararlanma ve ödünç verme kuralları şunlardır:\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır. Ancak, son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n*   Materyalin kaybolması veya zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n*   Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini <a href=\"Kullanıcı Hesabım\">Kullanıcı Hesabım</a> bağlantısını kullanarak uzatma işleminizi yapabilirsiniz.\n\nKaynaklar:\n*   Sayfa 17\n*   Sayfa 13",
+        "output": "Görsel-işitsel materyaller (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) basılı olmayan materyallerden oluşmaktadır. Bu bölümün amacı, üniversitedeki eğitim-öğretim programları, araştırmacılar ve kullanıcıların kültürel ihtiyaçlarını desteklemek ve bu materyallerin kullanımı için ihtiyaç duyulan araç ve gereçleri kullanıcı hizmetine sunmaktır.\n\nGörsel-işitsel materyallerden yararlanma ve ödünç verme kuralları şunlardır:\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır. Ancak, son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n*   Materyalin kaybolması veya zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n*   Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini <a href=\"Kullanıcı Hesabım\">Kullanıcı Hesabım</a> bağlantısını kullanarak uzatma işleminizi yapabilirsiniz.\n\nKaynaklar:\n*   Sayfa 17\n*   Sayfa 13",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:21:57.093Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "görsel işitsel materyaller ödünç alma"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:21:57.093Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Görsel-işitsel materyaller (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) basılı olmayan materyallerden oluşmaktadır. Bu bölümün amacı, üniversitedeki eğitim-öğretim programları, araştırmacılar ve kullanıcıların kültürel ihtiyaçlarını desteklemek ve bu materyallerin kullanımı için ihtiyaç duyulan araç ve gereçleri kullanıcı hizmetine sunmaktır.\n\nGörsel-işitsel materyallerden yararlanma ve ödünç verme kuralları şunlardır:\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır. Ancak, son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n*   Materyalin kaybolması veya zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n*   Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini <a href=\"Kullanıcı Hesabım\">Kullanıcı Hesabım</a> bağlantısını kullanarak uzatma işleminizi yapabilirsiniz.\n\nKaynaklar:\n*   Sayfa 17\n*   Sayfa 13",
+        "output": "Görsel-işitsel materyaller (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) basılı olmayan materyallerden oluşmaktadır. Bu bölümün amacı, üniversitedeki eğitim-öğretim programları, araştırmacılar ve kullanıcıların kültürel ihtiyaçlarını desteklemek ve bu materyallerin kullanımı için ihtiyaç duyulan araç ve gereçleri kullanıcı hizmetine sunmaktır.\n\nGörsel-işitsel materyallerden yararlanma ve ödünç verme kuralları şunlardır:\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır. Ancak, son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n*   Materyalin kaybolması veya zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n*   Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini <a href=\"Kullanıcı Hesabım\">Kullanıcı Hesabım</a> bağlantısını kullanarak uzatma işleminizi yapabilirsiniz.\n\nKaynaklar:\n*   Sayfa 17\n*   Sayfa 13",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:21:57.093Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 11784,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewv4au4x1d36uym81",
+    "timestamp": "2025-08-29T13:22:29.212Z",
+    "userMessage": {
+      "content": "kampüs dışı erişim ayarları nasıl",
+      "timestamp": "2025-08-29T13:22:29.211Z"
+    },
+    "agentResponse": {
+      "content": "<p>Veritabanlarına kampüs dışından erişmek için, her veritabanı adının altında bulunan <b>Kampüs Dışı</b> bağlantısını kullanmanız gerekmektedir. Elektronik kaynaklara kampüs dışından erişim hizmetinden yararlanabilmek için kütüphane üyeliği gerekmektedir.</p>",
+      "timestamp": "2025-08-29T13:22:29.211Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kampüs dışı erişim ayarları nasıl"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:22:29.211Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nElektronik kaynaklara kampüs dışı erişim hizmetinden yararlanabilmek için kütüphane üyeliği gerekmektedir.\n\nKaynaklar:\n- BAĞLAM (sayfa belirtilmemiş)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nElektronik kaynaklara kampüs dışı erişim hizmetinden yararlanabilmek için kütüphane üyeliği gerekmektedir.\n\nKaynaklar:\n- BAĞLAM (sayfa belirtilmemiş)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:22:29.211Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kampüs dışı erişim ayarları nasıl"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:22:29.211Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nElektronik kaynaklara kampüs dışı erişim hizmetinden yararlanabilmek için kütüphane üyeliği gerekmektedir.\n\nKaynaklar:\n- BAĞLAM (sayfa belirtilmemiş)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nElektronik kaynaklara kampüs dışı erişim hizmetinden yararlanabilmek için kütüphane üyeliği gerekmektedir.\n\nKaynaklar:\n- BAĞLAM (sayfa belirtilmemiş)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:22:29.211Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6976,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewv6ampgrpv3f90zzi",
+    "timestamp": "2025-08-29T13:24:02.257Z",
+    "userMessage": {
+      "content": "31. Kütüphaneler arası ödünç verme (ILL - Interlibrary Loan) hizmetiniz var mı?",
+      "timestamp": "2025-08-29T13:24:02.256Z"
+    },
+    "agentResponse": {
+      "content": "<p>Evet, İTÜ Kütüphanesi'nin Kütüphanelerarası Ödünç Yayın / Belge Sağlama (ILL - Interlibrary Loan) hizmeti bulunmaktadır. Bu hizmet, İTÜ Kütüphane koleksiyonlarında bulamadığınız ancak kısa süreliğine kullanmak istediğiniz kitapları veya basılı/elektronik makaleleri diğer kurumlardan belli bir süreliğine getirtmek için sunulmaktadır.</p><br><p><b>Hizmetten Yararlanma Koşulları:</b></p><ul><li>İTÜ öğretim elemanları, öğrencileri ve idari personeli kütüphane üyeliğine sahip olmalıdır.</li><li>Üye olan İTÜ emekli personeli bu hizmetten yararlanamaz.</li><li>İsteğinizi iletmek için kütüphanelerarası kitap ödünç alma formunu veya kütüphanelerarası ödünç belge sağlama formunu doldurmanız gerekmektedir.</li><li>Kullanıcılar, getirttiği yayını 1 ay içinde almaz veya ücretini ödemezse yeni bir istekte bulunamaz ve ödünç verme hizmetlerinden yararlanamaz.</li><li>Kütüphanelerarası ödünç yayın/belge sağlama hizmeti aracılığı ile yapılan istekler sonucu doğacak tüm masrafları (basılı/elektronik kopya, posta ücreti vb.) istekte bulunan kullanıcı karşılar.</li><li>Yurt içinden sağlanamayan yayın, kullanıcının istemesi durumunda yurt dışından sağlanabilmektedir. Yurt dışındaki kütüphaneler kendi ücret politikalarına göre yayın başına ücret almaktadır. Bu nedenle kullanıcılar istedikleri yayın için ödeyebilecekleri miktarı USD cinsinden Maximum Cost alanında belirtmelidir.</li><li>Yurt dışından sağlanan yayınlarda karşı kütüphaneye ödenecek ücretin tamamı ve ödünç alınan yayın için posta ve varsa gümrük ücreti kullanıcıdan alınır.</li><li>Cezaları ödemeyen kullanıcılar bu hizmetten yararlanamaz.</li></ul>",
+      "timestamp": "2025-08-29T13:24:02.256Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Kütüphaneler arası ödünç verme hizmeti"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:24:02.255Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kütüphanelerarası ödünç yayın / belge sağlama hizmeti, İTÜ Kütüphane koleksiyonlarında bulamadığınız ancak kısa süreliğine kullanmak istediğiniz kitapları veya basılı/elektronik makaleleri diğer kurumlardan belli bir süreliğine getirtmek için sunulan bir hizmettir.\n\nBu hizmetten yararlanabilmek için:\n*   İTÜ öğretim elemanları, öğrencileri ve idari personeli kütüphane üyeliğine sahip olmalıdır.\n*   Üye olan İTÜ emekli personeli bu hizmetten yararlanamaz.\n\n**Hizmetten Yararlanma Koşulları:**\n*   İsteğinizi iletmek için kütüphanelerarası kitap ödünç alma formunu veya kütüphanelerarası ödünç belge sağlama formunu doldurmanız gerekmektedir.\n*   Kullanıcılar, getirttiği yayını 1 ay içinde almaz veya ücretini ödemezse yeni bir istekte bulunamaz ve ödünç verme hizmetlerinden yararlanamaz.\n*   Kütüphanelerarası ödünç yayın/belge sağlama hizmeti aracılığı ile yapılan istekler sonucu doğacak tüm masrafları (basılı/elektronik kopya, posta ücreti vb.) istekte bulunan kullanıcı karşılar.\n*   Yurt içinden sağlanamayan yayın, kullanıcının istemesi durumunda yurt dışından sağlanabilmektedir. Yurt dışındaki kütüphaneler kendi ücret politikalarına göre yayın başına ücret almaktadır. Bu nedenle kullanıcılar istedikleri yayın için ödeyebilecekleri miktarı USD cinsinden Maximum Cost alanında belirtmelidir.\n*   Yurt dışından sağlanan yayınlarda karşı kütüphaneye ödenecek ücretin tamamı ve ödünç alınan yayın için posta ve varsa gümrük ücreti kullanıcıdan alınır.\n*   Cezaları ödemeyen kullanıcılar bu hizmetten yararlanamaz.\n\n**Kaynaklar:**\n*   BAĞLAM, sayfa 12\n*   BAĞLAM, sayfa 15\n*   BAĞLAM, sayfa 26",
+        "output": "Kütüphanelerarası ödünç yayın / belge sağlama hizmeti, İTÜ Kütüphane koleksiyonlarında bulamadığınız ancak kısa süreliğine kullanmak istediğiniz kitapları veya basılı/elektronik makaleleri diğer kurumlardan belli bir süreliğine getirtmek için sunulan bir hizmettir.\n\nBu hizmetten yararlanabilmek için:\n*   İTÜ öğretim elemanları, öğrencileri ve idari personeli kütüphane üyeliğine sahip olmalıdır.\n*   Üye olan İTÜ emekli personeli bu hizmetten yararlanamaz.\n\n**Hizmetten Yararlanma Koşulları:**\n*   İsteğinizi iletmek için kütüphanelerarası kitap ödünç alma formunu veya kütüphanelerarası ödünç belge sağlama formunu doldurmanız gerekmektedir.\n*   Kullanıcılar, getirttiği yayını 1 ay içinde almaz veya ücretini ödemezse yeni bir istekte bulunamaz ve ödünç verme hizmetlerinden yararlanamaz.\n*   Kütüphanelerarası ödünç yayın/belge sağlama hizmeti aracılığı ile yapılan istekler sonucu doğacak tüm masrafları (basılı/elektronik kopya, posta ücreti vb.) istekte bulunan kullanıcı karşılar.\n*   Yurt içinden sağlanamayan yayın, kullanıcının istemesi durumunda yurt dışından sağlanabilmektedir. Yurt dışındaki kütüphaneler kendi ücret politikalarına göre yayın başına ücret almaktadır. Bu nedenle kullanıcılar istedikleri yayın için ödeyebilecekleri miktarı USD cinsinden Maximum Cost alanında belirtmelidir.\n*   Yurt dışından sağlanan yayınlarda karşı kütüphaneye ödenecek ücretin tamamı ve ödünç alınan yayın için posta ve varsa gümrük ücreti kullanıcıdan alınır.\n*   Cezaları ödemeyen kullanıcılar bu hizmetten yararlanamaz.\n\n**Kaynaklar:**\n*   BAĞLAM, sayfa 12\n*   BAĞLAM, sayfa 15\n*   BAĞLAM, sayfa 26",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:24:02.256Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Kütüphaneler arası ödünç verme hizmeti"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:24:02.255Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kütüphanelerarası ödünç yayın / belge sağlama hizmeti, İTÜ Kütüphane koleksiyonlarında bulamadığınız ancak kısa süreliğine kullanmak istediğiniz kitapları veya basılı/elektronik makaleleri diğer kurumlardan belli bir süreliğine getirtmek için sunulan bir hizmettir.\n\nBu hizmetten yararlanabilmek için:\n*   İTÜ öğretim elemanları, öğrencileri ve idari personeli kütüphane üyeliğine sahip olmalıdır.\n*   Üye olan İTÜ emekli personeli bu hizmetten yararlanamaz.\n\n**Hizmetten Yararlanma Koşulları:**\n*   İsteğinizi iletmek için kütüphanelerarası kitap ödünç alma formunu veya kütüphanelerarası ödünç belge sağlama formunu doldurmanız gerekmektedir.\n*   Kullanıcılar, getirttiği yayını 1 ay içinde almaz veya ücretini ödemezse yeni bir istekte bulunamaz ve ödünç verme hizmetlerinden yararlanamaz.\n*   Kütüphanelerarası ödünç yayın/belge sağlama hizmeti aracılığı ile yapılan istekler sonucu doğacak tüm masrafları (basılı/elektronik kopya, posta ücreti vb.) istekte bulunan kullanıcı karşılar.\n*   Yurt içinden sağlanamayan yayın, kullanıcının istemesi durumunda yurt dışından sağlanabilmektedir. Yurt dışındaki kütüphaneler kendi ücret politikalarına göre yayın başına ücret almaktadır. Bu nedenle kullanıcılar istedikleri yayın için ödeyebilecekleri miktarı USD cinsinden Maximum Cost alanında belirtmelidir.\n*   Yurt dışından sağlanan yayınlarda karşı kütüphaneye ödenecek ücretin tamamı ve ödünç alınan yayın için posta ve varsa gümrük ücreti kullanıcıdan alınır.\n*   Cezaları ödemeyen kullanıcılar bu hizmetten yararlanamaz.\n\n**Kaynaklar:**\n*   BAĞLAM, sayfa 12\n*   BAĞLAM, sayfa 15\n*   BAĞLAM, sayfa 26",
+        "output": "Kütüphanelerarası ödünç yayın / belge sağlama hizmeti, İTÜ Kütüphane koleksiyonlarında bulamadığınız ancak kısa süreliğine kullanmak istediğiniz kitapları veya basılı/elektronik makaleleri diğer kurumlardan belli bir süreliğine getirtmek için sunulan bir hizmettir.\n\nBu hizmetten yararlanabilmek için:\n*   İTÜ öğretim elemanları, öğrencileri ve idari personeli kütüphane üyeliğine sahip olmalıdır.\n*   Üye olan İTÜ emekli personeli bu hizmetten yararlanamaz.\n\n**Hizmetten Yararlanma Koşulları:**\n*   İsteğinizi iletmek için kütüphanelerarası kitap ödünç alma formunu veya kütüphanelerarası ödünç belge sağlama formunu doldurmanız gerekmektedir.\n*   Kullanıcılar, getirttiği yayını 1 ay içinde almaz veya ücretini ödemezse yeni bir istekte bulunamaz ve ödünç verme hizmetlerinden yararlanamaz.\n*   Kütüphanelerarası ödünç yayın/belge sağlama hizmeti aracılığı ile yapılan istekler sonucu doğacak tüm masrafları (basılı/elektronik kopya, posta ücreti vb.) istekte bulunan kullanıcı karşılar.\n*   Yurt içinden sağlanamayan yayın, kullanıcının istemesi durumunda yurt dışından sağlanabilmektedir. Yurt dışındaki kütüphaneler kendi ücret politikalarına göre yayın başına ücret almaktadır. Bu nedenle kullanıcılar istedikleri yayın için ödeyebilecekleri miktarı USD cinsinden Maximum Cost alanında belirtmelidir.\n*   Yurt dışından sağlanan yayınlarda karşı kütüphaneye ödenecek ücretin tamamı ve ödünç alınan yayın için posta ve varsa gümrük ücreti kullanıcıdan alınır.\n*   Cezaları ödemeyen kullanıcılar bu hizmetten yararlanamaz.\n\n**Kaynaklar:**\n*   BAĞLAM, sayfa 12\n*   BAĞLAM, sayfa 15\n*   BAĞLAM, sayfa 26",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:24:02.256Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 21860,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mewv8mqg2hqkem4raen",
+    "timestamp": "2025-08-29T13:25:51.256Z",
+    "userMessage": {
+      "content": "apa stilinde kaynakça nasıl yazolır",
+      "timestamp": "2025-08-29T13:25:51.253Z"
+    },
+    "agentResponse": {
+      "content": "<p>İTÜ'de kaynak gösterme biçimi olarak <b>APA 6. Sürüm</b> kullanılmaktadır. APA'ya göre hazırlanmış kaynak örneklerini <b>İTÜ LEE Tez Yazım Şablonu</b>'nda bulabilirsiniz.</p><br><p>Ancak, adım adım kaynakça yazım prosedürü hakkında belgemde yeterli bilgi bulunmamaktadır. Daha detaylı bilgi için lütfen kütüphanedeki referans kütüphanecilerine danışın veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-08-29T13:25:51.253Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl yazılır adım adım prosedür"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:25:51.253Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İlgili bilgi:\nİTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. İTÜ LEE Tez Yazım Şablonu'nda APA'ya göre hazırlanmış kaynak örnekleri görülebilir.\n\nÜzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İlgili bilgi:\nİTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. İTÜ LEE Tez Yazım Şablonu'nda APA'ya göre hazırlanmış kaynak örnekleri görülebilir.\n\nÜzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:25:51.253Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "APA stilinde kaynakça nasıl yazılır adım adım prosedür"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-08-29T13:25:51.253Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İlgili bilgi:\nİTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. İTÜ LEE Tez Yazım Şablonu'nda APA'ya göre hazırlanmış kaynak örnekleri görülebilir.\n\nÜzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İlgili bilgi:\nİTÜ'de kaynak gösterme biçimi olarak APA 6th Ed. kullanılmaktadır. Çok sayıda kaynak gösterme biçimi olmasına rağmen hemen hepsinde aynı bilgiler yer almakta, bilginin sunuş sırası ve düzeni farklı olabilmektedir. İTÜ LEE Tez Yazım Şablonu'nda APA'ya göre hazırlanmış kaynak örnekleri görülebilir.\n\nÜzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 38\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-08-29T13:25:51.253Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 8861,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  }
+]

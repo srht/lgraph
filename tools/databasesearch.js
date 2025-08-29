@@ -7,7 +7,7 @@ import { z } from "zod";
  */
 export const createDatabaseSearchTool = () => {
   const name = "get_library_databases";
-  const description = `Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.`;
+  const description = `Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.`;
 
   const fn = async (args) => {
     // Handle different input formats for compatibility

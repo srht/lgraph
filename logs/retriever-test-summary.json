@@ -1,0 +1,62 @@
+[{
+  "timestamp": "2025-08-29T08:28:43.804Z",
+  "data": {
+    "testSummary": {
+      "total": 8,
+      "successful": 8,
+      "failed": 0,
+      "totalDuration": 71778,
+      "avgDuration": 8972
+    },
+    "results": [
+      {
+        "query": "pinimi unuttum nasıl alabilirim",
+        "success": true,
+        "duration": 2978,
+        "result": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+      },
+      {
+        "query": "kütüphane kartı şifremi unuttum",
+        "success": true,
+        "duration": 5300,
+        "result": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\nİlgili bilgi:\nKütüphane kullanımı konusunda karşılaşacağınız sorunlar için Mustafa İnan Kütüphanesi Giriş Katı’ndaki Danışma Masası’nda görev yapan referans kütüphanecilerinden veya Şube Kütüphanelerinde uzman kütüphanecilerden yardım alabilirsiniz.\n\nKaynaklar:\n- Sayfa 9\n- Sayfa 14"
+      },
+      {
+        "query": "öğrenci ödünç alma kuralları",
+        "success": true,
+        "duration": 8706,
+        "result": "Öğrencilerin ödünç alma kuralları aşağıdaki gibidir:\n\n*   İTÜ öğrencileri, İTÜ kimlik kartları ile kütüphaneye üye olabilir ve kendileri için yayın ödünç alabilirler.\n*   Üyeler başkası için, başkası adına yayın ödünç alamazlar.\n*   Ödünç Verme Hizmeti’nden yararlanılırken, İTÜ kimlik kartı kullanılmak zorundadır.\n*   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar ödünç verme hizmetinden yararlanamaz.\n*   Şube kütüphaneleri kapanmadan 15 dakika önce ödünç alma işlemlerini yaptırmaları gerekir.\n*   Başka bir kullanıcı tarafından ayırtılmadıysa üzerinizdeki yayının iade süresini Kullanıcı Hesabım bağlantısını kullanarak uzatma işleminizi yapabilirsiniz.\n*   Zamanında iade edilmeyen yayınlar için her materyal türüne göre farklı periyodlarda artan cezalar uygulanır.\n\n**Rezerv Yayınlar Koleksiyonu Ödünç Verme Kuralları (Öğrenciler İçin):**\n\n*   Rezerv Koleksiyonu’ndaki yayınlar iki saatlik ve 1 günlük ödünç verilebilir.\n*   Ders yayınına uzatma işlemi yapılmaz.\n*   Zamanında iade edilmeyen ders yayınına saatlik gecikme cezası uygulanır. Gecikme ücreti saat başına 2 TL’dir.\n*   Ders yayınını 3 kereden fazla zamanında iade etmeyen öğrencinin ders yayını kullanım hakkı 1 dönem boyunca kaldırılır.\n\n**İlgili bilgi:**\n\n*   Mezun olacak ve kayıtları silinecek olan öğrenciler kütüphaneden ilişik kesme belgesi almak zorundadırlar.\n*   Aktif statüde olup uyarılara rağmen borçlarını ödemeyen öğrencilerin öğrenci işlerindeki kayıtlarına İTÜ KDDB tarafından blok konulur.\n\n**Kaynaklar:**\n*   Sayfa 9\n*   Sayfa 19\n*   Sayfa 31"
+      },
+      {
+        "query": "kitap rezervasyon nasıl yapılır",
+        "success": true,
+        "duration": 20651,
+        "result": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+      },
+      {
+        "query": "kütüphane çalışma saatleri",
+        "success": true,
+        "duration": 3014,
+        "result": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- BAĞLAM (Mustafa İnan Kütüphanesi 7/24 açıktır.)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+      },
+      {
+        "query": "veritabanı erişimi nasıl sağlanır",
+        "success": true,
+        "duration": 3887,
+        "result": "Veritabanlarına erişim sağlamak için:\n\n*   İTÜ Kütüphaneleri web sayfasında \"Araştırma\" menüsü altında sunulan veritabanları ve içeriklerine ulaşabilirsiniz.\n*   Doğrudan <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a> linkinden veritabanlarına erişebilirsiniz.\n*   İlgili veritabanına kampüs içinden veya mevcutsa kampüs dışı bağlantısından erişebilirsiniz. Kampüs dışından erişim için her veritabanı adı altında yer alan \"Kampüs Dışı\" bağlantısı kullanılmalıdır.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 17\n*   BAĞLAM metni | Sayfa 13 (Veritabanları bölümü)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+      },
+      {
+        "query": "referans kütüphaneci iletişim",
+        "success": true,
+        "duration": 9018,
+        "result": "Referans kütüphanecileri ile aşağıdaki yollarla iletişime geçebilirsiniz:\n\n*   **Doğrudan:** Mustafa İnan Kütüphanesi'nin giriş katında bulunan Danışma Bankosu'na veya şube kütüphanelerdeki danışma bankolarında görev yapan uzman kütüphanecilere sorularınızı iletebilirsiniz.\n*   **Web Sitesi Üzerinden:** Web sitesindeki \"Kütüphaneciye Danış\" sayfasında iletişim bilgilerini bulabilirsiniz.\n*   **Elektronik Posta, Telefon ve Sosyal Medya:** Referans kütüphanecisi ile bu kanallar aracılığıyla iletişime geçebilirsiniz.\n*   **Canlı Destek:** Günün belirli saatlerinde web üzerinden canlı destek alabilirsiniz. Kampüs dışındaysanız İTÜ Kütüphane anasayfasından canlı destek hizmetine bağlanabilirsiniz.\n\n**Kaynaklar:**\n*   Elektronik Kaynaklar ve Akademik Araştırma Hizmetleri (Sayfa 2)\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 52\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 59\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+      },
+      {
+        "query": "uzaktan erişim nasıl yapılır",
+        "success": true,
+        "duration": 18224,
+        "result": "Uzaktan erişim nasıl yapılır sorusuna doğrudan bir yanıt bulunmamakla birlikte, kütüphane kaynaklarına erişimle ilgili aşağıdaki bilgiler mevcuttur:\n\nİlgili bilgi:\n*   **Belirli bir makaleye tam metin olarak ulaşmak için:** Kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna makalenin ismini veya konusunu yazarak arama yapabilirsiniz. Ortaya çıkan sonuçlardan, aradığınız makaleye ulaşım seçeneklerine göre ya makaleyi doğrudan indirebilir ya da yönlendirme linkine tıklayarak makalenin bulunduğu veritabanına yönlendirilerek makaleyi indirebilirsiniz. Ayrıca, kütüphanenin abone olduğu veritabanlarını, Google Scholar'ı veya açık erişim dergilerini kullanarak da makaleyi arayabilirsiniz.\n*   **Patent ve standartlara erişim için:** Kütüphanenin veritabanları sayfasını ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a>. Bu sayfada sol tarafta bulunan yayın türü bölümünde filtreleme yaparak ilgili veritabanlarını bulabilirsiniz.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım?\n*   Kütüphane Kaynakları: \"Tam metin olarak ulaşmak istediğiniz makalenin kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna ismini yazınız...\"\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 19: 46. Patent ve standartlara nasıl erişim sağlayabilirim?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+      }
+    ]
+  }
+}]

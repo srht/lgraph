@@ -12,7 +12,7 @@ import { z } from "zod";
  * @param {Object} chatLogger - Optional chat logger with logChat method
  * @returns {Object} LangGraph compatible tool
  */
-export function createDocumentSearchTool(
+export default function createDocumentSearchTool(
   documentProcessor,
   chatModel,
   chatLogger
@@ -133,6 +133,3 @@ export function createDocumentSearchTool(
 
   return getInformationFromDocumentsTool;
 }
-
-// Export the tool creation function
-export default createDocumentSearchTool;
