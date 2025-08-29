@@ -1,6 +1,6 @@
 # LGraph - LangGraph Compatible Library Tools
 
-Bu proje, ITU Kütüphanesi için LangGraph ve ESM import/export uyumlu araçları içerir. Uygulama başlatıldığında `data/` klasöründeki tüm PDF, Excel ve TXT dosyaları otomatik olarak yüklenir ve vektör deposuna eklenir.
+Bu proje, LangGraph ve ESM import/export uyumlu araçları içerir. Uygulama başlatıldığında `data/` klasöründeki tüm PDF, Excel ve TXT dosyaları otomatik olarak yüklenir ve vektör deposuna eklenir.
 
 ## 🚀 Özellikler
 
