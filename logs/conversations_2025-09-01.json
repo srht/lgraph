@@ -600,5 +600,2167 @@
       "totalLLMCalls": 0,
       "hasErrors": false
     }
+  },
+  {
+    "id": "mf13ee2spsblltnmlbs",
+    "timestamp": "2025-09-01T12:25:21.604Z",
+    "userMessage": {
+      "content": "Dergi koleksiyonunuz nerede?",
+      "timestamp": "2025-09-01T12:25:21.604Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p>Süreli Yayınlar (dergiler) koleksiyonu <b>İkinci ve Üçüncü Katta</b> yer almaktadır.</p>",
+      "timestamp": "2025-09-01T12:25:21.604Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "dergi koleksiyonu nerede"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:25:21.604Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Süreli Yayınlar (dergiler) koleksiyonu İkinci ve Üçüncü Katta yer almaktadır.\n\nKaynaklar:\n- Sayfa 14\n- Sayfa 18",
+        "output": "Süreli Yayınlar (dergiler) koleksiyonu İkinci ve Üçüncü Katta yer almaktadır.\n\nKaynaklar:\n- Sayfa 14\n- Sayfa 18",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:25:21.604Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "dergi koleksiyonu nerede"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:25:21.604Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Süreli Yayınlar (dergiler) koleksiyonu İkinci ve Üçüncü Katta yer almaktadır.\n\nKaynaklar:\n- Sayfa 14\n- Sayfa 18",
+        "output": "Süreli Yayınlar (dergiler) koleksiyonu İkinci ve Üçüncü Katta yer almaktadır.\n\nKaynaklar:\n- Sayfa 14\n- Sayfa 18",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:25:21.604Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 4439,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13ewh04zololmpfzq",
+    "timestamp": "2025-09-01T12:25:45.444Z",
+    "userMessage": {
+      "content": "Güncel gazetelere nereden ulaşabilirim?",
+      "timestamp": "2025-09-01T12:25:45.443Z"
+    },
+    "agentResponse": {
+      "content": "<p>Güncel gazetelere aşağıdaki veritabanları aracılığıyla ulaşabilirsiniz:</p>\n<ul>\n<li><b>Gazeteden Tarihe Bakış Projesi:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6599\">Erişim</a></li>\n<li><b>Asian & European Business Collection:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6752\">Erişim</a></li>\n<li><b>Belt and Road Initiative Reference Source (Tüm Alanlar):</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6614\">Erişim</a></li>\n<li><b>Canadian Newsstream:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6757\">Erişim</a></li>\n<li><b>Gravür Dünyası Dijital Gravür Kütüphanesi:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6851\">Erişim</a></li>\n<li><b>International Newsstream:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6773\">Erişim</a></li>\n<li><b>Newspaper Source Plus:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6364\">Erişim</a></li>\n<li><b>PressReader (newspapers, magazines):</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6655\">Erişim</a></li>\n<li><b>ProQuest Central:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6746\">Erişim</a></li>\n<li><b>Resmi Gazete:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6297\">Erişim</a></li>\n</ul>",
+      "timestamp": "2025-09-01T12:25:45.443Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "gazete"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:25:45.443Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "[{\"name\":\"Gazeteden Tarihe Bakış Projesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6599\"},{\"name\":\"Asian & European Business Collection\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6752\"},{\"name\":\"Belt and Road Initiative Reference Source (Tüm Alanlar)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6614\"},{\"name\":\"Canadian Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6757\"},{\"name\":\"Gravür Dünyası Dijital Gravür Kütüphanesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6851\"},{\"name\":\"International Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6773\"},{\"name\":\"Newspaper Source Plus\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6364\"},{\"name\":\"PressReader (newspapers, magazines)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6655\"},{\"name\":\"ProQuest Central\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6746\"},{\"name\":\"Resmi Gazete\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6297\"}]",
+        "output": "[{\"name\":\"Gazeteden Tarihe Bakış Projesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6599\"},{\"name\":\"Asian & European Business Collection\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6752\"},{\"name\":\"Belt and Road Initiative Reference Source (Tüm Alanlar)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6614\"},{\"name\":\"Canadian Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6757\"},{\"name\":\"Gravür Dünyası Dijital Gravür Kütüphanesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6851\"},{\"name\":\"International Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6773\"},{\"name\":\"Newspaper Source Plus\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6364\"},{\"name\":\"PressReader (newspapers, magazines)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6655\"},{\"name\":\"ProQuest Central\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6746\"},{\"name\":\"Resmi Gazete\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6297\"}]",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:25:45.443Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "gazete"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:25:45.443Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "[{\"name\":\"Gazeteden Tarihe Bakış Projesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6599\"},{\"name\":\"Asian & European Business Collection\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6752\"},{\"name\":\"Belt and Road Initiative Reference Source (Tüm Alanlar)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6614\"},{\"name\":\"Canadian Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6757\"},{\"name\":\"Gravür Dünyası Dijital Gravür Kütüphanesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6851\"},{\"name\":\"International Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6773\"},{\"name\":\"Newspaper Source Plus\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6364\"},{\"name\":\"PressReader (newspapers, magazines)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6655\"},{\"name\":\"ProQuest Central\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6746\"},{\"name\":\"Resmi Gazete\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6297\"}]",
+        "output": "[{\"name\":\"Gazeteden Tarihe Bakış Projesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6599\"},{\"name\":\"Asian & European Business Collection\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6752\"},{\"name\":\"Belt and Road Initiative Reference Source (Tüm Alanlar)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6614\"},{\"name\":\"Canadian Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6757\"},{\"name\":\"Gravür Dünyası Dijital Gravür Kütüphanesi\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6851\"},{\"name\":\"International Newsstream\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6773\"},{\"name\":\"Newspaper Source Plus\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6364\"},{\"name\":\"PressReader (newspapers, magazines)\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6655\"},{\"name\":\"ProQuest Central\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6746\"},{\"name\":\"Resmi Gazete\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6297\"}]",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:25:45.443Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 5533,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13fh4eo6hfzeqz0zn",
+    "timestamp": "2025-09-01T12:26:12.206Z",
+    "userMessage": {
+      "content": "Bir kitabın rezerve (hold) işlemini nasıl yaparım?",
+      "timestamp": "2025-09-01T12:26:12.205Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p><b>Yayın Ayırtma (Hold) İşlemi Nasıl Yapılır:</b><br>Bir yayını rezerve etmek için aşağıdaki adımları takip edebilirsiniz:<br><br><b>1. Koşullar:</b><br><ul><li>Ayırtmak istediğiniz yayın başka bir kullanıcı tarafından ödünç alınmış olmalıdır.</li><li>Katalog Tarama'da statüsü \"RAFTA\" görünen yayınlara ayırtma işlemi yapılamaz.</li><li>Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar yayın ayırtma işlemi yapamaz.</li><li>Ayırtılacak yayın sayısı, kullanıcının ödünç alabileceği yayın sayısı kadar olabilir.</li></ul><br><b>2. Ayırtma İşlemi:</b><br><ul><li>Kütüphane otomasyon sistemi üzerinden, yayın ile ilgili bilgilerin bulunduğu ekrandaki \"İstek / Request\" veya \"İstek Yap\" butonunu kullanabilirsiniz.</li><li>Alternatif olarak, ödünç verme bankolarından da yayın ayırtma işlemi yapabilirsiniz.</li></ul><br><b>3. Bildirim:</b><br><ul><li>Ayırtılan yayın önceki kullanıcı tarafından iade edildiğinde veya herhangi bir nedenle yayın ayırtma işlemi iptal edildiğinde, bu durum size e-posta mesajı ile bildirilir.</li></ul><br><b>4. Teslim Alma:</b><br><ul><li>Ayırtılan yayın, size bildirilen tarihten itibaren 3 gün içinde Ödünç Verme Bankosu'ndan alınmalıdır.</li><li>3 gün içinde alınmadığı takdirde sıradaki kullanıcıya verilir. Yayını bekleyen kullanıcı bulunmuyorsa yayın rafına gönderilir.</li></ul></p>",
+      "timestamp": "2025-09-01T12:26:12.205Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "yayın ayırtma nasıl yapılır adım adım prosedür"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:26:12.205Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Yayın ayırtma işlemi aşağıdaki adımlarla yapılabilir:\n\n1.  **Koşullar:**\n    *   Kullanmak istediğiniz yayın bir başka kullanıcı tarafından ödünç alınmış olmalıdır.\n    *   Katalog Tarama'da statüsü \"RAFTA\" görünen yayınlara ayırtma işlemi yapılmaz.\n    *   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar yayın ayırtma işlemi yapamaz.\n    *   Ayırtılacak yayın sayısı, kullanıcının ödünç alabileceği yayın sayısı kadar olabilir.\n\n2.  **Ayırtma İşlemi:**\n    *   Kütüphane otomasyon sistemi üzerinden, yayın ile ilgili bilgilerin bulunduğu ekrandaki \"İstek / Request\" veya \"İstek Yap\" butonunu kullanabilirsiniz.\n    *   Alternatif olarak, ödünç verme bankolarından da yayın ayırtma işlemi yapabilirsiniz.\n\n3.  **Bildirim:**\n    *   Ayırtılan yayın önceki kullanıcı tarafından iade edildiğinde veya herhangi bir nedenle yayın ayırtma işlemi iptal edildiğinde, bu durum size e-posta mesajı ile bildirilir.\n\n4.  **Teslim Alma:**\n    *   Ayırtılan yayın, size bildirilen tarihten itibaren 3 gün içinde Ödünç Verme Bankosu'ndan alınmalıdır.\n    *   3 gün içinde alınmadığı takdirde sıradaki kullanıcıya verilir. Yayını bekleyen kullanıcı bulunmuyorsa yayın rafına gönderilir.\n\n**Kaynaklar:**\n*   BAĞLAM metni | Sayfa: 11 (3.2.6 Yayın ayırtma ve Yayın Ayırtma bölümleri)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Yayın ayırtma işlemi aşağıdaki adımlarla yapılabilir:\n\n1.  **Koşullar:**\n    *   Kullanmak istediğiniz yayın bir başka kullanıcı tarafından ödünç alınmış olmalıdır.\n    *   Katalog Tarama'da statüsü \"RAFTA\" görünen yayınlara ayırtma işlemi yapılmaz.\n    *   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar yayın ayırtma işlemi yapamaz.\n    *   Ayırtılacak yayın sayısı, kullanıcının ödünç alabileceği yayın sayısı kadar olabilir.\n\n2.  **Ayırtma İşlemi:**\n    *   Kütüphane otomasyon sistemi üzerinden, yayın ile ilgili bilgilerin bulunduğu ekrandaki \"İstek / Request\" veya \"İstek Yap\" butonunu kullanabilirsiniz.\n    *   Alternatif olarak, ödünç verme bankolarından da yayın ayırtma işlemi yapabilirsiniz.\n\n3.  **Bildirim:**\n    *   Ayırtılan yayın önceki kullanıcı tarafından iade edildiğinde veya herhangi bir nedenle yayın ayırtma işlemi iptal edildiğinde, bu durum size e-posta mesajı ile bildirilir.\n\n4.  **Teslim Alma:**\n    *   Ayırtılan yayın, size bildirilen tarihten itibaren 3 gün içinde Ödünç Verme Bankosu'ndan alınmalıdır.\n    *   3 gün içinde alınmadığı takdirde sıradaki kullanıcıya verilir. Yayını bekleyen kullanıcı bulunmuyorsa yayın rafına gönderilir.\n\n**Kaynaklar:**\n*   BAĞLAM metni | Sayfa: 11 (3.2.6 Yayın ayırtma ve Yayın Ayırtma bölümleri)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:26:12.205Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "yayın ayırtma nasıl yapılır adım adım prosedür"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:26:12.205Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Yayın ayırtma işlemi aşağıdaki adımlarla yapılabilir:\n\n1.  **Koşullar:**\n    *   Kullanmak istediğiniz yayın bir başka kullanıcı tarafından ödünç alınmış olmalıdır.\n    *   Katalog Tarama'da statüsü \"RAFTA\" görünen yayınlara ayırtma işlemi yapılmaz.\n    *   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar yayın ayırtma işlemi yapamaz.\n    *   Ayırtılacak yayın sayısı, kullanıcının ödünç alabileceği yayın sayısı kadar olabilir.\n\n2.  **Ayırtma İşlemi:**\n    *   Kütüphane otomasyon sistemi üzerinden, yayın ile ilgili bilgilerin bulunduğu ekrandaki \"İstek / Request\" veya \"İstek Yap\" butonunu kullanabilirsiniz.\n    *   Alternatif olarak, ödünç verme bankolarından da yayın ayırtma işlemi yapabilirsiniz.\n\n3.  **Bildirim:**\n    *   Ayırtılan yayın önceki kullanıcı tarafından iade edildiğinde veya herhangi bir nedenle yayın ayırtma işlemi iptal edildiğinde, bu durum size e-posta mesajı ile bildirilir.\n\n4.  **Teslim Alma:**\n    *   Ayırtılan yayın, size bildirilen tarihten itibaren 3 gün içinde Ödünç Verme Bankosu'ndan alınmalıdır.\n    *   3 gün içinde alınmadığı takdirde sıradaki kullanıcıya verilir. Yayını bekleyen kullanıcı bulunmuyorsa yayın rafına gönderilir.\n\n**Kaynaklar:**\n*   BAĞLAM metni | Sayfa: 11 (3.2.6 Yayın ayırtma ve Yayın Ayırtma bölümleri)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Yayın ayırtma işlemi aşağıdaki adımlarla yapılabilir:\n\n1.  **Koşullar:**\n    *   Kullanmak istediğiniz yayın bir başka kullanıcı tarafından ödünç alınmış olmalıdır.\n    *   Katalog Tarama'da statüsü \"RAFTA\" görünen yayınlara ayırtma işlemi yapılmaz.\n    *   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar yayın ayırtma işlemi yapamaz.\n    *   Ayırtılacak yayın sayısı, kullanıcının ödünç alabileceği yayın sayısı kadar olabilir.\n\n2.  **Ayırtma İşlemi:**\n    *   Kütüphane otomasyon sistemi üzerinden, yayın ile ilgili bilgilerin bulunduğu ekrandaki \"İstek / Request\" veya \"İstek Yap\" butonunu kullanabilirsiniz.\n    *   Alternatif olarak, ödünç verme bankolarından da yayın ayırtma işlemi yapabilirsiniz.\n\n3.  **Bildirim:**\n    *   Ayırtılan yayın önceki kullanıcı tarafından iade edildiğinde veya herhangi bir nedenle yayın ayırtma işlemi iptal edildiğinde, bu durum size e-posta mesajı ile bildirilir.\n\n4.  **Teslim Alma:**\n    *   Ayırtılan yayın, size bildirilen tarihten itibaren 3 gün içinde Ödünç Verme Bankosu'ndan alınmalıdır.\n    *   3 gün içinde alınmadığı takdirde sıradaki kullanıcıya verilir. Yayını bekleyen kullanıcı bulunmuyorsa yayın rafına gönderilir.\n\n**Kaynaklar:**\n*   BAĞLAM metni | Sayfa: 11 (3.2.6 Yayın ayırtma ve Yayın Ayırtma bölümleri)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:26:12.205Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 12533,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13qy8ei817u13b9m",
+    "timestamp": "2025-09-01T12:35:07.599Z",
+    "userMessage": {
+      "content": "aldığım kitabın süresini nasıl uzatırım",
+      "timestamp": "2025-09-01T12:35:07.597Z"
+    },
+    "agentResponse": {
+      "content": "<p><b>Kitap ödünç süresini uzatma işlemi aşağıdaki yollarla yapılabilir:</b></p>\n<ul>\n<li><b>Çevrimiçi:</b> Kullanıcı Hesabım bağlantısını veya kütüphane otomasyon sistemi üzerinden (<a href=\"http://library.itu.edu.tr/patroninfo*tur\">http://library.itu.edu.tr/patroninfo*tur</a>) uzatma işleminizi yapabilirsiniz.</li>\n<li><b>Kütüphanede:</b> Kütüphanelere giderek uzatma işlemi yapabilirsiniz.</li>\n<li><b>Telefonla:</b> Öğretim elemanları ve idari personel telefonla (<a href=\"tel:2856619\">285 66 19</a>) uzatma işlemi yaptırabilir.</li>\n</ul>\n<p><b>Uzatma işlemi için dikkat edilmesi gerekenler:</b></p>\n<ul>\n<li>Başka bir kullanıcı tarafından ayırtılmamış olması gerekir.</li>\n<li>Ödünç alınan yayına, o yayın için belirlenen ödünç verme süresinin yarısı kadar zaman geçmedikçe uzatma işlemi yapılmaz.</li>\n<li>Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar için uzatma işlemi yapılmaz.</li>\n<li>E-posta ile uzatma işlemi yapılmaz.</li>\n</ul>",
+      "timestamp": "2025-09-01T12:35:07.597Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kitap ödünç süresi uzatma nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:35:07.597Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kitap ödünç süresi uzatma işlemi aşağıdaki yollarla yapılabilir:\n\n*   **Çevrimiçi:** Kullanıcı Hesabım bağlantısını veya kütüphane otomasyon sistemi üzerinden (<a href=\"http://library.itu.edu.tr/patroninfo*tur\">http://library.itu.edu.tr/patroninfo*tur</a>) uzatma işleminizi yapabilirsiniz.\n*   **Kütüphanede:** Kütüphanelere giderek uzatma işlemi yapabilirsiniz.\n*   **Telefonla:** Öğretim elemanları ve idari personel telefonla (<a href=\"tel:2856619\">285 66 19</a>) uzatma işlemi yaptırabilir.\n\n**Uzatma işlemi için dikkat edilmesi gerekenler:**\n\n*   Başka bir kullanıcı tarafından ayırtılmamış olması gerekir.\n*   Ödünç alınan yayına, o yayın için belirlenen ödünç verme süresinin yarısı kadar zaman geçmedikçe uzatma işlemi yapılmaz.\n*   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar için uzatma işlemi yapılmaz.\n*   E-posta ile uzatma işlemi yapılmaz.\n\n**Kaynaklar:**\n*   Sayfa 11\n*   Sayfa 10\n*   Sayfa 33",
+        "output": "Kitap ödünç süresi uzatma işlemi aşağıdaki yollarla yapılabilir:\n\n*   **Çevrimiçi:** Kullanıcı Hesabım bağlantısını veya kütüphane otomasyon sistemi üzerinden (<a href=\"http://library.itu.edu.tr/patroninfo*tur\">http://library.itu.edu.tr/patroninfo*tur</a>) uzatma işleminizi yapabilirsiniz.\n*   **Kütüphanede:** Kütüphanelere giderek uzatma işlemi yapabilirsiniz.\n*   **Telefonla:** Öğretim elemanları ve idari personel telefonla (<a href=\"tel:2856619\">285 66 19</a>) uzatma işlemi yaptırabilir.\n\n**Uzatma işlemi için dikkat edilmesi gerekenler:**\n\n*   Başka bir kullanıcı tarafından ayırtılmamış olması gerekir.\n*   Ödünç alınan yayına, o yayın için belirlenen ödünç verme süresinin yarısı kadar zaman geçmedikçe uzatma işlemi yapılmaz.\n*   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar için uzatma işlemi yapılmaz.\n*   E-posta ile uzatma işlemi yapılmaz.\n\n**Kaynaklar:**\n*   Sayfa 11\n*   Sayfa 10\n*   Sayfa 33",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:35:07.597Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kitap ödünç süresi uzatma nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:35:07.597Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kitap ödünç süresi uzatma işlemi aşağıdaki yollarla yapılabilir:\n\n*   **Çevrimiçi:** Kullanıcı Hesabım bağlantısını veya kütüphane otomasyon sistemi üzerinden (<a href=\"http://library.itu.edu.tr/patroninfo*tur\">http://library.itu.edu.tr/patroninfo*tur</a>) uzatma işleminizi yapabilirsiniz.\n*   **Kütüphanede:** Kütüphanelere giderek uzatma işlemi yapabilirsiniz.\n*   **Telefonla:** Öğretim elemanları ve idari personel telefonla (<a href=\"tel:2856619\">285 66 19</a>) uzatma işlemi yaptırabilir.\n\n**Uzatma işlemi için dikkat edilmesi gerekenler:**\n\n*   Başka bir kullanıcı tarafından ayırtılmamış olması gerekir.\n*   Ödünç alınan yayına, o yayın için belirlenen ödünç verme süresinin yarısı kadar zaman geçmedikçe uzatma işlemi yapılmaz.\n*   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar için uzatma işlemi yapılmaz.\n*   E-posta ile uzatma işlemi yapılmaz.\n\n**Kaynaklar:**\n*   Sayfa 11\n*   Sayfa 10\n*   Sayfa 33",
+        "output": "Kitap ödünç süresi uzatma işlemi aşağıdaki yollarla yapılabilir:\n\n*   **Çevrimiçi:** Kullanıcı Hesabım bağlantısını veya kütüphane otomasyon sistemi üzerinden (<a href=\"http://library.itu.edu.tr/patroninfo*tur\">http://library.itu.edu.tr/patroninfo*tur</a>) uzatma işleminizi yapabilirsiniz.\n*   **Kütüphanede:** Kütüphanelere giderek uzatma işlemi yapabilirsiniz.\n*   **Telefonla:** Öğretim elemanları ve idari personel telefonla (<a href=\"tel:2856619\">285 66 19</a>) uzatma işlemi yaptırabilir.\n\n**Uzatma işlemi için dikkat edilmesi gerekenler:**\n\n*   Başka bir kullanıcı tarafından ayırtılmamış olması gerekir.\n*   Ödünç alınan yayına, o yayın için belirlenen ödünç verme süresinin yarısı kadar zaman geçmedikçe uzatma işlemi yapılmaz.\n*   Üzerinde gecikmiş yayın ve/veya limitin üzerinde para cezası bulunan kullanıcılar için uzatma işlemi yapılmaz.\n*   E-posta ile uzatma işlemi yapılmaz.\n\n**Kaynaklar:**\n*   Sayfa 11\n*   Sayfa 10\n*   Sayfa 33",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:35:07.597Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 11186,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13svdegqcxs5v0hzt",
+    "timestamp": "2025-09-01T12:36:37.202Z",
+    "userMessage": {
+      "content": "Rezerve ettiğim kitap geldiğinde nasıl haberim olur?",
+      "timestamp": "2025-09-01T12:36:37.201Z"
+    },
+    "agentResponse": {
+      "content": "Thought: The user is asking how they will be notified when a reserved book arrives. The document search found that an \"ayırtma notu\" (reservation note) is sent when the reserved publication arrives. This directly answers the user's question.\nFinal Answer: <p>Rezerve ettiğiniz yayın geldiğinde size <b>\"ayırtma notu\"</b> gönderilerek haber verilir.</p>",
+      "timestamp": "2025-09-01T12:36:37.201Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "rezerve edilen kitap geldiğinde bildirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:36:37.201Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kullanıcının ayırtmış olduğu yayın geldiğinde \"ayırtma notu\" gönderilir.\n\nKaynaklar:\n- BAĞLAM (d) Ayırtma Notu paragrafı\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Kullanıcının ayırtmış olduğu yayın geldiğinde \"ayırtma notu\" gönderilir.\n\nKaynaklar:\n- BAĞLAM (d) Ayırtma Notu paragrafı\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:36:37.201Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "rezerve edilen kitap geldiğinde bildirim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:36:37.201Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kullanıcının ayırtmış olduğu yayın geldiğinde \"ayırtma notu\" gönderilir.\n\nKaynaklar:\n- BAĞLAM (d) Ayırtma Notu paragrafı\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Kullanıcının ayırtmış olduğu yayın geldiğinde \"ayırtma notu\" gönderilir.\n\nKaynaklar:\n- BAĞLAM (d) Ayırtma Notu paragrafı\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:36:37.201Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 5319,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13tdzkpqmyezp3p8",
+    "timestamp": "2025-09-01T12:37:01.328Z",
+    "userMessage": {
+      "content": "ayırtma notu nasıl gönderilir",
+      "timestamp": "2025-09-01T12:37:01.327Z"
+    },
+    "agentResponse": {
+      "content": "<p><b>Ayırtma notu aşağıdaki adımlarla gönderilir:</b><br><ul><li>Kullanıcının ayırtmış olduğu yayın geldiğinde veya herhangi bir nedenle ayırtma iptal edildiğinde, \"ayırtma notu\" oluşturulur.</li><li>Bu not, kullanıcıya e-posta ile gönderilir.</li></ul><br><b>İlgili Bilgi:</b><br>Ödünç verme notları e-posta ile gönderilir. Kullanıcıların e-posta adreslerinde değişiklik olduğunda kütüphanelerin ödünç verme bankolarına veya <a href=\"mailto:kutuphane@itu.edu.tr\">kutuphane@itu.edu.tr</a> adresine bildirmeleri gerekmektedir.</p>",
+      "timestamp": "2025-09-01T12:37:01.327Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "ayırtma notu nasıl gönderilir adım adım prosedür"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:37:01.327Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Ayırtma notu aşağıdaki adımlarla gönderilir:\n\n1.  Kullanıcının ayırtmış olduğu yayın geldiğinde veya herhangi bir nedenle ayırtma iptal edildiğinde, \"ayırtma notu\" oluşturulur.\n2.  Bu not, kullanıcıya e-posta ile gönderilir.\n\n**İlgili bilgi:**\n*   Ödünç verme notları e-posta ile gönderilir.\n*   Kullanıcıların e-posta adreslerinde değişiklik olduğunda kütüphanelerin ödünç verme bankolarına veya <a href=\"mailto:kutuphane@itu.edu.tr\">kutuphane@itu.edu.tr</a> adresine bildirmeleri gerekir.\n\n**Kaynaklar:**\n*   BAĞLAM (metin içinde belirtilen bölümler)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Ayırtma notu aşağıdaki adımlarla gönderilir:\n\n1.  Kullanıcının ayırtmış olduğu yayın geldiğinde veya herhangi bir nedenle ayırtma iptal edildiğinde, \"ayırtma notu\" oluşturulur.\n2.  Bu not, kullanıcıya e-posta ile gönderilir.\n\n**İlgili bilgi:**\n*   Ödünç verme notları e-posta ile gönderilir.\n*   Kullanıcıların e-posta adreslerinde değişiklik olduğunda kütüphanelerin ödünç verme bankolarına veya <a href=\"mailto:kutuphane@itu.edu.tr\">kutuphane@itu.edu.tr</a> adresine bildirmeleri gerekir.\n\n**Kaynaklar:**\n*   BAĞLAM (metin içinde belirtilen bölümler)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:37:01.327Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "ayırtma notu nasıl gönderilir adım adım prosedür"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:37:01.327Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Ayırtma notu aşağıdaki adımlarla gönderilir:\n\n1.  Kullanıcının ayırtmış olduğu yayın geldiğinde veya herhangi bir nedenle ayırtma iptal edildiğinde, \"ayırtma notu\" oluşturulur.\n2.  Bu not, kullanıcıya e-posta ile gönderilir.\n\n**İlgili bilgi:**\n*   Ödünç verme notları e-posta ile gönderilir.\n*   Kullanıcıların e-posta adreslerinde değişiklik olduğunda kütüphanelerin ödünç verme bankolarına veya <a href=\"mailto:kutuphane@itu.edu.tr\">kutuphane@itu.edu.tr</a> adresine bildirmeleri gerekir.\n\n**Kaynaklar:**\n*   BAĞLAM (metin içinde belirtilen bölümler)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Ayırtma notu aşağıdaki adımlarla gönderilir:\n\n1.  Kullanıcının ayırtmış olduğu yayın geldiğinde veya herhangi bir nedenle ayırtma iptal edildiğinde, \"ayırtma notu\" oluşturulur.\n2.  Bu not, kullanıcıya e-posta ile gönderilir.\n\n**İlgili bilgi:**\n*   Ödünç verme notları e-posta ile gönderilir.\n*   Kullanıcıların e-posta adreslerinde değişiklik olduğunda kütüphanelerin ödünç verme bankolarına veya <a href=\"mailto:kutuphane@itu.edu.tr\">kutuphane@itu.edu.tr</a> adresine bildirmeleri gerekir.\n\n**Kaynaklar:**\n*   BAĞLAM (metin içinde belirtilen bölümler)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:37:01.327Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 14496,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13uo3kj5y5jx0ac5j",
+    "timestamp": "2025-09-01T12:38:01.088Z",
+    "userMessage": {
+      "content": "Görsel-işitsel materyaller (DVD, CD) ödünç alınıyor mu?",
+      "timestamp": "2025-09-01T12:38:01.087Z"
+    },
+    "agentResponse": {
+      "content": "<p>Evet, görsel-işitsel materyaller (DVD, CD) ödünç alınabilmektedir. Bu materyallerin ödünç alınması ve kullanımı ile ilgili kurallar bulunmaktadır:</p>\n<ul>\n<li>Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.</li>\n<li>Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır.</li>\n<li>Materyalin kaybolması veya zarar görmesi durumunda kayıp materyal işlemi uygulanır.</li>\n<li>Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.</li>\n</ul>\n<p>Daha fazla bilgi için kütüphanenin \"Görsel-İşitsel Bölümü Materyallerinden Yararlandırma ve Ödünç Verme Kuralları\" bölümüne başvurabilirsiniz.</p>",
+      "timestamp": "2025-09-01T12:38:01.087Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Görsel-işitsel materyaller (DVD, CD) ödünç alınıyor mu?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:38:01.086Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(dvd,/g: Unterminated group",
+        "output": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(dvd,/g: Unterminated group",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:38:01.087Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "görsel-işitsel materyaller ödünç alma"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:38:01.087Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Görsel-işitsel materyallerin ödünç alınması ve kullanımı ile ilgili kurallar şunlardır:\n\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır.\n*   Materyalin kaybolması, zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n\n**İlgili bilgi:**\n*   Kaybedilen yayının baskısı mevcutsa, kullanıcı 15 gün içinde yayının son baskısını temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Baskısı tükenmiş yayının kaybedilmesi durumunda, kullanıcı Daire Başkanlığı’nca belirlenen, kaybedilene eşdeğer bir yayını 30 gün içinde temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.\n*   Ödünç alınan bir yayının iade süresi, başka bir kullanıcı tarafından ayırtılmadıysa Kullanıcı Hesabım bağlantısı kullanılarak uzatılabilir.\n*   Ödünç alınan ve iade süresi geçen yayınlar için saatlik veya günlük periyodlarda artan gecikme cezaları hesaplanarak üye kaydına işlenir.\n*   Son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n\n**Kaynaklar:**\n*   BAĞLAM (sayfa 17, 3.6 Görsel-İşitsel Bölümü Materyallerinden Yararlandırma ve Ödünç Verme Kuralları)\n*   BAĞLAM (sayfa 13, Kaybedilen yayının baskısı mevcut olanlar için; Baskısı tükenmiş yayının kaybedilmesi durumunda ise; İşlem ücreti 60 TL’dir; Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.)\n*   BAĞLAM (sayfa 13, Ödünç Alınan Yayının İade Süresini Uzatmak)\n*   BAĞLAM (Gecikme Cezası bölümü)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Görsel-işitsel materyallerin ödünç alınması ve kullanımı ile ilgili kurallar şunlardır:\n\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır.\n*   Materyalin kaybolması, zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n\n**İlgili bilgi:**\n*   Kaybedilen yayının baskısı mevcutsa, kullanıcı 15 gün içinde yayının son baskısını temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Baskısı tükenmiş yayının kaybedilmesi durumunda, kullanıcı Daire Başkanlığı’nca belirlenen, kaybedilene eşdeğer bir yayını 30 gün içinde temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.\n*   Ödünç alınan bir yayının iade süresi, başka bir kullanıcı tarafından ayırtılmadıysa Kullanıcı Hesabım bağlantısı kullanılarak uzatılabilir.\n*   Ödünç alınan ve iade süresi geçen yayınlar için saatlik veya günlük periyodlarda artan gecikme cezaları hesaplanarak üye kaydına işlenir.\n*   Son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n\n**Kaynaklar:**\n*   BAĞLAM (sayfa 17, 3.6 Görsel-İşitsel Bölümü Materyallerinden Yararlandırma ve Ödünç Verme Kuralları)\n*   BAĞLAM (sayfa 13, Kaybedilen yayının baskısı mevcut olanlar için; Baskısı tükenmiş yayının kaybedilmesi durumunda ise; İşlem ücreti 60 TL’dir; Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.)\n*   BAĞLAM (sayfa 13, Ödünç Alınan Yayının İade Süresini Uzatmak)\n*   BAĞLAM (Gecikme Cezası bölümü)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:38:01.087Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Görsel-işitsel materyaller (DVD, CD) ödünç alınıyor mu?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:38:01.086Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(dvd,/g: Unterminated group",
+        "output": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(dvd,/g: Unterminated group",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:38:01.087Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "görsel-işitsel materyaller ödünç alma"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:38:01.087Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Görsel-işitsel materyallerin ödünç alınması ve kullanımı ile ilgili kurallar şunlardır:\n\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır.\n*   Materyalin kaybolması, zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n\n**İlgili bilgi:**\n*   Kaybedilen yayının baskısı mevcutsa, kullanıcı 15 gün içinde yayının son baskısını temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Baskısı tükenmiş yayının kaybedilmesi durumunda, kullanıcı Daire Başkanlığı’nca belirlenen, kaybedilene eşdeğer bir yayını 30 gün içinde temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.\n*   Ödünç alınan bir yayının iade süresi, başka bir kullanıcı tarafından ayırtılmadıysa Kullanıcı Hesabım bağlantısı kullanılarak uzatılabilir.\n*   Ödünç alınan ve iade süresi geçen yayınlar için saatlik veya günlük periyodlarda artan gecikme cezaları hesaplanarak üye kaydına işlenir.\n*   Son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n\n**Kaynaklar:**\n*   BAĞLAM (sayfa 17, 3.6 Görsel-İşitsel Bölümü Materyallerinden Yararlandırma ve Ödünç Verme Kuralları)\n*   BAĞLAM (sayfa 13, Kaybedilen yayının baskısı mevcut olanlar için; Baskısı tükenmiş yayının kaybedilmesi durumunda ise; İşlem ücreti 60 TL’dir; Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.)\n*   BAĞLAM (sayfa 13, Ödünç Alınan Yayının İade Süresini Uzatmak)\n*   BAĞLAM (Gecikme Cezası bölümü)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Görsel-işitsel materyallerin ödünç alınması ve kullanımı ile ilgili kurallar şunlardır:\n\n*   Kullanıcılar ödünç aldıkları materyali korumak ve zarar vermemekle yükümlüdür.\n*   Zamanında iade edilmeyen materyal için günlük 5 TL gecikme cezası uygulanır.\n*   Materyalin kaybolması, zarar görmesi durumunda kayıp materyal işlemi uygulanır.\n*   Kullanıcı, ödünç verilmiş olan materyal için ayırtma işlemi yapabilir.\n\n**İlgili bilgi:**\n*   Kaybedilen yayının baskısı mevcutsa, kullanıcı 15 gün içinde yayının son baskısını temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Baskısı tükenmiş yayının kaybedilmesi durumunda, kullanıcı Daire Başkanlığı’nca belirlenen, kaybedilene eşdeğer bir yayını 30 gün içinde temin etmek ve 60 TL işlem ücretini ödemek zorundadır.\n*   Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.\n*   Ödünç alınan bir yayının iade süresi, başka bir kullanıcı tarafından ayırtılmadıysa Kullanıcı Hesabım bağlantısı kullanılarak uzatılabilir.\n*   Ödünç alınan ve iade süresi geçen yayınlar için saatlik veya günlük periyodlarda artan gecikme cezaları hesaplanarak üye kaydına işlenir.\n*   Son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n\n**Kaynaklar:**\n*   BAĞLAM (sayfa 17, 3.6 Görsel-İşitsel Bölümü Materyallerinden Yararlandırma ve Ödünç Verme Kuralları)\n*   BAĞLAM (sayfa 13, Kaybedilen yayının baskısı mevcut olanlar için; Baskısı tükenmiş yayının kaybedilmesi durumunda ise; İşlem ücreti 60 TL’dir; Kaybedilen yayın iade tarihinden önce kütüphaneye bildirilmezse ayrıca gecikme cezası uygulanır.)\n*   BAĞLAM (sayfa 13, Ödünç Alınan Yayının İade Süresini Uzatmak)\n*   BAĞLAM (Gecikme Cezası bölümü)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:38:01.087Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 13165,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf13vzlfxuff8zhdl0q",
+    "timestamp": "2025-09-01T12:39:02.643Z",
+    "userMessage": {
+      "content": "Scopus veya Web of Science'a nasıl erişebilirim?",
+      "timestamp": "2025-09-01T12:39:02.642Z"
+    },
+    "agentResponse": {
+      "content": "<p>Scopus veya Web of Science'a doğrudan erişim bilgisi bulunamadı. Ancak, kütüphanenin e-kaynaklar ve veritabanları sayfalarını kontrol etmenizi öneririm.</p><br><p>Genellikle bu tür veritabanlarına kütüphane web sitesindeki \"Veritabanları\" veya \"E-Kaynaklar\" bölümünden ulaşabilirsiniz. Kampüs dışından erişim için \"Kampüs Dışı Erişim Hizmeti\" hakkında bilgi edinmeniz gerekebilir.</p><br><p>Lütfen aşağıdaki bağlantıyı ziyaret ederek kütüphanenin veritabanları sayfasını kontrol edin:</p><br><p><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">ITU Kütüphanesi Veritabanları Sayfası</a></p><br><p>Bu sayfada Scopus ve Web of Science'ı arayabilir ve erişim talimatlarını bulabilirsiniz. Eğer hala sorun yaşıyorsanız, kütüphane personeli ile iletişime geçmeniz en doğrusu olacaktır.</p>",
+      "timestamp": "2025-09-01T12:39:02.642Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "Scopus veya Web of Science"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "output": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "Scopus Web of Science erişim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "Scopus veya Web of Science"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. Erişim bilgilerini döndürür. Input should be a keyword string. 'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "output": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "Scopus Web of Science erişim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:39:02.642Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 8568,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf144rq7s2qnhfn9tbc",
+    "timestamp": "2025-09-01T12:45:52.351Z",
+    "userMessage": {
+      "content": "Scopus veya Web of Science'a nasıl erişebilirim?",
+      "timestamp": "2025-09-01T12:45:52.349Z"
+    },
+    "agentResponse": {
+      "content": "<p>Scopus ve Web of Science gibi veritabanlarına erişim için lütfen İTÜ Kütüphanesi'nin veritabanları sayfasını ziyaret ediniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a></p>\n<p>Bu sayfada abone olunan tüm veritabanlarını bulabilir ve erişim sağlayabilirsiniz. Kampüs dışından erişim için genellikle kütüphane hesabınızla giriş yapmanız gerekmektedir.</p>",
+      "timestamp": "2025-09-01T12:45:52.349Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "Scopus, Web of Science"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "output": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "Scopus Web of Science erişim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "Scopus, Web of Science"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "output": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": {
+          "searchQuery": "Scopus Web of Science erişim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      },
+      {
+        "toolName": "library_web_search",
+        "toolDescription": "Kütüphane web sitesinde sitemap kullanarak sayfa arama yapar. Dokümanlarda sonuç bulunamadığında kullanılır.",
+        "input": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "output": "🌐 **\"Scopus Web of Science erişim\" konusu için kütüphane web sitesinde bulunan bilgiler:**\n\n1. **İletişim**\n   🔗 [https://kutuphane.itu.edu.tr/iletisim](https://kutuphane.itu.edu.tr/iletisim)\n   💡 **Önemli Bilgiler:**\n      • İTÜ Mustafa İnan Kütüphanesi\n      • Şube Kütüphaneleri\n      • Kullanıcı İşlemleri\n      • İTÜ Anasayfa\n      • Öğrenci İşleri\n      • Mustafa İnan Kimdir\n      • Yararlanma Koşulları\n      • Personel ve Bölümler\n\n2. **SSS**\n   🔗 [https://kutuphane.itu.edu.tr/sss](https://kutuphane.itu.edu.tr/sss)\n   💡 **Önemli Bilgiler:**\n      • Ödünç Verme Hizmeti\n      • Rezerv Hizmeti\n      • Kampüs Dışı Erişim Hizmeti\n      • Kütüphanelerarası Ödünç Yayın ve Doküman Sağlama Hizmeti\n      • Yayın İstek\n      • Süreli Yayınlar\n      • E-Kaynaklar\n      • Referans Masası\n\n3. **American Chemical Society (ACS) Yayınevi Oku & Yayımla Anlaşması**\n   🔗 [https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos](https://kutuphane.itu.edu.tr/anasayfa/2025/01/20/https-acsopenscience.org-customers-ankos)\n   💡 **Önemli Bilgiler:**\n      • Kullanıcı İşlemleri\n      • Üyelik ve PIN İşlemleri\n      • Ödünç Geciktirme Ücretleri\n      • Konu Rehberleri\n      • Veritabanları\n      • TSE Standart Talebi\n      • Oku ve Yayımla Anlaşmaları\n      • İTÜ Akademik Açık Arşiv\n\n💡 **Toplam 3 sayfa ziyaret edildi.**\n🔍 Daha fazla bilgi için yukarıdaki linkleri ziyaret edebilirsiniz.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:45:52.348Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 8002,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf14gho7e50mer38atg",
+    "timestamp": "2025-09-01T12:54:59.191Z",
+    "userMessage": {
+      "content": "Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)",
+      "timestamp": "2025-09-01T12:54:59.190Z"
+    },
+    "agentResponse": {
+      "content": "Thought: The user is asking how to connect to databases from outside the campus, specifically mentioning proxy/VPN settings. The `document_search` tool provided information about using the \"Kampüs Dışı\" link under each database and also referred to the ITU Information Technology Department's Knowledge Base for wireless access services, including certificate installation and DNS settings. This information directly answers the user's question.\nFinal Answer: <p>Kampüs dışından veritabanlarına erişmek için her veritabanı adı altında yer alan <b>Kampüs Dışı bağlantısı</b> kullanılmalıdır.</p><p>Ayrıca, İTÜ Bilgi İşlem Daire Başkanlığının Bilgi Bankası menüsünde bulunan <b>Kablosuz Erişim Hizmetleri</b> sayfasındaki ayarları yapabilirsiniz. Bu sayfada sertifika indirme ve kurma yönergeleri bulunmaktadır. Eğer ITU/NET Misafir ağına bağlanılamıyorsa, DNS ayarlarınızı 'otomatik' duruma getirmeniz gerekebilir.</p><p>İlgili bilgiye şu adresten ulaşabilirsiniz: <a href=\"https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri\">https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri</a></p>",
+      "timestamp": "2025-09-01T12:54:59.190Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kampüs dışından veritabanlarına bağlanma proxy vpn ayarları"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:54:59.189Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\n*   İTÜ Bilgi İşlem Daire Başkanlığının Bilgi Bankası menüsünde bulunan Kablosuz Erişim Hizmetleri sayfasında belirtilen ayarlar yapılabilir: <a href=\"https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri\">https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri</a>\n*   Sertifika bilgisayara indirilmeli ve aynı adresteki yönergeler takip edilerek kurulmalıdır.\n*   ITU/NET Misafir’e bağlanılamıyorsa DNS ayarları kontrol edilip ‘otomatik’ duruma getirilmelidir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\n*   İTÜ Bilgi İşlem Daire Başkanlığının Bilgi Bankası menüsünde bulunan Kablosuz Erişim Hizmetleri sayfasında belirtilen ayarlar yapılabilir: <a href=\"https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri\">https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri</a>\n*   Sertifika bilgisayara indirilmeli ve aynı adresteki yönergeler takip edilerek kurulmalıdır.\n*   ITU/NET Misafir’e bağlanılamıyorsa DNS ayarları kontrol edilip ‘otomatik’ duruma getirilmelidir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:54:59.190Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kampüs dışından veritabanlarına bağlanma proxy vpn ayarları"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T12:54:59.189Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\n*   İTÜ Bilgi İşlem Daire Başkanlığının Bilgi Bankası menüsünde bulunan Kablosuz Erişim Hizmetleri sayfasında belirtilen ayarlar yapılabilir: <a href=\"https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri\">https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri</a>\n*   Sertifika bilgisayara indirilmeli ve aynı adresteki yönergeler takip edilerek kurulmalıdır.\n*   ITU/NET Misafir’e bağlanılamıyorsa DNS ayarları kontrol edilip ‘otomatik’ duruma getirilmelidir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\n*   İTÜ Bilgi İşlem Daire Başkanlığının Bilgi Bankası menüsünde bulunan Kablosuz Erişim Hizmetleri sayfasında belirtilen ayarlar yapılabilir: <a href=\"https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri\">https://bidb.itu.edu.tr/bilgi-bankasi/internet/kablosuz-erisim-hizmetleri</a>\n*   Sertifika bilgisayara indirilmeli ve aynı adresteki yönergeler takip edilerek kurulmalıdır.\n*   ITU/NET Misafir’e bağlanılamıyorsa DNS ayarları kontrol edilip ‘otomatik’ duruma getirilmelidir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T12:54:59.190Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 28342,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf14rpsr3pilcej9xk9",
+    "timestamp": "2025-09-01T13:03:42.939Z",
+    "userMessage": {
+      "content": "Kampüs dışından veritabanlarına nasıl erişebilirim",
+      "timestamp": "2025-09-01T13:03:42.938Z"
+    },
+    "agentResponse": {
+      "content": "<p>Veritabanlarına kampüs dışından erişmek için, her veritabanı adının altında bulunan <b>Kampüs Dışı bağlantısını</b> kullanmanız gerekmektedir.<br><br>Doğrudan erişim için şu adresi ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a></p>",
+      "timestamp": "2025-09-01T13:03:42.938Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kampüs dışından veritabanlarına erişim nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:03:42.937Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nDoğrudan <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a> linkinden veritabanlarına ulaşabilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 17: 44. [Herhangi bir] veritabanında \"yapay sinir ağları\" üzerine son bir yılda yazılmış makaleleri bul. Doğrudan bu https://kutuphane.itu.edu.tr/arastirma/veritabanlari linkten veritabanlarına ulaşıp, bu veritabanları içerisinden [Herhangi bir] veritabanına ulaşabilirsiniz. İlgili veritabanına kampüs içi veya mevcutsa kampüs dışı bağlantısından erişebilirsiniz.\n- 13 (ELEKTRONİK KAYNAKLAR - Veritabanları bölümü)\n- 14 (Veritabanlarına kampüs dışından erişmek için...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nDoğrudan <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a> linkinden veritabanlarına ulaşabilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 17: 44. [Herhangi bir] veritabanında \"yapay sinir ağları\" üzerine son bir yılda yazılmış makaleleri bul. Doğrudan bu https://kutuphane.itu.edu.tr/arastirma/veritabanlari linkten veritabanlarına ulaşıp, bu veritabanları içerisinden [Herhangi bir] veritabanına ulaşabilirsiniz. İlgili veritabanına kampüs içi veya mevcutsa kampüs dışı bağlantısından erişebilirsiniz.\n- 13 (ELEKTRONİK KAYNAKLAR - Veritabanları bölümü)\n- 14 (Veritabanlarına kampüs dışından erişmek için...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:03:42.937Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kampüs dışından veritabanlarına erişim nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:03:42.937Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nDoğrudan <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a> linkinden veritabanlarına ulaşabilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 17: 44. [Herhangi bir] veritabanında \"yapay sinir ağları\" üzerine son bir yılda yazılmış makaleleri bul. Doğrudan bu https://kutuphane.itu.edu.tr/arastirma/veritabanlari linkten veritabanlarına ulaşıp, bu veritabanları içerisinden [Herhangi bir] veritabanına ulaşabilirsiniz. İlgili veritabanına kampüs içi veya mevcutsa kampüs dışı bağlantısından erişebilirsiniz.\n- 13 (ELEKTRONİK KAYNAKLAR - Veritabanları bölümü)\n- 14 (Veritabanlarına kampüs dışından erişmek için...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Veritabanlarına kampüs dışından erişmek için her veritabanı adı altında yer alan Kampüs Dışı bağlantısı kullanılmalıdır.\n\nİlgili bilgi:\nDoğrudan <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a> linkinden veritabanlarına ulaşabilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 6: 28. Kampüs dışından veritabanlarına nasıl bağlanabilirim? (Proxy/VPN ayarları)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 17: 44. [Herhangi bir] veritabanında \"yapay sinir ağları\" üzerine son bir yılda yazılmış makaleleri bul. Doğrudan bu https://kutuphane.itu.edu.tr/arastirma/veritabanlari linkten veritabanlarına ulaşıp, bu veritabanları içerisinden [Herhangi bir] veritabanına ulaşabilirsiniz. İlgili veritabanına kampüs içi veya mevcutsa kampüs dışı bağlantısından erişebilirsiniz.\n- 13 (ELEKTRONİK KAYNAKLAR - Veritabanları bölümü)\n- 14 (Veritabanlarına kampüs dışından erişmek için...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:03:42.937Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 8459,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf14y19km18k0c6cwd8",
+    "timestamp": "2025-09-01T13:08:37.736Z",
+    "userMessage": {
+      "content": "Belirli bir makaleye tam metin olarak nasıl ulaşırım?",
+      "timestamp": "2025-09-01T13:08:37.734Z"
+    },
+    "agentResponse": {
+      "content": "<p>Tam metin bir makaleye ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:</p>\n<h3>Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu</h3>\n<ul>\n<li>Kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna makalenin ismini veya konusunu yazarak aramayı başlatın.</li>\n<li>Sonuçlardan, aradığınız makaleye ulaşım seçeneklerine göre ya makaleyi doğrudan indirebilir ya da yönlendirme linkine tıklayarak makalenin bulunduğu veritabanına yönlendirilerek makaleyi indirebilirsiniz.</li>\n<li>Bu arama motoru, İTÜ Kütüphaneleri’nin sahip olduğu basılı ve elektronik koleksiyonun tamamını tek bir platformda tarama imkanı sağlar.</li>\n</ul>\n<h3>Diğer Yöntemler</h3>\n<ul>\n<li><b>Kütüphanenin Abone Olduğu Veritabanları:</b> Kütüphanenin abone olduğu veritabanlarını kullanarak makaleyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar.</li>\n<li><b>Google Scholar:</b> Google Scholar üzerinden makale başlığını veya yazar adını arayarak makalenin tam metnine ulaşabilirsiniz. Eğer makale açık erişimliyse, doğrudan erişim sağlayabilirsiniz.</li>\n<li><b>Açık Erişim Dergiler:</b> Eğer makale açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.</li>\n<li><b>Araştırmacı İletişimi:</b> Makalenin yazarlarıyla iletişime geçerek, makalenin bir kopyasını talep edebilirsiniz.</li>\n<li><b>Kütüphane Destek:</b> Kütüphane personelinden yardım alarak, makaleye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.</li>\n<li><b>Kütüphane Web Sitesi Rehberleri:</b> Eğer belirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.</li>\n</ul>",
+      "timestamp": "2025-09-01T13:08:37.734Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "tam metin makaleye nasıl ulaşılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:08:37.734Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Tam metin bir makaleye ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna makalenin ismini veya konusunu yazarak aramayı başlatın. Sonuçlardan, aradığınız makaleye ulaşım seçeneklerine göre ya makaleyi doğrudan indirebilir ya da yönlendirme linkine tıklayarak makalenin bulunduğu veritabanına yönlendirilerek makaleyi indirebilirsiniz. Bu arama motoru, İTÜ Kütüphaneleri’nin sahip olduğu basılı ve elektronik koleksiyonun tamamını tek bir platformda tarama imkanı sağlar.\n*   **Kütüphanenin Abone Olduğu Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak makaleyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar.\n*   **Google Scholar:** Google Scholar üzerinden makale başlığını veya yazar adını arayarak makalenin tam metnine ulaşabilirsiniz. Eğer makale açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer makale açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Makalenin yazarlarıyla iletişime geçerek, makalenin bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, makaleye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n*   **Kütüphane Web Sitesi Rehberleri:** Eğer belirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Kütüphane Kaynakları\n*   3. KULLANICI HİZMETLERİ, 3.1 Bilgi Arama ve Erişim Yöntemleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Tam metin bir makaleye ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna makalenin ismini veya konusunu yazarak aramayı başlatın. Sonuçlardan, aradığınız makaleye ulaşım seçeneklerine göre ya makaleyi doğrudan indirebilir ya da yönlendirme linkine tıklayarak makalenin bulunduğu veritabanına yönlendirilerek makaleyi indirebilirsiniz. Bu arama motoru, İTÜ Kütüphaneleri’nin sahip olduğu basılı ve elektronik koleksiyonun tamamını tek bir platformda tarama imkanı sağlar.\n*   **Kütüphanenin Abone Olduğu Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak makaleyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar.\n*   **Google Scholar:** Google Scholar üzerinden makale başlığını veya yazar adını arayarak makalenin tam metnine ulaşabilirsiniz. Eğer makale açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer makale açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Makalenin yazarlarıyla iletişime geçerek, makalenin bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, makaleye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n*   **Kütüphane Web Sitesi Rehberleri:** Eğer belirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Kütüphane Kaynakları\n*   3. KULLANICI HİZMETLERİ, 3.1 Bilgi Arama ve Erişim Yöntemleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:08:37.734Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "tam metin makaleye nasıl ulaşılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:08:37.734Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Tam metin bir makaleye ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna makalenin ismini veya konusunu yazarak aramayı başlatın. Sonuçlardan, aradığınız makaleye ulaşım seçeneklerine göre ya makaleyi doğrudan indirebilir ya da yönlendirme linkine tıklayarak makalenin bulunduğu veritabanına yönlendirilerek makaleyi indirebilirsiniz. Bu arama motoru, İTÜ Kütüphaneleri’nin sahip olduğu basılı ve elektronik koleksiyonun tamamını tek bir platformda tarama imkanı sağlar.\n*   **Kütüphanenin Abone Olduğu Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak makaleyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar.\n*   **Google Scholar:** Google Scholar üzerinden makale başlığını veya yazar adını arayarak makalenin tam metnine ulaşabilirsiniz. Eğer makale açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer makale açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Makalenin yazarlarıyla iletişime geçerek, makalenin bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, makaleye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n*   **Kütüphane Web Sitesi Rehberleri:** Eğer belirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Kütüphane Kaynakları\n*   3. KULLANICI HİZMETLERİ, 3.1 Bilgi Arama ve Erişim Yöntemleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Tam metin bir makaleye ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna makalenin ismini veya konusunu yazarak aramayı başlatın. Sonuçlardan, aradığınız makaleye ulaşım seçeneklerine göre ya makaleyi doğrudan indirebilir ya da yönlendirme linkine tıklayarak makalenin bulunduğu veritabanına yönlendirilerek makaleyi indirebilirsiniz. Bu arama motoru, İTÜ Kütüphaneleri’nin sahip olduğu basılı ve elektronik koleksiyonun tamamını tek bir platformda tarama imkanı sağlar.\n*   **Kütüphanenin Abone Olduğu Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak makaleyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar.\n*   **Google Scholar:** Google Scholar üzerinden makale başlığını veya yazar adını arayarak makalenin tam metnine ulaşabilirsiniz. Eğer makale açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer makale açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Makalenin yazarlarıyla iletişime geçerek, makalenin bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, makaleye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n*   **Kütüphane Web Sitesi Rehberleri:** Eğer belirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Kütüphane Kaynakları\n*   3. KULLANICI HİZMETLERİ, 3.1 Bilgi Arama ve Erişim Yöntemleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:08:37.734Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 18805,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf14zvpw3svq4gcj63a",
+    "timestamp": "2025-09-01T13:10:03.860Z",
+    "userMessage": {
+      "content": "Makalemin intihal oranını kontrol edebileceğim bir program var mı?",
+      "timestamp": "2025-09-01T13:10:03.859Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have found two databases, İntihal.net and IThenticate, that can be used for plagiarism checking. I have their names and links. I can now provide this information to the user.\nFinal Answer: <p>Makalenizin intihal oranını kontrol edebileceğiniz programlar bulunmaktadır:</p><ul><li><b>İntihal.net:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6505\">Erişim için tıklayınız</a></li><li><b>IThenticate:</b> <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#5894\">Erişim için tıklayınız</a></li></ul>",
+      "timestamp": "2025-09-01T13:10:03.859Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "intihal"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:10:03.859Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "[{\"name\":\"İntihal.net\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6505\"},{\"name\":\"IThenticate\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#5894\"}]",
+        "output": "[{\"name\":\"İntihal.net\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6505\"},{\"name\":\"IThenticate\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#5894\"}]",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:10:03.859Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "intihal"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:10:03.859Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "[{\"name\":\"İntihal.net\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6505\"},{\"name\":\"IThenticate\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#5894\"}]",
+        "output": "[{\"name\":\"İntihal.net\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6505\"},{\"name\":\"IThenticate\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#5894\"}]",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:10:03.859Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 4607,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf150v0niswv7373x7s",
+    "timestamp": "2025-09-01T13:10:49.607Z",
+    "userMessage": {
+      "content": "H-indeksi en yüksek akademisyenleri nasıl bulabilirim?",
+      "timestamp": "2025-09-01T13:10:49.605Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p>H-indeksi en yüksek akademisyenleri bulmak için Scopus veritabanını kullanabilirsiniz. İşte adımlar:</p><h3>1. Scopus Veritabanına Erişin:</h3><p>Kurumunuzun (İstanbul Teknik Üniversitesi) kütüphane web sayfasından \"Veritabanları\" bölümüne gidin ve listeden Scopus'u bularak giriş yapın.</p><h3>2. Yazar Arama (Author Search) Sekmesini Kullanın:</h3><p>Scopus ana sayfasında, arama kutularının üzerindeki sekmelerden \"Authors\" (Yazarlar) sekmesine tıklayın.</p><h3>3. Arama Sonuçlarını Konu Alanına Göre Filtreleyin:</h3><ul><li>Herhangi bir yazar ismi girmeden doğrudan \"Search\" (Ara) butonuna basın. Bu, Scopus'taki tüm yazarları içeren genel bir liste getirecektir.</li><li>Arama sonuçları sayfasının sol tarafında yer alan \"Refine Results\" (Sonuçları Daralt) panelini kullanın.</li><li>Bu panelden \"Subject Area\" (Konu Alanı) filtresini bulun ve ilgilendiğiniz alanı (örn. \"Computer Science\", \"Engineering\", \"Medicine\") seçerek listeyi daraltın.</li></ul><h3>4. H-İndeksine Göre Sıralayın:</h3><p>Arama sonuçları listesinin sağ üst köşesinde bulunan \"Sort by\" (Sıralama Ölçütü) menüsüne tıklayın. Menüyü açın ve \"h-index\" seçeneğini işaretleyin.</p><p>Bu adımları tamamladığınızda, seçtiğiniz bilimsel alanda çalışan ve en yüksek H-indeksine sahip olan akademisyenler en üstte görünecek şekilde sıralanmış bir liste elde edeceksiniz.</p><h3>İlgili bilgi: Daha Niş Konular İçin Alternatif Yöntem</h3><p>Eğer \"Makine Öğrenmesi\" gibi daha spesifik bir anahtar kelime ile arama yapmak isterseniz, aşağıdaki alternatif yöntemi kullanabilirsiniz:</p><ul><li>Scopus'ta bu defa \"Documents\" (Belgeler) sekmesinde kalın.</li><li>Arama kutusuna anahtar kelimenizi (örn. \"Large Language Models\" veya \"Semantic Search\") yazarak arama yapın.</li><li>Sonuç sayfasında, sol paneldeki \"Author name\" (Yazar Adı) filtresinin altındaki \"View all\" (Tümünü Gör) linkine tıklayın.</li><li>Açılan pencere, bu anahtar kelime ile en çok yayın yapan yazarları listeleyecektir.</li></ul>",
+      "timestamp": "2025-09-01T13:10:49.605Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "H-indeksi en yüksek akademisyenleri nasıl bulabilirim?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:10:49.605Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "H-indeksi en yüksek akademisyenleri bulmak için Scopus veritabanını kullanabilirsiniz. İşte adımlar:\n\n**1. Scopus Veritabanına Erişin:**\nKurumunuzun (İstanbul Teknik Üniversitesi) kütüphane web sayfasından \"Veritabanları\" bölümüne gidin ve listeden Scopus'u bularak giriş yapın.\n\n**2. Yazar Arama (Author Search) Sekmesini Kullanın:**\nScopus ana sayfasında, arama kutularının üzerindeki sekmelerden \"Authors\" (Yazarlar) sekmesine tıklayın.\n\n**3. Arama Sonuçlarını Konu Alanına Göre Filtreleyin:**\n*   Herhangi bir yazar ismi girmeden doğrudan \"Search\" (Ara) butonuna basın. Bu, Scopus'taki tüm yazarları içeren genel bir liste getirecektir.\n*   Arama sonuçları sayfasının sol tarafında yer alan \"Refine Results\" (Sonuçları Daralt) panelini kullanın.\n*   Bu panelden \"Subject Area\" (Konu Alanı) filtresini bulun ve ilgilendiğiniz alanı (örn. \"Computer Science\", \"Engineering\", \"Medicine\") seçerek listeyi daraltın.\n\n**4. H-İndeksine Göre Sıralayın:**\nArama sonuçları listesinin sağ üst köşesinde bulunan \"Sort by\" (Sıralama Ölçütü) menüsüne tıklayın. Menüyü açın ve \"h-index\" seçeneğini işaretleyin.\n\nBu adımları tamamladığınızda, seçtiğiniz bilimsel alanda çalışan ve en yüksek H-indeksine sahip olan akademisyenler en üstte görünecek şekilde sıralanmış bir liste elde edeceksiniz.\n\n**İlgili bilgi: Daha Niş Konular İçin Alternatif Yöntem**\nEğer \"Makine Öğrenmesi\" gibi daha spesifik bir anahtar kelime ile arama yapmak isterseniz, aşağıdaki alternatif yöntemi kullanabilirsiniz:\n*   Scopus'ta bu defa \"Documents\" (Belgeler) sekmesinde kalın.\n*   Arama kutusuna anahtar kelimenizi (örn. \"Large Language Models\" veya \"Semantic Search\") yazarak arama yapın.\n*   Sonuç sayfasında, sol paneldeki \"Author name\" (Yazar Adı) filtresinin altındaki \"View all\" (Tümünü Gör) linkine tıklayın.\n*   Açılan pencere, bu anahtar kelime ile en çok yayın yapan yazarları listeleyecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 15: 42. H-indeksi en yüksek akademisyenleri nasıl bulabilirim?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "H-indeksi en yüksek akademisyenleri bulmak için Scopus veritabanını kullanabilirsiniz. İşte adımlar:\n\n**1. Scopus Veritabanına Erişin:**\nKurumunuzun (İstanbul Teknik Üniversitesi) kütüphane web sayfasından \"Veritabanları\" bölümüne gidin ve listeden Scopus'u bularak giriş yapın.\n\n**2. Yazar Arama (Author Search) Sekmesini Kullanın:**\nScopus ana sayfasında, arama kutularının üzerindeki sekmelerden \"Authors\" (Yazarlar) sekmesine tıklayın.\n\n**3. Arama Sonuçlarını Konu Alanına Göre Filtreleyin:**\n*   Herhangi bir yazar ismi girmeden doğrudan \"Search\" (Ara) butonuna basın. Bu, Scopus'taki tüm yazarları içeren genel bir liste getirecektir.\n*   Arama sonuçları sayfasının sol tarafında yer alan \"Refine Results\" (Sonuçları Daralt) panelini kullanın.\n*   Bu panelden \"Subject Area\" (Konu Alanı) filtresini bulun ve ilgilendiğiniz alanı (örn. \"Computer Science\", \"Engineering\", \"Medicine\") seçerek listeyi daraltın.\n\n**4. H-İndeksine Göre Sıralayın:**\nArama sonuçları listesinin sağ üst köşesinde bulunan \"Sort by\" (Sıralama Ölçütü) menüsüne tıklayın. Menüyü açın ve \"h-index\" seçeneğini işaretleyin.\n\nBu adımları tamamladığınızda, seçtiğiniz bilimsel alanda çalışan ve en yüksek H-indeksine sahip olan akademisyenler en üstte görünecek şekilde sıralanmış bir liste elde edeceksiniz.\n\n**İlgili bilgi: Daha Niş Konular İçin Alternatif Yöntem**\nEğer \"Makine Öğrenmesi\" gibi daha spesifik bir anahtar kelime ile arama yapmak isterseniz, aşağıdaki alternatif yöntemi kullanabilirsiniz:\n*   Scopus'ta bu defa \"Documents\" (Belgeler) sekmesinde kalın.\n*   Arama kutusuna anahtar kelimenizi (örn. \"Large Language Models\" veya \"Semantic Search\") yazarak arama yapın.\n*   Sonuç sayfasında, sol paneldeki \"Author name\" (Yazar Adı) filtresinin altındaki \"View all\" (Tümünü Gör) linkine tıklayın.\n*   Açılan pencere, bu anahtar kelime ile en çok yayın yapan yazarları listeleyecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 15: 42. H-indeksi en yüksek akademisyenleri nasıl bulabilirim?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:10:49.605Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "H-indeksi en yüksek akademisyenleri nasıl bulabilirim?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:10:49.605Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "H-indeksi en yüksek akademisyenleri bulmak için Scopus veritabanını kullanabilirsiniz. İşte adımlar:\n\n**1. Scopus Veritabanına Erişin:**\nKurumunuzun (İstanbul Teknik Üniversitesi) kütüphane web sayfasından \"Veritabanları\" bölümüne gidin ve listeden Scopus'u bularak giriş yapın.\n\n**2. Yazar Arama (Author Search) Sekmesini Kullanın:**\nScopus ana sayfasında, arama kutularının üzerindeki sekmelerden \"Authors\" (Yazarlar) sekmesine tıklayın.\n\n**3. Arama Sonuçlarını Konu Alanına Göre Filtreleyin:**\n*   Herhangi bir yazar ismi girmeden doğrudan \"Search\" (Ara) butonuna basın. Bu, Scopus'taki tüm yazarları içeren genel bir liste getirecektir.\n*   Arama sonuçları sayfasının sol tarafında yer alan \"Refine Results\" (Sonuçları Daralt) panelini kullanın.\n*   Bu panelden \"Subject Area\" (Konu Alanı) filtresini bulun ve ilgilendiğiniz alanı (örn. \"Computer Science\", \"Engineering\", \"Medicine\") seçerek listeyi daraltın.\n\n**4. H-İndeksine Göre Sıralayın:**\nArama sonuçları listesinin sağ üst köşesinde bulunan \"Sort by\" (Sıralama Ölçütü) menüsüne tıklayın. Menüyü açın ve \"h-index\" seçeneğini işaretleyin.\n\nBu adımları tamamladığınızda, seçtiğiniz bilimsel alanda çalışan ve en yüksek H-indeksine sahip olan akademisyenler en üstte görünecek şekilde sıralanmış bir liste elde edeceksiniz.\n\n**İlgili bilgi: Daha Niş Konular İçin Alternatif Yöntem**\nEğer \"Makine Öğrenmesi\" gibi daha spesifik bir anahtar kelime ile arama yapmak isterseniz, aşağıdaki alternatif yöntemi kullanabilirsiniz:\n*   Scopus'ta bu defa \"Documents\" (Belgeler) sekmesinde kalın.\n*   Arama kutusuna anahtar kelimenizi (örn. \"Large Language Models\" veya \"Semantic Search\") yazarak arama yapın.\n*   Sonuç sayfasında, sol paneldeki \"Author name\" (Yazar Adı) filtresinin altındaki \"View all\" (Tümünü Gör) linkine tıklayın.\n*   Açılan pencere, bu anahtar kelime ile en çok yayın yapan yazarları listeleyecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 15: 42. H-indeksi en yüksek akademisyenleri nasıl bulabilirim?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "H-indeksi en yüksek akademisyenleri bulmak için Scopus veritabanını kullanabilirsiniz. İşte adımlar:\n\n**1. Scopus Veritabanına Erişin:**\nKurumunuzun (İstanbul Teknik Üniversitesi) kütüphane web sayfasından \"Veritabanları\" bölümüne gidin ve listeden Scopus'u bularak giriş yapın.\n\n**2. Yazar Arama (Author Search) Sekmesini Kullanın:**\nScopus ana sayfasında, arama kutularının üzerindeki sekmelerden \"Authors\" (Yazarlar) sekmesine tıklayın.\n\n**3. Arama Sonuçlarını Konu Alanına Göre Filtreleyin:**\n*   Herhangi bir yazar ismi girmeden doğrudan \"Search\" (Ara) butonuna basın. Bu, Scopus'taki tüm yazarları içeren genel bir liste getirecektir.\n*   Arama sonuçları sayfasının sol tarafında yer alan \"Refine Results\" (Sonuçları Daralt) panelini kullanın.\n*   Bu panelden \"Subject Area\" (Konu Alanı) filtresini bulun ve ilgilendiğiniz alanı (örn. \"Computer Science\", \"Engineering\", \"Medicine\") seçerek listeyi daraltın.\n\n**4. H-İndeksine Göre Sıralayın:**\nArama sonuçları listesinin sağ üst köşesinde bulunan \"Sort by\" (Sıralama Ölçütü) menüsüne tıklayın. Menüyü açın ve \"h-index\" seçeneğini işaretleyin.\n\nBu adımları tamamladığınızda, seçtiğiniz bilimsel alanda çalışan ve en yüksek H-indeksine sahip olan akademisyenler en üstte görünecek şekilde sıralanmış bir liste elde edeceksiniz.\n\n**İlgili bilgi: Daha Niş Konular İçin Alternatif Yöntem**\nEğer \"Makine Öğrenmesi\" gibi daha spesifik bir anahtar kelime ile arama yapmak isterseniz, aşağıdaki alternatif yöntemi kullanabilirsiniz:\n*   Scopus'ta bu defa \"Documents\" (Belgeler) sekmesinde kalın.\n*   Arama kutusuna anahtar kelimenizi (örn. \"Large Language Models\" veya \"Semantic Search\") yazarak arama yapın.\n*   Sonuç sayfasında, sol paneldeki \"Author name\" (Yazar Adı) filtresinin altındaki \"View all\" (Tümünü Gör) linkine tıklayın.\n*   Açılan pencere, bu anahtar kelime ile en çok yayın yapan yazarları listeleyecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 15: 42. H-indeksi en yüksek akademisyenleri nasıl bulabilirim?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:10:49.605Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 10337,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf151wx9s4flklwgjvf",
+    "timestamp": "2025-09-01T13:11:38.733Z",
+    "userMessage": {
+      "content": "Patent ve standartlara nasıl erişim sağlayabilirim?",
+      "timestamp": "2025-09-01T13:11:38.730Z"
+    },
+    "agentResponse": {
+      "content": "Thought: The user is asking how to access patents and standards. The `document_search` tool provided a direct answer, indicating that the user should visit the library's databases page and filter by publication type. It also mentioned that databases contain various electronic publications including standards. I have sufficient information to provide a final answer.\nFinal Answer: <p>Patent ve standartlara erişim sağlamak için Kütüphanenin veritabanları sayfasını ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a>. Sol tarafta bulunan yayın türü bölümünde filtreleme yaparak ilgili veritabanlarını bulabilirsiniz. Veritabanları, farklı disiplinlerde hazırlanmış elektronik yayınları (makale, dergi, kitap, standart vb.) içerirler.</p>",
+      "timestamp": "2025-09-01T13:11:38.730Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Patent ve standartlara nasıl erişim sağlayabilirim?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:11:38.730Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Patent ve standartlara erişim sağlamak için Kütüphanenin veritabanları sayfasını ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a>. Sol tarafta bulunan yayın türü bölümünde filtreleme yaparak ilgili veritabanlarını bulabilirsiniz.\n\nVeritabanları, farklı disiplinlerde hazırlanmış elektronik yayınları (makale, dergi, kitap, standart vb.) içerirler.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 19\n* ELEKTRONİK KAYNAKLAR - Veritabanları\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Patent ve standartlara erişim sağlamak için Kütüphanenin veritabanları sayfasını ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a>. Sol tarafta bulunan yayın türü bölümünde filtreleme yaparak ilgili veritabanlarını bulabilirsiniz.\n\nVeritabanları, farklı disiplinlerde hazırlanmış elektronik yayınları (makale, dergi, kitap, standart vb.) içerirler.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 19\n* ELEKTRONİK KAYNAKLAR - Veritabanları\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:11:38.730Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Patent ve standartlara nasıl erişim sağlayabilirim?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:11:38.730Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Patent ve standartlara erişim sağlamak için Kütüphanenin veritabanları sayfasını ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a>. Sol tarafta bulunan yayın türü bölümünde filtreleme yaparak ilgili veritabanlarını bulabilirsiniz.\n\nVeritabanları, farklı disiplinlerde hazırlanmış elektronik yayınları (makale, dergi, kitap, standart vb.) içerirler.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 19\n* ELEKTRONİK KAYNAKLAR - Veritabanları\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Patent ve standartlara erişim sağlamak için Kütüphanenin veritabanları sayfasını ziyaret edebilirsiniz: <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">https://kutuphane.itu.edu.tr/arastirma/veritabanlari</a>. Sol tarafta bulunan yayın türü bölümünde filtreleme yaparak ilgili veritabanlarını bulabilirsiniz.\n\nVeritabanları, farklı disiplinlerde hazırlanmış elektronik yayınları (makale, dergi, kitap, standart vb.) içerirler.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 19\n* ELEKTRONİK KAYNAKLAR - Veritabanları\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:11:38.730Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6374,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf153ztm2b2ewdaxbmw",
+    "timestamp": "2025-09-01T13:13:15.802Z",
+    "userMessage": {
+      "content": "Açık erişim (Open Access) yayınlar hakkında bilgi verir misin?",
+      "timestamp": "2025-09-01T13:13:15.796Z"
+    },
+    "agentResponse": {
+      "content": "<p>Açık erişim, bilimsel literatürün internet aracılığıyla finansal, yasal ve teknik engeller olmaksızın, erişilebilir, okunabilir, kaydedilebilir, kopyalanabilir, yazdırılabilir, taranabilir, tam metne bağlantı verilebilir, dizinlenebilir, yazılıma veri olarak aktarılabilir ve her türlü yasal amaç için kullanılabilir biçimde kamuya ücretsiz açık olmasıdır.</p><br><p>Bu gibi konularda daha detaylı bilgi için <a href=\"https://rehberler.kutuphane.itu.edu.tr/\">https://rehberler.kutuphane.itu.edu.tr/</a> adresini ziyaret edebilirsiniz.</p>",
+      "timestamp": "2025-09-01T13:13:15.796Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Açık erişim (Open Access) yayınlar hakkında bilgi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(open/g: Unterminated group",
+        "output": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(open/g: Unterminated group",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Açık erişim yayınlar hakkında bilgi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Açık erişim, bilimsel literatürün internet aracıyla finansal, yasal ve teknik bariyerler olmaksızın, erişilebilir, okunabilir, kaydedilebilir, kopyalanabilir, yazdırılabilir, taranabilir, tam metne bağlantı verilebilir, dizinlenebilir, yazılıma veri olarak aktarılabilir ve her türlü yasal amaç için kullanılabilir biçimde kamuya ücretsiz açık olmasıdır. Bu gibi konularda <a href=\"https://rehberler.kutuphane.itu.edu.tr/\">https://rehberler.kutuphane.itu.edu.tr/</a> adresinden detaylı bilgi edinebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 20\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Açık erişim, bilimsel literatürün internet aracıyla finansal, yasal ve teknik bariyerler olmaksızın, erişilebilir, okunabilir, kaydedilebilir, kopyalanabilir, yazdırılabilir, taranabilir, tam metne bağlantı verilebilir, dizinlenebilir, yazılıma veri olarak aktarılabilir ve her türlü yasal amaç için kullanılabilir biçimde kamuya ücretsiz açık olmasıdır. Bu gibi konularda <a href=\"https://rehberler.kutuphane.itu.edu.tr/\">https://rehberler.kutuphane.itu.edu.tr/</a> adresinden detaylı bilgi edinebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 20\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Açık erişim (Open Access) yayınlar hakkında bilgi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(open/g: Unterminated group",
+        "output": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(open/g: Unterminated group",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Açık erişim yayınlar hakkında bilgi"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Açık erişim, bilimsel literatürün internet aracıyla finansal, yasal ve teknik bariyerler olmaksızın, erişilebilir, okunabilir, kaydedilebilir, kopyalanabilir, yazdırılabilir, taranabilir, tam metne bağlantı verilebilir, dizinlenebilir, yazılıma veri olarak aktarılabilir ve her türlü yasal amaç için kullanılabilir biçimde kamuya ücretsiz açık olmasıdır. Bu gibi konularda <a href=\"https://rehberler.kutuphane.itu.edu.tr/\">https://rehberler.kutuphane.itu.edu.tr/</a> adresinden detaylı bilgi edinebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 20\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Açık erişim, bilimsel literatürün internet aracıyla finansal, yasal ve teknik bariyerler olmaksızın, erişilebilir, okunabilir, kaydedilebilir, kopyalanabilir, yazdırılabilir, taranabilir, tam metne bağlantı verilebilir, dizinlenebilir, yazılıma veri olarak aktarılabilir ve her türlü yasal amaç için kullanılabilir biçimde kamuya ücretsiz açık olmasıdır. Bu gibi konularda <a href=\"https://rehberler.kutuphane.itu.edu.tr/\">https://rehberler.kutuphane.itu.edu.tr/</a> adresinden detaylı bilgi edinebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 20\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:13:15.796Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 9296,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf154k7a4q5x1g4615c",
+    "timestamp": "2025-09-01T13:13:42.214Z",
+    "userMessage": {
+      "content": "Bir konferans bildirisine nasıl ulaşırım?",
+      "timestamp": "2025-09-01T13:13:42.212Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p>Tam metin bir konferans bildirisine ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:</p><h3>Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:</h3><ul><li>Ulaşmak istediğiniz konferans bildirisinin ismini veya konusunu kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna yazarak aramayı başlatın.</li><li>Sonuçlardan, bildiriye ulaşım seçeneklerine göre doğrudan indirebilir ya da yönlendirme linkine tıklayarak bulunduğu veritabanına yönlendirilerek indirebilirsiniz.</li></ul><h3>Veritabanları:</h3><ul><li>Kütüphanenin abone olduğu veritabanlarını kullanarak bildiriyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar, bu kapsamda konferans bildirileri de bulunabilir.</li></ul><h3>Google Scholar:</h3><ul><li>Google Scholar üzerinden bildiri başlığını veya yazar adını arayarak tam metnine ulaşabilirsiniz. Eğer bildiri açık erişimliyse, doğrudan erişim sağlayabilirsiniz.</li></ul><h3>Açık Erişim Dergiler:</h3><ul><li>Eğer bildiri açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.</li></ul><h3>Araştırmacı İletişimi:</h3><ul><li>Bildirinin yazarlarıyla iletişime geçerek, bir kopyasını talep edebilirsiniz.</li></ul><h3>Kütüphane Destek:</h3><ul><li>Kütüphane personelinden yardım alarak, bildiriye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.</li></ul><p>Belirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.</p>",
+      "timestamp": "2025-09-01T13:13:42.212Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "konferans bildirisine nasıl ulaşırım"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:13:42.212Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Tam metin bir konferans bildirisine ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Ulaşmak istediğiniz konferans bildirisinin ismini veya konusunu kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna yazarak aramayı başlatın. Sonuçlardan, bildiriye ulaşım seçeneklerine göre doğrudan indirebilir ya da yönlendirme linkine tıklayarak bulunduğu veritabanına yönlendirilerek indirebilirsiniz.\n*   **Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak bildiriyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar, bu kapsamda konferans bildirileri de bulunabilir.\n*   **Google Scholar:** Google Scholar üzerinden bildiri başlığını veya yazar adını arayarak tam metnine ulaşabilirsiniz. Eğer bildiri açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer bildiri açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Bildirinin yazarlarıyla iletişime geçerek, bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, bildiriye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n\nBelirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım? 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım?\n*   Kütüphane Kaynakları (metin içinde)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Tam metin bir konferans bildirisine ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Ulaşmak istediğiniz konferans bildirisinin ismini veya konusunu kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna yazarak aramayı başlatın. Sonuçlardan, bildiriye ulaşım seçeneklerine göre doğrudan indirebilir ya da yönlendirme linkine tıklayarak bulunduğu veritabanına yönlendirilerek indirebilirsiniz.\n*   **Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak bildiriyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar, bu kapsamda konferans bildirileri de bulunabilir.\n*   **Google Scholar:** Google Scholar üzerinden bildiri başlığını veya yazar adını arayarak tam metnine ulaşabilirsiniz. Eğer bildiri açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer bildiri açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Bildirinin yazarlarıyla iletişime geçerek, bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, bildiriye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n\nBelirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım? 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım?\n*   Kütüphane Kaynakları (metin içinde)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:13:42.212Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "konferans bildirisine nasıl ulaşırım"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:13:42.212Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Tam metin bir konferans bildirisine ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Ulaşmak istediğiniz konferans bildirisinin ismini veya konusunu kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna yazarak aramayı başlatın. Sonuçlardan, bildiriye ulaşım seçeneklerine göre doğrudan indirebilir ya da yönlendirme linkine tıklayarak bulunduğu veritabanına yönlendirilerek indirebilirsiniz.\n*   **Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak bildiriyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar, bu kapsamda konferans bildirileri de bulunabilir.\n*   **Google Scholar:** Google Scholar üzerinden bildiri başlığını veya yazar adını arayarak tam metnine ulaşabilirsiniz. Eğer bildiri açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer bildiri açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Bildirinin yazarlarıyla iletişime geçerek, bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, bildiriye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n\nBelirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım? 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım?\n*   Kütüphane Kaynakları (metin içinde)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Tam metin bir konferans bildirisine ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz:\n\n*   **Kütüphane Anasayfası \"Tarıyorum\" Arama Çubuğu:** Ulaşmak istediğiniz konferans bildirisinin ismini veya konusunu kütüphane anasayfasındaki \"Tarıyorum\" arama çubuğuna yazarak aramayı başlatın. Sonuçlardan, bildiriye ulaşım seçeneklerine göre doğrudan indirebilir ya da yönlendirme linkine tıklayarak bulunduğu veritabanına yönlendirilerek indirebilirsiniz.\n*   **Veritabanları:** Kütüphanenin abone olduğu veritabanlarını kullanarak bildiriyi arayabilirsiniz. Bu veritabanları genellikle akademik dergilerde yayımlanan makalelere erişim sağlar, bu kapsamda konferans bildirileri de bulunabilir.\n*   **Google Scholar:** Google Scholar üzerinden bildiri başlığını veya yazar adını arayarak tam metnine ulaşabilirsiniz. Eğer bildiri açık erişimliyse, doğrudan erişim sağlayabilirsiniz.\n*   **Açık Erişim Dergiler:** Eğer bildiri açık erişim bir dergide yayımlanmışsa, derginin web sitesinden ücretsiz olarak erişebilirsiniz.\n*   **Araştırmacı İletişimi:** Bildirinin yazarlarıyla iletişime geçerek, bir kopyasını talep edebilirsiniz.\n*   **Kütüphane Destek:** Kütüphane personelinden yardım alarak, bildiriye nasıl ulaşabileceğiniz konusunda destek isteyebilirsiniz.\n\nBelirli bir veritabanı veya platform üzerinden erişim sağlamak istiyorsanız, kütüphanenizin web sitesinde yer alan rehberleri inceleyebilir veya doğrudan kütüphane ile iletişime geçebilirsiniz.\n\n**Kaynaklar:**\n*   Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 7: 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım? 29. Belirli bir makaleye tam metin olarak nasıl ulaşırım?\n*   Kütüphane Kaynakları (metin içinde)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:13:42.212Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 9517,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf1560pjwaaymd5nhe8",
+    "timestamp": "2025-09-01T13:14:50.263Z",
+    "userMessage": {
+      "content": "Ön baskı (preprint) arşivlerine (arXiv gibi) erişim sağlıyor musunuz?",
+      "timestamp": "2025-09-01T13:14:50.261Z"
+    },
+    "agentResponse": {
+      "content": "Thought: The user is asking about access to preprint archives like arXiv. I have already tried searching for \"ön baskı arşivleri\" in `get_library_databases` and it returned no results. This indicates that the library might not directly subscribe to or provide access to these specific types of archives through its listed databases. I should now try a more general search on the library website to see if there's any information about preprint access or open access resources.\nAction: library_web_search\nAction Input: \"ön baskı arşivleri erişim\"\n",
+      "timestamp": "2025-09-01T13:14:50.261Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "ön baskı arşivleri"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:14:50.261Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "output": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:14:50.261Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": {
+          "input": "ön baskı arşivleri"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:14:50.261Z"
+      },
+      {
+        "toolName": "get_library_databases",
+        "toolDescription": "Kütüphanenin abone olduğu veritabanlarını bulur konu başlıklarına göre filtreler. \n  Erişim bilgilerini döndürür. Input should be a keyword string. \n  Eğer inputta bir bağlaçla ayrılarak yazılmış veritabanı isimleri varsa her bir veritabanı ismini kullanarak arama yapar.\n  'Mesela mühendislik veritabanları var mı?' sorusu için 'mühendislik' kelimesini kullanır. \n  Sonuç olarak bulunan veritabanlarını döndürür.",
+        "input": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "output": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:14:50.261Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 3683,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf15dtheko7wy3pxhrn",
+    "timestamp": "2025-09-01T13:20:54.146Z",
+    "userMessage": {
+      "content": "Grup çalışma odası nasıl rezerve edebilirim?",
+      "timestamp": "2025-09-01T13:20:54.144Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p>Grup çalışma odası rezervasyonu yapmak için giriş katta yer alan Ödünç Verme Bankosu'ndaki personele kimlik kartınız ile başvurarak oda ödünç alabilirsiniz. Kullanımda olan odalardan yararlanmak isteyen kullanıcılar da giriş kattaki Ödünç Verme Bankosu’na ayırtma taleplerini iletebilir.</p>",
+      "timestamp": "2025-09-01T13:20:54.144Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "grup çalışma odası rezervasyonu nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:20:54.144Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Grup çalışma odası rezervasyonu yapmak için giriş katta yer alan Ödünç Verme Bankosu'ndaki personele kimlik kartınız ile başvurarak oda ödünç alabilirsiniz. Kullanımda olan odalardan yararlanmak isteyen kullanıcılar da giriş kattaki Ödünç Verme Bankosu’na ayırtma taleplerini iletebilir.\n\nKaynaklar:\n- BAĞLAM (Grup çalışma odaları 2. madde)\n- BAĞLAM (Grup çalışma odaları 6. madde)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 22\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Grup çalışma odası rezervasyonu yapmak için giriş katta yer alan Ödünç Verme Bankosu'ndaki personele kimlik kartınız ile başvurarak oda ödünç alabilirsiniz. Kullanımda olan odalardan yararlanmak isteyen kullanıcılar da giriş kattaki Ödünç Verme Bankosu’na ayırtma taleplerini iletebilir.\n\nKaynaklar:\n- BAĞLAM (Grup çalışma odaları 2. madde)\n- BAĞLAM (Grup çalışma odaları 6. madde)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 22\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:20:54.144Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "grup çalışma odası rezervasyonu nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:20:54.144Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Grup çalışma odası rezervasyonu yapmak için giriş katta yer alan Ödünç Verme Bankosu'ndaki personele kimlik kartınız ile başvurarak oda ödünç alabilirsiniz. Kullanımda olan odalardan yararlanmak isteyen kullanıcılar da giriş kattaki Ödünç Verme Bankosu’na ayırtma taleplerini iletebilir.\n\nKaynaklar:\n- BAĞLAM (Grup çalışma odaları 2. madde)\n- BAĞLAM (Grup çalışma odaları 6. madde)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 22\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Grup çalışma odası rezervasyonu yapmak için giriş katta yer alan Ödünç Verme Bankosu'ndaki personele kimlik kartınız ile başvurarak oda ödünç alabilirsiniz. Kullanımda olan odalardan yararlanmak isteyen kullanıcılar da giriş kattaki Ödünç Verme Bankosu’na ayırtma taleplerini iletebilir.\n\nKaynaklar:\n- BAĞLAM (Grup çalışma odaları 2. madde)\n- BAĞLAM (Grup çalışma odaları 6. madde)\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 22\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:20:54.144Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 7051,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf15ev9r9p9gcgifw0j",
+    "timestamp": "2025-09-01T13:21:43.119Z",
+    "userMessage": {
+      "content": "Kütüphanede bilgisayar kullanabilir miyim?",
+      "timestamp": "2025-09-01T13:21:43.117Z"
+    },
+    "agentResponse": {
+      "content": "<p>Evet, kütüphanede bilgisayar kullanabilirsiniz.</p><br><p>Kütüphane içindeki bilgisayarlar sadece katalog taraması ve kütüphanenin sahip olduğu elektronik yayınlardan araştırma yapmak için kullanılır.</p><br><h3>Kullanım Şartları:</h3><ul><li><b>İTÜ mensupları:</b> İTÜ e-posta adresi ve şifresi ile giriş yaparak tarama bilgisayarlarını kullanabilirler.</li><li><b>Misafir kullanıcılar:</b> Kütüphaneye üye olurken verdikleri e-posta adresini kullanarak kendileri için ayrılmış 2 bilgisayardan tarama yapabilirler.</li></ul>",
+      "timestamp": "2025-09-01T13:21:43.117Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Kütüphanede bilgisayar kullanabilir miyim?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:21:43.117Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Evet, kütüphanede bilgisayar kullanabilirsiniz.\n\nKütüphane içindeki bilgisayarlar sadece katalog taraması ve kütüphanenin sahip olduğu elektronik yayınlardan araştırma yapmak için kullanılır.\n\n*   **İTÜ mensupları:** İTÜ e-posta adresi ve şifresi ile giriş yaparak tarama bilgisayarlarını kullanabilirler.\n*   **Misafir kullanıcılar:** Kütüphaneye üye olurken verdikleri e-posta adresini kullanarak kendileri için ayrılmış 2 bilgisayardan tarama yapabilirler.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 23: 54. Kütüphanede bilgisayar kullanabilir miyim?\n*   KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI (sayfa 14)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Evet, kütüphanede bilgisayar kullanabilirsiniz.\n\nKütüphane içindeki bilgisayarlar sadece katalog taraması ve kütüphanenin sahip olduğu elektronik yayınlardan araştırma yapmak için kullanılır.\n\n*   **İTÜ mensupları:** İTÜ e-posta adresi ve şifresi ile giriş yaparak tarama bilgisayarlarını kullanabilirler.\n*   **Misafir kullanıcılar:** Kütüphaneye üye olurken verdikleri e-posta adresini kullanarak kendileri için ayrılmış 2 bilgisayardan tarama yapabilirler.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 23: 54. Kütüphanede bilgisayar kullanabilir miyim?\n*   KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI (sayfa 14)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:21:43.117Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Kütüphanede bilgisayar kullanabilir miyim?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:21:43.117Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Evet, kütüphanede bilgisayar kullanabilirsiniz.\n\nKütüphane içindeki bilgisayarlar sadece katalog taraması ve kütüphanenin sahip olduğu elektronik yayınlardan araştırma yapmak için kullanılır.\n\n*   **İTÜ mensupları:** İTÜ e-posta adresi ve şifresi ile giriş yaparak tarama bilgisayarlarını kullanabilirler.\n*   **Misafir kullanıcılar:** Kütüphaneye üye olurken verdikleri e-posta adresini kullanarak kendileri için ayrılmış 2 bilgisayardan tarama yapabilirler.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 23: 54. Kütüphanede bilgisayar kullanabilir miyim?\n*   KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI (sayfa 14)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Evet, kütüphanede bilgisayar kullanabilirsiniz.\n\nKütüphane içindeki bilgisayarlar sadece katalog taraması ve kütüphanenin sahip olduğu elektronik yayınlardan araştırma yapmak için kullanılır.\n\n*   **İTÜ mensupları:** İTÜ e-posta adresi ve şifresi ile giriş yaparak tarama bilgisayarlarını kullanabilirler.\n*   **Misafir kullanıcılar:** Kütüphaneye üye olurken verdikleri e-posta adresini kullanarak kendileri için ayrılmış 2 bilgisayardan tarama yapabilirler.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 23: 54. Kütüphanede bilgisayar kullanabilir miyim?\n*   KÜTÜPHANEDEKİ BİLGİSAYARLARIN KULLANIMI (sayfa 14)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:21:43.117Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 6558,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf15ficbg37n6ku2wi6",
+    "timestamp": "2025-09-01T13:22:13.019Z",
+    "userMessage": {
+      "content": "Kütüphaneye kitap bağışı yapabilir miyim, nasıl yaparım?",
+      "timestamp": "2025-09-01T13:22:13.017Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p>Kütüphaneye kitap bağışı yapabilirsiniz. İşte adımlar ve dikkat edilmesi gerekenler:</p><h3>Bağış Süreci:</h3><ul><li>Bağış yapmak isteyen kişi veya kurumların, bağışlayacakları yayınların bilgilerini içeren listeyi önceden Daire Başkanlığı’na iletmesi gerekmektedir.</li><li>Koleksiyon Geliştirme Bölümü tarafından kütüphane koleksiyonu için uygun olduğuna karar verilen yayınlar teknik işlemleri yapılarak koleksiyona eklenir.</li><li>Bağış yapan kişi veya kuruma İTÜ adına teşekkür mektubu gönderilir.</li></ul><h3>Bağış Kabulünde Dikkat Edilen Noktalar:</h3><ul><li>Güncelliğini yitirmiş yayınlar (el yazması ve nadir basma eser niteliği dışında kalanlar) bağış olarak kabul edilmez.</li><li>Kütüphane koleksiyonunda (rezerv yayınlar hariç) mevcut olan yayınlar kabul edilmez.</li><li>Süreli yayınların bağış olarak kabul edilebilmesi için koleksiyonun başlangıcı ya da devamının kütüphanede bulunması gerekir.</li><li>Dergi, ansiklopedi vb. çok ciltli eserler cilt bütünlüğü oluşturuyorsa kabul edilir.</li><li>Fotokopi yayınlar, fiziksel açıdan kötü durumdaki yayınlar ve devamlılığı sağlanamayan süreli yayınlar bağış olarak kabul edilmemektedir.</li><li>Daire Başkanlığı, bağış yapılan yayınları hangi bölümde ve hangi kurallar doğrultusunda kullanıcılara sunacağı konusunda karar verme hakkına sahiptir.</li><li>Daire Başkanlığı, uygun gördüğü takdirde bağış olarak kabul ettiği yayınları iade etme veya başka bir kütüphaneye bağışlama hakkına sahiptir.</li></ul>",
+      "timestamp": "2025-09-01T13:22:13.017Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kütüphaneye kitap bağışı nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:22:13.017Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kütüphaneye kitap bağışı yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  Bağış yapmak isteyen kişi ve kurumların, bağışlayacakları yayınların bilgilerini içeren listeyi önceden Daire Başkanlığı’na iletmesi gerekir.\n2.  Koleksiyon Geliştirme Bölümü tarafından kütüphane koleksiyonu için uygun olduğuna karar verilen yayınlar teknik işlemleri yapılarak koleksiyona eklenir.\n3.  Bağış yapan kişi veya kuruma İTÜ adına teşekkür mektubu gönderilir.\n\nBağış kabulünde dikkat edilen bazı noktalar şunlardır:\n*   Güncelliğini yitirmiş yayınlar (el yazması ve nadir basma eser niteliği dışında kalanlar) bağış olarak kabul edilmez.\n*   Kütüphane koleksiyonunda (rezerv yayınlar hariç) mevcut olan yayınlar kabul edilmez.\n*   Süreli yayınların bağış olarak kabul edilebilmesi için koleksiyonun başlangıcı ya da devamının kütüphanede bulunması gerekir.\n*   Dergi, ansiklopedi vb. çok ciltli eserler cilt bütünlüğü oluşturuyorsa kabul edilir.\n*   Fotokopi yayınlar, fiziksel açıdan kötü durumdaki yayınlar ve devamlılığı sağlanamayan süreli yayınlar bağış olarak kabul edilmemektedir.\n*   Daire Başkanlığı, bağış yapılan yayınları hangi bölümde ve hangi kurallar doğrultusunda kullanıcılara sunacağı konusunda karar verme hakkına sahiptir.\n*   Daire Başkanlığı, uygun gördüğü takdirde bağış olarak kabul ettiği yayınları iade etme veya başka bir kütüphaneye bağışlama hakkına sahiptir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 43: 78. Kütüphaneye kitap bağışı yapabilir miyim, nasıl yaparım?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Kütüphaneye kitap bağışı yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  Bağış yapmak isteyen kişi ve kurumların, bağışlayacakları yayınların bilgilerini içeren listeyi önceden Daire Başkanlığı’na iletmesi gerekir.\n2.  Koleksiyon Geliştirme Bölümü tarafından kütüphane koleksiyonu için uygun olduğuna karar verilen yayınlar teknik işlemleri yapılarak koleksiyona eklenir.\n3.  Bağış yapan kişi veya kuruma İTÜ adına teşekkür mektubu gönderilir.\n\nBağış kabulünde dikkat edilen bazı noktalar şunlardır:\n*   Güncelliğini yitirmiş yayınlar (el yazması ve nadir basma eser niteliği dışında kalanlar) bağış olarak kabul edilmez.\n*   Kütüphane koleksiyonunda (rezerv yayınlar hariç) mevcut olan yayınlar kabul edilmez.\n*   Süreli yayınların bağış olarak kabul edilebilmesi için koleksiyonun başlangıcı ya da devamının kütüphanede bulunması gerekir.\n*   Dergi, ansiklopedi vb. çok ciltli eserler cilt bütünlüğü oluşturuyorsa kabul edilir.\n*   Fotokopi yayınlar, fiziksel açıdan kötü durumdaki yayınlar ve devamlılığı sağlanamayan süreli yayınlar bağış olarak kabul edilmemektedir.\n*   Daire Başkanlığı, bağış yapılan yayınları hangi bölümde ve hangi kurallar doğrultusunda kullanıcılara sunacağı konusunda karar verme hakkına sahiptir.\n*   Daire Başkanlığı, uygun gördüğü takdirde bağış olarak kabul ettiği yayınları iade etme veya başka bir kütüphaneye bağışlama hakkına sahiptir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 43: 78. Kütüphaneye kitap bağışı yapabilir miyim, nasıl yaparım?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:22:13.017Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "kütüphaneye kitap bağışı nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:22:13.017Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Kütüphaneye kitap bağışı yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  Bağış yapmak isteyen kişi ve kurumların, bağışlayacakları yayınların bilgilerini içeren listeyi önceden Daire Başkanlığı’na iletmesi gerekir.\n2.  Koleksiyon Geliştirme Bölümü tarafından kütüphane koleksiyonu için uygun olduğuna karar verilen yayınlar teknik işlemleri yapılarak koleksiyona eklenir.\n3.  Bağış yapan kişi veya kuruma İTÜ adına teşekkür mektubu gönderilir.\n\nBağış kabulünde dikkat edilen bazı noktalar şunlardır:\n*   Güncelliğini yitirmiş yayınlar (el yazması ve nadir basma eser niteliği dışında kalanlar) bağış olarak kabul edilmez.\n*   Kütüphane koleksiyonunda (rezerv yayınlar hariç) mevcut olan yayınlar kabul edilmez.\n*   Süreli yayınların bağış olarak kabul edilebilmesi için koleksiyonun başlangıcı ya da devamının kütüphanede bulunması gerekir.\n*   Dergi, ansiklopedi vb. çok ciltli eserler cilt bütünlüğü oluşturuyorsa kabul edilir.\n*   Fotokopi yayınlar, fiziksel açıdan kötü durumdaki yayınlar ve devamlılığı sağlanamayan süreli yayınlar bağış olarak kabul edilmemektedir.\n*   Daire Başkanlığı, bağış yapılan yayınları hangi bölümde ve hangi kurallar doğrultusunda kullanıcılara sunacağı konusunda karar verme hakkına sahiptir.\n*   Daire Başkanlığı, uygun gördüğü takdirde bağış olarak kabul ettiği yayınları iade etme veya başka bir kütüphaneye bağışlama hakkına sahiptir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 43: 78. Kütüphaneye kitap bağışı yapabilir miyim, nasıl yaparım?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Kütüphaneye kitap bağışı yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  Bağış yapmak isteyen kişi ve kurumların, bağışlayacakları yayınların bilgilerini içeren listeyi önceden Daire Başkanlığı’na iletmesi gerekir.\n2.  Koleksiyon Geliştirme Bölümü tarafından kütüphane koleksiyonu için uygun olduğuna karar verilen yayınlar teknik işlemleri yapılarak koleksiyona eklenir.\n3.  Bağış yapan kişi veya kuruma İTÜ adına teşekkür mektubu gönderilir.\n\nBağış kabulünde dikkat edilen bazı noktalar şunlardır:\n*   Güncelliğini yitirmiş yayınlar (el yazması ve nadir basma eser niteliği dışında kalanlar) bağış olarak kabul edilmez.\n*   Kütüphane koleksiyonunda (rezerv yayınlar hariç) mevcut olan yayınlar kabul edilmez.\n*   Süreli yayınların bağış olarak kabul edilebilmesi için koleksiyonun başlangıcı ya da devamının kütüphanede bulunması gerekir.\n*   Dergi, ansiklopedi vb. çok ciltli eserler cilt bütünlüğü oluşturuyorsa kabul edilir.\n*   Fotokopi yayınlar, fiziksel açıdan kötü durumdaki yayınlar ve devamlılığı sağlanamayan süreli yayınlar bağış olarak kabul edilmemektedir.\n*   Daire Başkanlığı, bağış yapılan yayınları hangi bölümde ve hangi kurallar doğrultusunda kullanıcılara sunacağı konusunda karar verme hakkına sahiptir.\n*   Daire Başkanlığı, uygun gördüğü takdirde bağış olarak kabul ettiği yayınları iade etme veya başka bir kütüphaneye bağışlama hakkına sahiptir.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 43: 78. Kütüphaneye kitap bağışı yapabilir miyim, nasıl yaparım?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:22:13.017Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 9282,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf15gl3lumk4od7pomo",
+    "timestamp": "2025-09-01T13:23:03.249Z",
+    "userMessage": {
+      "content": "Geri bildirim veya şikayette nasıl bulunabilirim?",
+      "timestamp": "2025-09-01T13:23:03.246Z"
+    },
+    "agentResponse": {
+      "content": "Thought: The initial search indicated that the answer is in a \"Kılavuz\" (Guide), but the document search did not provide the actual guide or the steps. I need to find the specific procedure for providing feedback or making a complaint. Since the document search didn't yield direct steps, I will try a more general web search on the library's website to see if there's a dedicated page or section for feedback and complaints.\nAction: library_web_search\nAction Input: \"kütüphane geri bildirim şikayet\"\n",
+      "timestamp": "2025-09-01T13:23:03.246Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "geri bildirim veya şikayet nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İlgili bilgi:\nGeri bildirim veya şikayette bulunma ile ilgili cevabın Kılavuz'da olduğu belirtilmiştir.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 46\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İlgili bilgi:\nGeri bildirim veya şikayette bulunma ile ilgili cevabın Kılavuz'da olduğu belirtilmiştir.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 46\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "geri bildirim şikayet prosedürü iletişim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "geri bildirim veya şikayet nasıl yapılır"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "İlgili bilgi:\nGeri bildirim veya şikayette bulunma ile ilgili cevabın Kılavuz'da olduğu belirtilmiştir.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 46\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "İlgili bilgi:\nGeri bildirim veya şikayette bulunma ile ilgili cevabın Kılavuz'da olduğu belirtilmiştir.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 46\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "geri bildirim şikayet prosedürü iletişim"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Üzgünüm, bu konu hakkında belgemde yeterli bilgi bulunmuyor.\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:23:03.246Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 22304,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
   }
 ]
