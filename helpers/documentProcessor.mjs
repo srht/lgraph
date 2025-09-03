@@ -221,6 +221,23 @@ export default class DocumentProcessor {
       }
     }
 
+    if (mimeType === "application/xml") {
+      try {
+        const xmlData = fs.readFileSync(filePath, "utf8");
+        
+        // Check if it's a sitemap XML
+        if (xmlData.includes('<urlset') && xmlData.includes('<loc>')) {
+          return this.#processSitemapXML(xmlData, filePath);
+        }
+        
+        // For other XML files, extract text content only
+        return this.#processGenericXML(xmlData);
+      } catch (err) {
+        console.error(`XML okuma hatası '${filePath}':`, err.message);
+        throw new Error(`XML işlenirken bir sorun oluştu: ${err.message}`);
+      }
+    }
+
     if (
       mimeType ===
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ||
@@ -322,6 +339,9 @@ export default class DocumentProcessor {
         break;
       case ".json":
         mimeType = "application/json";
+        break;
+      case ".xml":
+        mimeType = "application/xml";
         break;
       default:
         throw new Error(`Desteklenmeyen dosya uzantısı: ${fileExtension}`);
@@ -568,5 +588,101 @@ export default class DocumentProcessor {
   getRetriever(k = 5) {
     if (!this.vectorStore) return null;
     return this.vectorStore.asRetriever({ k });
+  }
+
+  /**
+   * Sitemap XML dosyasını işler ve yapılandırılmış veri döndürür
+   * @private
+   */
+  #processSitemapXML(xmlData, filePath) {
+    console.log(`📍 Sitemap XML işleniyor: ${path.basename(filePath)}`);
+    
+    // Extract URL entries with all available information
+    const urlEntryRegex = /<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*(?:<description>(.*?)<\/description>\s*)?<priority>(.*?)<\/priority>\s*<\/url>/gs;
+    
+    const urls = [];
+    let match;
+    
+    while ((match = urlEntryRegex.exec(xmlData)) !== null) {
+      const url = match[1].trim();
+      const lastmod = match[2].trim();
+      const description = match[3] ? match[3].trim() : '';
+      const priority = match[4].trim();
+      
+      // Extract meaningful info from URL path
+      const urlPath = new URL(url).pathname;
+      const pathParts = urlPath.split('/').filter(p => p);
+      const pageName = pathParts[pathParts.length - 1] || 'ana-sayfa';
+      
+      // Create readable content for each URL
+      let urlContent = `Sayfa: ${pageName.replace(/-/g, ' ')}\n`;
+      urlContent += `URL: ${url}\n`;
+      urlContent += `Son güncelleme: ${lastmod}\n`;
+      urlContent += `Öncelik: ${priority}\n`;
+      
+      if (description) {
+        urlContent += `Açıklama: ${description}\n`;
+      }
+      
+      // Add path context
+      if (pathParts.length > 1) {
+        urlContent += `Kategori: ${pathParts.slice(0, -1).join(' > ').replace(/-/g, ' ')}\n`;
+      }
+      
+      // Add keywords from URL and description
+      const keywords = [];
+      pathParts.forEach(part => {
+        keywords.push(...part.split('-').filter(w => w.length > 2));
+      });
+      
+      if (description) {
+        const descWords = description.toLowerCase()
+          .match(/\b[\w\u00C0-\u017F]+\b/g) || [];
+        keywords.push(...descWords.filter(w => w.length > 2));
+      }
+      
+      if (keywords.length > 0) {
+        urlContent += `Anahtar kelimeler: ${[...new Set(keywords)].join(', ')}\n`;
+      }
+      
+      urlContent += '\n';
+      urls.push(urlContent);
+    }
+    
+    if (urls.length === 0) {
+      console.warn('⚠️ Sitemap XML\'de URL bulunamadı');
+      return 'Sitemap XML dosyası işlendi ancak URL bulunamadı.';
+    }
+    
+    console.log(`✅ ${urls.length} URL sitemap'ten çıkarıldı`);
+    
+    // Combine all URL information
+    let combinedContent = `KÜTÜPHANE WEB SİTESİ HARİTASI\n`;
+    combinedContent += `Dosya: ${path.basename(filePath)}\n`;
+    combinedContent += `Toplam sayfa sayısı: ${urls.length}\n\n`;
+    combinedContent += `=== SAYFA LİSTESİ ===\n\n`;
+    combinedContent += urls.join('\n');
+    
+    return normalizeText(combinedContent);
+  }
+
+  /**
+   * Genel XML dosyasını işler - sadece text content'i çıkarır
+   * @private
+   */
+  #processGenericXML(xmlData) {
+    // Remove XML tags and extract text content
+    let textContent = xmlData
+      .replace(/<\?xml.*?\?>/g, '') // Remove XML declaration
+      .replace(/<!--.*?-->/gs, '') // Remove comments
+      .replace(/<[^>]+>/g, ' ') // Remove all tags
+      .replace(/\s+/g, ' ') // Normalize whitespace
+      .trim();
+    
+    if (!textContent || textContent.length < 10) {
+      return 'XML dosyası işlendi ancak metin içeriği bulunamadı.';
+    }
+    
+    return normalizeText(textContent);
   }
 }

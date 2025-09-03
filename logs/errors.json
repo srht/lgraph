@@ -1,12 +1,41 @@
-[{
-  "timestamp": "2025-08-29T08:18:13.689Z",
-  "data": {
-    "message": "Test hatası",
-    "stack": "Error: Test hatası\n    at file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/test-logger.mjs:35:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:370:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)",
-    "context": {
-      "context": "test-logger.mjs",
-      "operation": "test"
-    },
-    "type": "Error"
+[
+  {
+    "timestamp": "2025-08-29T08:18:13.689Z",
+    "data": {
+      "message": "Test hatası",
+      "stack": "Error: Test hatası\n    at file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/test-logger.mjs:35:9\n    at ModuleJob.run (node:internal/modules/esm/module_job:370:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)",
+      "context": {
+        "context": "test-logger.mjs",
+        "operation": "test"
+      },
+      "type": "Error"
+    }
+  },
+  {
+    "timestamp": "2025-09-02T10:10:33.496Z",
+    "data": {
+      "message": "[object Object]",
+      "stack": "ReferenceError: parsedResponse is not defined\n    at file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/app.mjs:336:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+      "context": null,
+      "type": "Object"
+    }
+  },
+  {
+    "timestamp": "2025-09-03T06:56:35.900Z",
+    "data": {
+      "message": "[object Object]",
+      "stack": "Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.5-flash\"},\"quotaValue\":\"250\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"24s\"}]\n    at handleResponseNotOk (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:432:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:401:9)\n    at async generateContent (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:865:22)\n    at async file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/google-genai/dist/chat_models.js:734:24\n    at async RetryOperation._fn (E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\node_modules\\p-retry\\index.js:50:12)",
+      "context": null,
+      "type": "Object"
+    }
+  },
+  {
+    "timestamp": "2025-09-03T06:56:35.933Z",
+    "data": {
+      "message": "[object Object]",
+      "stack": "Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.5-flash\"},\"quotaValue\":\"250\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"24s\"}]\n    at handleResponseNotOk (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:432:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:401:9)\n    at async generateContent (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:865:22)\n    at async file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/google-genai/dist/chat_models.js:734:24\n    at async RetryOperation._fn (E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\node_modules\\p-retry\\index.js:50:12)",
+      "context": null,
+      "type": "Object"
+    }
   }
-}]
+]

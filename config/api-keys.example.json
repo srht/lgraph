@@ -1,0 +1,41 @@
+{
+  "gemini": {
+    "keys": [
+      {
+        "key": "YOUR_FIRST_GEMINI_API_KEY_HERE",
+        "requestCount": 0,
+        "isActive": true
+      },
+      {
+        "key": "YOUR_SECOND_GEMINI_API_KEY_HERE",
+        "requestCount": 0,
+        "isActive": true
+      },
+      {
+        "key": "YOUR_THIRD_GEMINI_API_KEY_HERE",
+        "requestCount": 0,
+        "isActive": true
+      }
+    ],
+    "maxRequestsPerKey": 15,
+    "currentKeyIndex": 0,
+    "lastResetTime": 1696000000000
+  },
+  "openai": {
+    "keys": [
+      {
+        "key": "YOUR_FIRST_OPENAI_API_KEY_HERE",
+        "requestCount": 0,
+        "isActive": true
+      },
+      {
+        "key": "YOUR_SECOND_OPENAI_API_KEY_HERE",
+        "requestCount": 0,
+        "isActive": true
+      }
+    ],
+    "maxRequestsPerKey": 15,
+    "currentKeyIndex": 0,
+    "lastResetTime": 1696000000000
+  }
+}

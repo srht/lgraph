@@ -2762,5 +2762,433 @@
       "totalLLMCalls": 0,
       "hasErrors": false
     }
+  },
+  {
+    "id": "mf16ay4o4aeanpgvjbj",
+    "timestamp": "2025-09-01T13:46:39.816Z",
+    "userMessage": {
+      "content": "Birincil ve ikincil kaynaklar arasındaki fark nedir?",
+      "timestamp": "2025-09-01T13:46:39.814Z"
+    },
+    "agentResponse": {
+      "content": "<p>Merhaba! Akademik araştırmaların temelini oluşturan birincil ve ikincil kaynaklar arasındaki farkı basitçe açıklayayım:</p><br><h3>1. Birincil Kaynaklar (Olayın Kendisi veya Ham Veri)</h3><p>Birincil kaynaklar, bir olay veya konu hakkında doğrudan, ilk elden bilgi sunan orijinal materyallerdir. Olayın yaşandığı dönemde oluşturulmuş veya olaya bizzat tanıklık etmiş kişiler tarafından hazırlanmış kanıtlardır.</p><br><ul><li><b>Örnekler:</b></li><li><b>Tarih:</b> Günlükler, mektuplar, otobiyografiler, resmi belgeler (ferman, kanun, anlaşma), fotoğraflar, o döneme ait gazeteler.</li><li><b>Bilim:</b> Orijinal bir deneyin sonuçlarını sunan araştırma makalesi, laboratuvar defteri, patentler.</li><li><b>Sanat/Edebiyat:</b> Roman, şiir, resim, heykel, konuşma metinleri.</li></ul><br><h3>2. İkincil Kaynaklar (Olay Hakkındaki Yorumlar)</h3><p>İkincil kaynaklar, birincil kaynakları analiz eden, yorumlayan, özetleyen veya eleştiren çalışmalardır. Olayla aralarında bir \"adım\" vardır; konuyu size yorumlayarak aktarırlar.</p><br><ul><li><b>Örnekler:</b></li><li><b>Tarih:</b> Bir savaş hakkında yazılmış tarih kitabı, bir lider hakkında yazılmış biyografi.</li><li><b>Bilim:</b> Başka araştırmaları özetleyen ve değerlendiren derleme makaleler (review articles), ders kitapları.</li><li><b>Sanat/Edebiyat:</b> Bir roman hakkındaki kitap eleştirisi, bir sanatçının eserlerini analiz eden makaleler, ansiklopedi maddeleri.</li></ul>",
+      "timestamp": "2025-09-01T13:46:39.814Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Birincil ve ikincil kaynaklar arasındaki fark nedir?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:46:39.814Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Merhaba! Akademik araştırmaların temelini oluşturan birincil ve ikincil kaynaklar arasındaki farkı basitçe açıklayayım:\n\n**1. Birincil Kaynaklar (Olayın Kendisi veya Ham Veri)**\nBirincil kaynaklar, bir olay veya konu hakkında doğrudan, ilk elden bilgi sunan orijinal materyallerdir. Olayın yaşandığı dönemde oluşturulmuş veya olaya bizzat tanıklık etmiş kişiler tarafından hazırlanmış kanıtlardır.\n\n*   **Örnekler:**\n    *   **Tarih:** Günlükler, mektuplar, otobiyografiler, resmi belgeler (ferman, kanun, anlaşma), fotoğraflar, o döneme ait gazeteler.\n    *   **Bilim:** Orijinal bir deneyin sonuçlarını sunan araştırma makalesi, laboratuvar defteri, patentler.\n    *   **Sanat/Edebiyat:** Roman, şiir, resim, heykel, konuşma metinleri.\n\n**2. İkincil Kaynaklar (Olay Hakkındaki Yorumlar)**\nİkincil kaynaklar, birincil kaynakları analiz eden, yorumlayan, özetleyen veya eleştiren çalışmalardır. Olayla aralarında bir \"adım\" vardır; konuyu size yorumlayarak aktarırlar.\n\n*   **Örnekler:**\n    *   **Tarih:** Bir savaş hakkında yazılmış tarih kitabı, bir lider hakkında yazılmış biyografi.\n    *   **Bilim:** Başka araştırmaları özetleyen ve değerlendiren derleme makaleler (review articles), ders kitapları.\n    *   **Sanat/Edebiyat:** Bir roman hakkındaki kitap eleştirisi, bir sanatçının eserlerini analiz eden makaleler, ansiklopedi maddeleri.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 55\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Merhaba! Akademik araştırmaların temelini oluşturan birincil ve ikincil kaynaklar arasındaki farkı basitçe açıklayayım:\n\n**1. Birincil Kaynaklar (Olayın Kendisi veya Ham Veri)**\nBirincil kaynaklar, bir olay veya konu hakkında doğrudan, ilk elden bilgi sunan orijinal materyallerdir. Olayın yaşandığı dönemde oluşturulmuş veya olaya bizzat tanıklık etmiş kişiler tarafından hazırlanmış kanıtlardır.\n\n*   **Örnekler:**\n    *   **Tarih:** Günlükler, mektuplar, otobiyografiler, resmi belgeler (ferman, kanun, anlaşma), fotoğraflar, o döneme ait gazeteler.\n    *   **Bilim:** Orijinal bir deneyin sonuçlarını sunan araştırma makalesi, laboratuvar defteri, patentler.\n    *   **Sanat/Edebiyat:** Roman, şiir, resim, heykel, konuşma metinleri.\n\n**2. İkincil Kaynaklar (Olay Hakkındaki Yorumlar)**\nİkincil kaynaklar, birincil kaynakları analiz eden, yorumlayan, özetleyen veya eleştiren çalışmalardır. Olayla aralarında bir \"adım\" vardır; konuyu size yorumlayarak aktarırlar.\n\n*   **Örnekler:**\n    *   **Tarih:** Bir savaş hakkında yazılmış tarih kitabı, bir lider hakkında yazılmış biyografi.\n    *   **Bilim:** Başka araştırmaları özetleyen ve değerlendiren derleme makaleler (review articles), ders kitapları.\n    *   **Sanat/Edebiyat:** Bir roman hakkındaki kitap eleştirisi, bir sanatçının eserlerini analiz eden makaleler, ansiklopedi maddeleri.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 55\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:46:39.814Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Birincil ve ikincil kaynaklar arasındaki fark nedir?"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:46:39.814Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Merhaba! Akademik araştırmaların temelini oluşturan birincil ve ikincil kaynaklar arasındaki farkı basitçe açıklayayım:\n\n**1. Birincil Kaynaklar (Olayın Kendisi veya Ham Veri)**\nBirincil kaynaklar, bir olay veya konu hakkında doğrudan, ilk elden bilgi sunan orijinal materyallerdir. Olayın yaşandığı dönemde oluşturulmuş veya olaya bizzat tanıklık etmiş kişiler tarafından hazırlanmış kanıtlardır.\n\n*   **Örnekler:**\n    *   **Tarih:** Günlükler, mektuplar, otobiyografiler, resmi belgeler (ferman, kanun, anlaşma), fotoğraflar, o döneme ait gazeteler.\n    *   **Bilim:** Orijinal bir deneyin sonuçlarını sunan araştırma makalesi, laboratuvar defteri, patentler.\n    *   **Sanat/Edebiyat:** Roman, şiir, resim, heykel, konuşma metinleri.\n\n**2. İkincil Kaynaklar (Olay Hakkındaki Yorumlar)**\nİkincil kaynaklar, birincil kaynakları analiz eden, yorumlayan, özetleyen veya eleştiren çalışmalardır. Olayla aralarında bir \"adım\" vardır; konuyu size yorumlayarak aktarırlar.\n\n*   **Örnekler:**\n    *   **Tarih:** Bir savaş hakkında yazılmış tarih kitabı, bir lider hakkında yazılmış biyografi.\n    *   **Bilim:** Başka araştırmaları özetleyen ve değerlendiren derleme makaleler (review articles), ders kitapları.\n    *   **Sanat/Edebiyat:** Bir roman hakkındaki kitap eleştirisi, bir sanatçının eserlerini analiz eden makaleler, ansiklopedi maddeleri.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 55\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Merhaba! Akademik araştırmaların temelini oluşturan birincil ve ikincil kaynaklar arasındaki farkı basitçe açıklayayım:\n\n**1. Birincil Kaynaklar (Olayın Kendisi veya Ham Veri)**\nBirincil kaynaklar, bir olay veya konu hakkında doğrudan, ilk elden bilgi sunan orijinal materyallerdir. Olayın yaşandığı dönemde oluşturulmuş veya olaya bizzat tanıklık etmiş kişiler tarafından hazırlanmış kanıtlardır.\n\n*   **Örnekler:**\n    *   **Tarih:** Günlükler, mektuplar, otobiyografiler, resmi belgeler (ferman, kanun, anlaşma), fotoğraflar, o döneme ait gazeteler.\n    *   **Bilim:** Orijinal bir deneyin sonuçlarını sunan araştırma makalesi, laboratuvar defteri, patentler.\n    *   **Sanat/Edebiyat:** Roman, şiir, resim, heykel, konuşma metinleri.\n\n**2. İkincil Kaynaklar (Olay Hakkındaki Yorumlar)**\nİkincil kaynaklar, birincil kaynakları analiz eden, yorumlayan, özetleyen veya eleştiren çalışmalardır. Olayla aralarında bir \"adım\" vardır; konuyu size yorumlayarak aktarırlar.\n\n*   **Örnekler:**\n    *   **Tarih:** Bir savaş hakkında yazılmış tarih kitabı, bir lider hakkında yazılmış biyografi.\n    *   **Bilim:** Başka araştırmaları özetleyen ve değerlendiren derleme makaleler (review articles), ders kitapları.\n    *   **Sanat/Edebiyat:** Bir roman hakkındaki kitap eleştirisi, bir sanatçının eserlerini analiz eden makaleler, ansiklopedi maddeleri.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 55\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:46:39.814Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 10197,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf16bhzie8d7qydiljj",
+    "timestamp": "2025-09-01T13:47:05.550Z",
+    "userMessage": {
+      "content": "Aradığım kitap mevcut değilse, bana Amazon gibi sitelerden satın alma linki önerebilir misin?",
+      "timestamp": "2025-09-01T13:47:05.547Z"
+    },
+    "agentResponse": {
+      "content": "<p>Size yardımcı olmak isterdim ancak bu konuda yeterli bilgim yok. <br>Lütfen kütüphanedeki referans kütüphanecilerine başvurun veya kütüphane web sitesindeki canlı destekten yardım isteyin.</p>",
+      "timestamp": "2025-09-01T13:47:05.547Z"
+    },
+    "executionSteps": [],
+    "toolsUsed": [],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 1457,
+      "totalMessages": 2,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai"
+      ],
+      "totalSteps": 0,
+      "totalToolsUsed": 0,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf16d232vcznqzezf8",
+    "timestamp": "2025-09-01T13:48:18.254Z",
+    "userMessage": {
+      "content": "Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek veriyor musunuz?",
+      "timestamp": "2025-09-01T13:48:18.250Z"
+    },
+    "agentResponse": {
+      "content": "<p>Evet, atıf yönetimi araçları için destek verilmektedir. Özellikle <b>Mendeley Reference Manager (Institutional Edition)</b> hakkında detaylı bilgi bulunmaktadır.</p><br><p><b>Mendeley Institutional Edition (MIE)</b>, bir referans yönetim yazılımı ve akademik sosyal ağdır. Mendeley ile araştırma yapabilir, çalışmalarınızı sergileyebilir ve dünya genelindeki kullanıcılarla bağlantı kurup işbirliği yapabilirsiniz.</p><br><p><b>Mendeley kullanmak için:</b></p><ul><li>Öncelikle <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> adresinden \"create a free account\" ile bir hesap oluşturmanız gerekmektedir. Herhangi uzantılı bir e-posta ile ücretsiz hesap oluşturulabilir.</li><li>Masaüstü için, <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> alanından işletim sisteminize (Mac, Windows, Linux, Android) uygun uygulamayı indirebilirsiniz. Masaüstü uygulaması web uygulaması ile senkronize çalışır.</li></ul><br><p><b>Mendeley Kurumsal Versiyon (MIE) avantajları:</b></p><ul><li>5 GB kişisel kütüphane alanı.</li><li>20 GB kütüphane paylaşım alanı.</li><li>25 kişilik ve sınırsız grup oluşturma imkanı.</li></ul><br><p><b>MIE Kurumsal Versiyon Aktivasyonu:</b></p><ul><li>Kurum IP aralığı içerisindeyken özel (gmail, yahoo vb.) veya kurumsal e-posta (edu.tr) adresleri ile Mendeley hesaplarına bir kere giriş yapıldığında MIE hesap yükseltmesi ve MIE Kurumsal Sayfa üyeliği otomatik olarak gerçekleşir.</li><li>Sonrasında kurum içi veya dışında her yerden giriş yapıldığında MIE avantajlarından yararlanılabilir.</li><li>MIE hesabının aktivasyonunun devamlılığı için, kullanıcının 12 ay dolmadan en az bir kere kurum IP sistemi içerisinde giriş yapması yeterlidir.</li><li>MIE aktivasyon süresi dolmadan 10 gün önce kullanıcılara e-posta ile uyarı gelecektir.</li></ul><br><p><b>Referans Yönetimi Özellikleri:</b></p><ul><li>Referansları organize ederek verimliliği artırır.</li><li>Verinizi güvenle depolar.</li><li>Kolayca organize etme, okuma ve referans verme.</li><li>Tek tıkla atıf ve kaynakça oluşturma.</li><li>Etkin akademik yazımı destekler.</li><li>Her yerden her an ulaşım imkanı.</li><li>Çevrim dışı okuma, not alma ve altını çizme.</li><li>Takım arkadaşları veya diğer iş birliği ortakları ile notların paylaşımı.</li></ul><br><p><b>İşbirliği ve Görünürlük Özellikleri:</b></p><ul><li>Araştırmalarınızı görünür kılar ve paylaşır.</li><li>Araştırmacı profillerini görünür kılar.</li><li>İşbirliği ve iletişim ağlarını genişletir.</li><li>Araştırmacı işbirliğine olanak sağlar.</li><li>Bilgi paylaşımını destekler.</li></ul><br><p><b>Eğitim Kaynakları:</b></p><ul><li>Mendeley Türkçe online eğitim videosuna erişip, kayıt sonrası 7/24 ve her yerden izleyebilirsiniz.</li><li>MIE ile ilgili daha fazla bilgi ve materyaller (İngilizce): <a href=\"https://www.elsevier.com/solutions/mendeley/support\">https://www.elsevier.com/solutions/mendeley/support</a></li><li>Genel Mendeley kaynakları:<ul><li><a href=\"https://www.youtube.com/user/MendeleyResearch\">https://www.youtube.com/user/MendeleyResearch</a></li><li><a href=\"https://www.elsevier.com/solutions/mendeley/support/webinars\">https://www.elsevier.com/solutions/mendeley/support/webinars</a></li><li><a href=\"https://blog.mendeley.com/\">https://blog.mendeley.com/</a></li><li><a href=\"http://community.mendeley.com/guides\">http://community.mendeley.com/guides</a></li><li><a href=\"https://service.elsevier.com/app/home/supporthub/mendeley/\">https://service.elsevier.com/app/home/supporthub/mendeley/</a></li><li><a href=\"http://feedback.mendeley.com\">http://feedback.mendeley.com</a></li></ul></li><li>Mendeley ile Kolay Atıf/Referans Yönetimi (Yeni araçlar: MRW & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a></li><li>Mendeley ile Kolay Atıf/Referans Yönetimi (Mendeley Web & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5\">https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5</a></li><li>Mendeley Soru&Cevap (Yeni Kullanıcılar): <a href=\"https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a></li></ul><br><p><b>Zotero ve EndNote</b> için ise, bağlamda bahsedilse de, bu araçlar için spesifik bir destek veya kullanım bilgisi bulunmamaktadır.</p>",
+      "timestamp": "2025-09-01T13:48:18.250Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(mendeley,/g: Unterminated group",
+        "output": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(mendeley,/g: Unterminated group",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "atıf yönetimi araçları desteği"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Evet, atıf yönetimi araçları için destek verilmektedir. Özellikle Mendeley Reference Manager (Institutional Edition) hakkında detaylı bilgi bulunmaktadır.\n\nMendeley Institutional Edition (MIE), bir referans yönetim yazılımı ve akademik sosyal ağdır. Mendeley ile araştırma yapabilir, çalışmalarınızı sergileyebilir ve dünya genelindeki kullanıcılarla bağlantı kurup işbirliği yapabilirsiniz.\n\nMendeley kullanmak için:\n1.  Öncelikle <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> adresinden \"create a free account\" ile bir hesap oluşturmanız gerekmektedir. Herhangi uzantılı bir e-posta ile ücretsiz hesap oluşturulabilir.\n2.  Masaüstü için, <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> alanından işletim sisteminize (Mac, Windows, Linux, Android) uygun uygulamayı indirebilirsiniz. Masaüstü uygulaması web uygulaması ile senkronize çalışır.\n\nMendeley Kurumsal Versiyon (MIE) avantajları:\n*   5 GB kişisel kütüphane alanı.\n*   20 GB kütüphane paylaşım alanı.\n*   25 kişilik ve sınırsız grup oluşturma imkanı.\n\n**MIE Kurumsal Versiyon Aktivasyonu:**\n*   Kurum IP aralığı içerisindeyken özel (gmail, yahoo vb.) veya kurumsal e-posta (edu.tr) adresleri ile Mendeley hesaplarına bir kere giriş yapıldığında MIE hesap yükseltmesi ve MIE Kurumsal Sayfa üyeliği otomatik olarak gerçekleşir.\n*   Sonrasında kurum içi veya dışında her yerden giriş yapıldığında MIE avantajlarından yararlanılabilir.\n*   MIE hesabının aktivasyonunun devamlılığı için, kullanıcının 12 ay dolmadan en az bir kere kurum IP sistemi içerisinde giriş yapması yeterlidir.\n*   MIE aktivasyon süresi dolmadan 10 gün önce kullanıcılara e-posta ile uyarı gelecektir.\n\n**Referans Yönetimi Özellikleri:**\n*   Referansları organize ederek verimliliği artırır.\n*   Verinizi güvenle depolar.\n*   Kolayca organize etme, okuma ve referans verme.\n*   Tek tıkla atıf ve kaynakça oluşturma.\n*   Etkin akademik yazımı destekler.\n*   Her yerden her an ulaşım imkanı.\n*   Çevrim dışı okuma, not alma ve altını çizme.\n*   Takım arkadaşları veya diğer iş birliği ortakları ile notların paylaşımı.\n\n**İşbirliği ve Görünürlük Özellikleri:**\n*   Araştırmalarınızı görünür kılar ve paylaşır.\n*   Araştırmacı profillerini görünür kılar.\n*   İşbirliği ve iletişim ağlarını genişletir.\n*   Araştırmacı işbirliğine olanak sağlar.\n*   Bilgi paylaşımını destekler.\n\n**Eğitim Kaynakları:**\n*   Mendeley Türkçe online eğitim videosuna erişip, kayıt sonrası 7/24 ve her yerden izleyebilirsiniz.\n*   MIE ile ilgili daha fazla bilgi ve materyaller (İngilizce): <a href=\"https://www.elsevier.com/solutions/mendeley/support\">https://www.elsevier.com/solutions/mendeley/support</a>\n*   Genel Mendeley kaynakları:\n    *   <a href=\"https://www.youtube.com/user/MendeleyResearch\">https://www.youtube.com/user/MendeleyResearch</a>\n    *   <a href=\"https://www.elsevier.com/solutions/mendeley/support/webinars\">https://www.elsevier.com/solutions/mendeley/support/webinars</a>\n    *   <a href=\"https://blog.mendeley.com/\">https://blog.mendeley.com/</a>\n    *   <a href=\"http://community.mendeley.com/guides\">http://community.mendeley.com/guides</a>\n    *   <a href=\"https://service.elsevier.com/app/home/supporthub/mendeley/\">https://service.elsevier.com/app/home/supporthub/mendeley/</a>\n    *   <a href=\"http://feedback.mendeley.com\">http://feedback.mendeley.com</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Yeni araçlar: MRW & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Mendeley Web & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5\">https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5</a>\n*   Mendeley Soru&Cevap (Yeni Kullanıcılar): <a href=\"https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n\n**İlgili bilgi:**\nBağlamda Zotero ve EndNote'dan bahsedilse de, bu araçlar için spesifik bir destek veya kullanım bilgisi bulunmamaktadır.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 9: 36. Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek veriyor musunuz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Evet, atıf yönetimi araçları için destek verilmektedir. Özellikle Mendeley Reference Manager (Institutional Edition) hakkında detaylı bilgi bulunmaktadır.\n\nMendeley Institutional Edition (MIE), bir referans yönetim yazılımı ve akademik sosyal ağdır. Mendeley ile araştırma yapabilir, çalışmalarınızı sergileyebilir ve dünya genelindeki kullanıcılarla bağlantı kurup işbirliği yapabilirsiniz.\n\nMendeley kullanmak için:\n1.  Öncelikle <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> adresinden \"create a free account\" ile bir hesap oluşturmanız gerekmektedir. Herhangi uzantılı bir e-posta ile ücretsiz hesap oluşturulabilir.\n2.  Masaüstü için, <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> alanından işletim sisteminize (Mac, Windows, Linux, Android) uygun uygulamayı indirebilirsiniz. Masaüstü uygulaması web uygulaması ile senkronize çalışır.\n\nMendeley Kurumsal Versiyon (MIE) avantajları:\n*   5 GB kişisel kütüphane alanı.\n*   20 GB kütüphane paylaşım alanı.\n*   25 kişilik ve sınırsız grup oluşturma imkanı.\n\n**MIE Kurumsal Versiyon Aktivasyonu:**\n*   Kurum IP aralığı içerisindeyken özel (gmail, yahoo vb.) veya kurumsal e-posta (edu.tr) adresleri ile Mendeley hesaplarına bir kere giriş yapıldığında MIE hesap yükseltmesi ve MIE Kurumsal Sayfa üyeliği otomatik olarak gerçekleşir.\n*   Sonrasında kurum içi veya dışında her yerden giriş yapıldığında MIE avantajlarından yararlanılabilir.\n*   MIE hesabının aktivasyonunun devamlılığı için, kullanıcının 12 ay dolmadan en az bir kere kurum IP sistemi içerisinde giriş yapması yeterlidir.\n*   MIE aktivasyon süresi dolmadan 10 gün önce kullanıcılara e-posta ile uyarı gelecektir.\n\n**Referans Yönetimi Özellikleri:**\n*   Referansları organize ederek verimliliği artırır.\n*   Verinizi güvenle depolar.\n*   Kolayca organize etme, okuma ve referans verme.\n*   Tek tıkla atıf ve kaynakça oluşturma.\n*   Etkin akademik yazımı destekler.\n*   Her yerden her an ulaşım imkanı.\n*   Çevrim dışı okuma, not alma ve altını çizme.\n*   Takım arkadaşları veya diğer iş birliği ortakları ile notların paylaşımı.\n\n**İşbirliği ve Görünürlük Özellikleri:**\n*   Araştırmalarınızı görünür kılar ve paylaşır.\n*   Araştırmacı profillerini görünür kılar.\n*   İşbirliği ve iletişim ağlarını genişletir.\n*   Araştırmacı işbirliğine olanak sağlar.\n*   Bilgi paylaşımını destekler.\n\n**Eğitim Kaynakları:**\n*   Mendeley Türkçe online eğitim videosuna erişip, kayıt sonrası 7/24 ve her yerden izleyebilirsiniz.\n*   MIE ile ilgili daha fazla bilgi ve materyaller (İngilizce): <a href=\"https://www.elsevier.com/solutions/mendeley/support\">https://www.elsevier.com/solutions/mendeley/support</a>\n*   Genel Mendeley kaynakları:\n    *   <a href=\"https://www.youtube.com/user/MendeleyResearch\">https://www.youtube.com/user/MendeleyResearch</a>\n    *   <a href=\"https://www.elsevier.com/solutions/mendeley/support/webinars\">https://www.elsevier.com/solutions/mendeley/support/webinars</a>\n    *   <a href=\"https://blog.mendeley.com/\">https://blog.mendeley.com/</a>\n    *   <a href=\"http://community.mendeley.com/guides\">http://community.mendeley.com/guides</a>\n    *   <a href=\"https://service.elsevier.com/app/home/supporthub/mendeley/\">https://service.elsevier.com/app/home/supporthub/mendeley/</a>\n    *   <a href=\"http://feedback.mendeley.com\">http://feedback.mendeley.com</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Yeni araçlar: MRW & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Mendeley Web & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5\">https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5</a>\n*   Mendeley Soru&Cevap (Yeni Kullanıcılar): <a href=\"https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n\n**İlgili bilgi:**\nBağlamda Zotero ve EndNote'dan bahsedilse de, bu araçlar için spesifik bir destek veya kullanım bilgisi bulunmamaktadır.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 9: 36. Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek veriyor musunuz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(mendeley,/g: Unterminated group",
+        "output": "Belge sorgulanırken hata oluştu: Invalid regular expression: /(mendeley,/g: Unterminated group",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "atıf yönetimi araçları desteği"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 3,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Evet, atıf yönetimi araçları için destek verilmektedir. Özellikle Mendeley Reference Manager (Institutional Edition) hakkında detaylı bilgi bulunmaktadır.\n\nMendeley Institutional Edition (MIE), bir referans yönetim yazılımı ve akademik sosyal ağdır. Mendeley ile araştırma yapabilir, çalışmalarınızı sergileyebilir ve dünya genelindeki kullanıcılarla bağlantı kurup işbirliği yapabilirsiniz.\n\nMendeley kullanmak için:\n1.  Öncelikle <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> adresinden \"create a free account\" ile bir hesap oluşturmanız gerekmektedir. Herhangi uzantılı bir e-posta ile ücretsiz hesap oluşturulabilir.\n2.  Masaüstü için, <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> alanından işletim sisteminize (Mac, Windows, Linux, Android) uygun uygulamayı indirebilirsiniz. Masaüstü uygulaması web uygulaması ile senkronize çalışır.\n\nMendeley Kurumsal Versiyon (MIE) avantajları:\n*   5 GB kişisel kütüphane alanı.\n*   20 GB kütüphane paylaşım alanı.\n*   25 kişilik ve sınırsız grup oluşturma imkanı.\n\n**MIE Kurumsal Versiyon Aktivasyonu:**\n*   Kurum IP aralığı içerisindeyken özel (gmail, yahoo vb.) veya kurumsal e-posta (edu.tr) adresleri ile Mendeley hesaplarına bir kere giriş yapıldığında MIE hesap yükseltmesi ve MIE Kurumsal Sayfa üyeliği otomatik olarak gerçekleşir.\n*   Sonrasında kurum içi veya dışında her yerden giriş yapıldığında MIE avantajlarından yararlanılabilir.\n*   MIE hesabının aktivasyonunun devamlılığı için, kullanıcının 12 ay dolmadan en az bir kere kurum IP sistemi içerisinde giriş yapması yeterlidir.\n*   MIE aktivasyon süresi dolmadan 10 gün önce kullanıcılara e-posta ile uyarı gelecektir.\n\n**Referans Yönetimi Özellikleri:**\n*   Referansları organize ederek verimliliği artırır.\n*   Verinizi güvenle depolar.\n*   Kolayca organize etme, okuma ve referans verme.\n*   Tek tıkla atıf ve kaynakça oluşturma.\n*   Etkin akademik yazımı destekler.\n*   Her yerden her an ulaşım imkanı.\n*   Çevrim dışı okuma, not alma ve altını çizme.\n*   Takım arkadaşları veya diğer iş birliği ortakları ile notların paylaşımı.\n\n**İşbirliği ve Görünürlük Özellikleri:**\n*   Araştırmalarınızı görünür kılar ve paylaşır.\n*   Araştırmacı profillerini görünür kılar.\n*   İşbirliği ve iletişim ağlarını genişletir.\n*   Araştırmacı işbirliğine olanak sağlar.\n*   Bilgi paylaşımını destekler.\n\n**Eğitim Kaynakları:**\n*   Mendeley Türkçe online eğitim videosuna erişip, kayıt sonrası 7/24 ve her yerden izleyebilirsiniz.\n*   MIE ile ilgili daha fazla bilgi ve materyaller (İngilizce): <a href=\"https://www.elsevier.com/solutions/mendeley/support\">https://www.elsevier.com/solutions/mendeley/support</a>\n*   Genel Mendeley kaynakları:\n    *   <a href=\"https://www.youtube.com/user/MendeleyResearch\">https://www.youtube.com/user/MendeleyResearch</a>\n    *   <a href=\"https://www.elsevier.com/solutions/mendeley/support/webinars\">https://www.elsevier.com/solutions/mendeley/support/webinars</a>\n    *   <a href=\"https://blog.mendeley.com/\">https://blog.mendeley.com/</a>\n    *   <a href=\"http://community.mendeley.com/guides\">http://community.mendeley.com/guides</a>\n    *   <a href=\"https://service.elsevier.com/app/home/supporthub/mendeley/\">https://service.elsevier.com/app/home/supporthub/mendeley/</a>\n    *   <a href=\"http://feedback.mendeley.com\">http://feedback.mendeley.com</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Yeni araçlar: MRW & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Mendeley Web & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5\">https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5</a>\n*   Mendeley Soru&Cevap (Yeni Kullanıcılar): <a href=\"https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n\n**İlgili bilgi:**\nBağlamda Zotero ve EndNote'dan bahsedilse de, bu araçlar için spesifik bir destek veya kullanım bilgisi bulunmamaktadır.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 9: 36. Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek veriyor musunuz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Evet, atıf yönetimi araçları için destek verilmektedir. Özellikle Mendeley Reference Manager (Institutional Edition) hakkında detaylı bilgi bulunmaktadır.\n\nMendeley Institutional Edition (MIE), bir referans yönetim yazılımı ve akademik sosyal ağdır. Mendeley ile araştırma yapabilir, çalışmalarınızı sergileyebilir ve dünya genelindeki kullanıcılarla bağlantı kurup işbirliği yapabilirsiniz.\n\nMendeley kullanmak için:\n1.  Öncelikle <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> adresinden \"create a free account\" ile bir hesap oluşturmanız gerekmektedir. Herhangi uzantılı bir e-posta ile ücretsiz hesap oluşturulabilir.\n2.  Masaüstü için, <a href=\"https://www.mendeley.com/\">https://www.mendeley.com/</a> alanından işletim sisteminize (Mac, Windows, Linux, Android) uygun uygulamayı indirebilirsiniz. Masaüstü uygulaması web uygulaması ile senkronize çalışır.\n\nMendeley Kurumsal Versiyon (MIE) avantajları:\n*   5 GB kişisel kütüphane alanı.\n*   20 GB kütüphane paylaşım alanı.\n*   25 kişilik ve sınırsız grup oluşturma imkanı.\n\n**MIE Kurumsal Versiyon Aktivasyonu:**\n*   Kurum IP aralığı içerisindeyken özel (gmail, yahoo vb.) veya kurumsal e-posta (edu.tr) adresleri ile Mendeley hesaplarına bir kere giriş yapıldığında MIE hesap yükseltmesi ve MIE Kurumsal Sayfa üyeliği otomatik olarak gerçekleşir.\n*   Sonrasında kurum içi veya dışında her yerden giriş yapıldığında MIE avantajlarından yararlanılabilir.\n*   MIE hesabının aktivasyonunun devamlılığı için, kullanıcının 12 ay dolmadan en az bir kere kurum IP sistemi içerisinde giriş yapması yeterlidir.\n*   MIE aktivasyon süresi dolmadan 10 gün önce kullanıcılara e-posta ile uyarı gelecektir.\n\n**Referans Yönetimi Özellikleri:**\n*   Referansları organize ederek verimliliği artırır.\n*   Verinizi güvenle depolar.\n*   Kolayca organize etme, okuma ve referans verme.\n*   Tek tıkla atıf ve kaynakça oluşturma.\n*   Etkin akademik yazımı destekler.\n*   Her yerden her an ulaşım imkanı.\n*   Çevrim dışı okuma, not alma ve altını çizme.\n*   Takım arkadaşları veya diğer iş birliği ortakları ile notların paylaşımı.\n\n**İşbirliği ve Görünürlük Özellikleri:**\n*   Araştırmalarınızı görünür kılar ve paylaşır.\n*   Araştırmacı profillerini görünür kılar.\n*   İşbirliği ve iletişim ağlarını genişletir.\n*   Araştırmacı işbirliğine olanak sağlar.\n*   Bilgi paylaşımını destekler.\n\n**Eğitim Kaynakları:**\n*   Mendeley Türkçe online eğitim videosuna erişip, kayıt sonrası 7/24 ve her yerden izleyebilirsiniz.\n*   MIE ile ilgili daha fazla bilgi ve materyaller (İngilizce): <a href=\"https://www.elsevier.com/solutions/mendeley/support\">https://www.elsevier.com/solutions/mendeley/support</a>\n*   Genel Mendeley kaynakları:\n    *   <a href=\"https://www.youtube.com/user/MendeleyResearch\">https://www.youtube.com/user/MendeleyResearch</a>\n    *   <a href=\"https://www.elsevier.com/solutions/mendeley/support/webinars\">https://www.elsevier.com/solutions/mendeley/support/webinars</a>\n    *   <a href=\"https://blog.mendeley.com/\">https://blog.mendeley.com/</a>\n    *   <a href=\"http://community.mendeley.com/guides\">http://community.mendeley.com/guides</a>\n    *   <a href=\"https://service.elsevier.com/app/home/supporthub/mendeley/\">https://service.elsevier.com/app/home/supporthub/mendeley/</a>\n    *   <a href=\"http://feedback.mendeley.com\">http://feedback.mendeley.com</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Yeni araçlar: MRW & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=5TeZGGcTEkk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n*   Mendeley ile Kolay Atıf/Referans Yönetimi (Mendeley Web & Mendeley Cite Demo): <a href=\"https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5\">https://www.youtube.com/watch?v=HOfSnLQW7oI&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=5</a>\n*   Mendeley Soru&Cevap (Yeni Kullanıcılar): <a href=\"https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3\">https://www.youtube.com/watch?v=2dWCReSmJuk&list=PLSeDSb25IGc-o_ERmQ1Ceu7pmBzj8CvnQ&index=3</a>\n\n**İlgili bilgi:**\nBağlamda Zotero ve EndNote'dan bahsedilse de, bu araçlar için spesifik bir destek veya kullanım bilgisi bulunmamaktadır.\n\nKaynaklar:\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 9: 36. Atıf yönetimi araçları (Mendeley, Zotero, EndNote) için destek veriyor musunuz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 4,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:48:18.250Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 24864,
+      "totalMessages": 6,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 4,
+      "totalToolsUsed": 4,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf16geonhrjtxc76gi",
+    "timestamp": "2025-09-01T13:50:54.551Z",
+    "userMessage": {
+      "content": "Bilimsel bir dergide yayın yapma süreci hakkında bilgi verebilir misiniz?",
+      "timestamp": "2025-09-01T13:50:54.548Z"
+    },
+    "agentResponse": {
+      "content": "Thought: I have sufficient information to provide a final answer.\nFinal Answer: <p>Bilimsel bir dergide yayın yapma süreci genellikle aşağıdaki adımları içerir:</p><h3>Araştırma ve Hazırlık</h3><ul><li><b>Araştırma Yapma:</b> Araştırma konusunu belirlemek ve gerekli verileri toplamak.</li><li><b>Makale Yazımı:</b> Araştırma sonuçlarını ve bulguları düzenli bir şekilde makale formatında yazmak.</li></ul><h3>Dergi Seçimi</h3><ul><li><b>Uygun Dergi Bulma:</b> Araştırmanızın konusuna uygun bir dergi seçmek önemlidir. Derginin hedef kitlesi, etki faktörü ve yayın politikaları göz önünde bulundurulmalıdır.</li></ul><h3>Makale Gönderimi</h3><ul><li><b>Başvuru Süreci:</b> Makalenizi derginin belirlediği formatta hazırlayıp, genellikle çevrimiçi bir sistem üzerinden gönderirsiniz.</li><li><b>Kurumsal E-posta Kullanımı:</b> Özellikle açık erişim başvurularında, kurumsal e-posta adresi kullanmak doğrulama sürecini kolaylaştırır.</li></ul><h3>Hakem Değerlendirmesi</h3><ul><li><b>Hakem Görüşleri:</b> Makaleniz, alanında uzman hakemler tarafından değerlendirilir. Bu süreçte düzeltme talepleri gelebilir.</li><li><b>Revizyonlar:</b> Hakemlerin önerileri doğrultusunda makalenizde gerekli düzenlemeleri yapmanız gerekebilir.</li></ul><h3>Yayın Kararı</h3><ul><li><b>Kabul veya Red:</b> Revizyonlardan sonra makaleniz kabul edilebilir veya reddedilebilir.</li><li><b>Yayın Ücreti:</b> Açık erişim dergilerde makale işlem ücretini yazar veya fon sağlayıcısı ödemek durumundadır.</li></ul><h3>Yayınlanma</h3><ul><li><b>Son Düzenlemeler:</b> Kabul edilen makale son düzenlemelerden geçer ve dergide yayınlanır.</li><li><b>Açık Erişim:</b> Makaleniz açık erişim olarak yayınlanırsa, herkes tarafından ücretsiz erişilebilir olur.</li></ul><p>Bu süreç, dergiden dergiye değişiklik gösterebilir, ancak genel olarak bu adımlar takip edilir. Eğer daha spesifik bir bilgiye ihtiyacınız varsa, ilgili derginin web sitesinden detaylı bilgi alabilirsiniz.</p>",
+      "timestamp": "2025-09-01T13:50:54.548Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Bilimsel bir dergide yayın yapma süreci"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:50:54.548Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Bilimsel bir dergide yayın yapma süreci genellikle aşağıdaki adımları içerir:\n\n1.  **Araştırma ve Hazırlık**\n    *   **Araştırma Yapma:** İlk adım, araştırma konusunu belirlemek ve gerekli verileri toplamak.\n    *   **Makale Yazımı:** Araştırma sonuçlarını ve bulguları düzenli bir şekilde makale formatında yazmak.\n2.  **Dergi Seçimi**\n    *   **Uygun Dergi Bulma:** Araştırmanızın konusuna uygun bir dergi seçmek önemlidir. Derginin hedef kitlesi, etki faktörü ve yayın politikaları göz önünde bulundurulmalıdır.\n3.  **Makale Gönderimi**\n    *   **Başvuru Süreci:** Makalenizi derginin belirlediği formatta hazırlayıp, genellikle çevrimiçi bir sistem üzerinden gönderirsiniz.\n    *   **Kurumsal E-posta Kullanımı:** Özellikle açık erişim başvurularında, kurumsal e-posta adresi kullanmak doğrulama sürecini kolaylaştırır.\n4.  **Hakem Değerlendirmesi**\n    *   **Hakem Görüşleri:** Makaleniz, alanında uzman hakemler tarafından değerlendirilir. Bu süreçte düzeltme talepleri gelebilir.\n    *   **Revizyonlar:** Hakemlerin önerileri doğrultusunda makalenizde gerekli düzenlemeleri yapmanız gerekebilir.\n5.  **Yayın Kararı**\n    *   **Kabul veya Red:** Revizyonlardan sonra makaleniz kabul edilebilir veya reddedilebilir.\n    *   **Yayın Ücreti:** Açık erişim dergilerde makale işlem ücretini yazar veya fon sağlayıcısı ödemek durumundadır.\n6.  **Yayınlanma**\n    *   **Son Düzenlemeler:** Kabul edilen makale son düzenlemelerden geçer ve dergide yayınlanır.\n    *   **Açık Erişim:** Makaleniz açık erişim olarak yayınlanırsa, herkes tarafından ücretsiz erişilebilir olur.\n\nBu süreç, dergiden dergiye değişiklik gösterebilir, ancak genel olarak bu adımlar takip edilir. Eğer daha spesifik bir bilgiye ihtiyacınız varsa, ilgili derginin web sitesinden detaylı bilgi alabilirsiniz.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 13: 40. Bilimsel bir dergide yayın yapma süreci hakkında bilgi verebilir misiniz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Bilimsel bir dergide yayın yapma süreci genellikle aşağıdaki adımları içerir:\n\n1.  **Araştırma ve Hazırlık**\n    *   **Araştırma Yapma:** İlk adım, araştırma konusunu belirlemek ve gerekli verileri toplamak.\n    *   **Makale Yazımı:** Araştırma sonuçlarını ve bulguları düzenli bir şekilde makale formatında yazmak.\n2.  **Dergi Seçimi**\n    *   **Uygun Dergi Bulma:** Araştırmanızın konusuna uygun bir dergi seçmek önemlidir. Derginin hedef kitlesi, etki faktörü ve yayın politikaları göz önünde bulundurulmalıdır.\n3.  **Makale Gönderimi**\n    *   **Başvuru Süreci:** Makalenizi derginin belirlediği formatta hazırlayıp, genellikle çevrimiçi bir sistem üzerinden gönderirsiniz.\n    *   **Kurumsal E-posta Kullanımı:** Özellikle açık erişim başvurularında, kurumsal e-posta adresi kullanmak doğrulama sürecini kolaylaştırır.\n4.  **Hakem Değerlendirmesi**\n    *   **Hakem Görüşleri:** Makaleniz, alanında uzman hakemler tarafından değerlendirilir. Bu süreçte düzeltme talepleri gelebilir.\n    *   **Revizyonlar:** Hakemlerin önerileri doğrultusunda makalenizde gerekli düzenlemeleri yapmanız gerekebilir.\n5.  **Yayın Kararı**\n    *   **Kabul veya Red:** Revizyonlardan sonra makaleniz kabul edilebilir veya reddedilebilir.\n    *   **Yayın Ücreti:** Açık erişim dergilerde makale işlem ücretini yazar veya fon sağlayıcısı ödemek durumundadır.\n6.  **Yayınlanma**\n    *   **Son Düzenlemeler:** Kabul edilen makale son düzenlemelerden geçer ve dergide yayınlanır.\n    *   **Açık Erişim:** Makaleniz açık erişim olarak yayınlanırsa, herkes tarafından ücretsiz erişilebilir olur.\n\nBu süreç, dergiden dergiye değişiklik gösterebilir, ancak genel olarak bu adımlar takip edilir. Eğer daha spesifik bir bilgiye ihtiyacınız varsa, ilgili derginin web sitesinden detaylı bilgi alabilirsiniz.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 13: 40. Bilimsel bir dergide yayın yapma süreci hakkında bilgi verebilir misiniz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:50:54.548Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "Bilimsel bir dergide yayın yapma süreci"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:50:54.548Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Bilimsel bir dergide yayın yapma süreci genellikle aşağıdaki adımları içerir:\n\n1.  **Araştırma ve Hazırlık**\n    *   **Araştırma Yapma:** İlk adım, araştırma konusunu belirlemek ve gerekli verileri toplamak.\n    *   **Makale Yazımı:** Araştırma sonuçlarını ve bulguları düzenli bir şekilde makale formatında yazmak.\n2.  **Dergi Seçimi**\n    *   **Uygun Dergi Bulma:** Araştırmanızın konusuna uygun bir dergi seçmek önemlidir. Derginin hedef kitlesi, etki faktörü ve yayın politikaları göz önünde bulundurulmalıdır.\n3.  **Makale Gönderimi**\n    *   **Başvuru Süreci:** Makalenizi derginin belirlediği formatta hazırlayıp, genellikle çevrimiçi bir sistem üzerinden gönderirsiniz.\n    *   **Kurumsal E-posta Kullanımı:** Özellikle açık erişim başvurularında, kurumsal e-posta adresi kullanmak doğrulama sürecini kolaylaştırır.\n4.  **Hakem Değerlendirmesi**\n    *   **Hakem Görüşleri:** Makaleniz, alanında uzman hakemler tarafından değerlendirilir. Bu süreçte düzeltme talepleri gelebilir.\n    *   **Revizyonlar:** Hakemlerin önerileri doğrultusunda makalenizde gerekli düzenlemeleri yapmanız gerekebilir.\n5.  **Yayın Kararı**\n    *   **Kabul veya Red:** Revizyonlardan sonra makaleniz kabul edilebilir veya reddedilebilir.\n    *   **Yayın Ücreti:** Açık erişim dergilerde makale işlem ücretini yazar veya fon sağlayıcısı ödemek durumundadır.\n6.  **Yayınlanma**\n    *   **Son Düzenlemeler:** Kabul edilen makale son düzenlemelerden geçer ve dergide yayınlanır.\n    *   **Açık Erişim:** Makaleniz açık erişim olarak yayınlanırsa, herkes tarafından ücretsiz erişilebilir olur.\n\nBu süreç, dergiden dergiye değişiklik gösterebilir, ancak genel olarak bu adımlar takip edilir. Eğer daha spesifik bir bilgiye ihtiyacınız varsa, ilgili derginin web sitesinden detaylı bilgi alabilirsiniz.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 13: 40. Bilimsel bir dergide yayın yapma süreci hakkında bilgi verebilir misiniz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Bilimsel bir dergide yayın yapma süreci genellikle aşağıdaki adımları içerir:\n\n1.  **Araştırma ve Hazırlık**\n    *   **Araştırma Yapma:** İlk adım, araştırma konusunu belirlemek ve gerekli verileri toplamak.\n    *   **Makale Yazımı:** Araştırma sonuçlarını ve bulguları düzenli bir şekilde makale formatında yazmak.\n2.  **Dergi Seçimi**\n    *   **Uygun Dergi Bulma:** Araştırmanızın konusuna uygun bir dergi seçmek önemlidir. Derginin hedef kitlesi, etki faktörü ve yayın politikaları göz önünde bulundurulmalıdır.\n3.  **Makale Gönderimi**\n    *   **Başvuru Süreci:** Makalenizi derginin belirlediği formatta hazırlayıp, genellikle çevrimiçi bir sistem üzerinden gönderirsiniz.\n    *   **Kurumsal E-posta Kullanımı:** Özellikle açık erişim başvurularında, kurumsal e-posta adresi kullanmak doğrulama sürecini kolaylaştırır.\n4.  **Hakem Değerlendirmesi**\n    *   **Hakem Görüşleri:** Makaleniz, alanında uzman hakemler tarafından değerlendirilir. Bu süreçte düzeltme talepleri gelebilir.\n    *   **Revizyonlar:** Hakemlerin önerileri doğrultusunda makalenizde gerekli düzenlemeleri yapmanız gerekebilir.\n5.  **Yayın Kararı**\n    *   **Kabul veya Red:** Revizyonlardan sonra makaleniz kabul edilebilir veya reddedilebilir.\n    *   **Yayın Ücreti:** Açık erişim dergilerde makale işlem ücretini yazar veya fon sağlayıcısı ödemek durumundadır.\n6.  **Yayınlanma**\n    *   **Son Düzenlemeler:** Kabul edilen makale son düzenlemelerden geçer ve dergide yayınlanır.\n    *   **Açık Erişim:** Makaleniz açık erişim olarak yayınlanırsa, herkes tarafından ücretsiz erişilebilir olur.\n\nBu süreç, dergiden dergiye değişiklik gösterebilir, ancak genel olarak bu adımlar takip edilir. Eğer daha spesifik bir bilgiye ihtiyacınız varsa, ilgili derginin web sitesinden detaylı bilgi alabilirsiniz.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 13: 40. Bilimsel bir dergide yayın yapma süreci hakkında bilgi verebilir misiniz?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:50:54.548Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 16319,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
+  },
+  {
+    "id": "mf16h6brkco3u99ihgo",
+    "timestamp": "2025-09-01T13:51:30.375Z",
+    "userMessage": {
+      "content": "Araştırma verilerimi yönetmek için en iyi pratikler nelerdir?",
+      "timestamp": "2025-09-01T13:51:30.372Z"
+    },
+    "agentResponse": {
+      "content": "<p>Araştırma verilerinizi etkili bir şekilde yönetmek için en iyi pratikler şunlardır:</p><h3>Veri Planlaması</h3><ul><li><b>Veri Yönetim Planı (DMP):</b> Araştırmanızın başında verilerin nasıl toplanacağı, saklanacağı, analiz edileceği ve paylaşılacağı hakkında detaylar içeren bir veri yönetim planı oluşturun.</li></ul><h3>Veri Toplama</h3><ul><li><b>Standartlaştırma:</b> Verilerinizi toplarken standart yöntemler kullanarak tutarlılık ve kaliteyi artırın.</li><li><b>Dokümantasyon:</b> Topladığınız verileri detaylı bir şekilde belgeleyin.</li></ul><h3>Veri Saklama</h3><ul><li><b>Güvenli Saklama:</b> Verilerinizi şifreleme ve yedekleme gibi yöntemlerle güvenli bir şekilde saklayın.</li><li><b>Organizasyon:</b> Dosya isimlendirme kuralları ve klasör yapıları kullanarak verilerinizi düzenli ve erişilebilir hale getirin.</li></ul><h3>Veri Analizi</h3><ul><li><b>Yazılım ve Araçlar:</b> Verilerinizi analiz etmek için uygun yazılım ve araçları kullanın.</li></ul><h3>Veri Paylaşımı</h3><ul><li><b>Açık Erişim:</b> Mümkünse verilerinizi açık erişim platformlarında paylaşarak araştırmanızın görünürlüğünü artırın.</li><li><b>Lisanslama:</b> Verilerinizi paylaşırken uygun lisanslama yöntemlerini kullanarak telif haklarını koruyun.</li></ul><h3>Veri Arşivleme</h3><ul><li><b>Uzun Vadeli Saklama:</b> Araştırmanız tamamlandıktan sonra verilerinizi uzun vadeli saklama çözümleri kullanarak arşivleyin.</li></ul><p>Araştırma verilerinizi İTÜ Akademik Açık Arşivinde (İTÜ AAA) saklayabilirsiniz. İTÜ AAA, üniversitemizin akademik ve idari personeli, öğrencileri tarafından bilimsel dergilerde yayınlanmış makaleler, araştırma projeleri, konferans metinleri, raporlar, ders notları ve İTÜ'nün tüm enstitülerinde üretilmiş yüksek lisans ve doktora tezlerinin yazar/eser sahiplerinin izinleri dahilinde yer alması ve sınırsız erişime sunulmasını amaçlamaktadır.</p>",
+      "timestamp": "2025-09-01T13:51:30.372Z"
+    },
+    "executionSteps": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "araştırma verileri yönetimi en iyi pratikler"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:51:30.372Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Araştırma verilerinizi etkili bir şekilde yönetmek, araştırma sürecinizin başarısı için kritik öneme sahiptir. İşte araştırma verilerinizi yönetmek için en iyi pratikler:\n\n1.  **Veri Planlaması**\n    *   **Veri Yönetim Planı (DMP):** Araştırmanızın başında bir veri yönetim planı oluşturun. Bu plan, verilerin nasıl toplanacağı, saklanacağı, analiz edileceği ve paylaşılacağı hakkında detaylar içermelidir.\n2.  **Veri Toplama**\n    *   **Standartlaştırma:** Verilerinizi toplarken standart yöntemler kullanın. Bu, verilerin tutarlılığını ve kalitesini artırır.\n    *   **Dokümantasyon:** Topladığınız verileri detaylı bir şekilde belgeleyin. Bu, verilerinizi daha sonra anlamanızı ve başkalarıyla paylaşmanızı kolaylaştırır.\n3.  **Veri Saklama**\n    *   **Güvenli Saklama:** Verilerinizi güvenli bir şekilde saklayın. Şifreleme ve yedekleme gibi yöntemlerle veri güvenliğini sağlayın.\n    *   **Organizasyon:** Verilerinizi düzenli bir şekilde organize edin. Dosya isimlendirme kuralları ve klasör yapıları kullanarak verilerinizi kolayca erişilebilir hale getirin.\n4.  **Veri Analizi**\n    *   **Yazılım ve Araçlar:** Verilerinizi analiz etmek için uygun yazılım ve araçları kullanın. Bu araçlar, verilerinizi daha etkili bir şekilde işlemeye yardımcı olabilir.\n5.  **Veri Paylaşımı**\n    *   **Açık Erişim:** Mümkünse verilerinizi açık erişim platformlarında paylaşın. Bu, araştırmanızın görünürlüğünü artırabilir ve diğer araştırmacılarla işbirliği yapmanıza olanak tanır.\n    *   **Lisanslama:** Verilerinizi paylaşırken uygun lisanslama yöntemlerini kullanarak telif haklarını koruyun.\n6.  **Veri Arşivleme**\n    *   **Uzun Vadeli Saklama:** Araştırmanız tamamlandıktan sonra verilerinizi uzun vadeli saklama çözümleri kullanarak arşivleyin. Bu, gelecekteki araştırmalar için veri erişimini sağlar.\n\nBu pratikler, araştırma verilerinizi etkili bir şekilde yönetmenize yardımcı olabilir. Eğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden veya veri yönetimi uzmanlarından destek alabilirsiniz.\n\n**İlgili bilgi:**\nAraştırma verilerinizi İTÜ Akademik Açık Arşivinde (İTÜ AAA) saklayabilirsiniz. İTÜ AAA, üniversitemizin akademik ve idari personeli, öğrencileri tarafından bilimsel dergilerde yayınlanmış makaleler, araştırma projeleri, konferans metinleri, raporlar, ders notları ve İTÜ'nün tüm enstitülerinde üretilmiş yüksek lisans ve doktora tezlerinin yazar/eser sahiplerinin izinleri dahilinde yer alması ve sınırsız erişime sunulmasını amaçlamaktadır. Açık arşivde bulunan çalışmalardan yararlanıldığında, kullanan kişinin kaynak göstermesi bilimsel etik açısından gerekli ve zorunludur. Kaynak gösterilmesinde kullanılan çalışmanın adı ve yazarıyla birlikte açık arşivin URL adresi verilecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 12\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Araştırma verilerinizi etkili bir şekilde yönetmek, araştırma sürecinizin başarısı için kritik öneme sahiptir. İşte araştırma verilerinizi yönetmek için en iyi pratikler:\n\n1.  **Veri Planlaması**\n    *   **Veri Yönetim Planı (DMP):** Araştırmanızın başında bir veri yönetim planı oluşturun. Bu plan, verilerin nasıl toplanacağı, saklanacağı, analiz edileceği ve paylaşılacağı hakkında detaylar içermelidir.\n2.  **Veri Toplama**\n    *   **Standartlaştırma:** Verilerinizi toplarken standart yöntemler kullanın. Bu, verilerin tutarlılığını ve kalitesini artırır.\n    *   **Dokümantasyon:** Topladığınız verileri detaylı bir şekilde belgeleyin. Bu, verilerinizi daha sonra anlamanızı ve başkalarıyla paylaşmanızı kolaylaştırır.\n3.  **Veri Saklama**\n    *   **Güvenli Saklama:** Verilerinizi güvenli bir şekilde saklayın. Şifreleme ve yedekleme gibi yöntemlerle veri güvenliğini sağlayın.\n    *   **Organizasyon:** Verilerinizi düzenli bir şekilde organize edin. Dosya isimlendirme kuralları ve klasör yapıları kullanarak verilerinizi kolayca erişilebilir hale getirin.\n4.  **Veri Analizi**\n    *   **Yazılım ve Araçlar:** Verilerinizi analiz etmek için uygun yazılım ve araçları kullanın. Bu araçlar, verilerinizi daha etkili bir şekilde işlemeye yardımcı olabilir.\n5.  **Veri Paylaşımı**\n    *   **Açık Erişim:** Mümkünse verilerinizi açık erişim platformlarında paylaşın. Bu, araştırmanızın görünürlüğünü artırabilir ve diğer araştırmacılarla işbirliği yapmanıza olanak tanır.\n    *   **Lisanslama:** Verilerinizi paylaşırken uygun lisanslama yöntemlerini kullanarak telif haklarını koruyun.\n6.  **Veri Arşivleme**\n    *   **Uzun Vadeli Saklama:** Araştırmanız tamamlandıktan sonra verilerinizi uzun vadeli saklama çözümleri kullanarak arşivleyin. Bu, gelecekteki araştırmalar için veri erişimini sağlar.\n\nBu pratikler, araştırma verilerinizi etkili bir şekilde yönetmenize yardımcı olabilir. Eğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden veya veri yönetimi uzmanlarından destek alabilirsiniz.\n\n**İlgili bilgi:**\nAraştırma verilerinizi İTÜ Akademik Açık Arşivinde (İTÜ AAA) saklayabilirsiniz. İTÜ AAA, üniversitemizin akademik ve idari personeli, öğrencileri tarafından bilimsel dergilerde yayınlanmış makaleler, araştırma projeleri, konferans metinleri, raporlar, ders notları ve İTÜ'nün tüm enstitülerinde üretilmiş yüksek lisans ve doktora tezlerinin yazar/eser sahiplerinin izinleri dahilinde yer alması ve sınırsız erişime sunulmasını amaçlamaktadır. Açık arşivde bulunan çalışmalardan yararlanıldığında, kullanan kişinin kaynak göstermesi bilimsel etik açısından gerekli ve zorunludur. Kaynak gösterilmesinde kullanılan çalışmanın adı ve yazarıyla birlikte açık arşivin URL adresi verilecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 12\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:51:30.372Z"
+      }
+    ],
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": {
+          "input": "araştırma verileri yönetimi en iyi pratikler"
+        },
+        "output": "Tool execution pending",
+        "executionTime": 0,
+        "success": false,
+        "status": "requested",
+        "messageIndex": 1,
+        "messageType": "ai",
+        "timestamp": "2025-09-01T13:51:30.372Z"
+      },
+      {
+        "toolName": "document_search",
+        "toolDescription": "Yüklenen dokümanlarda (hybrid: vektör + BM25) arama yapar ve sorulara sadece BAĞLAM'a dayanarak yanıt verir. Cache'den otomatik vector store yükleme desteği.",
+        "input": "Araştırma verilerinizi etkili bir şekilde yönetmek, araştırma sürecinizin başarısı için kritik öneme sahiptir. İşte araştırma verilerinizi yönetmek için en iyi pratikler:\n\n1.  **Veri Planlaması**\n    *   **Veri Yönetim Planı (DMP):** Araştırmanızın başında bir veri yönetim planı oluşturun. Bu plan, verilerin nasıl toplanacağı, saklanacağı, analiz edileceği ve paylaşılacağı hakkında detaylar içermelidir.\n2.  **Veri Toplama**\n    *   **Standartlaştırma:** Verilerinizi toplarken standart yöntemler kullanın. Bu, verilerin tutarlılığını ve kalitesini artırır.\n    *   **Dokümantasyon:** Topladığınız verileri detaylı bir şekilde belgeleyin. Bu, verilerinizi daha sonra anlamanızı ve başkalarıyla paylaşmanızı kolaylaştırır.\n3.  **Veri Saklama**\n    *   **Güvenli Saklama:** Verilerinizi güvenli bir şekilde saklayın. Şifreleme ve yedekleme gibi yöntemlerle veri güvenliğini sağlayın.\n    *   **Organizasyon:** Verilerinizi düzenli bir şekilde organize edin. Dosya isimlendirme kuralları ve klasör yapıları kullanarak verilerinizi kolayca erişilebilir hale getirin.\n4.  **Veri Analizi**\n    *   **Yazılım ve Araçlar:** Verilerinizi analiz etmek için uygun yazılım ve araçları kullanın. Bu araçlar, verilerinizi daha etkili bir şekilde işlemeye yardımcı olabilir.\n5.  **Veri Paylaşımı**\n    *   **Açık Erişim:** Mümkünse verilerinizi açık erişim platformlarında paylaşın. Bu, araştırmanızın görünürlüğünü artırabilir ve diğer araştırmacılarla işbirliği yapmanıza olanak tanır.\n    *   **Lisanslama:** Verilerinizi paylaşırken uygun lisanslama yöntemlerini kullanarak telif haklarını koruyun.\n6.  **Veri Arşivleme**\n    *   **Uzun Vadeli Saklama:** Araştırmanız tamamlandıktan sonra verilerinizi uzun vadeli saklama çözümleri kullanarak arşivleyin. Bu, gelecekteki araştırmalar için veri erişimini sağlar.\n\nBu pratikler, araştırma verilerinizi etkili bir şekilde yönetmenize yardımcı olabilir. Eğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden veya veri yönetimi uzmanlarından destek alabilirsiniz.\n\n**İlgili bilgi:**\nAraştırma verilerinizi İTÜ Akademik Açık Arşivinde (İTÜ AAA) saklayabilirsiniz. İTÜ AAA, üniversitemizin akademik ve idari personeli, öğrencileri tarafından bilimsel dergilerde yayınlanmış makaleler, araştırma projeleri, konferans metinleri, raporlar, ders notları ve İTÜ'nün tüm enstitülerinde üretilmiş yüksek lisans ve doktora tezlerinin yazar/eser sahiplerinin izinleri dahilinde yer alması ve sınırsız erişime sunulmasını amaçlamaktadır. Açık arşivde bulunan çalışmalardan yararlanıldığında, kullanan kişinin kaynak göstermesi bilimsel etik açısından gerekli ve zorunludur. Kaynak gösterilmesinde kullanılan çalışmanın adı ve yazarıyla birlikte açık arşivin URL adresi verilecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 12\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "output": "Araştırma verilerinizi etkili bir şekilde yönetmek, araştırma sürecinizin başarısı için kritik öneme sahiptir. İşte araştırma verilerinizi yönetmek için en iyi pratikler:\n\n1.  **Veri Planlaması**\n    *   **Veri Yönetim Planı (DMP):** Araştırmanızın başında bir veri yönetim planı oluşturun. Bu plan, verilerin nasıl toplanacağı, saklanacağı, analiz edileceği ve paylaşılacağı hakkında detaylar içermelidir.\n2.  **Veri Toplama**\n    *   **Standartlaştırma:** Verilerinizi toplarken standart yöntemler kullanın. Bu, verilerin tutarlılığını ve kalitesini artırır.\n    *   **Dokümantasyon:** Topladığınız verileri detaylı bir şekilde belgeleyin. Bu, verilerinizi daha sonra anlamanızı ve başkalarıyla paylaşmanızı kolaylaştırır.\n3.  **Veri Saklama**\n    *   **Güvenli Saklama:** Verilerinizi güvenli bir şekilde saklayın. Şifreleme ve yedekleme gibi yöntemlerle veri güvenliğini sağlayın.\n    *   **Organizasyon:** Verilerinizi düzenli bir şekilde organize edin. Dosya isimlendirme kuralları ve klasör yapıları kullanarak verilerinizi kolayca erişilebilir hale getirin.\n4.  **Veri Analizi**\n    *   **Yazılım ve Araçlar:** Verilerinizi analiz etmek için uygun yazılım ve araçları kullanın. Bu araçlar, verilerinizi daha etkili bir şekilde işlemeye yardımcı olabilir.\n5.  **Veri Paylaşımı**\n    *   **Açık Erişim:** Mümkünse verilerinizi açık erişim platformlarında paylaşın. Bu, araştırmanızın görünürlüğünü artırabilir ve diğer araştırmacılarla işbirliği yapmanıza olanak tanır.\n    *   **Lisanslama:** Verilerinizi paylaşırken uygun lisanslama yöntemlerini kullanarak telif haklarını koruyun.\n6.  **Veri Arşivleme**\n    *   **Uzun Vadeli Saklama:** Araştırmanız tamamlandıktan sonra verilerinizi uzun vadeli saklama çözümleri kullanarak arşivleyin. Bu, gelecekteki araştırmalar için veri erişimini sağlar.\n\nBu pratikler, araştırma verilerinizi etkili bir şekilde yönetmenize yardımcı olabilir. Eğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden veya veri yönetimi uzmanlarından destek alabilirsiniz.\n\n**İlgili bilgi:**\nAraştırma verilerinizi İTÜ Akademik Açık Arşivinde (İTÜ AAA) saklayabilirsiniz. İTÜ AAA, üniversitemizin akademik ve idari personeli, öğrencileri tarafından bilimsel dergilerde yayınlanmış makaleler, araştırma projeleri, konferans metinleri, raporlar, ders notları ve İTÜ'nün tüm enstitülerinde üretilmiş yüksek lisans ve doktora tezlerinin yazar/eser sahiplerinin izinleri dahilinde yer alması ve sınırsız erişime sunulmasını amaçlamaktadır. Açık arşivde bulunan çalışmalardan yararlanıldığında, kullanan kişinin kaynak göstermesi bilimsel etik açısından gerekli ve zorunludur. Kaynak gösterilmesinde kullanılan çalışmanın adı ve yazarıyla birlikte açık arşivin URL adresi verilecektir.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 12\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "executionTime": 0,
+        "success": true,
+        "status": "completed",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "timestamp": "2025-09-01T13:51:30.372Z"
+      }
+    ],
+    "llmCalls": [],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 14354,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ],
+      "totalSteps": 2,
+      "totalToolsUsed": 2,
+      "totalLLMCalls": 0,
+      "hasErrors": false
+    }
   }
 ]

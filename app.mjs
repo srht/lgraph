@@ -26,6 +26,7 @@ import cors from "cors";
 import createChatModel from "./helpers/modelSelector.js";
 import stateGraphGenerator from "./helpers/stateGraphGenerator.js";
 import {  conversationStore, MAX_CONVERSATION_LENGTH, conversationHelpers } from "./helpers/conversationHelper.js";
+import QuestionQueue from "./helpers/questionQueue.js";
 const logger = new ConversationLogger();
 const course_book_search = createCourseBookSearchTool();
 const database_search = createDatabaseSearchTool();
@@ -42,7 +43,7 @@ async function loadDataFiles(documentProcessor) {
   console.log("📁 Data klasöründeki dosyalar yükleniyor...");
   
   const dataDir = path.join(__dirname, "data");
-  const supportedExtensions = ['.pdf', '.xlsx', '.xls', '.txt', '.json'];
+  const supportedExtensions = ['.pdf', '.xlsx', '.xls', '.txt', '.json','.xml'];
   
   try {
     // Check if data directory exists
@@ -134,6 +135,121 @@ const model = new ChatGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 }).bindTools(tools);
 
+// ---------- Question Queue System ----------
+let questionQueue = null;
+
+function initializeQuestionQueue() {
+  questionQueue = new QuestionQueue({
+    maxQuestionsPerMinute: 15,
+    processInterval: 60000 // 1 dakika
+  });
+
+  // processQuestion metodunu override et
+  questionQueue.processQuestion = async function(questionData) {
+    const { message, userId, priority = 0 } = questionData;
+    const startTime = Date.now();
+    
+    console.log(`🤖 Soru işleniyor: ${userId} - ${message.substring(0, 50)}...`);
+    
+    const graph = stateGraphGenerator(model, tools, toolsCondition, SYSTEM_PROMPT, logger);
+    
+    // Kullanıcının conversation history'sini al ve yeni mesajı ekle
+    let userConversation = conversationHelpers.getUserConversation(userId);
+    userConversation = conversationHelpers.addMessage(userId, new HumanMessage(message));
+    
+    // Graph'ı çalıştır
+    const result = await graph.invoke({
+      messages: [new HumanMessage(message)],
+    });
+    
+    const allMessages = result.messages;
+    const response = allMessages[allMessages.length - 1]?.content || 'No response generated';
+    const match = response.match(/Final Answer:\s*([\s\S]*)/i);
+      let parsedResponse = match ? match[1].trim() : response;
+    const totalExecutionTime = Date.now() - startTime;
+    
+    // AI response'u conversation history'ye ekle
+    const aiMessage = allMessages[allMessages.length - 1];
+    if (aiMessage && aiMessage._getType() === 'ai') {
+      conversationHelpers.addMessage(userId, aiMessage);
+    }
+    
+    // Tool kullanımını tespit et
+    let actualToolsUsed = [];
+    let actualLLMCalls = [];
+    
+    for (let i = 0; i < allMessages.length; i++) {
+      const msg = allMessages[i];
+      
+      if (msg._getType() === 'tool') {
+        actualToolsUsed.push({
+          toolName: msg.name || 'unknown',
+          toolInput: msg.tool_calls?.[0]?.args || 'unknown',
+          toolOutput: msg.content || 'unknown',
+          messageIndex: i,
+          messageType: msg._getType(),
+          status: 'completed',
+          executionTime: 0
+        });
+      }
+      
+      if (msg._getType() === 'ai') {
+        actualLLMCalls.push({
+          model: model.constructor.name,
+          input: allMessages.slice(0, i).map(m => ({
+            type: m._getType(),
+            content: m.content
+          })),
+          output: {
+            type: msg._getType(),
+            content: msg.content
+          },
+          executionTime: 0,
+          inputTokens: 0,
+          outputTokens: 0,
+          totalTokens: 0
+        });
+      }
+    }
+    
+    // Conversation logger
+    let conversationId = null;
+    try {
+      conversationId = logger.logConversation({
+        userId,
+        userMessage: message,
+        aiResponse: response,
+        toolsUsed: actualToolsUsed,
+        llmCalls: actualLLMCalls,
+        errors: result.logs?.errors || [],
+        metadata: {
+          totalExecutionTime,
+          totalMessages: allMessages.length,
+          model: model.constructor.name,
+          temperature: model.temperature || 0,
+          messageTypes: allMessages.map(msg => msg._getType())
+        }
+      });
+    } catch (logError) {
+      console.warn('⚠️ Loglama hatası:', logError.message);
+    }
+    
+    return {
+      success: true,
+      response: parsedResponse,
+      timestamp: new Date().toISOString(),
+      conversationId: conversationId,
+      userId: userId,
+      executionTime: totalExecutionTime,
+      toolsUsed: actualToolsUsed.length,
+      llmCalls: actualLLMCalls.length,
+      toolDetails: actualToolsUsed,
+      queueProcessed: true
+    };
+  };
+
+  console.log("✅ Soru kuyruğu sistemi başlatıldı");
+}
 
 // ---------- Graph ----------
 
@@ -157,8 +273,68 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Chat endpoint
-app.post('/chat', async (req, res) => {
+// Chat endpoint - Queue based
+app.post('/askchat', async (req, res) => {
+  try {
+    const { message, userId = 'default', priority = 0 } = req.body;
+    
+    if (!message || typeof message !== 'string') {
+      return res.status(400).json({ 
+        error: 'Message is required and must be a string' 
+      });
+    }
+
+    console.log(`💬 Chat request queued from user ${userId}: ${message}`);
+    
+    // Soruyu kuyruğa ekle
+    const processId = questionQueue.enqueue({
+      message,
+      userId,
+      priority
+    });
+
+    res.json({
+      success: true,
+      message: 'Sorunuz kuyruğa eklendi',
+      processId: processId,
+      status: questionQueue.getStatus(processId),
+      queueStats: {
+        queueSize: questionQueue.getStats().currentQueueSize,
+        position: questionQueue.getStatus(processId).position,
+        estimatedWaitTime: questionQueue.getStatus(processId).estimatedWaitTime
+      }
+    });
+
+  } catch (error) {
+    console.error('❌ Queue error:', error);
+    res.status(500).json({
+      error: 'Kuyruk hatası: ' + error.message
+    });
+  }
+});
+
+// Get result endpoint
+app.get('/askchat/result/:processId', async (req, res) => {
+  try {
+    const { processId } = req.params;
+    const status = questionQueue.getStatus(processId);
+    
+    res.json({
+      success: true,
+      processId: processId,
+      ...status
+    });
+
+  } catch (error) {
+    console.error('❌ Result fetch error:', error);
+    res.status(500).json({
+      error: 'Sonuç alma hatası: ' + error.message
+    });
+  }
+});
+
+// Original chat endpoint (for immediate processing)
+app.post('/askchat/immediate', async (req, res) => {
   const startTime = Date.now();
   let conversationId = null;
   const graph = stateGraphGenerator(model, tools, toolsCondition, SYSTEM_PROMPT, logger);
@@ -172,7 +348,7 @@ app.post('/chat', async (req, res) => {
       });
     }
 
-    console.log(`💬 Chat request from user ${userId}: ${message}`);
+    console.log(`💬 Immediate chat request from user ${userId}: ${message}`);
     
     // Kullanıcının conversation history'sini al ve yeni mesajı ekle
     let userConversation = conversationHelpers.getUserConversation(userId);
@@ -185,7 +361,7 @@ app.post('/chat', async (req, res) => {
       //messages: userConversation,
       messages: [new HumanMessage(message)],
     });
-
+    console.log("--------------------------------")
     console.log(result)
     // Tüm mesajları incele ve tool kullanımını tespit et
     const allMessages = result.messages;
@@ -306,7 +482,7 @@ app.post('/chat', async (req, res) => {
        });
      }
      
-           res.json({
+           console.log({
         success: true,
         response: response,
         timestamp: new Date().toISOString(),
@@ -330,6 +506,14 @@ app.post('/chat', async (req, res) => {
           output: totalOutputTokens,
           total: totalTokens
         }
+      });
+
+      const match = response.match(/Final Answer:\s*([\s\S]*)/i);
+      let parsedResponse = match ? match[1].trim() : response;
+
+      res.json({
+        success: true,
+       response: parsedResponse,
       });
 
   } catch (error) {
@@ -381,6 +565,73 @@ app.get('/tools', (req, res) => {
     tools: toolsInfo,
     count: tools.length
   });
+});
+
+// Queue management endpoints
+app.get('/queue/stats', (req, res) => {
+  try {
+    const stats = questionQueue.getStats();
+    res.json({
+      success: true,
+      stats: stats
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+app.get('/queue/status/:processId', (req, res) => {
+  try {
+    const { processId } = req.params;
+    const status = questionQueue.getStatus(processId);
+    
+    res.json({
+      success: true,
+      processId: processId,
+      ...status
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+app.post('/queue/clear', (req, res) => {
+  try {
+    const clearedCount = questionQueue.clearQueue();
+    res.json({
+      success: true,
+      message: `${clearedCount} soru kuyruktan temizlendi`,
+      clearedCount: clearedCount
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+app.post('/queue/cleanup', (req, res) => {
+  try {
+    const { olderThanMinutes = 60 } = req.body;
+    const cleanedCount = questionQueue.cleanupCompleted(olderThanMinutes);
+    res.json({
+      success: true,
+      message: `${cleanedCount} eski sonuç temizlendi`,
+      cleanedCount: cleanedCount
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
 });
 
 // Conversation management endpoints
@@ -1067,8 +1318,9 @@ app.get('/cache/rebuild', async (req, res) => {
 // ---------- Main Function ----------
 const run = async () => {
   try {
-    // Rebind tools to model
-    //model.bindTools(tools); (openai için)
+    // Initialize question queue system
+    initializeQuestionQueue();
+    
     console.log(`🎯 Toplam ${tools.length} araç yüklendi:`);
     tools.forEach((tool, index) => {
       console.log(`   ${index + 1}. ${tool.name} - ${tool.description}`);
@@ -1079,8 +1331,15 @@ const run = async () => {
       console.log(`🚀 HTTP Server başlatıldı: http://localhost:${PORT}`);
       console.log(`📡 Endpoints:`);
       console.log(`   GET  /health - Server durumu`);
-      console.log(`   POST /chat - Chat endpoint`);
+      console.log(`   POST /askchat - Kuyruğa soru gönder (dakikada 15 limit)`);
+      console.log(`   GET  /askchat/result/:processId - Soru sonucunu al`);
+      console.log(`   POST /askchat/immediate - Anlık soru (kuyruk bypass)`);
       console.log(`   GET  /tools - Mevcut araçlar`);
+      console.log(`🔄 Queue Management:`);
+      console.log(`   GET  /queue/stats - Kuyruk istatistikleri`);
+      console.log(`   GET  /queue/status/:processId - İşlem durumu`);
+      console.log(`   POST /queue/clear - Kuyruğu temizle`);
+      console.log(`   POST /queue/cleanup - Eski sonuçları temizle`);
       console.log(`   GET  /vectorstore - Vector store durumu ve içerik`);
       console.log(`   GET  /vectorstore?search=query - Vector store'da arama`);
       console.log(`   GET  /vectorstore?showAll=true - Tüm dokümanları göster`);

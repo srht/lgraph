@@ -61,7 +61,9 @@ const createITULibrarySearchTool = () => {
         
         if (searchType === 'author') {
           // Handle author search with existing logic
-          finalResults = await handleAuthorSearch($, searchQuery, baseUrl);
+          const {authorResults, authorPageUrl} = await handleAuthorSearch($, searchQuery, baseUrl);
+          finalResults = authorResults;
+          searchUrl = authorPageUrl;
         } else if (searchType === 'title') {
           // Handle title search
           finalResults = handleTitleSearch($, searchQuery);
@@ -74,11 +76,11 @@ const createITULibrarySearchTool = () => {
         }
 
         if (finalResults.length === 0) {
-          return `"${searchQuery}" için ITU Kütüphanesi'nde ${searchType === 'author' ? 'yazar' : searchType === 'title' ? 'kitap' : searchType === 'isbn' ? 'ISBN' : 'konu'} bulunamadı. Lütfen arama kriterlerini kontrol edin.`;
+          return `"${searchQuery}" için ITU Kütüphanesi'nde ${searchType === 'author' ? 'yazar' : searchType === 'title' ? 'kitap' : searchType === 'isbn' ? 'ISBN' : searchType === 'subject' ? 'konu başlığı' : 'sonuç'} bulunamadı. Lütfen arama kriterlerini kontrol edin.`;
         }
 
         // Format the results based on search type
-        let resultText = `📚 **${searchType === 'author' ? 'Yazar' : searchType === 'title' ? 'Kitap Başlığı' : searchType === 'isbn' ? 'ISBN' : 'Konu'}**: "${searchQuery}" için ITU Kütüphanesi'nde bulunan sonuçlar:\n\n`;
+        let resultText = `📚 **${searchType === 'author' ? 'Yazar' : searchType === 'title' ? 'Kitap Başlığı' : searchType === 'isbn' ? 'ISBN' : searchType === 'subject' ? 'Konu Başlıkları' : 'Sonuçlar'}**: "${searchQuery}" için ITU Kütüphanesi'nde bulunan sonuçlar:\n\n`;
         
         if (searchType === 'isbn') {
           // ISBN search usually returns single result with detailed info
@@ -90,18 +92,16 @@ const createITULibrarySearchTool = () => {
             `   🔢 ISBN: ${book.isbn || searchQuery}\n` +
             `   🔗 [Kütüphane Kaydı](${baseUrl}${book.link})\n`;
         } else if (searchType === 'subject') {
-          // Subject search usually returns multiple results
-          resultText += finalResults.map((book, index) => 
-            `${index + 1}. **${book.title}**\n` +
-            `   ✍️ ${book.author}\n` +
-            `   📅 ${book.year || 'Yıl belirtilmemiş'}\n` +
-            `   📍 ${book.location || 'Konum belirtilmemiş'}\n` +
-            `   🔗 [Kütüphane Kaydı](${baseUrl}${book.link})\n`
+          // Subject search returns topic/subject links, not books
+          resultText += finalResults.map((subject, index) => 
+            `${index + 1}. **${subject.title}**\n` +
+            `   🔗 [Konu Detayı](${baseUrl}${subject.link})\n` +
+            `   📂 Tür: ${subject.type === 'subject' ? 'Ana Konu' : 'Genel Kategori'}\n`
           ).join('\n');
           
           // Add subject-specific information
-          resultText += `\n💡 **Konu Arama Bilgisi**: "${searchQuery}" konusunda toplam ${finalResults.length} kitap bulundu.\n`;
-          resultText += `🔍 **Arama URL**: [ITU Kütüphanesi Konu Arama](${searchUrl})\n`;
+          resultText += `\n💡 **Konu Arama Bilgisi**: "${searchQuery}" ile ilgili ${finalResults.length} konu başlığı bulundu.\n`;
+          resultText += `\n📖 **Not**: Bu sonuçlar konu başlıklarıdır. Her bir konuya tıklayarak o konudaki kitapları görebilirsiniz.\n`;
         } else {
           // Multiple results for author/title search
           resultText += finalResults.map((book, index) => 
@@ -112,7 +112,7 @@ const createITULibrarySearchTool = () => {
             `   🔗 [Kütüphane Kaydı](${baseUrl}${book.link})\n`
           ).join('\n');
         }
-        
+        resultText += `🔍 **Ana Arama URL**: [Sonuç Listesi](${searchUrl})\n`;
         resultText += `\n💡 **Toplam ${finalResults.length} sonuç bulundu.**`;
 
         return resultText;
@@ -148,11 +148,11 @@ async function handleAuthorSearch($, authorName, baseUrl) {
         const authorSuggestions = [];
         const normalizedAuthorName = authorName.toLowerCase().trim();
         const authorParts = normalizedAuthorName.split(' ').filter(part => part.length > 0);
-        
+        let authorResultsPageUrl = '';
         $('a[href*="/search*tur/a?"]').each((i, element) => {
           const href = $(element).attr('href');
           const text = $(element).text().trim();
-          
+          console.log(text, href);
           if (text && href) {
             const normalizedText = text.toLowerCase().trim();
             let isMatch = false;
@@ -212,10 +212,10 @@ async function handleAuthorSearch($, authorName, baseUrl) {
           console.log(`🎯 En uygun eşleşme: ${bestMatch.text}`);
           
           // Visit the author's page to get books
-          const authorPageUrl = baseUrl + bestMatch.href;
-          console.log(`🔗 Yazar sayfası: ${authorPageUrl}`);
+          authorResultsPageUrl = baseUrl + bestMatch.href;
+          console.log(`🔗 Yazar sayfası: ${authorResultsPageUrl}`);
           
-          const authorPageResponse = await axios.get(authorPageUrl, {
+          const authorPageResponse = await axios.get(authorResultsPageUrl, {
             timeout: 30000,
             headers: {
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -231,7 +231,7 @@ async function handleAuthorSearch($, authorName, baseUrl) {
           finalResults = extractBooksFromPage($, authorName);
         }
 
-  return finalResults;
+  return {authorResults: finalResults, authorPageUrl:authorResultsPageUrl};
 }
 
 // Handle title search
@@ -259,7 +259,7 @@ function handleTitleSearch($, titleQuery) {
         let link = '';
         titleCell.find('a').each((j, linkElement) => {
           const href = $(linkElement).attr('href');
-          if (href && href.includes('/search*tur')) {
+          if (href && href.includes('/search*tur')&&!href.includes('patron')) {
             link = href;
           }
         });
@@ -280,7 +280,7 @@ function handleTitleSearch($, titleQuery) {
       }
     }
   });
-  
+  console.log(books);
   return books;
 }
 
@@ -485,131 +485,92 @@ function extractBooksFromPage($, authorName) {
   return books;
 }
 
-// Handle subject search (konu arama)
+// Handle subject search (konu arama) - returns subject/topic links
 function handleSubjectSearch($, subjectQuery) {
-  const books = [];
+  const subjects = [];
   const normalizedSubjectQuery = subjectQuery.toLowerCase().trim();
   
   console.log(`🔍 Konu arama sonuçları işleniyor: ${subjectQuery}`);
   
-  // Look for subject search results in the page
-  // Subject search usually returns a list of books related to the topic
+  // Look for subject links in the page
+  // ITU Library subject search returns a list of related topics/subjects with links
   
-  // First, try to find the main search results table
-  $('table').each((tableIndex, tableElement) => {
-    const $table = $(tableElement);
-    const $rows = $table.find('tr');
+  // Look for links that contain subject information
+  $('a').each((i, element) => {
+    const $link = $(element);
+    const href = $link.attr('href');
+    const text = $link.text().trim();
     
-    if ($rows.length > 1) { // Skip header row
-      $rows.each((rowIndex, rowElement) => {
-        const $row = $(rowElement);
-        const $cells = $row.find('td');
+    if (href && text && text.length > 3) {
+      // Check if this is a subject/topic link
+      if (href.includes('/search*tur') && 
+          (href.includes('searchtype=d') || href.includes('searchtype=X'))) {
         
-        if ($cells.length >= 3) {
-          // Extract information from cells
-          const firstCell = $cells.eq(0).text().trim();
-          const secondCell = $cells.eq(1).text().trim();
-          const thirdCell = $cells.length >= 3 ? $cells.eq(2).text().trim() : '';
+        // Check if the text is related to our search query
+        const normalizedText = text.toLowerCase();
+        if (normalizedText.includes(normalizedSubjectQuery) || 
+            normalizedSubjectQuery.split(' ').some(word => 
+              word.length > 2 && normalizedText.includes(word))) {
           
-          // Check if this row contains book information related to the subject
-          if (firstCell && secondCell && 
-              (firstCell.toLowerCase().includes(normalizedSubjectQuery) || 
-               secondCell.toLowerCase().includes(normalizedSubjectQuery))) {
-            
-            // Try to extract title and author
-            let title = '';
-            let author = '';
-            let year = '';
-            let location = '';
-            let link = '';
-            
-            // Look for links in cells to determine which is title
-            $cells.each((cellIndex, cellElement) => {
-              const $cell = $(cellElement);
-              const cellText = $cell.text().trim();
-              const $link = $cell.find('a');
-              
-              if ($link.length > 0 && cellText.length > 5) {
-                const href = $link.attr('href');
-                if (href && href.includes('/search*tur')) {
-                  link = href;
-                  // If this cell has a link, it's likely the title
-                  if (!title) {
-                    title = cellText;
-                  }
-                }
-              }
-            });
-            
-            // If no title found from links, use the second cell as title
-            if (!title && secondCell.length > 5) {
-              title = secondCell;
-            }
-            
-            // Use first cell as author if it looks like an author name
-            if (firstCell.length > 3 && firstCell.length < 100 && 
-                !firstCell.toLowerCase().includes(normalizedSubjectQuery)) {
-              author = firstCell;
-            }
-            
-            // Extract year from any cell
-            const yearMatch = (firstCell + ' ' + secondCell + ' ' + thirdCell).match(/\b(19|20)\d{2}\b/);
-            if (yearMatch) {
-              year = yearMatch[0];
-            }
-            
-            // Extract location if available
-            if ($cells.length >= 4) {
-              location = $cells.eq(3).text().trim();
-            }
-            
-            if (title && title.length > 5) {
-              books.push({
-                title: title,
-                author: author || 'Bilinmiyor',
-                year: year || 'Yıl belirtilmemiş',
-                location: location || 'Konum belirtilmemiş',
-                link: link
-              });
-            }
-          }
-        }
-      });
-    }
-  });
-  
-  // If no results found in tables, try alternative patterns
-  if (books.length === 0) {
-    // Look for any text that might contain book information
-    $('body').find('*').each((i, element) => {
-      const text = $(element).text().trim();
-      if (text && text.length > 20 && text.length < 500) {
-        // Check if this text contains subject-related information
-        if (text.toLowerCase().includes(normalizedSubjectQuery) && 
-            (text.includes('ISBN') || text.includes('Yayın') || text.includes('Kitap') || 
-             text.includes('Bibliyografi') || text.includes('Konu'))) {
-          
-          // Try to extract structured information
-          const lines = text.split('\n').filter(line => line.trim().length > 5);
-          
-          lines.forEach(line => {
-            if (line.toLowerCase().includes(normalizedSubjectQuery)) {
-              books.push({
-                title: line.substring(0, 100) + '...',
-                author: 'Bilinmiyor',
-                year: 'Yıl belirtilmemiş',
-                location: 'Konum belirtilmemiş',
-                link: ''
-              });
-            }
+          subjects.push({
+            title: text,
+            link: href,
+            type: 'subject'
           });
         }
       }
-    });
-  }
+      // Also look for general subject links
+      else if (href.includes('/search*tur') && text.length > 5 && text.length < 200) {
+        const normalizedText = text.toLowerCase();
+        
+        // Check for broader subject matches
+        if (normalizedText.includes(normalizedSubjectQuery) || 
+            normalizedSubjectQuery.split(' ').some(word => 
+              word.length > 2 && normalizedText.includes(word))) {
+          
+          subjects.push({
+            title: text,
+            link: href,
+            type: 'general'
+          });
+        }
+      }
+    }
+  });
   
-  console.log(`📚 Konu aramada ${books.length} kitap bulundu`);
-  return books;
+  // Remove duplicates based on title
+  const uniqueSubjects = [];
+  const seenTitles = new Set();
+  
+  subjects.forEach(subject => {
+    if (!seenTitles.has(subject.title.toLowerCase())) {
+      seenTitles.add(subject.title.toLowerCase());
+      uniqueSubjects.push(subject);
+    }
+  });
+  
+  // Sort by relevance - exact matches first, then partial matches
+  uniqueSubjects.sort((a, b) => {
+    const aTitle = a.title.toLowerCase();
+    const bTitle = b.title.toLowerCase();
+    
+    // Exact match gets highest priority
+    if (aTitle === normalizedSubjectQuery) return -1;
+    if (bTitle === normalizedSubjectQuery) return 1;
+    
+    // Contains full query gets higher priority
+    if (aTitle.includes(normalizedSubjectQuery) && !bTitle.includes(normalizedSubjectQuery)) return -1;
+    if (bTitle.includes(normalizedSubjectQuery) && !aTitle.includes(normalizedSubjectQuery)) return 1;
+    
+    // Shorter titles get higher priority (more specific)
+    return aTitle.length - bTitle.length;
+  });
+  
+  // Limit to most relevant 15 results
+  const limitedSubjects = uniqueSubjects.slice(0, 15);
+  console.log(limitedSubjects);
+  console.log(`📚 Konu aramada ${limitedSubjects.length} konu başlığı bulundu`);
+  return limitedSubjects;
 }
 
 export { createITULibrarySearchTool };

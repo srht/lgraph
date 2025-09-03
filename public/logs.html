@@ -314,7 +314,7 @@
         let currentPage = 0;
         const pageSize = 20;
         let allConversations = [];
-
+        let siteBasePath = '';
         // Sayfa yüklendiğinde konuşmaları yükle
         document.addEventListener('DOMContentLoaded', () => {
             loadConversations();
@@ -330,7 +330,7 @@
 
         async function loadConversations() {
             try {
-                const response = await fetch('/logs/conversations?limit=1000');
+                const response = await fetch(siteBasePath + '/logs/conversations?limit=1000');
                 const data = await response.json();
                 
                 if (data.success) {
@@ -370,7 +370,7 @@
 
         async function loadStats() {
             try {
-                const response = await fetch('/logs/stats');
+                const response = await fetch(siteBasePath + '/logs/stats');
                 const data = await response.json();
                 
                 if (data.success) {
@@ -526,7 +526,7 @@
 
         async function showConversationDetails(id) {
             try {
-                const response = await fetch(`/logs/conversations/${id}`);
+                const response = await fetch(siteBasePath + '/logs/conversations/${id}');
                 const data = await response.json();
                 
                 if (data.success) {

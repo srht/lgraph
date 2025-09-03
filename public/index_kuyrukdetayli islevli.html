@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kütüphane AI Asistanı</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .chat-container {
+            height: 500px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.ai {
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 15px 20px;
+            border-radius: 20px;
+            word-wrap: break-word;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.ai .message-content {
+            background: white;
+            color: #333;
+            border: 1px solid #e9ecef;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #667eea;
+        }
+
+        .input-group button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .input-group button:hover {
+            transform: translateY(-2px);
+        }
+
+        .input-group button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status {
+            text-align: center;
+            padding: 10px;
+            background: #e9ecef;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .queue-status {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 20px;
+            display: none;
+        }
+
+        .queue-status.show {
+            display: block;
+        }
+
+        .queue-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .queue-position {
+            font-weight: bold;
+            color: #1976d2;
+        }
+
+        .queue-progress {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .queue-progress-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .queue-details {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .processing-message {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .processing-message.show {
+            display: block;
+        }
+
+        .processing-message .spinner {
+            width: 20px;
+            height: 20px;
+            border-width: 2px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .tools-info {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .tools-info h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .tool-item {
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+        }
+
+        .tool-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tool-description {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .question {
+            background: #fdffdf !important;
+            font-weight: bold;
+            font-style: italic;
+            cursor: pointer;
+
+        }
+        .question:hover {
+            background: #f6f8db !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Kütüphane AI Asistanı</h1>
+            <p>Kütüphane hakkında sorularınızı sorun, size yardımcı olayım!</p>
+            <div class="nav-links">
+                <a href="/logs.html" class="nav-link">📊 Konuşma Logları</a>
+                <a href="/tools" class="nav-link">🔧 Mevcut Toollar</a>
+                <a href="/queue/stats" class="nav-link">🔄 Kuyruk Durumu</a>
+                <a href="/health" class="nav-link">💚 Sistem Durumu</a>
+            </div>
+        </div>
+
+        <div class="status" id="status">
+            Bağlanıyor...
+        </div>
+
+        <div class="queue-status" id="queueStatus">
+            <div class="queue-info">
+                <span class="queue-position" id="queuePosition">Sıra: ?</span>
+                <span id="queueEstimate">Tahmini: ?</span>
+            </div>
+            <div class="queue-progress">
+                <div class="queue-progress-bar" id="queueProgress"></div>
+            </div>
+            <div class="queue-details">
+                <span id="queueSize">Kuyruk: ?</span>
+                <span id="queueProcessId">ID: ?</span>
+            </div>
+        </div>
+
+        <div class="processing-message" id="processingMessage">
+            <div class="spinner"></div>
+            <span id="processingText">Sorunuz işleniyor...</span>
+        </div>
+
+        <div class="tools-info" id="toolsInfo">
+            <h3>🛠️ Mevcut Araçlar</h3>
+            <div id="toolsList">Yükleniyor...</div>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="message ai">
+                <div class="message-content">
+                    Merhaba! Ben kütüphane AI asistanınızım. Size nasıl yardımcı olabilirim? 
+                    Kütüphane hakkında herhangi bir soru sorabilirsiniz.
+                </div>
+            </div>
+            <div class="message ai">
+                <div class="message-content">
+                    ⚡ <strong>Yeni Kuyruk Sistemi:</strong> Sorularınız artık akıllı kuyruk sistemi ile işlenir. 
+                    Dakikada maksimum 15 soru işlenir ve sıraya alınan sorularınızın bekleme süresi gösterilir.
+                </div>
+            </div>
+            <div class="message ai">
+                <div class="message-content">
+                    Sorduğunuz sorular ve cevaplarınız, chatbot'un geliştirilmesinde kullanılmak üzere günlük loglarımızda kaydedilir.
+                </div>
+            </div>
+            <div class="message ai">
+                <div class="message-content question">
+                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            AI düşünüyor...
+        </div>
+
+        <div class="input-container">
+            <div class="input-group">
+                <input type="text" id="messageInput" placeholder="Mesajınızı yazın..." maxlength="500">
+                <button id="sendButton" onclick="sendMessage()">Gönder</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isConnected = false;
+        let siteBasePath = '';
+        let currentProcessId = null;
+        let pollInterval = null;
+        
+        // Check server status on load
+        async function checkServerStatus() {
+            try {
+                const response = await fetch(siteBasePath + '/health');
+                const data = await response.json();
+                
+                if (data.status === 'OK') {
+                    document.getElementById('status').textContent = 
+                        `✅ Bağlandı | Araçlar: ${data.tools} | Vector Store: ${data.vectorStore}`;
+                    isConnected = true;
+                    loadTools();
+                    loadQueueStats();
+                } else {
+                    document.getElementById('status').textContent = '❌ Server hatası';
+                }
+            } catch (error) {
+                document.getElementById('status').textContent = '❌ Bağlantı hatası';
+                console.error('Server status check failed:', error);
+            }
+        }
+
+        // Load queue statistics
+        async function loadQueueStats() {
+            try {
+                const response = await fetch(siteBasePath + '/queue/stats');
+                const data = await response.json();
+                
+                if (data.success) {
+                    const stats = data.stats;
+                    const statusText = document.getElementById('status').textContent;
+                    document.getElementById('status').textContent = 
+                        `${statusText} | Kuyruk: ${stats.currentQueueSize} | İşlenen: ${stats.processedThisMinute}/15`;
+                }
+            } catch (error) {
+                console.error('Queue stats failed:', error);
+            }
+        }
+
+        // Load available tools
+        async function loadTools() {
+            try {
+                const response = await fetch(siteBasePath + '/tools');
+                const data = await response.json();
+                
+                const toolsList = document.getElementById('toolsList');
+                toolsList.innerHTML = '';
+                
+                data.tools.forEach(tool => {
+                    const toolDiv = document.createElement('div');
+                    toolDiv.className = 'tool-item';
+                    toolDiv.innerHTML = `
+                        <div class="tool-name">${tool.name}</div>
+                        <div class="tool-description">${tool.description}</div>
+                    `;
+                    toolsList.appendChild(toolDiv);
+                });
+            } catch (error) {
+                console.error('Failed to load tools:', error);
+                document.getElementById('toolsList').innerHTML = 'Araçlar yüklenemedi';
+            }
+        }
+
+        // Send message function with queue system
+        async function sendMessage(elmMessage) {
+            if (!isConnected) {
+                alert('Server bağlantısı yok!');
+                return;
+            }
+
+            const input = document.getElementById('messageInput');
+            const message = elmMessage || input.value.trim();
+            
+            if (!message) return;
+
+            // Clear any existing polling
+            if (pollInterval) {
+                clearInterval(pollInterval);
+                pollInterval = null;
+            }
+
+            // Add user message to chat
+            addMessage(message, 'user');
+            input.value = '';
+
+            // Disable send button
+            document.getElementById('sendButton').disabled = true;
+
+            try {
+                // Send message to queue
+                const response = await fetch('/askchat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 
+                        message: message,
+                        userId: 'web-user-' + Date.now() 
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentProcessId = data.processId;
+                    
+                    // Show queue status
+                    showQueueStatus(data.status, data.queueStats);
+                    
+                    // Start polling for result
+                    startPolling(currentProcessId);
+                    
+                } else {
+                    addMessage('Üzgünüm, bir hata oluştu: ' + data.error, 'ai');
+                    document.getElementById('sendButton').disabled = false;
+                }
+            } catch (error) {
+                console.error('Chat error:', error);
+                addMessage('Bağlantı hatası oluştu. Lütfen tekrar deneyin.', 'ai');
+                document.getElementById('sendButton').disabled = false;
+            }
+        }
+
+        // Show queue status
+        function showQueueStatus(status, queueStats) {
+            const queueStatusDiv = document.getElementById('queueStatus');
+            const queuePosition = document.getElementById('queuePosition');
+            const queueEstimate = document.getElementById('queueEstimate');
+            const queueSize = document.getElementById('queueSize');
+            const queueProcessId = document.getElementById('queueProcessId');
+            const queueProgress = document.getElementById('queueProgress');
+
+            if (status.status === 'queued') {
+                queuePosition.textContent = `Sıra: ${status.position}`;
+                queueEstimate.textContent = `Tahmini: ${formatTime(status.estimatedWaitTime)}`;
+                queueSize.textContent = `Kuyruk: ${queueStats.queueSize}`;
+                queueProcessId.textContent = `ID: ${currentProcessId.substring(0, 8)}...`;
+                
+                // Progress bar calculation
+                const progressPercent = Math.max(0, (queueStats.queueSize - status.position + 1) / queueStats.queueSize * 100);
+                queueProgress.style.width = progressPercent + '%';
+                
+                queueStatusDiv.classList.add('show');
+                
+                // Hide processing message
+                document.getElementById('processingMessage').classList.remove('show');
+            }
+        }
+
+        // Start polling for result
+        function startPolling(processId) {
+            pollInterval = setInterval(async () => {
+                try {
+                    const response = await fetch(`/askchat/result/${processId}`);
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        updateStatus(data);
+                        
+                        if (data.status === 'completed') {
+                            // Show result
+                            clearInterval(pollInterval);
+                            pollInterval = null;
+                            showResult(data.result);
+                            
+                        } else if (data.status === 'failed') {
+                            // Show error
+                            clearInterval(pollInterval);
+                            pollInterval = null;
+                            addMessage('Üzgünüm, sorunuz işlenirken bir hata oluştu: ' + data.error, 'ai');
+                            resetUI();
+                        }
+                    }
+                    
+                } catch (error) {
+                    console.error('Polling error:', error);
+                }
+            }, 2000); // Poll every 2 seconds
+        }
+
+        // Update status during processing
+        function updateStatus(data) {
+            const queueStatusDiv = document.getElementById('queueStatus');
+            const processingDiv = document.getElementById('processingMessage');
+            const processingText = document.getElementById('processingText');
+
+            if (data.status === 'processing') {
+                queueStatusDiv.classList.remove('show');
+                processingDiv.classList.add('show');
+                processingText.textContent = 'Sorunuz işleniyor...';
+                
+            } else if (data.status === 'queued') {
+                const queuePosition = document.getElementById('queuePosition');
+                const queueEstimate = document.getElementById('queueEstimate');
+                
+                queuePosition.textContent = `Sıra: ${data.position}`;
+                queueEstimate.textContent = `Tahmini: ${formatTime(data.estimatedWaitTime)}`;
+                
+                // Update progress
+                const progressPercent = Math.max(0, 100 - (data.position / data.queueSize * 100));
+                document.getElementById('queueProgress').style.width = progressPercent + '%';
+            }
+        }
+
+        // Show final result
+        function showResult(result) {
+            if (result && result.response) {
+                let responseText = result.response;
+                
+                // Tool kullanım bilgilerini ekle
+                if (result.toolDetails && result.toolDetails.length > 0) {
+                    responseText += '\n\n🔧 **Tool Kullanımı:**\n';
+                    result.toolDetails.forEach(tool => {
+                        if (tool.toolName === 'no_tool_used') {
+                            responseText += `• Direkt cevap verildi\n`;
+                        } else {
+                            let toolInfo = `• ${tool.toolName}: ${tool.status}`;
+                            if (tool.messageIndex !== undefined) {
+                                toolInfo += ` (Mesaj #${tool.messageIndex})`;
+                            }
+                            if (tool.executionTime) {
+                                toolInfo += ` (${tool.executionTime}ms)`;
+                            }
+                            responseText += toolInfo + '\n';
+                        }
+                    });
+                }
+                
+                // Processing info
+                if (result.executionTime) {
+                    responseText += `\n\n⏱️ **İşlem Süresi:** ${result.executionTime}ms`;
+                }
+                if (result.queueProcessed) {
+                    responseText += ` | ✅ Kuyruk sistemi ile işlendi`;
+                }
+                
+                addMessage(responseText, 'ai');
+            }
+            
+            resetUI();
+        }
+
+        // Reset UI after completion
+        function resetUI() {
+            document.getElementById('queueStatus').classList.remove('show');
+            document.getElementById('processingMessage').classList.remove('show');
+            document.getElementById('sendButton').disabled = false;
+            currentProcessId = null;
+            
+            // Refresh queue stats
+            loadQueueStats();
+        }
+
+        // Format time in milliseconds to readable format
+        function formatTime(ms) {
+            if (!ms) return 'Bilinmiyor';
+            
+            if (ms < 1000) {
+                return '<1s';
+            } else if (ms < 60000) {
+                return Math.round(ms / 1000) + 's';
+            } else {
+                return Math.round(ms / 60000) + 'm';
+            }
+        }
+
+        // Add message to chat
+        function addMessage(content, type) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = content;
+            
+            messageDiv.appendChild(contentDiv);
+            chatContainer.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Enter key support
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Check server status on page load
+        checkServerStatus();
+
+        // Check server status every 30 seconds
+        setInterval(checkServerStatus, 30000);
+
+        // Update queue stats every 10 seconds
+        setInterval(loadQueueStats, 10000);
+
+       document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                sendMessage(question.textContent);
+            });
+        });
+       });
+    </script>
+</body>
+</html>
