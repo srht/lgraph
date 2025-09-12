@@ -1,0 +1,9 @@
+[{
+  "timestamp": "2025-09-12T07:49:00.011Z",
+  "data": {
+    "message": "[object Object]",
+    "stack": "Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{\"@type\":\"type.googleapis.com/google.rpc.ErrorInfo\",\"reason\":\"API_KEY_INVALID\",\"domain\":\"googleapis.com\",\"metadata\":{\"service\":\"generativelanguage.googleapis.com\"}},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"en-US\",\"message\":\"API key not valid. Please pass a valid API key.\"}]\n    at handleResponseNotOk (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:432:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:401:9)\n    at async generateContent (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@google/generative-ai/dist/index.mjs:865:22)\n    at async file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/google-genai/dist/chat_models.js:734:24\n    at async RetryOperation._fn (E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\node_modules\\p-retry\\index.js:50:12)",
+    "context": null,
+    "type": "Object"
+  }
+}]

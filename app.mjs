@@ -1,258 +1,98 @@
-// app.mjs
+// app.mjs - Refactored with helper classes
 import "dotenv/config";
-import { z } from "zod";
-import { ChatOpenAI } from "@langchain/openai";
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import { tool } from "@langchain/core/tools";
-import { PromptTemplate } from "@langchain/core/prompts";
-import { StateGraph, MessagesAnnotation } from "@langchain/langgraph";
-import { ToolNode, toolsCondition } from "@langchain/langgraph/prebuilt";
+
+import { toolsCondition } from "@langchain/langgraph/prebuilt";
 import { createCourseBookSearchTool } from "./tools/coursebooksearch.js";
 import { createDatabaseSearchTool } from "./tools/databasesearch.js";
-import createDocumentSearchTool from "./tools/archived/createDocumentSearchTool.mjs";
 import { createITULibrarySearchTool } from "./tools/ituLibrarySearch.js";
 import { createLibraryWebSearchTool } from "./tools/libraryWebSearch.js";
 import { createJournalSubscriptionSearchTool } from "./tools/journalSubscriptionSearch.js";
-import { buildDocumentSearchTool } from "./helpers/docsRetriever.js";
-import DocumentProcessor from "./helpers/documentProcessor.mjs";
-import { SYSTEM_PROMPT } from "./helpers/systemPrompt.js";
-import ConversationLogger from "./helpers/logger.js";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import { buildDocumentSearchTool } from "./helpers/data/docsRetriever.js";
+import { SYSTEM_PROMPT } from "./helpers/data/systemPrompt.js";
 import express from "express";
 import cors from "cors";
-import createChatModel from "./helpers/modelSelector.js";
-import stateGraphGenerator from "./helpers/stateGraphGenerator.js";
-import {  conversationStore, MAX_CONVERSATION_LENGTH, conversationHelpers } from "./helpers/conversationHelper.js";
-import QuestionQueue from "./helpers/questionQueue.js";
-const logger = new ConversationLogger();
+import stateGraphGenerator from "./helpers/functions/stateGraphGenerator.js";
+
+// Import helper classes
+import ModelInitializer from "./helpers/model/modelInitializer.js";
+import DataLoader from "./helpers/data/dataLoader.js";
+import QueueManager from "./helpers/queue/queueManager.js";
+import ApiHandlers from "./helpers/api/apiHandlers.js";
+import ResponseProcessor from "./helpers/functions/responseProcessor.js";
+import LoggingHandlers from "./helpers/logging/loggingHandlers.js";
+import VectorStoreHandlers from "./helpers/vectorstore/vectorStoreHandlers.js";
+
+// Initialize helper instances
+const modelInitializer = new ModelInitializer();
+const dataLoader = new DataLoader();
+const queueManager = new QueueManager();
+const apiHandlers = new ApiHandlers();
+const responseProcessor = new ResponseProcessor();
+const loggingHandlers = new LoggingHandlers();
+const vectorStoreHandlers = new VectorStoreHandlers();
+
+// Global variables
+let VectorStore = null;
+let documentProcessor = null;
+let tools = [];
+let model = null;
+
+// Initialize tools
 const course_book_search = createCourseBookSearchTool();
 const database_search = createDatabaseSearchTool();
 const itu_library_search = createITULibrarySearchTool();
 const library_web_search = createLibraryWebSearchTool();
 const journal_subscription_search = createJournalSubscriptionSearchTool();
-// __dirname eşleniği (ESM)
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-let VectorStore = null;
-const documentProcessor = new DocumentProcessor();
-// ---------- Data Loading Function ----------
-async function loadDataFiles(documentProcessor) {
-  console.log("📁 Data klasöründeki dosyalar yükleniyor...");
-  
-  const dataDir = path.join(__dirname, "data");
-  const supportedExtensions = ['.pdf', '.xlsx', '.xls', '.txt', '.json','.xml'];
-  
-  try {
-    // Check if data directory exists
-    if (!fs.existsSync(dataDir)) {
-      console.log("⚠️ Data klasörü bulunamadı, atlanıyor...");
-      return null;
-    }
 
-    const files = fs.readdirSync(dataDir);
-    const supportedFiles = files.filter(file => {
-      const ext = path.extname(file).toLowerCase();
-      return supportedExtensions.includes(ext);
+// Initialize models and data
+async function initializeApplication() {
+  try {
+    console.log("🚀 Uygulama başlatılıyor...");
+
+    // Initialize models
+    const { chatModel, embeddingModel } =
+      await modelInitializer.initializeModels();
+    model = chatModel;
+
+    // Initialize document processor
+    documentProcessor = dataLoader.initializeDocumentProcessor(embeddingModel);
+
+    // Load data files
+    await dataLoader.loadDataFiles(documentProcessor);
+
+    // Get vector store
+    VectorStore = dataLoader.getVectorStore();
+
+    // Build document search tool
+    const document_search2 = buildDocumentSearchTool({
+      vectorStore: VectorStore,
     });
 
-    if (supportedFiles.length === 0) {
-      console.log("ℹ️ Data klasöründe desteklenen dosya bulunamadı.");
-      return null;
-    }
+    // Initialize tools array
+    tools = [
+      document_search2,
+      course_book_search,
+      database_search,
+      itu_library_search,
+      library_web_search,
+      journal_subscription_search,
+    ];
 
-    console.log(`📋 Bulunan dosyalar: ${supportedFiles.join(", ")}`);
+    // Bind tools to model
+    model = model.bindTools(tools);
 
-    // Dosya yollarını processedFiles'a ekle (cache validation için)
-    const filePaths = supportedFiles.map(file => path.join(dataDir, file));
-    documentProcessor.processedFiles = filePaths;
+    // Initialize queue manager
+    queueManager.initializeQuestionQueue(model, tools, toolsCondition);
 
-    // Cache'den yüklemeyi dene
-    console.log("\n🔄 Cache kontrol ediliyor...");
-    const cacheLoaded = await documentProcessor.loadFromCache();
-    
-    if (cacheLoaded && documentProcessor.isCacheValid()) {
-      console.log("✅ Cache'den başarıyla yüklendi, dosya işleme atlanıyor");
-      return documentProcessor;
-    }
+    // Set document processor for vector store handlers
+    vectorStoreHandlers.setDocumentProcessor(documentProcessor);
 
-    console.log("🔄 Cache geçersiz veya bulunamadı, dosyalar işleniyor...");
-
-    // Process each supported file
-    for (const file of supportedFiles) {
-      const filePath = path.join(dataDir, file);
-      const fileSize = fs.statSync(filePath).size;
-      
-      console.log(`\n🔄 İşleniyor: ${file} (${(fileSize / 1024).toFixed(1)} KB)`);
-      
-      try {
-        await documentProcessor.processDocument(filePath, file);
-        console.log(`✅ ${file} başarıyla işlendi ve vektör deposuna eklendi.`);
-      } catch (error) {
-        console.error(`❌ ${file} işlenirken hata:`, error.message);
-        // Continue with other files even if one fails
-      }
-    }
-
-    console.log("\n🎉 Tüm dosyalar işlendi!");
-    
-    // Cache'e kaydet
-    console.log("\n💾 Cache'e kaydediliyor...");
-    await documentProcessor.saveToCache();
-    
-    return documentProcessor;
-    
+    console.log("✅ Uygulama başarıyla başlatıldı");
   } catch (error) {
-    console.error("❌ Data dosyaları yüklenirken hata:", error.message);
-    return null;
+    console.error("❌ Uygulama başlatma hatası:", error);
+    throw error;
   }
 }
-await loadDataFiles(documentProcessor);
-
-VectorStore=documentProcessor.getVectorStore();
-const document_search2 = buildDocumentSearchTool({vectorStore: documentProcessor.getVectorStore()});
-//const document_search = createDocumentSearchTool(VectorStore);
-// Initialize tools array with basic tools
-let tools = [document_search2, course_book_search, database_search, itu_library_search, library_web_search, journal_subscription_search];
-let docTool = null;
-
-// Model oluştur
-//const { chatModel, embeddingModel } = createChatModel("openai");
-//const model = chatModel;
-// ---------- Model ----------
-/*
-const model = new ChatOpenAI({
-  model: "gpt-4o-mini", // veya 'gpt-4o', 'gpt-4o-mini-tts' değil!
-  temperature: 0,
-}).bindTools(tools);
-*/
-
-const model = new ChatGoogleGenerativeAI({
-  model: "gemini-2.5-flash",
-  temperature: 0,
-  apiKey: process.env.GEMINI_API_KEY,
-}).bindTools(tools);
-
-// ---------- Question Queue System ----------
-let questionQueue = null;
-
-function initializeQuestionQueue() {
-  questionQueue = new QuestionQueue({
-    maxQuestionsPerMinute: 15,
-    processInterval: 60000 // 1 dakika
-  });
-
-  // processQuestion metodunu override et
-  questionQueue.processQuestion = async function(questionData) {
-    const { message, userId, priority = 0 } = questionData;
-    const startTime = Date.now();
-    
-    console.log(`🤖 Soru işleniyor: ${userId} - ${message.substring(0, 50)}...`);
-    
-    const graph = stateGraphGenerator(model, tools, toolsCondition, SYSTEM_PROMPT, logger);
-    
-    // Kullanıcının conversation history'sini al ve yeni mesajı ekle
-    let userConversation = conversationHelpers.getUserConversation(userId);
-    userConversation = conversationHelpers.addMessage(userId, new HumanMessage(message));
-    
-    // Graph'ı çalıştır
-    const result = await graph.invoke({
-      messages: [new HumanMessage(message)],
-    });
-    
-    const allMessages = result.messages;
-    const response = allMessages[allMessages.length - 1]?.content || 'No response generated';
-    const match = response.match(/Final Answer:\s*([\s\S]*)/i);
-      let parsedResponse = match ? match[1].trim() : response;
-    const totalExecutionTime = Date.now() - startTime;
-    
-    // AI response'u conversation history'ye ekle
-    const aiMessage = allMessages[allMessages.length - 1];
-    if (aiMessage && aiMessage._getType() === 'ai') {
-      conversationHelpers.addMessage(userId, aiMessage);
-    }
-    
-    // Tool kullanımını tespit et
-    let actualToolsUsed = [];
-    let actualLLMCalls = [];
-    
-    for (let i = 0; i < allMessages.length; i++) {
-      const msg = allMessages[i];
-      
-      if (msg._getType() === 'tool') {
-        actualToolsUsed.push({
-          toolName: msg.name || 'unknown',
-          toolInput: msg.tool_calls?.[0]?.args || 'unknown',
-          toolOutput: msg.content || 'unknown',
-          messageIndex: i,
-          messageType: msg._getType(),
-          status: 'completed',
-          executionTime: 0
-        });
-      }
-      
-      if (msg._getType() === 'ai') {
-        actualLLMCalls.push({
-          model: model.constructor.name,
-          input: allMessages.slice(0, i).map(m => ({
-            type: m._getType(),
-            content: m.content
-          })),
-          output: {
-            type: msg._getType(),
-            content: msg.content
-          },
-          executionTime: 0,
-          inputTokens: 0,
-          outputTokens: 0,
-          totalTokens: 0
-        });
-      }
-    }
-    
-    // Conversation logger
-    let conversationId = null;
-    try {
-      conversationId = logger.logConversation({
-        userId,
-        userMessage: message,
-        aiResponse: response,
-        toolsUsed: actualToolsUsed,
-        llmCalls: actualLLMCalls,
-        errors: result.logs?.errors || [],
-        metadata: {
-          totalExecutionTime,
-          totalMessages: allMessages.length,
-          model: model.constructor.name,
-          temperature: model.temperature || 0,
-          messageTypes: allMessages.map(msg => msg._getType())
-        }
-      });
-    } catch (logError) {
-      console.warn('⚠️ Loglama hatası:', logError.message);
-    }
-    
-    return {
-      success: true,
-      response: parsedResponse,
-      timestamp: new Date().toISOString(),
-      conversationId: conversationId,
-      userId: userId,
-      executionTime: totalExecutionTime,
-      toolsUsed: actualToolsUsed.length,
-      llmCalls: actualLLMCalls.length,
-      toolDetails: actualToolsUsed,
-      queueProcessed: true
-    };
-  };
-
-  console.log("✅ Soru kuyruğu sistemi başlatıldı");
-}
-
-// ---------- Graph ----------
-
 
 // ---------- HTTP Server Setup ----------
 const app = express();
@@ -261,1066 +101,192 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
+
+// ---------- API Endpoints ----------
 
 // Health check endpoint
-app.get('/health', (req, res) => {
-  res.json({ 
-    status: 'OK', 
-    timestamp: new Date().toISOString(),
-    tools: tools.length,
-    vectorStore: VectorStore ? 'Loaded' : 'Not loaded'
-  });
+app.get("/health", (req, res) => {
+  apiHandlers.handleHealthCheck(req, res, tools, VectorStore);
 });
 
 // Chat endpoint - Queue based
-app.post('/askchat', async (req, res) => {
-  try {
-    const { message, userId = 'default', priority = 0 } = req.body;
-    
-    if (!message || typeof message !== 'string') {
-      return res.status(400).json({ 
-        error: 'Message is required and must be a string' 
-      });
-    }
-
-    console.log(`💬 Chat request queued from user ${userId}: ${message}`);
-    
-    // Soruyu kuyruğa ekle
-    const processId = questionQueue.enqueue({
-      message,
-      userId,
-      priority
-    });
-
-    res.json({
-      success: true,
-      message: 'Sorunuz kuyruğa eklendi',
-      processId: processId,
-      status: questionQueue.getStatus(processId),
-      queueStats: {
-        queueSize: questionQueue.getStats().currentQueueSize,
-        position: questionQueue.getStatus(processId).position,
-        estimatedWaitTime: questionQueue.getStatus(processId).estimatedWaitTime
-      }
-    });
-
-  } catch (error) {
-    console.error('❌ Queue error:', error);
-    res.status(500).json({
-      error: 'Kuyruk hatası: ' + error.message
-    });
-  }
+app.post("/askchat", (req, res) => {
+  apiHandlers.handleChatQueue(req, res, queueManager);
 });
 
 // Get result endpoint
-app.get('/askchat/result/:processId', async (req, res) => {
-  try {
-    const { processId } = req.params;
-    const status = questionQueue.getStatus(processId);
-    
-    res.json({
-      success: true,
-      processId: processId,
-      ...status
-    });
-
-  } catch (error) {
-    console.error('❌ Result fetch error:', error);
-    res.status(500).json({
-      error: 'Sonuç alma hatası: ' + error.message
-    });
-  }
+app.get("/askchat/result/:processId", (req, res) => {
+  apiHandlers.handleGetResult(req, res, queueManager);
 });
 
 // Original chat endpoint (for immediate processing)
-app.post('/askchat/immediate', async (req, res) => {
-  const startTime = Date.now();
-  let conversationId = null;
-  const graph = stateGraphGenerator(model, tools, toolsCondition, SYSTEM_PROMPT, logger);
-
-  try {
-    const { message, userId = 'default' } = req.body;
-    
-    if (!message || typeof message !== 'string') {
-      return res.status(400).json({ 
-        error: 'Message is required and must be a string' 
-      });
-    }
-
-    console.log(`💬 Immediate chat request from user ${userId}: ${message}`);
-    
-    // Kullanıcının conversation history'sini al ve yeni mesajı ekle
-    let userConversation = conversationHelpers.getUserConversation(userId);
-    userConversation = conversationHelpers.addMessage(userId, new HumanMessage(message));
-    
-    console.log(`📚 Conversation history length: ${userConversation.length}`);
-    
-    // Invoke the graph with the conversation history
-    const result = await graph.invoke({
-      //messages: userConversation,
-      messages: [new HumanMessage(message)],
-    });
-    console.log("--------------------------------")
-    console.log(result)
-    // Tüm mesajları incele ve tool kullanımını tespit et
-    const allMessages = result.messages;
-    const response = allMessages[allMessages.length - 1]?.content || 'No response generated';
-    const totalExecutionTime = Date.now() - startTime;
-
-    console.log(`🤖 AI Response: ${response}`);
-    
-    // AI response'u conversation history'ye ekle
-    const aiMessage = allMessages[allMessages.length - 1];
-    if (aiMessage && aiMessage._getType() === 'ai') {
-      conversationHelpers.addMessage(userId, aiMessage);
-      console.log(`💾 Conversation history updated for user ${userId}`);
-    }
-    
-    // Tool kullanımını tüm mesajlardan tespit et
-    let actualToolsUsed = [];
-    let actualLLMCalls = [];
-    
-    for (let i = 0; i < allMessages.length; i++) {
-      const msg = allMessages[i];
-      const msgType = msg._getType();
-      
-      if (msgType === 'tool') {
-        // Tool mesajı - tool kullanımı ve cevabı
-        const toolName = msg.name || 'unknown_tool';
-        const toolDescription = tools.find(t => t.name === toolName)?.description || 'Unknown tool';
-        
-        const toolLog = logger.logToolUsage({
-          toolName: toolName,
-          toolDescription: toolDescription,
-          input: msg.content || 'No input',
-          output: msg.content || 'No output',
-          executionTime: 0, // Tool mesajında execution time yok
-          success: true,
-          status: 'completed',
-          messageIndex: i,
-          messageType: msgType
-        });
-        
-        actualToolsUsed.push(toolLog);
-      } else if (msgType === 'ai' && msg.tool_calls && msg.tool_calls.length > 0) {
-        // AI mesajı ama tool çağrısı var - tool isteği
-        for (const toolCall of msg.tool_calls) {
-          const toolLog = logger.logToolUsage({
-            toolName: toolCall.name,
-            toolDescription: tools.find(t => t.name === toolCall.name)?.description || 'Unknown tool',
-            input: toolCall.args,
-            output: 'Tool execution pending',
-            executionTime: 0,
-            success: false,
-            status: 'requested',
-            messageIndex: i,
-            messageType: msgType
-          });
-          
-          actualToolsUsed.push(toolLog);
-        }
-      } else if (msgType === 'ai' && !msg.tool_calls) {
-        // AI mesajı ama tool çağrısı yok - direkt cevap
-        const noToolLog = logger.logToolUsage({
-          toolName: 'no_tool_used',
-          toolDescription: 'Agent decided not to use any tools',
-          input: 'Direct response without tool usage',
-          output: msg.content,
-          executionTime: 0,
-          success: true,
-          status: 'direct_response',
-          messageIndex: i,
-          messageType: msgType
-        });
-        
-        actualToolsUsed.push(noToolLog);
-      }
-    }
-    
-    // LLM çağrılarını da tüm mesajlardan tespit et
-    if (result.logs && result.logs.llmCalls) {
-      actualLLMCalls = result.logs.llmCalls;
-    }
-    
-    // Konuşmayı logla
-    try {
-      conversationId = logger.logAgentInteraction({
-        userMessage: message,
-        agentResponse: response,
-        steps: [
-          ...actualLLMCalls,
-          ...actualToolsUsed
-        ],
-        toolsUsed: actualToolsUsed,
-        llmCalls: actualLLMCalls,
-        errors: result.logs?.errors || [],
-        metadata: {
-          totalExecutionTime,
-          totalMessages: allMessages.length,
-          model: model.constructor.name,
-          temperature: model.temperature || 0,
-          messageTypes: allMessages.map(msg => msg._getType())
-        }
-      });
-      
-      console.log(`📝 Conversation logged with ID: ${conversationId}`);
-    } catch (logError) {
-      console.warn('⚠️ Loglama hatası:', logError.message);
-    }
-    
-         // Token kullanım bilgilerini hesapla
-     let totalInputTokens = 0;
-     let totalOutputTokens = 0;
-     let totalTokens = 0;
-     
-     if (actualLLMCalls && actualLLMCalls.length > 0) {
-       actualLLMCalls.forEach(llmCall => {
-         totalInputTokens += llmCall.inputTokens || 0;
-         totalOutputTokens += llmCall.outputTokens || 0;
-         totalTokens += llmCall.totalTokens || 0;
-       });
-     }
-     
-           console.log({
-        success: true,
-        response: response,
-        timestamp: new Date().toISOString(),
-        conversationId: conversationId,
-        userId: userId,
-        conversationLength: userConversation.length,
-        executionTime: totalExecutionTime,
-        toolsUsed: result.logs?.toolsUsed?.length || 0,
-        llmCalls: result.logs?.llmCalls?.length || 0,
-        toolDetails: actualToolsUsed.map(tool => ({
-          name: tool.toolName,
-          status: tool.status,
-          executionTime: tool.executionTime,
-          messageIndex: tool.messageIndex,
-          messageType: tool.messageType,
-          input: tool.input,
-          output: tool.output
-        })) || [],
-        tokenUsage: {
-          input: totalInputTokens,
-          output: totalOutputTokens,
-          total: totalTokens
-        }
-      });
-
-      const match = response.match(/Final Answer:\s*([\s\S]*)/i);
-      let parsedResponse = match ? match[1].trim() : response;
-
-      res.json({
-        success: true,
-       response: parsedResponse,
-      });
-
-  } catch (error) {
-    const totalExecutionTime = Date.now() - startTime;
-    console.error('❌ Chat error:', error);
-    
-    // Hata durumunda da logla
-    try {
-      conversationId = logger.logAgentInteraction({
-        userMessage: req.body?.message || 'Unknown message',
-        agentResponse: 'Error occurred during processing',
-        steps: [],
-        toolsUsed: [],
-        llmCalls: [],
-        errors: [logger.logError({
-          error,
-          context: 'Chat endpoint',
-          stack: error.stack
-        })],
-        metadata: {
-          totalExecutionTime,
-          totalMessages: 0,
-          model: model.constructor.name,
-          temperature: model.temperature || 0,
-          error: true
-        }
-      });
-    } catch (logError) {
-      console.warn('⚠️ Error logging failed:', logError.message);
-    }
-    
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message,
-      conversationId: conversationId,
-      executionTime: totalExecutionTime
-    });
-  }
-});
-
-// Get available tools endpoint
-app.get('/tools', (req, res) => {
-  const toolsInfo = tools.map(tool => ({
-    name: tool.name,
-    description: tool.description
-  }));
-  
-  res.json({
-    tools: toolsInfo,
-    count: tools.length
+app.post("/askchat/immediate", (req, res) => {
+  apiHandlers.handleImmediateChat(req, res, {
+    model,
+    tools,
+    toolsCondition,
+    SYSTEM_PROMPT,
+    stateGraphGenerator,
+    responseProcessor,
   });
 });
 
+// Get available tools endpoint
+app.get("/tools", (req, res) => {
+  apiHandlers.handleGetTools(req, res, tools);
+});
+
 // Queue management endpoints
-app.get('/queue/stats', (req, res) => {
-  try {
-    const stats = questionQueue.getStats();
-    res.json({
-      success: true,
-      stats: stats
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: error.message
-    });
-  }
+app.get("/queue/stats", (req, res) => {
+  apiHandlers.handleQueueStats(req, res, queueManager);
 });
 
-app.get('/queue/status/:processId', (req, res) => {
-  try {
-    const { processId } = req.params;
-    const status = questionQueue.getStatus(processId);
-    
-    res.json({
-      success: true,
-      processId: processId,
-      ...status
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: error.message
-    });
-  }
+app.get("/queue/status/:processId", (req, res) => {
+  apiHandlers.handleQueueStatus(req, res, queueManager);
 });
 
-app.post('/queue/clear', (req, res) => {
-  try {
-    const clearedCount = questionQueue.clearQueue();
-    res.json({
-      success: true,
-      message: `${clearedCount} soru kuyruktan temizlendi`,
-      clearedCount: clearedCount
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: error.message
-    });
-  }
+app.post("/queue/clear", (req, res) => {
+  apiHandlers.handleClearQueue(req, res, queueManager);
 });
 
-app.post('/queue/cleanup', (req, res) => {
-  try {
-    const { olderThanMinutes = 60 } = req.body;
-    const cleanedCount = questionQueue.cleanupCompleted(olderThanMinutes);
-    res.json({
-      success: true,
-      message: `${cleanedCount} eski sonuç temizlendi`,
-      cleanedCount: cleanedCount
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: error.message
-    });
-  }
+app.post("/queue/cleanup", (req, res) => {
+  apiHandlers.handleCleanupQueue(req, res, queueManager);
 });
 
 // Conversation management endpoints
-app.get('/conversations/:userId', (req, res) => {
-  try {
-    const { userId } = req.params;
-    const conversation = conversationStore.get(userId) || [];
-    
-    res.json({
-      success: true,
-      userId: userId,
-      conversationLength: conversation.length,
-      messages: conversation.map((msg, index) => ({
-        index: index,
-        type: msg._getType(),
-        content: msg.content,
-        timestamp: new Date().toISOString()
-      }))
-    });
-  } catch (error) {
-    console.error('❌ Get conversation error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/conversations/:userId", (req, res) => {
+  apiHandlers.handleGetConversation(req, res);
 });
 
-app.delete('/conversations/:userId', (req, res) => {
-  try {
-    const { userId } = req.params;
-    const deleted = conversationStore.delete(userId);
-    
-    res.json({
-      success: true,
-      userId: userId,
-      deleted: deleted,
-      message: deleted ? 'Conversation cleared' : 'No conversation found'
-    });
-  } catch (error) {
-    console.error('❌ Clear conversation error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.delete("/conversations/:userId", (req, res) => {
+  apiHandlers.handleDeleteConversation(req, res);
 });
 
-app.get('/conversations', (req, res) => {
-  try {
-    const conversations = Array.from(conversationStore.entries()).map(([userId, conversation]) => ({
-      userId: userId,
-      conversationLength: conversation.length,
-      lastMessage: conversation[conversation.length - 1]?.content?.substring(0, 100) || 'No messages',
-      lastActivity: new Date().toISOString()
-    }));
-    
-    res.json({
-      success: true,
-      totalConversations: conversations.length,
-      conversations: conversations
-    });
-  } catch (error) {
-    console.error('❌ Get conversations list error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/conversations", (req, res) => {
+  apiHandlers.handleGetAllConversations(req, res);
 });
 
-app.get('/conversations/:userId/summary', (req, res) => {
-  try {
-    const { userId } = req.params;
-    const summary = conversationHelpers.getConversationSummary(userId);
-    
-    res.json({
-      success: true,
-      userId: userId,
-      summary: summary
-    });
-  } catch (error) {
-    console.error('❌ Get conversation summary error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/conversations/:userId/summary", (req, res) => {
+  apiHandlers.handleGetConversationSummary(req, res);
 });
 
-// Test endpoint for conversation memory
-app.post('/conversations/:userId/test', (req, res) => {
-  try {
-    const { userId } = req.params;
-    const { message } = req.body;
-    
-    if (!message) {
-      return res.status(400).json({ error: 'Message is required' });
-    }
-    
-    // Test message ekle
-    const testMessage = new HumanMessage(message);
-    conversationHelpers.addMessage(userId, testMessage);
-    
-    const conversation = conversationHelpers.getUserConversation(userId);
-    const summary = conversationHelpers.getConversationSummary(userId);
-    
-    res.json({
-      success: true,
-      message: 'Test message added',
-      userId: userId,
-      conversationLength: conversation.length,
-      summary: summary
-    });
-  } catch (error) {
-    console.error('❌ Test conversation error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.post("/conversations/:userId/test", (req, res) => {
+  apiHandlers.handleTestConversation(req, res);
 });
 
-// Get vector store status and content
-app.get('/vectorstore', async (req, res) => {
-  if (!VectorStore) {
-    return res.status(404).json({ 
-      error: 'Vector store not loaded' 
-    });
-  }
-  
-  try {
-    const { search, showAll } = req.query;
-    
-    let allDocs;
-    if (search && search.trim()) {
-      // Arama sorgusu varsa sadece ilgili dokümanları al
-      console.log(`🔍 Vector store'da arama: "${search}"`);
-      const retriever = VectorStore.asRetriever({ k: 10000 });
-      allDocs = await retriever.getRelevantDocuments(search);
-    } else {
-      // Arama yoksa tüm dokümanları al
-      const retriever = VectorStore.asRetriever({ k: 10000 });
-      allDocs = await retriever.getRelevantDocuments(""); // Boş sorgu ile tüm dokümanları al
-    }
-    
-    // Dokümanları kategorilere ayır
-    const categorizedDocs = {
-      excel: [],
-      pdf: [],
-      docx: [],
-      txt: [],
-      json: [],
-      other: []
-    };
-    
-    let totalDocs = 0;
-    let totalContentLength = 0;
-    
-    allDocs.forEach((doc, index) => {
-      totalDocs++;
-      totalContentLength += doc.pageContent?.length || 0;
-      
-      const metadata = doc.metadata || {};
-      const source = metadata.source || 'unknown';
-      const docType = metadata.documentType || 'unknown';
-      
-      // Doküman bilgilerini hazırla
-      const docInfo = {
-        id: index,
-        source: source,
-        documentType: docType,
-        content: doc.pageContent?.substring(0, 200) + (doc.pageContent?.length > 200 ? '...' : ''),
-        fullContent: doc.pageContent,
-        metadata: metadata,
-        contentLength: doc.pageContent?.length || 0
-      };
-      
-      // Excel satır dokümanları için özel işleme
-      if (docType === 'excel_row') {
-        categorizedDocs.excel.push(docInfo);
-      } else if (source.endsWith('.pdf')) {
-        categorizedDocs.pdf.push(docInfo);
-      } else if (source.endsWith('.docx')) {
-        categorizedDocs.docx.push(docInfo);
-      } else if (source.endsWith('.txt')) {
-        categorizedDocs.txt.push(docInfo);
-      } else if (source.endsWith('.json')) {
-        categorizedDocs.json.push(docInfo);
-      } else {
-        categorizedDocs.other.push(docInfo);
-      }
-    });
-    
-    // Her kategori için istatistikler
-    const stats = {
-      total: totalDocs,
-      totalContentLength: totalContentLength,
-      excel: {
-        count: categorizedDocs.excel.length,
-        totalRows: categorizedDocs.excel.length,
-        sheets: [...new Set(categorizedDocs.excel.map(doc => doc.metadata?.sheetName).filter(Boolean))]
-      },
-      pdf: { count: categorizedDocs.pdf.length },
-      docx: { count: categorizedDocs.docx.length },
-      txt: { count: categorizedDocs.txt.length },
-      json: { count: categorizedDocs.json.length },
-      other: { count: categorizedDocs.other.length }
-    };
-    
-    res.json({
-      status: 'Loaded',
-      timestamp: new Date().toISOString(),
-      search: search || null,
-      stats: stats,
-      documents: {
-        excel: categorizedDocs.excel.slice(0, 50), // İlk 50 Excel satırı
-        pdf: categorizedDocs.pdf.slice(0, 20),     // İlk 20 PDF parçası
-        docx: categorizedDocs.docx.slice(0, 20),   // İlk 20 DOCX parçası
-        txt: categorizedDocs.txt.slice(0, 20),     // İlk 20 TXT parçası
-        json: categorizedDocs.json.slice(0, 20),   // İlk 20 JSON parçası
-        other: categorizedDocs.other.slice(0, 20)  // İlk 20 diğer parça
-      },
-      // Tüm dokümanları görmek için query parametresi
-      showAll: showAll === 'true',
-      allDocuments: showAll === 'true' ? allDocs.map((doc, index) => ({
-        id: index,
-        source: doc.metadata?.source || 'unknown',
-        documentType: doc.metadata?.documentType || 'unknown',
-        content: doc.pageContent?.substring(0, 300) + (doc.pageContent?.length > 300 ? '...' : ''),
-        metadata: doc.metadata,
-        contentLength: doc.pageContent?.length || 0
-      })) : null
-    });
-    
-  } catch (error) {
-    console.error('❌ Vector store content retrieval error:', error);
-    res.status(500).json({ 
-      error: 'Failed to retrieve vector store content', 
-      message: error.message 
-    });
-  }
+// Vector store endpoints
+app.get("/vectorstore", (req, res) => {
+  vectorStoreHandlers.handleGetVectorStore(req, res, VectorStore);
 });
 
 // ---------- Logging Endpoints ----------
 
 // Get all conversations
-app.get('/logs/conversations', (req, res) => {
-  try {
-    const limit = parseInt(req.query.limit) || 100;
-    const offset = parseInt(req.query.offset) || 0;
-    
-    const conversations = logger.getConversations(limit, offset);
-    
-    res.json({
-      success: true,
-      conversations,
-      pagination: {
-        limit,
-        offset,
-        total: conversations.length
-      }
-    });
-  } catch (error) {
-    console.error('❌ Get conversations error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/logs/conversations", (req, res) => {
+  loggingHandlers.handleGetConversations(req, res);
 });
 
 // Get conversation by ID
-app.get('/logs/conversations/:id', (req, res) => {
-  try {
-    const { id } = req.params;
-    const conversation = logger.getConversationById(id);
-    
-    if (!conversation) {
-      return res.status(404).json({ 
-        error: 'Conversation not found' 
-      });
-    }
-    
-    res.json({
-      success: true,
-      conversation
-    });
-  } catch (error) {
-    console.error('❌ Get conversation error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/logs/conversations/:id", (req, res) => {
+  loggingHandlers.handleGetConversationById(req, res);
 });
 
 // Search conversations
-app.get('/logs/search', (req, res) => {
-  try {
-    const { q: query } = req.query;
-    
-    if (!query) {
-      return res.status(400).json({ 
-        error: 'Search query is required' 
-      });
-    }
-    
-    const results = logger.searchConversations(query);
-    
-    res.json({
-      success: true,
-      results,
-      query,
-      count: results.length
-    });
-  } catch (error) {
-    console.error('❌ Search conversations error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/logs/search", (req, res) => {
+  loggingHandlers.handleSearchConversations(req, res);
 });
 
 // Get conversation statistics
-app.get('/logs/stats', (req, res) => {
-  try {
-    const stats = logger.getConversationStats();
-    
-    res.json({
-      success: true,
-      stats
-    });
-  } catch (error) {
-    console.error('❌ Get stats error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/logs/stats", (req, res) => {
+  loggingHandlers.handleGetStats(req, res);
 });
 
 // Cleanup old logs
-app.delete('/logs/cleanup', (req, res) => {
-  try {
-    const daysToKeep = parseInt(req.query.days) || 30;
-    const deletedCount = logger.cleanupOldLogs(daysToKeep);
-    
-    res.json({
-      success: true,
-      message: `${deletedCount} old log entries cleaned up`,
-      daysKept: daysToKeep
-    });
-  } catch (error) {
-    console.error('❌ Cleanup logs error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.delete("/logs/cleanup", (req, res) => {
+  loggingHandlers.handleCleanupLogs(req, res);
 });
 
 // ---------- Genel Amaçlı Loglama Endpoints ----------
 
 // Text loglama endpoint
-app.post('/logs/text', (req, res) => {
-  try {
-    const { text, fileName, options = {} } = req.body;
-    
-    if (!text || !fileName) {
-      return res.status(400).json({ 
-        error: 'Text and fileName are required' 
-      });
-    }
-    
-    const success = logger.logText(text, fileName, options);
-    
-    res.json({
-      success: success,
-      message: success ? 'Text logged successfully' : 'Failed to log text',
-      fileName: `${fileName}.${options.extension || 'log'}`
-    });
-  } catch (error) {
-    console.error('❌ Text logging error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.post("/logs/text", (req, res) => {
+  loggingHandlers.handleLogText(req, res);
 });
 
 // JSON loglama endpoint
-app.post('/logs/json', (req, res) => {
-  try {
-    const { data, fileName, options = {} } = req.body;
-    
-    if (!data || !fileName) {
-      return res.status(400).json({ 
-        error: 'Data and fileName are required' 
-      });
-    }
-    
-    const success = logger.logJSON(data, fileName, options);
-    
-    res.json({
-      success: success,
-      message: success ? 'JSON logged successfully' : 'Failed to log JSON',
-      fileName: `${fileName}.json`
-    });
-  } catch (error) {
-    console.error('❌ JSON logging error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.post("/logs/json", (req, res) => {
+  loggingHandlers.handleLogJSON(req, res);
 });
 
 // Debug loglama endpoint
-app.post('/logs/debug', (req, res) => {
-  try {
-    const { message, data = null } = req.body;
-    
-    if (!message) {
-      return res.status(400).json({ 
-        error: 'Message is required' 
-      });
-    }
-    
-    const success = logger.logDebug(message, data);
-    
-    res.json({
-      success: success,
-      message: success ? 'Debug logged successfully' : 'Failed to log debug',
-      fileName: 'debug.json'
-    });
-  } catch (error) {
-    console.error('❌ Debug logging error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.post("/logs/debug", (req, res) => {
+  loggingHandlers.handleLogDebug(req, res);
 });
 
 // Error loglama endpoint
-app.post('/logs/error', (req, res) => {
-  try {
-    const { error: errorMsg, context = null } = req.body;
-    
-    if (!errorMsg) {
-      return res.status(400).json({ 
-        error: 'Error message is required' 
-      });
-    }
-    
-    const success = logger.logError(errorMsg, context);
-    
-    res.json({
-      success: success,
-      message: success ? 'Error logged successfully' : 'Failed to log error',
-      fileName: 'errors.json'
-    });
-  } catch (error) {
-    console.error('❌ Error logging error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.post("/logs/error", (req, res) => {
+  loggingHandlers.handleLogError(req, res);
 });
 
 // Performance loglama endpoint
-app.post('/logs/performance', (req, res) => {
-  try {
-    const { operation, duration, details = {} } = req.body;
-    
-    if (!operation || duration === undefined) {
-      return res.status(400).json({ 
-        error: 'Operation and duration are required' 
-      });
-    }
-    
-    const success = logger.logPerformance(operation, duration, details);
-    
-    res.json({
-      success: success,
-      message: success ? 'Performance logged successfully' : 'Failed to log performance',
-      fileName: 'performance.json'
-    });
-  } catch (error) {
-    console.error('❌ Performance logging error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.post("/logs/performance", (req, res) => {
+  loggingHandlers.handleLogPerformance(req, res);
 });
 
 // Log dosyalarını listele
-app.get('/logs/files', (req, res) => {
-  try {
-    const { pattern } = req.query;
-    const files = logger.getLogFiles(pattern);
-    
-    res.json({
-      success: true,
-      files: files,
-      count: files.length,
-      pattern: pattern || null
-    });
-  } catch (error) {
-    console.error('❌ List log files error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/logs/files", (req, res) => {
+  loggingHandlers.handleGetLogFiles(req, res);
 });
 
 // Log dosyası oku
-app.get('/logs/files/:fileName', (req, res) => {
-  try {
-    const { fileName } = req.params;
-    const { lines } = req.query;
-    
-    const content = logger.readLogFile(fileName, lines ? parseInt(lines) : null);
-    
-    if (content === null) {
-      return res.status(404).json({ 
-        error: 'Log file not found' 
-      });
-    }
-    
-    res.json({
-      success: true,
-      fileName: fileName,
-      content: content,
-      lines: lines ? parseInt(lines) : null
-    });
-  } catch (error) {
-    console.error('❌ Read log file error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/logs/files/:fileName", (req, res) => {
+  loggingHandlers.handleReadLogFile(req, res);
 });
 
 // ---------- Vector Store Cache Yönetimi Endpoints ----------
 
 // Cache durumunu al
-app.get('/cache/status', (req, res) => {
-  try {
-    const cacheInfo = documentProcessor.getCacheInfo();
-    
-    res.json({
-      success: true,
-      cache: cacheInfo,
-      useCache: documentProcessor.useCache,
-      processedFiles: documentProcessor.processedFiles?.length || 0
-    });
-  } catch (error) {
-    console.error('❌ Cache status error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/cache/status", (req, res) => {
+  vectorStoreHandlers.handleGetCacheStatus(req, res);
 });
 
 // Cache'i temizle
-app.get('/cache/clear', (req, res) => {
-  try {
-    const success = documentProcessor.clearCache();
-    
-    res.json({
-      success: success,
-      message: success ? 'Cache cleared successfully' : 'Failed to clear cache'
-    });
-  } catch (error) {
-    console.error('❌ Cache clear error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/cache/clear", (req, res) => {
+  vectorStoreHandlers.handleClearCache(req, res);
 });
 
 // Cache'den yeniden yükle
-app.get('/cache/reload', async (req, res) => {
-  try {
-    console.log('🔄 Cache\'den yeniden yükleme başlatılıyor...');
-    
-    const success = await documentProcessor.loadFromCache();
-    
-    if (success) {
-      // Vector store'u güncelle
-      VectorStore = documentProcessor.getVectorStore();
-      
-      res.json({
-        success: true,
-        message: 'Cache reloaded successfully',
-        vectorStore: VectorStore ? 'Loaded' : 'Not loaded'
-      });
-    } else {
-      res.json({
-        success: false,
-        message: 'Failed to reload from cache'
-      });
-    }
-  } catch (error) {
-    console.error('❌ Cache reload error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/cache/reload", (req, res) => {
+  vectorStoreHandlers.handleReloadCache(req, res, (newVectorStore) => {
+    VectorStore = newVectorStore;
+  });
 });
 
 // Cache'e kaydet
-app.get('/cache/save', async (req, res) => {
-  try {
-    console.log('💾 Cache\'e kaydetme başlatılıyor...');
-    
-    const success = await documentProcessor.saveToCache();
-    
-    res.json({
-      success: success,
-      message: success ? 'Cache saved successfully' : 'Failed to save cache'
-    });
-  } catch (error) {
-    console.error('❌ Cache save error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+app.get("/cache/save", (req, res) => {
+  vectorStoreHandlers.handleSaveCache(req, res);
 });
 
 // Dosyaları yeniden işle (cache'i bypass et)
-app.get('/cache/rebuild', async (req, res) => {
-  try {
-    console.log('🔄 Dosyalar yeniden işleniyor (cache bypass)...');
-    
-    // Cache'i temizle
-    documentProcessor.clearCache();
-    
-    // Yeni document processor oluştur (cache devre dışı)
-    const newProcessor = new DocumentProcessor(1000, 300, false);
-    
-    // Dosyaları yeniden işle
-    const result = await loadDataFiles(newProcessor);
-    
-    if (result) {
-      // Global değişkenleri güncelle
-      VectorStore = newProcessor.getVectorStore();
-      
-      // Yeni cache'e kaydet
-      newProcessor.useCache = true;
-      await newProcessor.saveToCache();
-      
-      res.json({
-        success: true,
-        message: 'Files reprocessed and cache rebuilt successfully',
-        vectorStore: VectorStore ? 'Loaded' : 'Not loaded'
-      });
-    } else {
-      res.json({
-        success: false,
-        message: 'Failed to reprocess files'
-      });
+app.get("/cache/rebuild", (req, res) => {
+  vectorStoreHandlers.handleRebuildCache(
+    req,
+    res,
+    (processor) => dataLoader.loadDataFiles(processor),
+    (newVectorStore) => {
+      VectorStore = newVectorStore;
+      documentProcessor = dataLoader.getDocumentProcessor();
     }
-  } catch (error) {
-    console.error('❌ Cache rebuild error:', error);
-    res.status(500).json({ 
-      error: 'Internal server error', 
-      message: error.message 
-    });
-  }
+  );
 });
 
 // ---------- Main Function ----------
 const run = async () => {
   try {
-    // Initialize question queue system
-    initializeQuestionQueue();
-    
+    // Initialize application
+    await initializeApplication();
+
     console.log(`🎯 Toplam ${tools.length} araç yüklendi:`);
     tools.forEach((tool, index) => {
       console.log(`   ${index + 1}. ${tool.name} - ${tool.description}`);
@@ -1345,8 +311,12 @@ const run = async () => {
       console.log(`   GET  /vectorstore?showAll=true - Tüm dokümanları göster`);
       console.log(`💬 Conversation Endpoints:`);
       console.log(`   GET  /conversations - Tüm conversation'ları listele`);
-      console.log(`   GET  /conversations/:userId - Belirli kullanıcının conversation'ı`);
-      console.log(`   GET  /conversations/:userId/summary - Conversation özeti`);
+      console.log(
+        `   GET  /conversations/:userId - Belirli kullanıcının conversation'ı`
+      );
+      console.log(
+        `   GET  /conversations/:userId/summary - Conversation özeti`
+      );
       console.log(`   DELETE /conversations/:userId - Conversation'ı temizle`);
       console.log(`📝 Logging Endpoints:`);
       console.log(`   GET  /logs/conversations - Tüm konuşmalar`);
@@ -1360,7 +330,9 @@ const run = async () => {
       console.log(`   POST /logs/debug - Debug loglama`);
       console.log(`   POST /logs/error - Error loglama`);
       console.log(`   POST /logs/performance - Performance loglama`);
-      console.log(`   GET  /logs/files?pattern=query - Log dosyalarını listele`);
+      console.log(
+        `   GET  /logs/files?pattern=query - Log dosyalarını listele`
+      );
       console.log(`   GET  /logs/files/:fileName?lines=N - Log dosyası oku`);
       console.log(`💾 Vector Store Cache Endpoints:`);
       console.log(`   GET  /cache/status - Cache durumu`);
@@ -1369,7 +341,6 @@ const run = async () => {
       console.log(`   POST /cache/save - Cache'e kaydet`);
       console.log(`   POST /cache/rebuild - Dosyaları yeniden işle`);
     });
-    
   } catch (error) {
     console.error("❌ Uygulama çalıştırılırken hata:", error);
     process.exit(1);

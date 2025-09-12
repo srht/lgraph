@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "createdAt": "2025-09-03T11:33:17.171Z",
-  "embeddingProvider": "GoogleGenerativeAIEmbeddings",
-  "embeddingModel": "embedding-001",
-  "totalVectors": 629,
-  "totalDocuments": 629,
+  "createdAt": "2025-09-10T15:58:32.090Z",
+  "embeddingProvider": "OpenAIEmbeddings",
+  "embeddingModel": "text-embedding-3-small",
+  "totalVectors": 321,
+  "totalDocuments": 321,
   "sourceFiles": [
     {
       "path": "E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\data\\Chatbot Soruları ve Cevapları.xlsx",
