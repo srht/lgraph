@@ -1,22 +1,21 @@
 // vectorStorePersistence.js
-import fs from 'fs';
-import path from 'path';
-import crypto from 'crypto';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import crypto from "crypto";
+import { fileURLToPath } from "url";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
-import { OpenAIEmbeddings } from "@langchain/openai";
-import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
-
+import ModelInitializer from "../model/modelInitializer.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class VectorStorePersistence {
   constructor(cacheDir = null) {
-    this.cacheDir = cacheDir || path.join(__dirname, '..', 'vector_cache');
-    this.metadataFile = path.join(this.cacheDir, 'metadata.json');
-    this.vectorsFile = path.join(this.cacheDir, 'vectors.json');
-    this.documentsFile = path.join(this.cacheDir, 'documents.json');
-    
+    this.cacheDir =
+      cacheDir || path.join(__dirname, "..", "..", "vector_cache");
+    this.metadataFile = path.join(this.cacheDir, "metadata.json");
+    this.vectorsFile = path.join(this.cacheDir, "vectors.json");
+    this.documentsFile = path.join(this.cacheDir, "documents.json");
+
     this.ensureCacheDirectory();
   }
 
@@ -33,7 +32,7 @@ class VectorStorePersistence {
   calculateFileHash(filePath) {
     try {
       const content = fs.readFileSync(filePath);
-      return crypto.createHash('md5').update(content).digest('hex');
+      return crypto.createHash("md5").update(content).digest("hex");
     } catch (error) {
       console.warn(`⚠️ Hash hesaplanamadı: ${filePath}`, error.message);
       return null;
@@ -46,10 +45,10 @@ class VectorStorePersistence {
   saveMetadata(metadata) {
     try {
       fs.writeFileSync(this.metadataFile, JSON.stringify(metadata, null, 2));
-      console.log('💾 Metadata kaydedildi');
+      console.log("💾 Metadata kaydedildi");
       return true;
     } catch (error) {
-      console.error('❌ Metadata kaydetme hatası:', error);
+      console.error("❌ Metadata kaydetme hatası:", error);
       return false;
     }
   }
@@ -60,12 +59,12 @@ class VectorStorePersistence {
   loadMetadata() {
     try {
       if (fs.existsSync(this.metadataFile)) {
-        const content = fs.readFileSync(this.metadataFile, 'utf8');
+        const content = fs.readFileSync(this.metadataFile, "utf8");
         return JSON.parse(content);
       }
       return null;
     } catch (error) {
-      console.error('❌ Metadata yükleme hatası:', error);
+      console.error("❌ Metadata yükleme hatası:", error);
       return null;
     }
   }
@@ -75,12 +74,12 @@ class VectorStorePersistence {
    */
   async saveVectorStore(vectorStore, sourceFiles = []) {
     try {
-      console.log('💾 Vector store kaydediliyor...');
-      
+      console.log("💾 Vector store kaydediliyor...");
+
       // Vector store'dan vektörleri ve dokümanları çıkar
       const vectors = [];
       const documents = [];
-      
+
       // MemoryVectorStore'dan verileri çıkar
       if (vectorStore.memoryVectors) {
         for (let i = 0; i < vectorStore.memoryVectors.length; i++) {
@@ -88,30 +87,33 @@ class VectorStorePersistence {
           vectors.push({
             content: vector.content,
             embedding: vector.embedding,
-            metadata: vector.metadata
+            metadata: vector.metadata,
           });
-          
+
           documents.push({
             pageContent: vector.content,
-            metadata: vector.metadata
+            metadata: vector.metadata,
           });
         }
       }
 
       // Metadata oluştur
       const metadata = {
-        version: '1.0',
+        version: "1.0",
         createdAt: new Date().toISOString(),
-        embeddingProvider: vectorStore.embeddings?.constructor?.name || 'unknown',
-        embeddingModel: vectorStore.embeddings?.modelName || 'unknown',
+        embeddingProvider:
+          vectorStore.embeddings?.constructor?.name || "unknown",
+        embeddingModel: vectorStore.embeddings?.modelName || "unknown",
         totalVectors: vectors.length,
         totalDocuments: documents.length,
-        sourceFiles: sourceFiles.map(filePath => ({
+        sourceFiles: sourceFiles.map((filePath) => ({
           path: filePath,
           hash: this.calculateFileHash(filePath),
           size: fs.existsSync(filePath) ? fs.statSync(filePath).size : 0,
-          lastModified: fs.existsSync(filePath) ? fs.statSync(filePath).mtime.toISOString() : null
-        }))
+          lastModified: fs.existsSync(filePath)
+            ? fs.statSync(filePath).mtime.toISOString()
+            : null,
+        })),
       };
 
       // Dosyaları kaydet
@@ -119,11 +121,12 @@ class VectorStorePersistence {
       fs.writeFileSync(this.documentsFile, JSON.stringify(documents, null, 2));
       this.saveMetadata(metadata);
 
-      console.log(`✅ Vector store kaydedildi: ${vectors.length} vektör, ${documents.length} doküman`);
+      console.log(
+        `✅ Vector store kaydedildi: ${vectors.length} vektör, ${documents.length} doküman`
+      );
       return true;
-
     } catch (error) {
-      console.error('❌ Vector store kaydetme hatası:', error);
+      console.error("❌ Vector store kaydetme hatası:", error);
       return false;
     }
   }
@@ -131,50 +134,50 @@ class VectorStorePersistence {
   /**
    * Vector store'u dosyadan yükle
    */
-  async loadVectorStore(embeddingProvider = 'gemini', embeddingApiKey = null) {
+  async loadVectorStore(embeddingProvider = "gemini", embeddingApiKey = null) {
     try {
-      console.log('📂 Vector store yükleniyor...');
+      console.log("📂 Vector store yükleniyor...");
 
       // Dosyaların varlığını kontrol et
-      if (!fs.existsSync(this.vectorsFile) || !fs.existsSync(this.documentsFile)) {
-        console.log('ℹ️ Cache dosyaları bulunamadı');
+      if (
+        !fs.existsSync(this.vectorsFile) ||
+        !fs.existsSync(this.documentsFile)
+      ) {
+        console.log("ℹ️ Cache dosyaları bulunamadı");
         return null;
       }
 
       // Metadata'yı yükle
       const metadata = this.loadMetadata();
       if (!metadata) {
-        console.log('⚠️ Metadata bulunamadı');
+        console.log("⚠️ Metadata bulunamadı");
         return null;
       }
 
-      console.log(`📊 Cache bilgileri: ${metadata.totalVectors} vektör, ${metadata.embeddingProvider} provider`);
+      console.log(
+        `📊 Cache bilgileri: ${metadata.totalVectors} vektör, ${metadata.embeddingProvider} provider`
+      );
+      const modelInitializer = new ModelInitializer();
+      const { chatModel, embeddingModel } =
+        await modelInitializer.initializeModels();
 
       // Embedding modelini oluştur
-      let embeddings;
-      if (embeddingProvider === 'openai') {
-        embeddings = new OpenAIEmbeddings({
-          apiKey: embeddingApiKey
-        });
-      } else {
-        // default gemini
-        embeddings = new GoogleGenerativeAIEmbeddings({
-          apiKey: embeddingApiKey || process.env.GEMINI_API_KEY
-        });
-      }
+      let embeddings = embeddingModel;
 
       // Dokümanları yükle
-      const documentsContent = fs.readFileSync(this.documentsFile, 'utf8');
+      const documentsContent = fs.readFileSync(this.documentsFile, "utf8");
       const documents = JSON.parse(documentsContent);
 
       // Vector store oluştur
-      const vectorStore = await MemoryVectorStore.fromDocuments(documents, embeddings);
+      const vectorStore = await MemoryVectorStore.fromDocuments(
+        documents,
+        embeddings
+      );
 
       console.log(`✅ Vector store yüklendi: ${documents.length} doküman`);
       return { vectorStore, metadata };
-
     } catch (error) {
-      console.error('❌ Vector store yükleme hatası:', error);
+      console.error("❌ Vector store yükleme hatası:", error);
       return null;
     }
   }
@@ -186,19 +189,21 @@ class VectorStorePersistence {
     try {
       const metadata = this.loadMetadata();
       if (!metadata) {
-        console.log('🔍 Metadata yok, cache geçersiz');
+        console.log("🔍 Metadata yok, cache geçersiz");
         return false;
       }
 
       // Dosya sayısı kontrolü
       if (metadata.sourceFiles.length !== sourceFiles.length) {
-        console.log('🔍 Dosya sayısı değişmiş, cache geçersiz');
+        console.log("🔍 Dosya sayısı değişmiş, cache geçersiz");
         return false;
       }
 
       // Her dosya için hash kontrolü
       for (const filePath of sourceFiles) {
-        const cachedFile = metadata.sourceFiles.find(f => f.path === filePath);
+        const cachedFile = metadata.sourceFiles.find(
+          (f) => f.path === filePath
+        );
         if (!cachedFile) {
           console.log(`🔍 Yeni dosya: ${filePath}, cache geçersiz`);
           return false;
@@ -211,11 +216,10 @@ class VectorStorePersistence {
         }
       }
 
-      console.log('✅ Cache güncel');
+      console.log("✅ Cache güncel");
       return true;
-
     } catch (error) {
-      console.error('❌ Cache validasyon hatası:', error);
+      console.error("❌ Cache validasyon hatası:", error);
       return false;
     }
   }
@@ -228,7 +232,7 @@ class VectorStorePersistence {
       const files = [this.metadataFile, this.vectorsFile, this.documentsFile];
       let deletedCount = 0;
 
-      files.forEach(file => {
+      files.forEach((file) => {
         if (fs.existsSync(file)) {
           fs.unlinkSync(file);
           deletedCount++;
@@ -238,7 +242,7 @@ class VectorStorePersistence {
       console.log(`🗑️ Cache temizlendi: ${deletedCount} dosya silindi`);
       return true;
     } catch (error) {
-      console.error('❌ Cache temizleme hatası:', error);
+      console.error("❌ Cache temizleme hatası:", error);
       return false;
     }
   }
@@ -263,16 +267,18 @@ class VectorStorePersistence {
         files: {
           metadata: fs.existsSync(this.metadataFile),
           vectors: vectorsExists,
-          documents: documentsExists
+          documents: documentsExists,
         },
         sizes: {
-          metadata: fs.existsSync(this.metadataFile) ? fs.statSync(this.metadataFile).size : 0,
+          metadata: fs.existsSync(this.metadataFile)
+            ? fs.statSync(this.metadataFile).size
+            : 0,
           vectors: vectorsExists ? fs.statSync(this.vectorsFile).size : 0,
-          documents: documentsExists ? fs.statSync(this.documentsFile).size : 0
-        }
+          documents: documentsExists ? fs.statSync(this.documentsFile).size : 0,
+        },
       };
     } catch (error) {
-      console.error('❌ Cache bilgi alma hatası:', error);
+      console.error("❌ Cache bilgi alma hatası:", error);
       return { exists: false, error: error.message };
     }
   }

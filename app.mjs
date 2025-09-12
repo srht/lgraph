@@ -7,7 +7,7 @@ import { createDatabaseSearchTool } from "./tools/databasesearch.js";
 import { createITULibrarySearchTool } from "./tools/ituLibrarySearch.js";
 import { createLibraryWebSearchTool } from "./tools/libraryWebSearch.js";
 import { createJournalSubscriptionSearchTool } from "./tools/journalSubscriptionSearch.js";
-import { buildDocumentSearchTool } from "./helpers/data/docsRetriever.js";
+import { buildDocumentSearchTool } from "./tools/document_search.js";
 import { SYSTEM_PROMPT } from "./helpers/data/systemPrompt.js";
 import express from "express";
 import cors from "cors";
@@ -64,13 +64,13 @@ async function initializeApplication() {
     VectorStore = dataLoader.getVectorStore();
 
     // Build document search tool
-    const document_search2 = buildDocumentSearchTool({
+    const document_search = buildDocumentSearchTool({
       vectorStore: VectorStore,
     });
 
     // Initialize tools array
     tools = [
-      document_search2,
+      document_search,
       course_book_search,
       database_search,
       itu_library_search,

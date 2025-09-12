@@ -6,13 +6,13 @@ import { PromptTemplate } from "@langchain/core/prompts";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { EnsembleRetriever } from "langchain/retrievers/ensemble";
 import { BM25Retriever } from "@langchain/community/retrievers/bm25";
-
+import ModelInitializer from "../helpers/model/modelInitializer.js";
 import { OpenAIEmbeddings, ChatOpenAI } from "@langchain/openai";
 import {
   GoogleGenerativeAIEmbeddings,
   ChatGoogleGenerativeAI,
 } from "@langchain/google-genai";
-import VectorStorePersistence from "../vectorstore/vectorStorePersistence.js";
+import VectorStorePersistence from "../helpers/vectorstore/vectorStorePersistence.js";
 
 // -----------------------------
 // Config
@@ -23,16 +23,14 @@ const DEFAULTS = {
   minScore: 0.1, // similaritySearchWithScore için alt eşik
   searchType: "similarity", // "similarity" | "mmr"
   modelProvider: "gemini", // "gemini" | "openai"
-  chatModel: {
-    gemini: { model: "gemini-2.5-flash", temperature: 0 },
-    openai: { model: "gpt-4o-mini", temperature: 0 },
-  },
-  embeddingProvider: "openai", // "gemini" | "openai" - OpenAI limitler daha yüksek
-  embeddingModel: {
-    gemini: "gemini-embedding-001", // çok dilli
-    openai: "text-embedding-3-small", // çok dilli
-  },
+  embeddingProvider: "gemini", // "gemini" | "openai" - OpenAI limitler daha yüksek
 };
+
+const modelInitializer = new ModelInitializer();
+
+// Models will be initialized when needed
+let chatModel = null;
+let embeddingModel = null;
 
 // -----------------------------
 // State (process içi)
@@ -41,50 +39,8 @@ let VectorStore = null; // MemoryVectorStore veya kalıcı bir store
 let AllDocs = []; // BM25 için doküman listesi
 let PersistenceStore = null; // Vector store persistence
 
-// -----------------------------
-// Helpers
-// -----------------------------
-function makeEmbeddings({ provider, apiKey }) {
-  if (provider === "openai") {
-    return new OpenAIEmbeddings({
-      apiKey,
-      model: DEFAULTS.embeddingModel.openai,
-    });
-  }
-  // default gemini
-  return new GoogleGenerativeAIEmbeddings({
-    apiKey,
-    model: DEFAULTS.embeddingModel.gemini,
-  });
-}
-
-function makeChatModel({ provider, apiKey }) {
-  if (provider === "openai") {
-    const cfg = DEFAULTS.chatModel.openai;
-    return new ChatOpenAI({
-      apiKey,
-      model: cfg.model,
-      temperature: cfg.temperature,
-    });
-  }
-  // default gemini
-  const cfg = DEFAULTS.chatModel.gemini;
-  return new ChatGoogleGenerativeAI({
-    apiKey: process.env.GEMINI_API_KEY,
-    model: cfg.model,
-    temperature: cfg.temperature,
-  });
-}
-
-export async function createVectorStoreFromDocs({
-  docs, // Document[] (pageContent, metadata)
-  embeddingProvider = DEFAULTS.embeddingProvider,
-  embeddingApiKey,
-}) {
-  const embeddings = makeEmbeddings({
-    provider: embeddingProvider,
-    apiKey: embeddingApiKey,
-  });
+export async function createVectorStoreFromDocs({ docs }) {
+  const embeddings = embeddingModel;
 
   VectorStore = await MemoryVectorStore.fromDocuments(docs, embeddings);
   AllDocs = docs;
@@ -125,10 +81,12 @@ export async function loadVectorStoreFromCache({
         `✅ Cache'den vector store yüklendi: ${result.metadata.totalDocuments} doküman`
       );
 
+      /*
       // AllDocs'u da güncelle
       const retriever = VectorStore.asRetriever({ k: 1000 });
+      console.log("🔄 AllDocs yükleniyor...");
       AllDocs = await retriever.getRelevantDocuments("");
-
+*/
       return { VectorStore, metadata: result.metadata };
     } else {
       console.log("ℹ️ Cache bulunamadı veya geçersiz");
@@ -311,10 +269,6 @@ export function buildDocumentSearchTool({
   cacheDir = null,
   sourceFiles = [],
 } = {}) {
-  const chatModel = makeChatModel({
-    provider: modelProvider,
-    apiKey: modelApiKey,
-  });
   const prompt = buildAnswerPrompt();
 
   // Vector store'u ayarla
@@ -345,6 +299,14 @@ export function buildDocumentSearchTool({
 
   return tool(
     async (args) => {
+      // Initialize models if not already done
+      if (!chatModel || !embeddingModel) {
+        const models = await modelInitializer.initializeModels();
+        chatModel = models.chatModel;
+        embeddingModel = models.embeddingModel;
+        console.log("🤖 Document search için modeller yüklendi");
+      }
+
       const userInput =
         (typeof args === "string" ? args : undefined) ??
         args?.input ??
@@ -376,12 +338,16 @@ export function buildDocumentSearchTool({
       }
 
       try {
+        /*
         // 1) VectorStore doküman kontrolü
+        console.log("🔍 VectorStore doküman sayısı kontrol ediliyor...");
+        console.log("VectorStore:", VectorStore);
         const vectorStoreStats = await VectorStore.similaritySearch("", 1);
         if (vectorStoreStats.length === 0) {
           return `Üzgünüm, sistemde henüz doküman yüklenmemiş. Lütfen önce dokümanları yükleyin.`;
         }
-
+*/
+        console.log("VectorStore doküman sayısı kontrol edildi.");
         // 2) HYBRID
         const { hybrid } = await buildHybridRetriever({
           kVec,
@@ -443,6 +409,7 @@ export function buildDocumentSearchTool({
         const context = docs.map((d) => d.pageContent || "").join("\n\n");
         const formatted = await prompt.format({ context, input: userInput });
         console.log("formatted:", formatted);
+        console.log("chatModel:", chatModel);
         const response = await chatModel.invoke([
           { role: "user", content: formatted },
         ]);
@@ -485,6 +452,7 @@ export function buildDocumentSearchTool({
         );
       } catch (err) {
         console.error("❌ document_search (hybrid) hata:", err?.message);
+        console.log("err:", err);
         return `Belge sorgulanırken hata oluştu: ${err?.message}`;
       }
     },

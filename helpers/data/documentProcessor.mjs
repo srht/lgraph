@@ -13,7 +13,11 @@ import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import createChatModel from "../model/modelSelector.js";
-import { getPageContent, getPersonelPage, getPlainPage } from "../functions/readPage.js";
+import {
+  getPageContent,
+  getPersonelPage,
+  getPlainPage,
+} from "../functions/readPage.js";
 import VectorStorePersistence from "../vectorstore/vectorStorePersistence.js";
 // __dirname eşleniği (ESM)
 const __filename = fileURLToPath(import.meta.url);
@@ -30,26 +34,32 @@ const normalizeText = (txt) =>
 
 export default class DocumentProcessor {
   /**
-   * @param {string} apiKey  - OpenAI API key for embeddings
+   * @param {Object} embeddingModel - Embedding model instance
    * @param {number} chunkSize
    * @param {number} chunkOverlap
    * @param {boolean} useCache - Cache kullanılsın mı
    * @param {string} cacheDir - Cache klasörü
    */
-  constructor(chunkSize = 1000, chunkOverlap = 300, useCache = true, cacheDir = null) {
+  constructor(
+    embeddingModel = null,
+    chunkSize = 1000,
+    chunkOverlap = 300,
+    useCache = true,
+    cacheDir = null
+  ) {
+    if (embeddingModel) {
+      this.embeddingModel = embeddingModel;
+      // Chat model for backward compatibility
+      const { chatModel } = createChatModel(process.env.CHAT_MODEL || "gemini");
+      this.chatModel = chatModel;
+    } else {
+      const { chatModel, embeddingModel: defaultEmbedding } = createChatModel(
+        process.env.CHAT_MODEL || "gemini"
+      );
+      this.chatModel = chatModel;
+      this.embeddingModel = defaultEmbedding;
+    }
 
-    // OpenAI embeddings - daha yüksek limitler
-    this.embeddings = new OpenAIEmbeddings({
-      openAIApiKey: process.env.OPENAI_API_KEY,
-      model: "text-embedding-3-small", // Daha uygun maliyetli model
-    });
-    
-    /*
-    this.embeddings = new GoogleGenerativeAIEmbeddings({
-      apiKey: process.env.GEMINI_API_KEY,
-    })
-    */
-    
     // Persistence sistemi
     this.useCache = useCache;
     this.persistence = new VectorStorePersistence(cacheDir);
@@ -77,7 +87,7 @@ export default class DocumentProcessor {
    */
   #convertExcelToLegacyText(excelData) {
     let extractedText = "";
-    
+
     excelData.sheets.forEach((sheet) => {
       extractedText += `\n=== ${sheet.sheetName} ===\n`;
       sheet.rows.forEach((row) => {
@@ -101,30 +111,32 @@ export default class DocumentProcessor {
     try {
       console.log(`📊 Excel dosyası işleniyor: ${fileName}`);
       console.log(`   📋 Sayfa sayısı: ${excelData.sheets.length}`);
-      
+
       if (!excelData.sheets || excelData.sheets.length === 0) {
         throw new Error("Excel dosyasında sayfa bulunamadı");
       }
-      
+
       const allDocuments = [];
       let totalRows = 0;
       let processedRows = 0;
-      
+
       excelData.sheets.forEach((sheet) => {
-        console.log(`   📄 Sayfa: ${sheet.sheetName} (${sheet.rows.length} satır)`);
+        console.log(
+          `   📄 Sayfa: ${sheet.sheetName} (${sheet.rows.length} satır)`
+        );
         totalRows += sheet.rows.length;
-        
+
         if (!sheet.rows || sheet.rows.length === 0) {
           console.log(`   ⚠️ Sayfa ${sheet.sheetName} boş, atlanıyor`);
           return;
         }
-        
+
         sheet.rows.forEach((row) => {
           // Boş satırları atla
           if (!row.content || row.content.trim().length === 0) {
             return;
           }
-          
+
           try {
             // Her satır için ayrı doküman oluştur
             const document = new Document({
@@ -134,7 +146,7 @@ export default class DocumentProcessor {
                 sheetName: sheet.sheetName,
                 rowIndex: row.rowIndex,
                 rowContent: row.content,
-                documentType: 'excel_row',
+                documentType: "excel_row",
                 // Arama için ek anahtar kelimeler
                 searchableContent: `${row.content}`,
                 // Excel satır bilgileri
@@ -142,30 +154,36 @@ export default class DocumentProcessor {
                   fileName: fileName,
                   sheetName: sheet.sheetName,
                   rowIndex: row.rowIndex,
-                  cellCount: row.content.split(' ').length,
-                  hasData: row.content.trim().length > 0
-                }
-              }
+                  cellCount: row.content.split(" ").length,
+                  hasData: row.content.trim().length > 0,
+                },
+              },
             });
-            
+
             allDocuments.push(document);
             processedRows++;
           } catch (rowError) {
-            console.warn(`   ⚠️ Satır ${row.rowIndex} işlenirken hata:`, rowError.message);
+            console.warn(
+              `   ⚠️ Satır ${row.rowIndex} işlenirken hata:`,
+              rowError.message
+            );
           }
         });
       });
-      
-      console.log(`   📚 Toplam ${allDocuments.length} satır dokümanı oluşturuldu (${processedRows}/${totalRows} satır işlendi)`);
-      console.log(`   🔍 Her satır ayrı doküman olarak kaydedildi - daha granüler arama imkanı`);
-      
+
+      console.log(
+        `   📚 Toplam ${allDocuments.length} satır dokümanı oluşturuldu (${processedRows}/${totalRows} satır işlendi)`
+      );
+      console.log(
+        `   🔍 Her satır ayrı doküman olarak kaydedildi - daha granüler arama imkanı`
+      );
+
       if (allDocuments.length === 0) {
         throw new Error("İşlenebilir satır bulunamadı");
       }
-      
+
       // Excel dokümanlarını batch halinde ekle
       await this.addDocumentsInBatches(allDocuments);
-      
     } catch (error) {
       console.error(`❌ Excel dosyası işlenirken hata: ${error.message}`);
       throw error;
@@ -183,14 +201,16 @@ export default class DocumentProcessor {
         const dataBuffer = fs.readFileSync(filePath);
         if (!dataBuffer?.length)
           throw new Error("PDF dosyası boş veya okunamadı.");
-        
+
         // Parse the PDF
         const data = await pdfParse(dataBuffer);
         if (!data?.text) throw new Error("PDF'ten metin çıkarılamadı.");
         let normalizedText = normalizeText(data.text);
         console.log("normalizedText:", normalizedText);
         return normalizedText;
-        console.warn("⚠️ PDF işleme geçici olarak devre dışı. PDF dosyası atlanıyor.");
+        console.warn(
+          "⚠️ PDF işleme geçici olarak devre dışı. PDF dosyası atlanıyor."
+        );
         return "PDF dosyası yüklendi ancak metin çıkarılamadı. PDF işleme geçici olarak devre dışı.";
       } catch (err) {
         console.error(`PDF okuma hatası '${filePath}':`, err.message);
@@ -226,12 +246,12 @@ export default class DocumentProcessor {
     if (mimeType === "application/xml") {
       try {
         const xmlData = fs.readFileSync(filePath, "utf8");
-        
+
         // Check if it's a sitemap XML
-        if (xmlData.includes('<urlset') && xmlData.includes('<loc>')) {
+        if (xmlData.includes("<urlset") && xmlData.includes("<loc>")) {
           return this.#processSitemapXML(xmlData, filePath);
         }
-        
+
         // For other XML files, extract text content only
         return this.#processGenericXML(xmlData);
       } catch (err) {
@@ -250,21 +270,21 @@ export default class DocumentProcessor {
           cellDates: true,
           raw: false,
         });
-        
+
         // Excel dosyası için özel işleme - her satırı ayrı doküman olarak kaydet
         const excelData = {
-          type: 'excel',
+          type: "excel",
           fileName: path.basename(filePath),
-          sheets: []
+          sheets: [],
         };
 
         workbook.SheetNames.forEach((sheetName) => {
           const worksheet = workbook.Sheets[sheetName];
           const jsonData = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
-          
+
           const sheetData = {
             sheetName,
-            rows: []
+            rows: [],
           };
 
           jsonData.forEach((row, rowIndex) => {
@@ -278,12 +298,14 @@ export default class DocumentProcessor {
                 )
                 .map((cell) => String(cell))
                 .join(" ");
-              
+
               if (rowText.trim()) {
                 sheetData.rows.push({
                   rowIndex: rowIndex + 1,
                   content: rowText,
-                  fullText: `Dosya: ${path.basename(filePath)} | Sayfa: ${sheetName} | Satır ${rowIndex + 1}: ${rowText}`
+                  fullText: `Dosya: ${path.basename(
+                    filePath
+                  )} | Sayfa: ${sheetName} | Satır ${rowIndex + 1}: ${rowText}`,
                 });
               }
             }
@@ -294,10 +316,10 @@ export default class DocumentProcessor {
 
         // Excel verilerini özel formatta döndür
         return {
-          type: 'excel',
+          type: "excel",
           data: excelData,
           // Geriye uyumluluk için eski format da ekle
-          legacyText: this.#convertExcelToLegacyText(excelData)
+          legacyText: this.#convertExcelToLegacyText(excelData),
         };
       } catch (excelError) {
         console.error(`Excel okuma hatası '${filePath}':`, excelError.message);
@@ -318,7 +340,7 @@ export default class DocumentProcessor {
     if (!this.processedFiles.includes(filePath)) {
       this.processedFiles.push(filePath);
     }
-    
+
     const fileExtension = path.extname(fileName).toLowerCase();
     let mimeType;
     switch (fileExtension) {
@@ -351,14 +373,13 @@ export default class DocumentProcessor {
 
     let text;
     let isExcelFile = false;
-    
+
     try {
       text = await this.#extractTextFromFile(filePath, mimeType);
       if (!text) throw new Error("Çıkarılan metin boş.");
-      
+
       // Excel dosyası mı kontrol et
-      isExcelFile = text.type === 'excel';
-      
+      isExcelFile = text.type === "excel";
     } catch (error) {
       console.error(`'${fileName}' metin çıkarılırken hata:`, error.message);
       throw error;
@@ -373,7 +394,8 @@ export default class DocumentProcessor {
         source: fileName,
       });
       const documents = docs.map(
-        (d) => new Document({ pageContent: d.pageContent, metadata: d.metadata })
+        (d) =>
+          new Document({ pageContent: d.pageContent, metadata: d.metadata })
       );
 
       await this.addDocumentsInBatches(documents);
@@ -395,7 +417,7 @@ export default class DocumentProcessor {
       } else {
         this.vectorStore = await MemoryVectorStore.fromDocuments(
           batch,
-          this.embeddings
+          this.embeddingModel
         );
       }
 
@@ -503,24 +525,29 @@ export default class DocumentProcessor {
    */
   async loadFromCache() {
     if (!this.useCache) {
-      console.log('📂 Cache kullanımı devre dışı');
+      console.log("📂 Cache kullanımı devre dışı");
       return false;
     }
 
     try {
-      console.log('📂 Cache\'den vector store yükleniyor...');
-      const result = await this.persistence.loadVectorStore('openai', process.env.OPENAI_API_KEY);
-      
+      console.log("📂 Cache'den vector store yükleniyor...");
+      const result = await this.persistence.loadVectorStore(
+        "openai",
+        process.env.OPENAI_API_KEY
+      );
+
       if (result) {
         this.vectorStore = result.vectorStore;
-        console.log(`✅ Cache'den yüklendi: ${result.metadata.totalDocuments} doküman`);
+        console.log(
+          `✅ Cache'den yüklendi: ${result.metadata.totalDocuments} doküman`
+        );
         return true;
       } else {
-        console.log('ℹ️ Cache bulunamadı veya geçersiz');
+        console.log("ℹ️ Cache bulunamadı veya geçersiz");
         return false;
       }
     } catch (error) {
-      console.error('❌ Cache yükleme hatası:', error);
+      console.error("❌ Cache yükleme hatası:", error);
       return false;
     }
   }
@@ -534,18 +561,21 @@ export default class DocumentProcessor {
     }
 
     try {
-      console.log('💾 Vector store cache\'e kaydediliyor...');
-      const success = await this.persistence.saveVectorStore(this.vectorStore, this.processedFiles);
-      
+      console.log("💾 Vector store cache'e kaydediliyor...");
+      const success = await this.persistence.saveVectorStore(
+        this.vectorStore,
+        this.processedFiles
+      );
+
       if (success) {
-        console.log('✅ Cache\'e kaydedildi');
+        console.log("✅ Cache'e kaydedildi");
       } else {
-        console.log('❌ Cache\'e kaydetme başarısız');
+        console.log("❌ Cache'e kaydetme başarısız");
       }
-      
+
       return success;
     } catch (error) {
-      console.error('❌ Cache kaydetme hatası:', error);
+      console.error("❌ Cache kaydetme hatası:", error);
       return false;
     }
   }
@@ -598,73 +628,79 @@ export default class DocumentProcessor {
    */
   #processSitemapXML(xmlData, filePath) {
     console.log(`📍 Sitemap XML işleniyor: ${path.basename(filePath)}`);
-    
+
     // Extract URL entries with all available information
-    const urlEntryRegex = /<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*(?:<description>(.*?)<\/description>\s*)?<priority>(.*?)<\/priority>\s*<\/url>/gs;
-    
+    const urlEntryRegex =
+      /<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>\s*(?:<description>(.*?)<\/description>\s*)?<priority>(.*?)<\/priority>\s*<\/url>/gs;
+
     const urls = [];
     let match;
-    
+
     while ((match = urlEntryRegex.exec(xmlData)) !== null) {
       const url = match[1].trim();
       const lastmod = match[2].trim();
-      const description = match[3] ? match[3].trim() : '';
+      const description = match[3] ? match[3].trim() : "";
       const priority = match[4].trim();
-      
+
       // Extract meaningful info from URL path
       const urlPath = new URL(url).pathname;
-      const pathParts = urlPath.split('/').filter(p => p);
-      const pageName = pathParts[pathParts.length - 1] || 'ana-sayfa';
-      
+      const pathParts = urlPath.split("/").filter((p) => p);
+      const pageName = pathParts[pathParts.length - 1] || "ana-sayfa";
+
       // Create readable content for each URL
-      let urlContent = `Sayfa: ${pageName.replace(/-/g, ' ')}\n`;
+      let urlContent = `Sayfa: ${pageName.replace(/-/g, " ")}\n`;
       urlContent += `URL: ${url}\n`;
       urlContent += `Son güncelleme: ${lastmod}\n`;
       urlContent += `Öncelik: ${priority}\n`;
-      
+
       if (description) {
         urlContent += `Açıklama: ${description}\n`;
       }
-      
+
       // Add path context
       if (pathParts.length > 1) {
-        urlContent += `Kategori: ${pathParts.slice(0, -1).join(' > ').replace(/-/g, ' ')}\n`;
+        urlContent += `Kategori: ${pathParts
+          .slice(0, -1)
+          .join(" > ")
+          .replace(/-/g, " ")}\n`;
       }
-      
+
       // Add keywords from URL and description
       const keywords = [];
-      pathParts.forEach(part => {
-        keywords.push(...part.split('-').filter(w => w.length > 2));
+      pathParts.forEach((part) => {
+        keywords.push(...part.split("-").filter((w) => w.length > 2));
       });
-      
+
       if (description) {
-        const descWords = description.toLowerCase()
-          .match(/\b[\w\u00C0-\u017F]+\b/g) || [];
-        keywords.push(...descWords.filter(w => w.length > 2));
+        const descWords =
+          description.toLowerCase().match(/\b[\w\u00C0-\u017F]+\b/g) || [];
+        keywords.push(...descWords.filter((w) => w.length > 2));
       }
-      
+
       if (keywords.length > 0) {
-        urlContent += `Anahtar kelimeler: ${[...new Set(keywords)].join(', ')}\n`;
+        urlContent += `Anahtar kelimeler: ${[...new Set(keywords)].join(
+          ", "
+        )}\n`;
       }
-      
-      urlContent += '\n';
+
+      urlContent += "\n";
       urls.push(urlContent);
     }
-    
+
     if (urls.length === 0) {
-      console.warn('⚠️ Sitemap XML\'de URL bulunamadı');
-      return 'Sitemap XML dosyası işlendi ancak URL bulunamadı.';
+      console.warn("⚠️ Sitemap XML'de URL bulunamadı");
+      return "Sitemap XML dosyası işlendi ancak URL bulunamadı.";
     }
-    
+
     console.log(`✅ ${urls.length} URL sitemap'ten çıkarıldı`);
-    
+
     // Combine all URL information
     let combinedContent = `KÜTÜPHANE WEB SİTESİ HARİTASI\n`;
     combinedContent += `Dosya: ${path.basename(filePath)}\n`;
     combinedContent += `Toplam sayfa sayısı: ${urls.length}\n\n`;
     combinedContent += `=== SAYFA LİSTESİ ===\n\n`;
-    combinedContent += urls.join('\n');
-    
+    combinedContent += urls.join("\n");
+
     return normalizeText(combinedContent);
   }
 
@@ -675,16 +711,16 @@ export default class DocumentProcessor {
   #processGenericXML(xmlData) {
     // Remove XML tags and extract text content
     let textContent = xmlData
-      .replace(/<\?xml.*?\?>/g, '') // Remove XML declaration
-      .replace(/<!--.*?-->/gs, '') // Remove comments
-      .replace(/<[^>]+>/g, ' ') // Remove all tags
-      .replace(/\s+/g, ' ') // Normalize whitespace
+      .replace(/<\?xml.*?\?>/g, "") // Remove XML declaration
+      .replace(/<!--.*?-->/gs, "") // Remove comments
+      .replace(/<[^>]+>/g, " ") // Remove all tags
+      .replace(/\s+/g, " ") // Normalize whitespace
       .trim();
-    
+
     if (!textContent || textContent.length < 10) {
-      return 'XML dosyası işlendi ancak metin içeriği bulunamadı.';
+      return "XML dosyası işlendi ancak metin içeriği bulunamadı.";
     }
-    
+
     return normalizeText(textContent);
   }
 }

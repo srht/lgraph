@@ -30,7 +30,7 @@ export default class DataLoader {
   async loadDataFiles(documentProcessor) {
     console.log("📁 Data klasöründeki dosyalar yükleniyor...");
     
-    const dataDir = path.join(this.__dirname, "..", "data");
+    const dataDir = path.join(this.__dirname, "..", "..", "data");
     const supportedExtensions = ['.pdf', '.xlsx', '.xls', '.txt', '.json', '.xml'];
     
     try {
