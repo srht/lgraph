@@ -1,0 +1,1906 @@
+[
+  {
+    "id": "mff07tgvkzbl8ls4ai",
+    "timestamp": "2025-09-11T06:05:02.575Z",
+    "userId": "web-user-1757570693045",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p><b>Kütüphanelerin Çalışma Saatleri:</b><br>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında <b>7/24 açıktır</b>.<br>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n* Sayfa: yararlanma kosullari (K. maddesi)\n* Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CuUBAdHtim9Q9d/H/iaF0IUo81z4zTKu9DgPmq3kfC39VgGgkbYy0YXyr8CnoR8qsZrVURX9oFxkjFqA2708+LMOSVks+EBvI2F6LViLe5vbZ2vkQOqZzZOiHN9cHd7yJzEpc7t0LICBH+yIat5EijW3+gVxtLmAOyhfa8p43wTQ2ytcWtbZ9Ac4RHJyZM+eyaOWNQior5hVOi57/Z7qov+hXoFYWb3Qkq6iBrhPhQV/Fkn3pCRu30a5HOpx3SeozUR9TUOn8x13HKbmx87YETFAa0RPLBVOHobC/tc2cx6MFs7fWcTpXQ=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CuUBAdHtim9Q9d/H/iaF0IUo81z4zTKu9DgPmq3kfC39VgGgkbYy0YXyr8CnoR8qsZrVURX9oFxkjFqA2708+LMOSVks+EBvI2F6LViLe5vbZ2vkQOqZzZOiHN9cHd7yJzEpc7t0LICBH+yIat5EijW3+gVxtLmAOyhfa8p43wTQ2ytcWtbZ9Ac4RHJyZM+eyaOWNQior5hVOi57/Z7qov+hXoFYWb3Qkq6iBrhPhQV/Fkn3pCRu30a5HOpx3SeozUR9TUOn8x13HKbmx87YETFAa0RPLBVOHobC/tc2cx6MFs7fWcTpXQ=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n* Sayfa: yararlanma kosullari (K. maddesi)\n* Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Kütüphanelerin Çalışma Saatleri:</b><br>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında <b>7/24 açıktır</b>.<br>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 10731,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mff0fvdv6t28r1fjpeo",
+    "timestamp": "2025-09-11T06:11:18.307Z",
+    "userId": "web-user-1757571066602",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><br><p>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n* Sayfa: yararlanma kosullari\n* Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CuUBAdHtim95pr8jyvcd3paFrsLCS8k1QE1UPKSvsutVXjQviHapPUfdmhY+2Lo05WkcQ0K0GNM3m5xRUJzWAZc3acSf1eJC9C1b1Fq30Z1cCTcVugEBGpQEu3pqaLuH3CWf+rYR3p3gg+l3LKSy8WW/gCHLJcAgG3E4wghgJRwER5Uv9cgBa1svLpWNYIiqu/sS9AQIrM0/mikR9YJ6N6ulFLcj4X+qJSHr7C/+Dur5THNfEPgGWqGsFnj0mgcTOIDJRUOQr7Sjly5DjJlGlUqRvsbQqatczI7jTLbUbld6EQ5oonwaEA=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CuUBAdHtim95pr8jyvcd3paFrsLCS8k1QE1UPKSvsutVXjQviHapPUfdmhY+2Lo05WkcQ0K0GNM3m5xRUJzWAZc3acSf1eJC9C1b1Fq30Z1cCTcVugEBGpQEu3pqaLuH3CWf+rYR3p3gg+l3LKSy8WW/gCHLJcAgG3E4wghgJRwER5Uv9cgBa1svLpWNYIiqu/sS9AQIrM0/mikR9YJ6N6ulFLcj4X+qJSHr7C/+Dur5THNfEPgGWqGsFnj0mgcTOIDJRUOQr7Sjly5DjJlGlUqRvsbQqatczI7jTLbUbld6EQ5oonwaEA=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n* Sayfa: yararlanma kosullari\n* Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><br><p>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 12885,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mff0i3yh82td5qwlksh",
+    "timestamp": "2025-09-11T06:13:02.729Z",
+    "userId": "web-user-1757571171366",
+    "userMessage": "turnitin hesabı açmak istiyorum",
+    "aiResponse": "<p>Turnitin hesabı açmak için durumunuza göre aşağıdaki adımları takip edebilirsiniz:</p><br><h3>Akademisyenler İçin Hesap Açımı:</h3><ul><li>Tez kontrolü için hesap sahipleri tez danışmanları olan akademisyenler olarak belirlenmiştir.</li><li>Hesap açımı için aşağıdaki İTÜ Admin hesabına Ad/Soyad, akademik statü ve bölüm bilgilerinizi içeren bir e-posta göndermeniz gerekmektedir:<br><b>İTÜ Admin:</b> Burcu Bulut <a href=\"mailto:bulutburcu@itu.edu.tr\">bulutburcu@itu.edu.tr</a></li><li>Şifrenizi oluşturmak için aşağıdaki linki kullanabilirsiniz. Şifre sıfırlama alanında mail adresinizi ve soyadınızı (ilk harfi büyük ve İngilizce karakterlerle) girmeniz istenecektir:<br><b>Şifre Oluşturma Linki:</b> <a href=\"https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&\">https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&</a></li><li>Kullanıcı bilgilerinizle <a href=\"http://turnitin.com/tr/\">http://turnitin.com/tr/</a> adresinden Turnitin hesabınıza giriş yapabilirsiniz.</li></ul><h3>Öğrenciler İçin Hesap Açımı:</h3><ol><li>Kayıt olmak ve bir kullanıcı profili oluşturmak için <a href=\"www.turnitin.com\">www.turnitin.com</a> adresine gidiniz ve açılır menüden dil seçiminizi yapınız.</li><li>Anasayfada bulunan \"Hesap Oluştur\" bağlantısına tıklayınız, Kullanıcı Profili Oluşturma sayfası açılacaktır.</li><li>\"Öğrenci\" bağlantısına tıklayınız. Yeni kullanıcı formundaki gerekli alanları doldurunuz. Bir profil oluşturmak için, öğretmeninizden edineceğiniz bir Sınıf Numarası ve bir Kayıt Şifresi’ne sahip olmanız gerekmektedir.</li><li>Profilinizi oluşturduğunuzda, Turnitin’e giriş yapmak için \"Kabul Ediyorum\" düğmesine tıklayınız.</li></ol>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Turnitin hesabı açmak için durumunuza göre aşağıdaki adımları takip edebilirsiniz:\n\n**Akademisyenler İçin Hesap Açımı:**\nTez kontrolü için hesap sahipleri tez danışmanları olan akademisyenler olarak belirlenmiştir. Hesap açımı için aşağıdaki İTÜ Admin hesabına Ad/Soyad, akademik statü ve bölüm bilgilerinizi içeren bir e-posta göndermeniz gerekmektedir:\n*   İTÜ Admin: Burcu Bulut <a href=\"mailto:bulutburcu@itu.edu.tr\">bulutburcu@itu.edu.tr</a>\n\nŞifrenizi oluşturmak için aşağıdaki linki kullanabilirsiniz. Şifre sıfırlama alanında mail adresinizi ve soyadınızı (ilk harfi büyük ve İngilizce karakterlerle) girmeniz istenecektir:\n*   Şifre Oluşturma Linki: <a href=\"https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&\">https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&</a>\nKullanıcı bilgilerinizle <a href=\"http://turnitin.com/tr/\">http://turnitin.com/tr/</a> adresinden Turnitin hesabınıza giriş yapabilirsiniz.\n\n**Öğrenciler İçin Hesap Açımı:**\n1.  Kayıt olmak ve bir kullanıcı profili oluşturmak için <a href=\"www.turnitin.com\">www.turnitin.com</a> adresine gidiniz ve açılır menüden dil seçiminizi yapınız.\n2.  Anasayfada bulunan \"Hesap Oluştur\" bağlantısına tıklayınız, Kullanıcı Profili Oluşturma sayfası açılacaktır.\n3.  \"Öğrenci\" bağlantısına tıklayınız. Yeni kullanıcı formundaki gerekli alanları doldurunuz. Bir profil oluşturmak için, öğretmeninizden edineceğiniz bir Sınıf Numarası ve bir Kayıt Şifresi’ne sahip olmanız gerekmektedir.\n4.  Profilinizi oluşturduğunuzda, Turnitin’e giriş yapmak için \"Kabul Ediyorum\" düğmesine tıklayınız.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 10: 37. Makalemin intihal oranını kontrol edebileceğim bir program var mı?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "turnitin hesabı açmak istiyorum"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Turnitin hesabı açmak istiyorum"
+                }
+              },
+              "thoughtSignature": "CrIBAdHtim/RqXnjvqbBo4LUiKMMCKFPiwGygSrA2cc1BMR8XrjFuHjPtllK4eIlILIylHGtGOI4dUNeBzQoZcnjiDQdeNi+79nfze7+oAiPeyxuUDRwzjiVizjk4U5XDc/IF+R9bZh7XU67MpytESp0zusrTMGEtb/qRJHLif0RN04TU+8W3rqOMeFE3N8fSHePxfba092na/VvvS3rvSX5HZqtz2nQD4Q9xbP2R0FWcq30ig=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "turnitin hesabı açmak istiyorum"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Turnitin hesabı açmak istiyorum"
+                  }
+                },
+                "thoughtSignature": "CrIBAdHtim/RqXnjvqbBo4LUiKMMCKFPiwGygSrA2cc1BMR8XrjFuHjPtllK4eIlILIylHGtGOI4dUNeBzQoZcnjiDQdeNi+79nfze7+oAiPeyxuUDRwzjiVizjk4U5XDc/IF+R9bZh7XU67MpytESp0zusrTMGEtb/qRJHLif0RN04TU+8W3rqOMeFE3N8fSHePxfba092na/VvvS3rvSX5HZqtz2nQD4Q9xbP2R0FWcq30ig=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Turnitin hesabı açmak için durumunuza göre aşağıdaki adımları takip edebilirsiniz:\n\n**Akademisyenler İçin Hesap Açımı:**\nTez kontrolü için hesap sahipleri tez danışmanları olan akademisyenler olarak belirlenmiştir. Hesap açımı için aşağıdaki İTÜ Admin hesabına Ad/Soyad, akademik statü ve bölüm bilgilerinizi içeren bir e-posta göndermeniz gerekmektedir:\n*   İTÜ Admin: Burcu Bulut <a href=\"mailto:bulutburcu@itu.edu.tr\">bulutburcu@itu.edu.tr</a>\n\nŞifrenizi oluşturmak için aşağıdaki linki kullanabilirsiniz. Şifre sıfırlama alanında mail adresinizi ve soyadınızı (ilk harfi büyük ve İngilizce karakterlerle) girmeniz istenecektir:\n*   Şifre Oluşturma Linki: <a href=\"https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&\">https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&</a>\nKullanıcı bilgilerinizle <a href=\"http://turnitin.com/tr/\">http://turnitin.com/tr/</a> adresinden Turnitin hesabınıza giriş yapabilirsiniz.\n\n**Öğrenciler İçin Hesap Açımı:**\n1.  Kayıt olmak ve bir kullanıcı profili oluşturmak için <a href=\"www.turnitin.com\">www.turnitin.com</a> adresine gidiniz ve açılır menüden dil seçiminizi yapınız.\n2.  Anasayfada bulunan \"Hesap Oluştur\" bağlantısına tıklayınız, Kullanıcı Profili Oluşturma sayfası açılacaktır.\n3.  \"Öğrenci\" bağlantısına tıklayınız. Yeni kullanıcı formundaki gerekli alanları doldurunuz. Bir profil oluşturmak için, öğretmeninizden edineceğiniz bir Sınıf Numarası ve bir Kayıt Şifresi’ne sahip olmanız gerekmektedir.\n4.  Profilinizi oluşturduğunuzda, Turnitin’e giriş yapmak için \"Kabul Ediyorum\" düğmesine tıklayınız.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 10: 37. Makalemin intihal oranını kontrol edebileceğim bir program var mı?\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Turnitin hesabı açmak için durumunuza göre aşağıdaki adımları takip edebilirsiniz:</p><br><h3>Akademisyenler İçin Hesap Açımı:</h3><ul><li>Tez kontrolü için hesap sahipleri tez danışmanları olan akademisyenler olarak belirlenmiştir.</li><li>Hesap açımı için aşağıdaki İTÜ Admin hesabına Ad/Soyad, akademik statü ve bölüm bilgilerinizi içeren bir e-posta göndermeniz gerekmektedir:<br><b>İTÜ Admin:</b> Burcu Bulut <a href=\"mailto:bulutburcu@itu.edu.tr\">bulutburcu@itu.edu.tr</a></li><li>Şifrenizi oluşturmak için aşağıdaki linki kullanabilirsiniz. Şifre sıfırlama alanında mail adresinizi ve soyadınızı (ilk harfi büyük ve İngilizce karakterlerle) girmeniz istenecektir:<br><b>Şifre Oluşturma Linki:</b> <a href=\"https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&\">https://turnitin.com/password_reset1.asp?r=59.5863636261615&svr=329&lang=tr&</a></li><li>Kullanıcı bilgilerinizle <a href=\"http://turnitin.com/tr/\">http://turnitin.com/tr/</a> adresinden Turnitin hesabınıza giriş yapabilirsiniz.</li></ul><h3>Öğrenciler İçin Hesap Açımı:</h3><ol><li>Kayıt olmak ve bir kullanıcı profili oluşturmak için <a href=\"www.turnitin.com\">www.turnitin.com</a> adresine gidiniz ve açılır menüden dil seçiminizi yapınız.</li><li>Anasayfada bulunan \"Hesap Oluştur\" bağlantısına tıklayınız, Kullanıcı Profili Oluşturma sayfası açılacaktır.</li><li>\"Öğrenci\" bağlantısına tıklayınız. Yeni kullanıcı formundaki gerekli alanları doldurunuz. Bir profil oluşturmak için, öğretmeninizden edineceğiniz bir Sınıf Numarası ve bir Kayıt Şifresi’ne sahip olmanız gerekmektedir.</li><li>Profilinizi oluşturduğunuzda, Turnitin’e giriş yapmak için \"Kabul Ediyorum\" düğmesine tıklayınız.</li></ol>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 12745,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mff0p67de220y6uwco7",
+    "timestamp": "2025-09-11T06:18:32.233Z",
+    "userId": "web-user-1757571495330",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphanelerin genel çalışma saatleri ve tatil günleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CvIBAdHtim9T4wut0bYiaFqIEuLs7BeyQizEdvJpPEvxVnmbhnINrcrqW6UqhQd6etT3AR7LK81af0y8MX1cbrI/oH8garsaVC3okf8SbDVlyVfXSY5bwJs+LSgHBI+1iek0z/SYYPZ55sD6YK3npCL9bUu3pB8+A+SPBUXly/n2k8FO723YZWAkyctfAi8UOggSZ22dUxE04mQ5dTDI/JQWPmgS9YZRTVUJLjn0qTizX8XIB67+Smh5wN5aLb33zyUPHpcH+7O5RZwb1Df7lluR0SIBgkNzAltkQBnaYY6HUnFE0LZKuOPATp0DqJt2onh91tk="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CvIBAdHtim9T4wut0bYiaFqIEuLs7BeyQizEdvJpPEvxVnmbhnINrcrqW6UqhQd6etT3AR7LK81af0y8MX1cbrI/oH8garsaVC3okf8SbDVlyVfXSY5bwJs+LSgHBI+1iek0z/SYYPZ55sD6YK3npCL9bUu3pB8+A+SPBUXly/n2k8FO723YZWAkyctfAi8UOggSZ22dUxE04mQ5dTDI/JQWPmgS9YZRTVUJLjn0qTizX8XIB67+Smh5wN5aLb33zyUPHpcH+7O5RZwb1Df7lluR0SIBgkNzAltkQBnaYY6HUnFE0LZKuOPATp0DqJt2onh91tk="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphanelerin genel çalışma saatleri ve tatil günleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 17935,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mff1cig9whzutxvpvjd",
+    "timestamp": "2025-09-11T06:36:41.193Z",
+    "userId": "web-user-1757572591857",
+    "userMessage": "pinimi unuttum nasıl alabilirim",
+    "aiResponse": "<p>PIN kodunuzu unuttuysanız, kütüphane web sayfasındaki <b>PIN İşlemleri</b> alanından kendiniz yeni bir şifre oluşturabilirsiniz. Şifreler e-posta veya telefonla verilmemektedir. İstenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam bulunan yeni PIN'inizi oluşturabilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "PIN kodunuzu hatırlamıyorsanız, kütüphane web sayfasındaki PIN İşlemleri alanından şifrenizi kendiniz oluşturabilirsiniz. Şifreler e-posta ya da telefonla verilemez. Sizden istenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. En az 6 haneli, içinde harf ve rakam olan PIN’inizi bu alanda oluşturabilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 60\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "pinimi unuttum nasıl alabilirim"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "pinimi unuttum nasıl alabilirim"
+                }
+              },
+              "thoughtSignature": "CtQBAdHtim8S65uZWrpyprY71uMKKAanqxFT5vE234jUEM4vgaC4ID7r9GEQCDq5Un7WJPPD8GRJ43wd5WVXcvyg/3Ln+n3KvmQuEYl9qhPxFZgu+IOjzaxrE9cT6s43mQpNpNoC4rg4YLa/kRs1TjIU6RrE6oocDDao9jUSCnu7/EW13ZIVv4oKpFaWPxR4g/RyRnqj2WSPGeYT2RMnNV6u11FX+8cpVSIlaMup/2kFCZj/JtOPlg4Nha+T88gqfp9TQHE+HLvojXcck7DHCf1Oo5KFP4s="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "pinimi unuttum nasıl alabilirim"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "pinimi unuttum nasıl alabilirim"
+                  }
+                },
+                "thoughtSignature": "CtQBAdHtim8S65uZWrpyprY71uMKKAanqxFT5vE234jUEM4vgaC4ID7r9GEQCDq5Un7WJPPD8GRJ43wd5WVXcvyg/3Ln+n3KvmQuEYl9qhPxFZgu+IOjzaxrE9cT6s43mQpNpNoC4rg4YLa/kRs1TjIU6RrE6oocDDao9jUSCnu7/EW13ZIVv4oKpFaWPxR4g/RyRnqj2WSPGeYT2RMnNV6u11FX+8cpVSIlaMup/2kFCZj/JtOPlg4Nha+T88gqfp9TQHE+HLvojXcck7DHCf1Oo5KFP4s="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "PIN kodunuzu hatırlamıyorsanız, kütüphane web sayfasındaki PIN İşlemleri alanından şifrenizi kendiniz oluşturabilirsiniz. Şifreler e-posta ya da telefonla verilemez. Sizden istenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. En az 6 haneli, içinde harf ve rakam olan PIN’inizi bu alanda oluşturabilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 60\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>PIN kodunuzu unuttuysanız, kütüphane web sayfasındaki <b>PIN İşlemleri</b> alanından kendiniz yeni bir şifre oluşturabilirsiniz. Şifreler e-posta veya telefonla verilmemektedir. İstenen bilgileri forma doldurduğunuzda, kütüphaneye üye olurken verdiğiniz e-posta adresinize PIN oluşturmanız için bir link gönderilecektir. Bu alanda en az 6 haneli, içinde harf ve rakam bulunan yeni PIN'inizi oluşturabilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 10349,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffbhcvy7ortees8na",
+    "timestamp": "2025-09-11T11:20:23.422Z",
+    "userId": "web-user-1757589617349",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">Kütüphane Çalışma Saatleri</a> sayfasını ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n* Sayfa: calisma saatleri\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CvIBAdHtim/To56xB4KId5BS3bspTINoUZRqWBzoIJt/J8Q5MELLI921eAOI1uIAyGNomuWBAFfMp/kMyzb8mZCauZzP8ENdzwFXFWSuTExpwrHacFA+BhR1StqYMEt8l94o872HlUcvQvazX7qYnf470+yOhO64DgcbRCwJdF6jgWJvG5Q46uLqKJLuyEO2ts7CwENP+y4ZUEGnCxa7CgEaYISc8CyqtC9RrtFX6dVny9/45hCPAcHCgib3RMwZQ3LXPbI+hYNRrcioGyLsfUr26veiUZoLHOD0zFd1d6Hzn6cK3239C53QaaeTSisL+TEOlco="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CvIBAdHtim/To56xB4KId5BS3bspTINoUZRqWBzoIJt/J8Q5MELLI921eAOI1uIAyGNomuWBAFfMp/kMyzb8mZCauZzP8ENdzwFXFWSuTExpwrHacFA+BhR1StqYMEt8l94o872HlUcvQvazX7qYnf470+yOhO64DgcbRCwJdF6jgWJvG5Q46uLqKJLuyEO2ts7CwENP+y4ZUEGnCxa7CgEaYISc8CyqtC9RrtFX6dVny9/45hCPAcHCgib3RMwZQ3LXPbI+hYNRrcioGyLsfUr26veiUZoLHOD0zFd1d6Hzn6cK3239C53QaaeTSisL+TEOlco="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n* Sayfa: calisma saatleri\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">Kütüphane Çalışma Saatleri</a> sayfasını ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 7964,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffbi1dfj3hr4xg4xf8",
+    "timestamp": "2025-09-11T11:20:55.155Z",
+    "userId": "web-user-1757589646965",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">Kütüphane Çalışma Saatleri</a> sayfasını ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n* Sayfa: calisma saatleri\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CvIBAdHtim9ESmG7MGgX/oPLe29bGCnBZuXFGj/Z9VERUPeOFngoYLffxGTQMDoXKoPMdgqSuy/d3I/2CcFouFaK4zl+tbDLvRrUoeQb7GsfB9Fs26dcsylytGJVpywWTE0rxvqunc9jr7+c4kEBI+d09hAkamVmYBpEytQMxdUz56zUMN7ahm1IyaSuPY99rjAcQ2nDyLkiYVvTnLXU8htZlMizDQNztJzXwDX11c00apHzJ0rEnX3CupPtl7l84TWVmBRvalKrbBAA8Leaat3I8BiFHGSW0K0rC/MqLZo0sFk+5qqZUDCTwkXsY6Qsvg/guN8="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CvIBAdHtim9ESmG7MGgX/oPLe29bGCnBZuXFGj/Z9VERUPeOFngoYLffxGTQMDoXKoPMdgqSuy/d3I/2CcFouFaK4zl+tbDLvRrUoeQb7GsfB9Fs26dcsylytGJVpywWTE0rxvqunc9jr7+c4kEBI+d09hAkamVmYBpEytQMxdUz56zUMN7ahm1IyaSuPY99rjAcQ2nDyLkiYVvTnLXU8htZlMizDQNztJzXwDX11c00apHzJ0rEnX3CupPtl7l84TWVmBRvalKrbBAA8Leaat3I8BiFHGSW0K0rC/MqLZo0sFk+5qqZUDCTwkXsY6Qsvg/guN8="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n* Sayfa: calisma saatleri\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">Kütüphane Çalışma Saatleri</a> sayfasını ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 9464,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffbk7n30z04p4i13hhp",
+    "timestamp": "2025-09-11T11:22:36.591Z",
+    "userId": "web-user-1757589748732",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında <b>7/24 açıktır</b>.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">Kütüphane Çalışma Saatleri</a> sayfasını ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n* Sayfa: calisma saatleri\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CvIBAdHtim9+H3V9XyaD6wcJqDsAVfNkRKl6lMtEMQte6JVSFVeX++klaHI/kFYrCqXgLXLqKqVL6gssa7MPzwkgWprxlDx95CzcfnxwWVZWDmJtNuCZo/FvXSDsirkyGmq9VSvHUaL8y896iwy54/9NVHth8xeBu7ewwAi5c02IqrTJLYP8UXnB/R+F5Tu38hccSwprHomOxJyo3Yo/JZ8kKRwkoZO7pHRdht7suTJojuZBpsy0hvRYVl03dV0QTPcajAUlMbC8CxjivoKu2607tDd1B+WHxUPcHykbgjneZTsnUD6wRb4QSm3vu9ElVNfGEqc="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CvIBAdHtim9+H3V9XyaD6wcJqDsAVfNkRKl6lMtEMQte6JVSFVeX++klaHI/kFYrCqXgLXLqKqVL6gssa7MPzwkgWprxlDx95CzcfnxwWVZWDmJtNuCZo/FvXSDsirkyGmq9VSvHUaL8y896iwy54/9NVHth8xeBu7ewwAi5c02IqrTJLYP8UXnB/R+F5Tu38hccSwprHomOxJyo3Yo/JZ8kKRwkoZO7pHRdht7suTJojuZBpsy0hvRYVl03dV0QTPcajAUlMbC8CxjivoKu2607tDd1B+WHxUPcHykbgjneZTsnUD6wRb4QSm3vu9ElVNfGEqc="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n* Sayfa: calisma saatleri\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında <b>7/24 açıktır</b>.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">Kütüphane Çalışma Saatleri</a> sayfasını ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 9168,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffbyict02yplvqm0b8r",
+    "timestamp": "2025-09-11T11:33:43.661Z",
+    "userId": "web-user-1757590417533",
+    "userMessage": "Sefiller kitabı var mı?",
+    "aiResponse": "<p><b>\"Sefiller\" kitabı için ITU Kütüphanesi'nde bulunan sonuçlar:</b><br><ul><li><b>Sefiller</b><br>📅 2012<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller</b><br>📅 Yıl belirtilmemiş<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller+%2F&1%2C8%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller I</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+i%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller II</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+ii%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller III</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iii%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller IV</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iv%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller kervanı : öykü</b><br>📅 2007<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kervani+oyku%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller \"Kozet\"</b><br>📅 2019<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kozet+%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller</b><br>📅 Yıl belirtilmemiş<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller%2F&1%2C3%2C/indexsort=-\">Kütüphane Kaydı</a></li></ul><br><b>Toplam 9 sonuç bulundu.</b><br>Ana Arama URL: <a href=\"https://divit.library.itu.edu.tr/search*tur/?searchtype=t&searcharg=Sefiller&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=tSefiller\">Sonuç Listesi</a></p>",
+    "toolsUsed": [
+      {
+        "toolName": "itu_library_search",
+        "toolInput": "unknown",
+        "toolOutput": "📚 **Kitap Başlığı**: \"Sefiller\" için ITU Kütüphanesi'nde bulunan sonuçlar:\n\n1. **Sefiller**\n   ✍️ 1\n   📅 2012\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller&1%2C1%2C/indexsort=-)\n\n2. **Sefiller**\n   ✍️ 2\n   📅 Yıl belirtilmemiş\n   📍 8\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller+%2F&1%2C8%2C/indexsort=-)\n\n3. **Sefiller I**\n   ✍️ 3\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+i%2F&1%2C1%2C/indexsort=-)\n\n4. **Sefiller II**\n   ✍️ 4\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+ii%2F&1%2C1%2C/indexsort=-)\n\n5. **Sefiller III**\n   ✍️ 5\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iii%2F&1%2C1%2C/indexsort=-)\n\n6. **Sefiller IV**\n   ✍️ 6\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iv%2F&1%2C1%2C/indexsort=-)\n\n7. **Sefiller kervanı : öykü**\n   ✍️ 7\n   📅 2007\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kervani+oyku%2F&1%2C1%2C/indexsort=-)\n\n8. **Sefiller \"Kozet\"**\n   ✍️ 8\n   📅 2019\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kozet+%2F&1%2C1%2C/indexsort=-)\n\n9. **Sefiller**\n   ✍️ 9\n   📅 Yıl belirtilmemiş\n   📍 3\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller%2F&1%2C3%2C/indexsort=-)\n🔍 **Ana Arama URL**: [Sonuç Listesi](https://divit.library.itu.edu.tr/search*tur/?searchtype=t&searcharg=Sefiller&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=tSefiller)\n\n💡 **Toplam 9 sonuç bulundu.**",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Sefiller kitabı var mı?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "itu_library_search",
+                "args": {
+                  "searchQuery": "Sefiller",
+                  "searchType": "title"
+                }
+              },
+              "thoughtSignature": "CqgBAdHtim+EfhaotwEeLJKjLw2mSXnIzu0oIAh9T/vxj0oIBbsUt04jh4xOfDrbcTX3B2PmreUxNEnthk6c2tGcj7ey9uJrJ5y2DD6qjCnZLp/1hzW/j/fRljEvISozqX7Su5GB/9p3zDIxXkBq4pc0FOFXkZpjG5lbd+faiu1sVz4zH8YukldpKiwNaX6PW145MuvRHR9SJFr5fX4/g4/XlLsbxMswXWLW"
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Sefiller kitabı var mı?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "itu_library_search",
+                  "args": {
+                    "searchQuery": "Sefiller",
+                    "searchType": "title"
+                  }
+                },
+                "thoughtSignature": "CqgBAdHtim+EfhaotwEeLJKjLw2mSXnIzu0oIAh9T/vxj0oIBbsUt04jh4xOfDrbcTX3B2PmreUxNEnthk6c2tGcj7ey9uJrJ5y2DD6qjCnZLp/1hzW/j/fRljEvISozqX7Su5GB/9p3zDIxXkBq4pc0FOFXkZpjG5lbd+faiu1sVz4zH8YukldpKiwNaX6PW145MuvRHR9SJFr5fX4/g4/XlLsbxMswXWLW"
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "📚 **Kitap Başlığı**: \"Sefiller\" için ITU Kütüphanesi'nde bulunan sonuçlar:\n\n1. **Sefiller**\n   ✍️ 1\n   📅 2012\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller&1%2C1%2C/indexsort=-)\n\n2. **Sefiller**\n   ✍️ 2\n   📅 Yıl belirtilmemiş\n   📍 8\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller+%2F&1%2C8%2C/indexsort=-)\n\n3. **Sefiller I**\n   ✍️ 3\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+i%2F&1%2C1%2C/indexsort=-)\n\n4. **Sefiller II**\n   ✍️ 4\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+ii%2F&1%2C1%2C/indexsort=-)\n\n5. **Sefiller III**\n   ✍️ 5\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iii%2F&1%2C1%2C/indexsort=-)\n\n6. **Sefiller IV**\n   ✍️ 6\n   📅 2004\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iv%2F&1%2C1%2C/indexsort=-)\n\n7. **Sefiller kervanı : öykü**\n   ✍️ 7\n   📅 2007\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kervani+oyku%2F&1%2C1%2C/indexsort=-)\n\n8. **Sefiller \"Kozet\"**\n   ✍️ 8\n   📅 2019\n   📍 1\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kozet+%2F&1%2C1%2C/indexsort=-)\n\n9. **Sefiller**\n   ✍️ 9\n   📅 Yıl belirtilmemiş\n   📍 3\n   🔗 [Kütüphane Kaydı](https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller%2F&1%2C3%2C/indexsort=-)\n🔍 **Ana Arama URL**: [Sonuç Listesi](https://divit.library.itu.edu.tr/search*tur/?searchtype=t&searcharg=Sefiller&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=tSefiller)\n\n💡 **Toplam 9 sonuç bulundu.**"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>\"Sefiller\" kitabı için ITU Kütüphanesi'nde bulunan sonuçlar:</b><br><ul><li><b>Sefiller</b><br>📅 2012<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller</b><br>📅 Yıl belirtilmemiş<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller+%2F&1%2C8%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller I</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+i%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller II</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+ii%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller III</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iii%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller IV</b><br>📅 2004<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+iv%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller kervanı : öykü</b><br>📅 2007<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kervani+oyku%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller \"Kozet\"</b><br>📅 2019<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/frameset&FF=tsefiller+kozet+%2F&1%2C1%2C/indexsort=-\">Kütüphane Kaydı</a></li><li><b>Sefiller</b><br>📅 Yıl belirtilmemiş<br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/tSefiller/tsefiller/1%2C9%2C18%2CB/exact&FF=tsefiller%2F&1%2C3%2C/indexsort=-\">Kütüphane Kaydı</a></li></ul><br><b>Toplam 9 sonuç bulundu.</b><br>Ana Arama URL: <a href=\"https://divit.library.itu.edu.tr/search*tur/?searchtype=t&searcharg=Sefiller&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=tSefiller\">Sonuç Listesi</a></p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 8404,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffc1dj3479lbtj0c8k",
+    "timestamp": "2025-09-11T11:35:57.375Z",
+    "userId": "web-user-1757590546101",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphanelerin genel çalışma saatleri ve tatil günleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CuUBAdHtim9oFMJKPICwHqnvnnEOkxIlAiaGVwW7ZxeE2+e46yuwAdBkrp8qdsH4gDgw5nDwaaW0qXRjDjB72nTtJFgjouUdkeu6LxWS0gXhfGhcKlELXCRBqeWy4cW16VBSmF3NjSTIDUVYzafIa95SkFzm9pobWdmslGjHl+B1cieErdRwaCb4ykCGBHZ9sCjwkMFiCQHzfsB0hLWl/N48jxjF6UdbuodgkiJfhJfIzM4eIpOcvsxa5HHrh7v4Ipas6U67sUa0Ms+jnB+b3wsliyDWZ93Ujx+I9G727LFbVOUlEMVvjA=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CuUBAdHtim9oFMJKPICwHqnvnnEOkxIlAiaGVwW7ZxeE2+e46yuwAdBkrp8qdsH4gDgw5nDwaaW0qXRjDjB72nTtJFgjouUdkeu6LxWS0gXhfGhcKlELXCRBqeWy4cW16VBSmF3NjSTIDUVYzafIa95SkFzm9pobWdmslGjHl+B1cieErdRwaCb4ykCGBHZ9sCjwkMFiCQHzfsB0hLWl/N48jxjF6UdbuodgkiJfhJfIzM4eIpOcvsxa5HHrh7v4Ipas6U67sUa0Ms+jnB+b3wsliyDWZ93Ujx+I9G727LFbVOUlEMVvjA=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphanelerin genel çalışma saatleri ve tatil günleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 13175,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffcard60v4utdkorkx",
+    "timestamp": "2025-09-11T11:43:15.210Z",
+    "userId": "web-user-1757590981580",
+    "userMessage": "Aerodinamik ile ilgili kaynaklar nelerdir ?",
+    "aiResponse": "<p><b>Aerodinamik Konusuyla İlgili Kaynaklar:</b><br>ITU Kütüphanesi'nde \"Aerodinamik\" konusu altında 11 farklı başlık bulunmuştur. Bu başlıklar ve ilgili bağlantıları aşağıdadır:</p><h3>Konu Başlıkları:</h3><ul><li><b>Aerodinamik</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/aexact&FF=daerodinamik&1%2C2\">Konu Detayı</a></li><li><b>Aerodinamik -- Deneme</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneme&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Deneyler</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneyler&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Araştırma</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik Çok katlı yapılar</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+cok+katli+yapilar&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik Dikey havalanan uçak</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+dikey+havalanan+ucak&1%2C7%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Denetim sistemleri</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+denetim+sistemleri&1%2C4%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Bilgisayar benzetimi</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+bilgisayar+benzetimi&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Bilgisayar programları</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+bilgisayar+programlari&1%2C2%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik Eksenel akış kompresörleri</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+eksenel+akis+kompresorleri&1%2C2%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Araştırma -- Standartlar</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma+standartlar&1%2C1%2C/indexsort=-\">Konu Detayı</a></li></ul><p>Bu sonuçlar konu başlıklarıdır. Her bir konuya tıklayarak o konudaki kitapları ve diğer materyalleri görüntüleyebilirsiniz.</p><p><b>Ana Arama URL:</b> <a href=\"https://divit.library.itu.edu.tr/search*tur/?searchtype=d&searcharg=Aerodinamik&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=dAerodinamik\">Tüm Sonuçları Görüntüle</a></p>",
+    "toolsUsed": [
+      {
+        "toolName": "itu_library_search",
+        "toolInput": "unknown",
+        "toolOutput": "📚 **Konu Başlıkları**: \"Aerodinamik\" için ITU Kütüphanesi'nde bulunan sonuçlar:\n\n1. **Aerodinamik**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/aexact&FF=daerodinamik&1%2C2)\n   📂 Tür: Genel Kategori\n\n2. **Aerodinamik -- Deneme**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneme&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n3. **Aerodinamik -- Deneyler**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneyler&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n4. **Aerodinamik -- Araştırma**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n5. **Aerodinamik Çok katlı yapılar**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+cok+katli+yapilar&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n6. **Aerodinamik Dikey havalanan uçak**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+dikey+havalanan+ucak&1%2C7%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n7. **Aerodinamik -- Denetim sistemleri**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+denetim+sistemleri&1%2C4%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n8. **Aerodinamik -- Bilgisayar benzetimi**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+bilgisayar+benzetimi&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n9. **Aerodinamik -- Bilgisayar programları**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+bilgisayar+programlari&1%2C2%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n10. **Aerodinamik Eksenel akış kompresörleri**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+eksenel+akis+kompresorleri&1%2C2%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n11. **Aerodinamik -- Araştırma -- Standartlar**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma+standartlar&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n💡 **Konu Arama Bilgisi**: \"Aerodinamik\" ile ilgili 11 konu başlığı bulundu.\n\n📖 **Not**: Bu sonuçlar konu başlıklarıdır. Her bir konuya tıklayarak o konudaki kitapları görebilirsiniz.\n🔍 **Ana Arama URL**: [Sonuç Listesi](https://divit.library.itu.edu.tr/search*tur/?searchtype=d&searcharg=Aerodinamik&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=dAerodinamik)\n\n💡 **Toplam 11 sonuç bulundu.**",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Aerodinamik ile ilgili kaynaklar nelerdir ?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "itu_library_search",
+                "args": {
+                  "searchType": "subject",
+                  "searchQuery": "Aerodinamik"
+                }
+              },
+              "thoughtSignature": "CscCAdHtim+ZuKrQ8nPm9bLzjLoljN5yXKUnU37WLhtS1a6mEDeYzfph0qinInrv6lCosru5FcWyXIdW6TLncEQk042oCJdf6q41j0fByheUK/se96ws+F1TZfI3acuNd3oUIXF2MfklK1p9RHps2GaqfERmedX8WlphzlOoIEGDBQJPfqgLzMLkYVs03XqZSQzuFcCxns69Kn9nTXGaadH4ERwWuGD6MABpOqoAVUKoc4IIP56OJg/9otzNIr31XI0WFFQp+T26Xn3EOEkuhLjhmBfp1+PjhdeUkpmdu/bUZvCcgKTyN7cLsWNzAOAhA5O8jFC3HEDxmThB8wmlQamp1yXfkPq9RYyr+W/gN8inBqW92qQ4ciJLYwMF3/uQClDotRQ8oa/7HWFOzQgeezL5OoBrxeXSVP0UlrJRPPOMNsQo3CFjYURj"
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Aerodinamik ile ilgili kaynaklar nelerdir ?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "itu_library_search",
+                  "args": {
+                    "searchType": "subject",
+                    "searchQuery": "Aerodinamik"
+                  }
+                },
+                "thoughtSignature": "CscCAdHtim+ZuKrQ8nPm9bLzjLoljN5yXKUnU37WLhtS1a6mEDeYzfph0qinInrv6lCosru5FcWyXIdW6TLncEQk042oCJdf6q41j0fByheUK/se96ws+F1TZfI3acuNd3oUIXF2MfklK1p9RHps2GaqfERmedX8WlphzlOoIEGDBQJPfqgLzMLkYVs03XqZSQzuFcCxns69Kn9nTXGaadH4ERwWuGD6MABpOqoAVUKoc4IIP56OJg/9otzNIr31XI0WFFQp+T26Xn3EOEkuhLjhmBfp1+PjhdeUkpmdu/bUZvCcgKTyN7cLsWNzAOAhA5O8jFC3HEDxmThB8wmlQamp1yXfkPq9RYyr+W/gN8inBqW92qQ4ciJLYwMF3/uQClDotRQ8oa/7HWFOzQgeezL5OoBrxeXSVP0UlrJRPPOMNsQo3CFjYURj"
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "📚 **Konu Başlıkları**: \"Aerodinamik\" için ITU Kütüphanesi'nde bulunan sonuçlar:\n\n1. **Aerodinamik**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/aexact&FF=daerodinamik&1%2C2)\n   📂 Tür: Genel Kategori\n\n2. **Aerodinamik -- Deneme**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneme&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n3. **Aerodinamik -- Deneyler**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneyler&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n4. **Aerodinamik -- Araştırma**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n5. **Aerodinamik Çok katlı yapılar**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+cok+katli+yapilar&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n6. **Aerodinamik Dikey havalanan uçak**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+dikey+havalanan+ucak&1%2C7%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n7. **Aerodinamik -- Denetim sistemleri**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+denetim+sistemleri&1%2C4%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n8. **Aerodinamik -- Bilgisayar benzetimi**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+bilgisayar+benzetimi&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n9. **Aerodinamik -- Bilgisayar programları**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+bilgisayar+programlari&1%2C2%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n10. **Aerodinamik Eksenel akış kompresörleri**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+eksenel+akis+kompresorleri&1%2C2%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n11. **Aerodinamik -- Araştırma -- Standartlar**\n   🔗 [Konu Detayı](https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma+standartlar&1%2C1%2C/indexsort=-)\n   📂 Tür: Genel Kategori\n\n💡 **Konu Arama Bilgisi**: \"Aerodinamik\" ile ilgili 11 konu başlığı bulundu.\n\n📖 **Not**: Bu sonuçlar konu başlıklarıdır. Her bir konuya tıklayarak o konudaki kitapları görebilirsiniz.\n🔍 **Ana Arama URL**: [Sonuç Listesi](https://divit.library.itu.edu.tr/search*tur/?searchtype=d&searcharg=Aerodinamik&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=dAerodinamik)\n\n💡 **Toplam 11 sonuç bulundu.**"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Aerodinamik Konusuyla İlgili Kaynaklar:</b><br>ITU Kütüphanesi'nde \"Aerodinamik\" konusu altında 11 farklı başlık bulunmuştur. Bu başlıklar ve ilgili bağlantıları aşağıdadır:</p><h3>Konu Başlıkları:</h3><ul><li><b>Aerodinamik</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/aexact&FF=daerodinamik&1%2C2\">Konu Detayı</a></li><li><b>Aerodinamik -- Deneme</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneme&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Deneyler</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+deneyler&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Araştırma</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik Çok katlı yapılar</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+cok+katli+yapilar&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik Dikey havalanan uçak</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+dikey+havalanan+ucak&1%2C7%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Denetim sistemleri</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+denetim+sistemleri&1%2C4%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Bilgisayar benzetimi</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+bilgisayar+benzetimi&1%2C1%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Bilgisayar programları</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+bilgisayar+programlari&1%2C2%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik Eksenel akış kompresörleri</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/exact&FF=daerodinamik+eksenel+akis+kompresorleri&1%2C2%2C/indexsort=-\">Konu Detayı</a></li><li><b>Aerodinamik -- Araştırma -- Standartlar</b><br>🔗 <a href=\"https://divit.library.itu.edu.tr/search*tur?/dAerodinamik/daerodinamik/1%2C112%2C1005%2CB/frameset&FF=daerodinamik+arastirma+standartlar&1%2C1%2C/indexsort=-\">Konu Detayı</a></li></ul><p>Bu sonuçlar konu başlıklarıdır. Her bir konuya tıklayarak o konudaki kitapları ve diğer materyalleri görüntüleyebilirsiniz.</p><p><b>Ana Arama URL:</b> <a href=\"https://divit.library.itu.edu.tr/search*tur/?searchtype=d&searcharg=Aerodinamik&sortdropdown=-&SORT=D&extended=0&SUBMIT=Ara&searchlimits=&searchorigarg=dAerodinamik\">Tüm Sonuçları Görüntüle</a></p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 15836,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffcdgrxyw5465ocyjk",
+    "timestamp": "2025-09-11T11:45:21.453Z",
+    "userId": "web-user-1757591061636",
+    "userMessage": "Aerodinamik ile ilgili veri tabanları nelerdir ?",
+    "aiResponse": "<p>Aerodinamik ile ilgili doğrudan bir veritabanı bulunamadı. Ancak, kütüphanenin abone olduğu tüm veritabanlarına <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">buradan</a> ulaşabilirsiniz. İlgili anahtar kelimelerle genel mühendislik veya fizik veritabanlarında arama yapmayı deneyebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolInput": "unknown",
+        "toolOutput": "Aradığınız kriterlere uygun veritabanı bulunamadı.",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Aerodinamik ile ilgili veri tabanları nelerdir ?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "get_library_databases",
+                "args": {
+                  "input": "Aerodinamik"
+                }
+              },
+              "thoughtSignature": "CpkCAdHtim+JQWYxwPWYHDWkGHNthjXxl3RUwci1mXeBdozZZlGCJg/a1KcayjVvRNkrwJ5JwFFDrKYGlDxrCpiJkBObRDaAy3sun5ST8o+HVTR06hapV7eW2sJRUom910/GUj/N9XnQfvdjS3Ox9R23CKPCHrEBYJL4TGw0GRmI95YwX19qGfHoWLW9BiHh40QJiPATB/EKk7YJWRnXqg5H82NvhZ+W6YUvSasdxsZ+1KHaFVCTKYwXe+R0nge58L6dIJvhwLr6rKePcqI4zInXz5TwQqLw0Y+BPl4JFRU5MCi3FIMkgbdmoBJkZUA7TNo5fMyB7SqbTaq47rp75XATBo5I5BYIgE+gXxhPz6qCn1uZ4MIQcPGtWGc="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Aerodinamik ile ilgili veri tabanları nelerdir ?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "get_library_databases",
+                  "args": {
+                    "input": "Aerodinamik"
+                  }
+                },
+                "thoughtSignature": "CpkCAdHtim+JQWYxwPWYHDWkGHNthjXxl3RUwci1mXeBdozZZlGCJg/a1KcayjVvRNkrwJ5JwFFDrKYGlDxrCpiJkBObRDaAy3sun5ST8o+HVTR06hapV7eW2sJRUom910/GUj/N9XnQfvdjS3Ox9R23CKPCHrEBYJL4TGw0GRmI95YwX19qGfHoWLW9BiHh40QJiPATB/EKk7YJWRnXqg5H82NvhZ+W6YUvSasdxsZ+1KHaFVCTKYwXe+R0nge58L6dIJvhwLr6rKePcqI4zInXz5TwQqLw0Y+BPl4JFRU5MCi3FIMkgbdmoBJkZUA7TNo5fMyB7SqbTaq47rp75XATBo5I5BYIgE+gXxhPz6qCn1uZ4MIQcPGtWGc="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Aradığınız kriterlere uygun veritabanı bulunamadı."
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Aerodinamik ile ilgili doğrudan bir veritabanı bulunamadı. Ancak, kütüphanenin abone olduğu tüm veritabanlarına <a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari\">buradan</a> ulaşabilirsiniz. İlgili anahtar kelimelerle genel mühendislik veya fizik veritabanlarında arama yapmayı deneyebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 61732,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffcf3zboq2ik6lmsdl",
+    "timestamp": "2025-09-11T11:46:38.183Z",
+    "userId": "web-user-1757591197163",
+    "userMessage": "Uçak  ile ilgili veri tabanları nelerdir ?",
+    "aiResponse": "<p>Uçak ile ilgili bulduğum veri tabanları şunlardır:</p><h3>Veri Tabanları:</h3><ul><li><b>ASTM COMPASS ( ASTM Standards, Journals )</b><br><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6594\">Erişim Linki</a></li><li><b>Engineering Database</b><br><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6767\">Erişim Linki</a></li><li><b>Materials Science Database</b><br><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6777\">Erişim Linki</a></li></ul>",
+    "toolsUsed": [
+      {
+        "toolName": "get_library_databases",
+        "toolInput": "unknown",
+        "toolOutput": "[{\"name\":\"ASTM COMPASS ( ASTM Standards, Journals )\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6594\"},{\"name\":\"Engineering Database\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6767\"},{\"name\":\"Materials Science Database\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6777\"}]",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Uçak  ile ilgili veri tabanları nelerdir ?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "get_library_databases",
+                "args": {
+                  "input": "uçak"
+                }
+              },
+              "thoughtSignature": "CokCAdHtim/BZKwuluNa4/+rU5LBUaLFNyoaQwBTIJjKlzIfeIW/e9z/IVEFQjlnxWEj9yINkpa3zQ/44CRux3eehpoz+stdGpZnK1jAmPgDsLteDbupzm6HtmN8amo7jdAwTBgNP4CT6hSU0BGxiH83dD/BZnBc3mIVRHs1Uhdh0DjPvA+qXIniCMmFnsIruZ0py5RSk01MpQBp7u1qaxFBBclb3vDgljQcHAqTkhulqFA4r7gupyl2BLnzuUrlMZB8W/jTme2UfEZINDDU5EcVa12HdyiDiLOMYfTeF3zxi8mRLncorRHh0EkZBDnvQSWE5UtiJh9eItP/ymp2Iz5DAGMNJcHMGakd3w=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Uçak  ile ilgili veri tabanları nelerdir ?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "get_library_databases",
+                  "args": {
+                    "input": "uçak"
+                  }
+                },
+                "thoughtSignature": "CokCAdHtim/BZKwuluNa4/+rU5LBUaLFNyoaQwBTIJjKlzIfeIW/e9z/IVEFQjlnxWEj9yINkpa3zQ/44CRux3eehpoz+stdGpZnK1jAmPgDsLteDbupzm6HtmN8amo7jdAwTBgNP4CT6hSU0BGxiH83dD/BZnBc3mIVRHs1Uhdh0DjPvA+qXIniCMmFnsIruZ0py5RSk01MpQBp7u1qaxFBBclb3vDgljQcHAqTkhulqFA4r7gupyl2BLnzuUrlMZB8W/jTme2UfEZINDDU5EcVa12HdyiDiLOMYfTeF3zxi8mRLncorRHh0EkZBDnvQSWE5UtiJh9eItP/ymp2Iz5DAGMNJcHMGakd3w=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "[{\"name\":\"ASTM COMPASS ( ASTM Standards, Journals )\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6594\"},{\"name\":\"Engineering Database\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6767\"},{\"name\":\"Materials Science Database\",\"link\":\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6777\"}]"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Uçak ile ilgili bulduğum veri tabanları şunlardır:</p><h3>Veri Tabanları:</h3><ul><li><b>ASTM COMPASS ( ASTM Standards, Journals )</b><br><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6594\">Erişim Linki</a></li><li><b>Engineering Database</b><br><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6767\">Erişim Linki</a></li><li><b>Materials Science Database</b><br><a href=\"https://kutuphane.itu.edu.tr/arastirma/veritabanlari#6777\">Erişim Linki</a></li></ul>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 3676,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffcswyw37b70hnfnha",
+    "timestamp": "2025-09-11T11:57:22.280Z",
+    "userId": "web-user-1757591790346",
+    "userMessage": "ödünç aldığım kitapları vaktinde iade etmezsem ne olur ?",
+    "aiResponse": "<p>Ödünç aldığınız yayınları vaktinde iade etmezseniz aşağıdaki durumlarla karşılaşırsınız:</p><ul><li><b>Gecikme Cezası:</b> İade süresi geçtiğinde, saatlik veya günlük periyotlarda artan gecikme cezaları üye kaydınıza işlenir.</li><li><b>Üyelik Kısıtlaması:</b> Cezalar belirli bir miktara ulaştığında, üyelik hakkınıza kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanamazsınız.</li><li><b>Ceza Miktarı:</b> Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenir.</li><li><b>Gecikme Cezası Uygulanmayan Durum:</b> Son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.</li></ul><p><b>Gecikme Notlarına Rağmen İade Etmeyenler İçin Özel Durumlar:</b></p><ul><li><b>Öğrenciler:</b> Öğrenci otomasyon sistemindeki kayıtlarına kısıntı konulur.</li><li><b>Öğretim Elemanı ve İdari Personel:</b> Görev yaptığı birime yazı yazılır.</li><li><b>İTÜ Emekli Personeli:</b> Ödünç alınan yayını iki kez geciktirmesi ve cezasını ödememesi durumunda üyeliği iptal edilir.</li></ul><p><b>Özel Materyaller İçin Gecikme Cezası:</b></p><ul><li>Görsel-İşitsel Bölümü materyallerinden (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) zamanında iade edilmeyenler için günlük 5 TL gecikme cezası uygulanır.</li></ul>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Ödünç alınan yayınların iade süresi geçtiğinde, saatlik veya günlük periyotlarda artan gecikme cezaları hesaplanarak üye kaydına işlenir. Üyelik türüne göre cezalar belirli bir miktara ulaştığında, üyelik hakkına kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanılamaz. Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenir.\n\nSon iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n\nGecikme notlarına rağmen ödünç aldığı yayını iade etmeyenler için:\n*   Öğrencilerin öğrenci otomasyon sistemindeki kayıtlarına kısıntı konulur.\n*   Öğretim elemanı ve idari personelin görev yaptığı birime yazı yazılır.\n*   İTÜ emekli personelinin ödünç alınan yayını iki kez geciktirmesi cezasını ödemediği takdirde üyeliği iptal edilir.\n\nİlgili bilgi:\n*   Görsel-İşitsel Bölümü materyallerinden (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) zamanında iade edilmeyenler için günlük 5 TL gecikme cezası uygulanır.\n\nKaynaklar:\n*   BAĞLAM (sayfa 14, 17)",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "ödünç aldığım kitapları vaktinde iade etmezsem ne olur ?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "ödünç alınan kitapların geç iadesi"
+                }
+              },
+              "thoughtSignature": "CvoCAdHtim+DIA8Z/ObdoPxaty3YQqdyteCsGUKH4ZfLQkkHe8S6yF7aAqyUNpcreGbAoyICSZc2knslJ+czzSrG/lD1mFMhx/UDza6cF97xSfgm125uQ2L4VJtFPrgJqjQeKzVQVIAnVyggTTmVDxGxRoIxQxyYYgZn2orCR6t0CZEEMiEDt8LSlIEV5CB6Y3CgqwGeM/l0Wed4LbdiOJCoMJk2gFVkbyKNXGAuxz67RH0jnueQb4YRG4Pmkr1Ikf3blhMbA0ktrxdK6J9S2pqeKuqyc6xMQBhZjM2LRSyiTu1qAZ4U+QQjP4h6Sf/ZG9ezr+gqWIdi9HeRzQ7EVUgm4Ew2CAVzvqLc+ZjTvmVtKj/WKr3tqNkukQcKRfRrOVo1eD3M30eNdGuAnKlob5CMY5ZipBrkTB99ppDxSooQOfGeI+W4iFDtH31+XrYsRpXOWqJFu/38EYIA8r+6fkb0b6YCV7OuSBtK93s3+BIhcCvzApNKajLpB9Au"
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "ödünç aldığım kitapları vaktinde iade etmezsem ne olur ?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "ödünç alınan kitapların geç iadesi"
+                  }
+                },
+                "thoughtSignature": "CvoCAdHtim+DIA8Z/ObdoPxaty3YQqdyteCsGUKH4ZfLQkkHe8S6yF7aAqyUNpcreGbAoyICSZc2knslJ+czzSrG/lD1mFMhx/UDza6cF97xSfgm125uQ2L4VJtFPrgJqjQeKzVQVIAnVyggTTmVDxGxRoIxQxyYYgZn2orCR6t0CZEEMiEDt8LSlIEV5CB6Y3CgqwGeM/l0Wed4LbdiOJCoMJk2gFVkbyKNXGAuxz67RH0jnueQb4YRG4Pmkr1Ikf3blhMbA0ktrxdK6J9S2pqeKuqyc6xMQBhZjM2LRSyiTu1qAZ4U+QQjP4h6Sf/ZG9ezr+gqWIdi9HeRzQ7EVUgm4Ew2CAVzvqLc+ZjTvmVtKj/WKr3tqNkukQcKRfRrOVo1eD3M30eNdGuAnKlob5CMY5ZipBrkTB99ppDxSooQOfGeI+W4iFDtH31+XrYsRpXOWqJFu/38EYIA8r+6fkb0b6YCV7OuSBtK93s3+BIhcCvzApNKajLpB9Au"
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Ödünç alınan yayınların iade süresi geçtiğinde, saatlik veya günlük periyotlarda artan gecikme cezaları hesaplanarak üye kaydına işlenir. Üyelik türüne göre cezalar belirli bir miktara ulaştığında, üyelik hakkına kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanılamaz. Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenir.\n\nSon iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n\nGecikme notlarına rağmen ödünç aldığı yayını iade etmeyenler için:\n*   Öğrencilerin öğrenci otomasyon sistemindeki kayıtlarına kısıntı konulur.\n*   Öğretim elemanı ve idari personelin görev yaptığı birime yazı yazılır.\n*   İTÜ emekli personelinin ödünç alınan yayını iki kez geciktirmesi cezasını ödemediği takdirde üyeliği iptal edilir.\n\nİlgili bilgi:\n*   Görsel-İşitsel Bölümü materyallerinden (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) zamanında iade edilmeyenler için günlük 5 TL gecikme cezası uygulanır.\n\nKaynaklar:\n*   BAĞLAM (sayfa 14, 17)"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Ödünç aldığınız yayınları vaktinde iade etmezseniz aşağıdaki durumlarla karşılaşırsınız:</p><ul><li><b>Gecikme Cezası:</b> İade süresi geçtiğinde, saatlik veya günlük periyotlarda artan gecikme cezaları üye kaydınıza işlenir.</li><li><b>Üyelik Kısıtlaması:</b> Cezalar belirli bir miktara ulaştığında, üyelik hakkınıza kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanamazsınız.</li><li><b>Ceza Miktarı:</b> Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenir.</li><li><b>Gecikme Cezası Uygulanmayan Durum:</b> Son iade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.</li></ul><p><b>Gecikme Notlarına Rağmen İade Etmeyenler İçin Özel Durumlar:</b></p><ul><li><b>Öğrenciler:</b> Öğrenci otomasyon sistemindeki kayıtlarına kısıntı konulur.</li><li><b>Öğretim Elemanı ve İdari Personel:</b> Görev yaptığı birime yazı yazılır.</li><li><b>İTÜ Emekli Personeli:</b> Ödünç alınan yayını iki kez geciktirmesi ve cezasını ödememesi durumunda üyeliği iptal edilir.</li></ul><p><b>Özel Materyaller İçin Gecikme Cezası:</b></p><ul><li>Görsel-İşitsel Bölümü materyallerinden (DVD, VCD, CD, disket, video kaset, ses ve müzik kasetleri/CD’leri ve filmler) zamanında iade edilmeyenler için günlük 5 TL gecikme cezası uygulanır.</li></ul>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 54692,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffcundp9nougu30bn6",
+    "timestamp": "2025-09-11T11:58:43.165Z",
+    "userId": "web-user-1757591901646",
+    "userMessage": "gecikme cezaları nelerdir ?",
+    "aiResponse": "<p><b>Gecikme Cezaları ve Uygulamaları:</b><br>Ödünç alınan ve iade süresi geçen yayınlar için gecikme cezaları saatlik veya günlük periyotlarda artarak üye kaydına işlenir. Belirli bir miktara ulaştığında üyelik hakkına kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanılamaz. Para cezasını ödemeyenlere ödünç yayın verilmez.</p><br><p><b>Cezaların Miktarları:</b></p><ul><li><b>Genel Yayınlar:</b><br><ul><li>İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.</li><li>1-7 gün arası geciken her yayın için <b>5 TL</b>.</li><li>8 gün ve sonrası geciken her yayın için <b>10 TL</b>.</li></ul></li><li><b>Rezerv (Ders) Yayınları:</b> Geciken her saat için <b>2 TL</b>. Ayrıca kullanıcı 1 hafta süre ile ödünç verme hizmetlerinden yararlanamaz.</li><li><b>Dolap ve Çalışma Odası Anahtarları:</b> Geciken her saat için <b>2 TL</b>.</li><li><b>Görsel-İşitsel Materyaller (filmler, vb.):</b> Günlük <b>20 TL</b>.</li></ul><br><p>Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenmektedir.</p><br><p><b>Gecikme Notlarına Rağmen Yayını İade Etmeyenlere Uygulanan Ek Yaptırımlar:</b></p><ul><li><b>Öğrenciler:</b> Öğrenci otomasyon sistemindeki kayıtlarına kısıntı (blok) konulur.</li><li><b>Öğretim Elemanı ve İdari Personel:</b> Görev yaptığı birime yazı yazılır.</li><li><b>İTÜ Emekli Personeli:</b> Ödünç alınan yayını iki kez geciktirmesi ve cezasını ödememesi durumunda üyeliği iptal edilir.</li></ul><br><p><b>Para Cezalarının Yönetimi:</b></p><ul><li>Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur.</li><li>Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.</li><li>Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.</li></ul><br><p>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri\">https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri</a> adresini ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Gecikme cezaları, ödünç alınan ve iade süresi geçen yayınlar için saatlik veya günlük periyotlarda artarak üye kaydına işlenir. Cezalar belli bir miktara ulaştığında üyelik hakkına kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanılamaz. Para cezasını ödemeyenlere ödünç yayın verilmez.\n\n**Cezaların Uygulanması ve Miktarları:**\n*   **Genel Yayınlar:**\n    *   İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n    *   1-7 gün arası geciken her yayın için 5 TL.\n    *   8 gün ve sonrası geciken her yayın için 10 TL.\n*   **Rezerv (Ders) Yayınları:** Geciken her saat için 2 TL. Ayrıca kullanıcı 1 hafta süre ile ödünç verme hizmetlerinden yararlanamaz.\n*   **Dolap ve Çalışma Odası Anahtarları:** Geciken her saat için 2 TL.\n*   **Görsel-İşitsel Materyaller (filmler, vb.):** Günlük 20 TL.\n*   Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenmektedir.\n\n**Gecikme Notlarına Rağmen Yayını İade Etmeyenlere Uygulanan Ek Yaptırımlar:**\n*   **Öğrenciler:** Öğrenci otomasyon sistemindeki kayıtlarına kısıntı (blok) konulur.\n*   **Öğretim Elemanı ve İdari Personel:** Görev yaptığı birime yazı yazılır.\n*   **İTÜ Emekli Personeli:** Ödünç alınan yayını iki kez geciktirmesi ve cezasını ödememesi durumunda üyeliği iptal edilir.\n\n**Para Cezalarının Yönetimi:**\n*   Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur.\n*   Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.\n*   Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.\n\n**İlgili bilgi:**\nGecikme cezası ödemeleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri\">https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri</a> adresini ziyaret edebilirsiniz.\n\n**Kaynaklar:**\n*   kutuphane uyeligi\n*   gecikme cezasi odemeleri\n*   Sayfa 12\n*   Sayfa 14\n*   Sayfa 34",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "gecikme cezaları nelerdir ?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "gecikme cezaları nelerdir?"
+                }
+              },
+              "thoughtSignature": "CuMCAdHtim8QFsjgMs7OXDSeGHZuqxdobph+e6HSPH++7mkqWQsVc++gnONrlH87oEHHCWRU+8oUQXhI+2qJiFRCFpK8Cozw3vH/rT1BjeSWUtVrtVmS0Ey8dI3eDX7b3l3tdPXoFwEWzUnZ00Cj19xaPCjdMzEnNn1rFtDKD3sPAzJgFHa9P98BLNFH3tq0BknbCp+9ct88iXEk9Np0DqNivAHzSItHY9YOPt8URdM3498a5x+sgz7W/+460k3P7XCdBrXlKVFAL6Q081xDLmXHruYXySGTyLybyUmPklwwsjT978p9pt2qmZI+jD2dMPq4qEalv1V5TvgiHw213b24dlQkhLCdSIC3Sf4l8M/zpXY46vGC6cG/t2xqXt1Jsi657/o3RacpicogHOVBGCXUMEMIoACTPquyizvpFudvyVIcPElZJngmRZIgNxZ/KwD+jD1EJ8kHcmeQ2mkERz7Lk6T/KA=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "gecikme cezaları nelerdir ?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "gecikme cezaları nelerdir?"
+                  }
+                },
+                "thoughtSignature": "CuMCAdHtim8QFsjgMs7OXDSeGHZuqxdobph+e6HSPH++7mkqWQsVc++gnONrlH87oEHHCWRU+8oUQXhI+2qJiFRCFpK8Cozw3vH/rT1BjeSWUtVrtVmS0Ey8dI3eDX7b3l3tdPXoFwEWzUnZ00Cj19xaPCjdMzEnNn1rFtDKD3sPAzJgFHa9P98BLNFH3tq0BknbCp+9ct88iXEk9Np0DqNivAHzSItHY9YOPt8URdM3498a5x+sgz7W/+460k3P7XCdBrXlKVFAL6Q081xDLmXHruYXySGTyLybyUmPklwwsjT978p9pt2qmZI+jD2dMPq4qEalv1V5TvgiHw213b24dlQkhLCdSIC3Sf4l8M/zpXY46vGC6cG/t2xqXt1Jsi657/o3RacpicogHOVBGCXUMEMIoACTPquyizvpFudvyVIcPElZJngmRZIgNxZ/KwD+jD1EJ8kHcmeQ2mkERz7Lk6T/KA=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Gecikme cezaları, ödünç alınan ve iade süresi geçen yayınlar için saatlik veya günlük periyotlarda artarak üye kaydına işlenir. Cezalar belli bir miktara ulaştığında üyelik hakkına kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanılamaz. Para cezasını ödemeyenlere ödünç yayın verilmez.\n\n**Cezaların Uygulanması ve Miktarları:**\n*   **Genel Yayınlar:**\n    *   İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.\n    *   1-7 gün arası geciken her yayın için 5 TL.\n    *   8 gün ve sonrası geciken her yayın için 10 TL.\n*   **Rezerv (Ders) Yayınları:** Geciken her saat için 2 TL. Ayrıca kullanıcı 1 hafta süre ile ödünç verme hizmetlerinden yararlanamaz.\n*   **Dolap ve Çalışma Odası Anahtarları:** Geciken her saat için 2 TL.\n*   **Görsel-İşitsel Materyaller (filmler, vb.):** Günlük 20 TL.\n*   Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenmektedir.\n\n**Gecikme Notlarına Rağmen Yayını İade Etmeyenlere Uygulanan Ek Yaptırımlar:**\n*   **Öğrenciler:** Öğrenci otomasyon sistemindeki kayıtlarına kısıntı (blok) konulur.\n*   **Öğretim Elemanı ve İdari Personel:** Görev yaptığı birime yazı yazılır.\n*   **İTÜ Emekli Personeli:** Ödünç alınan yayını iki kez geciktirmesi ve cezasını ödememesi durumunda üyeliği iptal edilir.\n\n**Para Cezalarının Yönetimi:**\n*   Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur.\n*   Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.\n*   Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.\n\n**İlgili bilgi:**\nGecikme cezası ödemeleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri\">https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri</a> adresini ziyaret edebilirsiniz.\n\n**Kaynaklar:**\n*   kutuphane uyeligi\n*   gecikme cezasi odemeleri\n*   Sayfa 12\n*   Sayfa 14\n*   Sayfa 34"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Gecikme Cezaları ve Uygulamaları:</b><br>Ödünç alınan ve iade süresi geçen yayınlar için gecikme cezaları saatlik veya günlük periyotlarda artarak üye kaydına işlenir. Belirli bir miktara ulaştığında üyelik hakkına kısıtlama getirilir ve kütüphane hizmetlerinden geçici olarak yararlanılamaz. Para cezasını ödemeyenlere ödünç yayın verilmez.</p><br><p><b>Cezaların Miktarları:</b></p><ul><li><b>Genel Yayınlar:</b><br><ul><li>İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara gecikme cezası uygulanmaz.</li><li>1-7 gün arası geciken her yayın için <b>5 TL</b>.</li><li>8 gün ve sonrası geciken her yayın için <b>10 TL</b>.</li></ul></li><li><b>Rezerv (Ders) Yayınları:</b> Geciken her saat için <b>2 TL</b>. Ayrıca kullanıcı 1 hafta süre ile ödünç verme hizmetlerinden yararlanamaz.</li><li><b>Dolap ve Çalışma Odası Anahtarları:</b> Geciken her saat için <b>2 TL</b>.</li><li><b>Görsel-İşitsel Materyaller (filmler, vb.):</b> Günlük <b>20 TL</b>.</li></ul><br><p>Gecikme ceza miktarı, kaynakların türlerine ve bulundukları koleksiyona göre belirlenmektedir.</p><br><p><b>Gecikme Notlarına Rağmen Yayını İade Etmeyenlere Uygulanan Ek Yaptırımlar:</b></p><ul><li><b>Öğrenciler:</b> Öğrenci otomasyon sistemindeki kayıtlarına kısıntı (blok) konulur.</li><li><b>Öğretim Elemanı ve İdari Personel:</b> Görev yaptığı birime yazı yazılır.</li><li><b>İTÜ Emekli Personeli:</b> Ödünç alınan yayını iki kez geciktirmesi ve cezasını ödememesi durumunda üyeliği iptal edilir.</li></ul><br><p><b>Para Cezalarının Yönetimi:</b></p><ul><li>Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur.</li><li>Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.</li><li>Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.</li></ul><br><p>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri\">https://kutuphane.itu.edu.tr/hizmetler/gecikme-cezasi-odemeleri</a> adresini ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 24080,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffdao4fawjit33grl",
+    "timestamp": "2025-09-11T12:11:10.623Z",
+    "userId": "web-user-1757592650490",
+    "userMessage": "Kütüphaneye nasıl üye olabilirim?",
+    "aiResponse": "<p>Kütüphaneye üye olmak için aşağıdaki adımları takip edebilirsiniz:</p><br><h3>İTÜ Mensupları İçin Üyelik İşlemleri:</h3><ul><li><b>Genel İTÜ Mensupları:</b> Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.</li><li><b>Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:</b> Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.</li></ul><br><h3>İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):</h3><ul><li>“İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.</li><li>İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.</li><li>Karşınıza çıkan formdaki eksik bilgi girişi alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.</li><li>Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.</li><li>Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.</li><li>Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.</li></ul><br><h3>Misafir Kullanıcılar İçin Üyelik İşlemleri:</h3><ul><li><b>Üye Olabilecekler:</b><ul><li>Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.</li><li>İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.</li><li>İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.<ul><li>İTÜ mezunları mezun kartları ile,</li><li>Diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.</li></ul></li></ul></li><li><b>Üye Olamayacaklar:</b><ul><li>Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.</li></ul></li></ul><br><h3>Genel Bilgi:</h3><ul><li>Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.</li></ul>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Kütüphaneye üye olmak için aşağıdaki adımları takip edebilirsiniz:\n\n**İTÜ Mensupları İçin Üyelik İşlemleri:**\n\n1.  **Genel İTÜ Mensupları:** Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.\n2.  **Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:** Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.\n\n**İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):**\n\n*   “İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.\n*   İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.\n*   Karşınıza çıkan formdaki eksik bilgi girişi alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.\n*   Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.\n*   Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.\n*   Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.\n\n**Misafir Kullanıcılar İçin Üyelik İşlemleri:**\n\n*   **Üye Olabilecekler:**\n    *   Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.\n    *   İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.\n    *   İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.\n        *   İTÜ mezunları mezun kartları ile,\n        *   Diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.\n*   **Üye Olamayacaklar:**\n    *   Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.\n\n**Genel Bilgi:**\n\n*   Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.\n\n**Kaynaklar:**\n*   BAĞLAM (1.2 Kütüphaneye Üyelik, 1.2.1 İTÜ mensuplarının üyelik işlemleri, 1.2.2 Misafir kullanıcıların üyelik işlemleri)\n*   BAĞLAM (Üyelik, Üyelik Adımları)\n*   BAĞLAM (B. İTÜ mezunları..., C. Kütüphaneye giriş...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Kütüphaneye nasıl üye olabilirim?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphaneye nasıl üye olabilirim?"
+                }
+              },
+              "thoughtSignature": "CsUCAdHtim9QJ2Cb/SNab9iKK9NTMWVQQxcUbHC+pdDuECBJmMMjUWGnERtDKDFKcqJl8AXbhGffEo/MxlNQp7QBXIuHgV3j5rfLelu6eCcNEZc3dfOCDRqGR+Y4FRJkkL4oY3sPAa8gWTH0i5kRjBy4kco/rK6HfW+HaWQnNKPaT0soTIF/+IJ6QlEpMj/dGZTCZmbWiQUPRlLtFok5H/Qa4JnF1AOwlxlaw/kMNMosOrN+NgJ3pAD4QAbx/AtZzwOvciftJisQ9/dvNiXJaxC6qeVDVADHe9pVBc3hrVA1CSSL6geaJm/z2zDL335eft+a3wWTDJk2cwRTu2Uf7xNHmbMfmSQ5tQjYnuJZfJeXJxuaVL5fO7qaWT04ui7YMMHSqP5zHp3f0Eb70rXtWLg09M98qfQqa+vpB+0tngCb9dqiB7WcZw=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Kütüphaneye nasıl üye olabilirim?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphaneye nasıl üye olabilirim?"
+                  }
+                },
+                "thoughtSignature": "CsUCAdHtim9QJ2Cb/SNab9iKK9NTMWVQQxcUbHC+pdDuECBJmMMjUWGnERtDKDFKcqJl8AXbhGffEo/MxlNQp7QBXIuHgV3j5rfLelu6eCcNEZc3dfOCDRqGR+Y4FRJkkL4oY3sPAa8gWTH0i5kRjBy4kco/rK6HfW+HaWQnNKPaT0soTIF/+IJ6QlEpMj/dGZTCZmbWiQUPRlLtFok5H/Qa4JnF1AOwlxlaw/kMNMosOrN+NgJ3pAD4QAbx/AtZzwOvciftJisQ9/dvNiXJaxC6qeVDVADHe9pVBc3hrVA1CSSL6geaJm/z2zDL335eft+a3wWTDJk2cwRTu2Uf7xNHmbMfmSQ5tQjYnuJZfJeXJxuaVL5fO7qaWT04ui7YMMHSqP5zHp3f0Eb70rXtWLg09M98qfQqa+vpB+0tngCb9dqiB7WcZw=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Kütüphaneye üye olmak için aşağıdaki adımları takip edebilirsiniz:\n\n**İTÜ Mensupları İçin Üyelik İşlemleri:**\n\n1.  **Genel İTÜ Mensupları:** Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.\n2.  **Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:** Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.\n\n**İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):**\n\n*   “İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.\n*   İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.\n*   Karşınıza çıkan formdaki eksik bilgi girişi alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.\n*   Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.\n*   Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.\n*   Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.\n\n**Misafir Kullanıcılar İçin Üyelik İşlemleri:**\n\n*   **Üye Olabilecekler:**\n    *   Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.\n    *   İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.\n    *   İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.\n        *   İTÜ mezunları mezun kartları ile,\n        *   Diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.\n*   **Üye Olamayacaklar:**\n    *   Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.\n\n**Genel Bilgi:**\n\n*   Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.\n\n**Kaynaklar:**\n*   BAĞLAM (1.2 Kütüphaneye Üyelik, 1.2.1 İTÜ mensuplarının üyelik işlemleri, 1.2.2 Misafir kullanıcıların üyelik işlemleri)\n*   BAĞLAM (Üyelik, Üyelik Adımları)\n*   BAĞLAM (B. İTÜ mezunları..., C. Kütüphaneye giriş...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Kütüphaneye üye olmak için aşağıdaki adımları takip edebilirsiniz:</p><br><h3>İTÜ Mensupları İçin Üyelik İşlemleri:</h3><ul><li><b>Genel İTÜ Mensupları:</b> Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.</li><li><b>Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:</b> Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.</li></ul><br><h3>İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):</h3><ul><li>“İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.</li><li>İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.</li><li>Karşınıza çıkan formdaki eksik bilgi girişi alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.</li><li>Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.</li><li>Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.</li><li>Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.</li></ul><br><h3>Misafir Kullanıcılar İçin Üyelik İşlemleri:</h3><ul><li><b>Üye Olabilecekler:</b><ul><li>Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.</li><li>İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.</li><li>İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.<ul><li>İTÜ mezunları mezun kartları ile,</li><li>Diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.</li></ul></li></ul></li><li><b>Üye Olamayacaklar:</b><ul><li>Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.</li></ul></li></ul><br><h3>Genel Bilgi:</h3><ul><li>Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.</li></ul>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 22388,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffdd2e2xvs6ggxz7gb",
+    "timestamp": "2025-09-11T12:13:02.426Z",
+    "userId": "web-user-1757592695546",
+    "userMessage": "Kütüphaneye nasıl üye olabilirim?",
+    "aiResponse": "<p>Kütüphaneye üyelik işlemleri, İTÜ mensupları ve misafir kullanıcılar için farklılık göstermektedir:</p><br><h3>İTÜ Mensupları İçin Üyelik İşlemleri:</h3><ul><li><b>Genel İTÜ Mensupları:</b> Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.</li><li><b>Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:</b> Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.</li></ul><br><h4>İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):</h4><ul><li>“İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.</li><li>İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.</li><li>Karşınıza çıkan formdaki eksik bilgi giriş alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.</li><li>Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.</li><li>Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.</li><li>Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.</li></ul><br><h3>Misafir Kullanıcılar İçin Üyelik İşlemleri:</h3><ul><li><b>Üye Olabilecekler:</b><ul><li>Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.</li><li>İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.</li><li>İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.</li><li>İTÜ mezunları mezun kartları ile, diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.</li></ul></li><li><b>Üye Olamayacaklar:</b><ul><li>Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.</li></ul></li></ul><br><p><b>Genel Bilgi:</b> Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Kütüphaneye üye olmak için aşağıdaki adımları takip edebilirsiniz:\n\n**İTÜ Mensupları İçin Üyelik İşlemleri:**\n\n1.  **Genel İTÜ Mensupları:** Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.\n2.  **Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:** Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.\n\n**İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):**\n\n*   “İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.\n*   İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.\n*   Karşınıza çıkan formdaki eksik bilgi girişi alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.\n*   Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.\n*   Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.\n*   Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.\n\n**Misafir Kullanıcılar İçin Üyelik İşlemleri:**\n\n*   **Üye Olabilecekler:**\n    *   Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.\n    *   İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.\n    *   İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.\n        *   İTÜ mezunları mezun kartları ile,\n        *   Diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.\n*   **Üye Olamayacaklar:**\n    *   Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.\n\n**Genel Bilgi:**\n\n*   Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.\n\n**Kaynaklar:**\n*   BAĞLAM (1.2 Kütüphaneye Üyelik, 1.2.1 İTÜ mensuplarının üyelik işlemleri, 1.2.2 Misafir kullanıcıların üyelik işlemleri)\n*   BAĞLAM (Üyelik, Üyelik Adımları)\n*   BAĞLAM (B. İTÜ mezunları..., C. Kütüphaneye giriş...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Kütüphaneye nasıl üye olabilirim?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphaneye nasıl üye olabilirim?"
+                }
+              },
+              "thoughtSignature": "CsUCAdHtim+gXR0GY4CL5dyEP2iuzG/qJlVN89kulYuewQDJrxa5F6S3eKYePCPp5kWFM/pY6S6Kq4r3MvGxnLG/pyOmxS5m8I69yo2FfMOSWdRYSnMvddJ9ii3y7MTjUFkc1GSuwz5QW8PZXT8dZEE0eZT5/1titendwnGExvnGX+va+/cc4aRjDDBxk1rSpbi/oEk1Y5XB/Ee7qEEVXWFlLtNTzsGujW5njf+K/TywOhooqH5RNcUOTWKnw1FsBIebu2qWCXQsOydk6SiwjHW7KORgIeZvfUGEgo3wpRLWJyV6+1W13O6qrJW79xNUzX/2Fb3AeKO3rLXJ7eGdhHUzEMqgOKm0Sm0fKYtsqr5WNaiBMDU9itUO+6DesHc2zgxPCV0+dlz085ji/ynNE93wkR5/yjm8a0b6FhaqJ04CfRuazG+IWA=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Kütüphaneye nasıl üye olabilirim?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphaneye nasıl üye olabilirim?"
+                  }
+                },
+                "thoughtSignature": "CsUCAdHtim+gXR0GY4CL5dyEP2iuzG/qJlVN89kulYuewQDJrxa5F6S3eKYePCPp5kWFM/pY6S6Kq4r3MvGxnLG/pyOmxS5m8I69yo2FfMOSWdRYSnMvddJ9ii3y7MTjUFkc1GSuwz5QW8PZXT8dZEE0eZT5/1titendwnGExvnGX+va+/cc4aRjDDBxk1rSpbi/oEk1Y5XB/Ee7qEEVXWFlLtNTzsGujW5njf+K/TywOhooqH5RNcUOTWKnw1FsBIebu2qWCXQsOydk6SiwjHW7KORgIeZvfUGEgo3wpRLWJyV6+1W13O6qrJW79xNUzX/2Fb3AeKO3rLXJ7eGdhHUzEMqgOKm0Sm0fKYtsqr5WNaiBMDU9itUO+6DesHc2zgxPCV0+dlz085ji/ynNE93wkR5/yjm8a0b6FhaqJ04CfRuazG+IWA=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Kütüphaneye üye olmak için aşağıdaki adımları takip edebilirsiniz:\n\n**İTÜ Mensupları İçin Üyelik İşlemleri:**\n\n1.  **Genel İTÜ Mensupları:** Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.\n2.  **Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:** Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.\n\n**İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):**\n\n*   “İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.\n*   İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.\n*   Karşınıza çıkan formdaki eksik bilgi girişi alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.\n*   Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.\n*   Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.\n*   Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.\n\n**Misafir Kullanıcılar İçin Üyelik İşlemleri:**\n\n*   **Üye Olabilecekler:**\n    *   Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.\n    *   İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.\n    *   İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.\n        *   İTÜ mezunları mezun kartları ile,\n        *   Diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.\n*   **Üye Olamayacaklar:**\n    *   Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.\n\n**Genel Bilgi:**\n\n*   Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.\n\n**Kaynaklar:**\n*   BAĞLAM (1.2 Kütüphaneye Üyelik, 1.2.1 İTÜ mensuplarının üyelik işlemleri, 1.2.2 Misafir kullanıcıların üyelik işlemleri)\n*   BAĞLAM (Üyelik, Üyelik Adımları)\n*   BAĞLAM (B. İTÜ mezunları..., C. Kütüphaneye giriş...)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Kütüphaneye üyelik işlemleri, İTÜ mensupları ve misafir kullanıcılar için farklılık göstermektedir:</p><br><h3>İTÜ Mensupları İçin Üyelik İşlemleri:</h3><ul><li><b>Genel İTÜ Mensupları:</b> Kütüphane web sayfasından online üyelik formunu eksiksiz doldurmanız gerekmektedir.</li><li><b>Sözleşmeli / Misafir Öğretim Elemanı veya Sözleşmeli İdari Personel:</b> Görev yaptığınız birimden, İTÜ’deki görevinizi ve görev sürenizi belirten yazı ile birlikte kütüphaneye başvurarak online üyelik formunu doldurmanız gerekir.</li></ul><br><h4>İTÜ Hesabıyla Kayıt Adımları (İTÜ mensupları için):</h4><ul><li>“İTÜ Hesabıyla Kayıt” butonuna tıkladıktan sonra İTÜ Giriş sayfasına yönlendirileceksiniz.</li><li>İTÜ Giriş sayfasında İTÜ kullanıcı adınız ve parolanız ile giriş yaptığınızda kütüphane kayıt sayfasına yönlendirileceksiniz.</li><li>Karşınıza çıkan formdaki eksik bilgi giriş alanlarını tamamlayıp, kaydet butonuna tıklayarak kayıt başvurunuzu tamamlamış olacaksınız.</li><li>Üyelik başvurunuz 3 iş günü içinde değerlendirilerek kütüphane üyeliğiniz başlatılacaktır.</li><li>Üyeliğiniz onaylandığında İTÜ e-posta adresinize bir bilgilendirme e-postası ulaşacaktır.</li><li>Kullanıcı İşlemleri alanına ilk kez girerken, Soyad, Ad ve Öğrenci / Sicil numarasını giriniz ve PIN alanını boş bırakarak yeni PIN oluşturunuz.</li></ul><br><h3>Misafir Kullanıcılar İçin Üyelik İşlemleri:</h3><ul><li><b>Üye Olabilecekler:</b><ul><li>Diğer üniversitelerin lisansüstü öğrencileri ve akademik personeli İTÜ Kütüphanelerine üye olabilirler.</li><li>İTÜ Tıp Fakültesi 5. ve 6. sınıf öğrencileri, diplomalarında Lisans ve Yüksek Lisans birlikte yazdığından, Yüksek Lisans öğrencileri kapsamında üyelik yoluyla kütüphaneden yararlanabilirler.</li><li>İTÜ mezunları, İTÜ Vakfı ve İTÜ Geliştirme Vakfı personeli, diğer üniversitelerin yüksek lisans ve doktora öğrencileri ile öğretim elemanları, Üniversite Yönetim Kurulu (ÜYK) kararı ile belirlenen koşullar çerçevesinde sadece kütüphane içindeki hizmetlerden yararlanabilir, ödünç yayın alamazlar.</li><li>İTÜ mezunları mezun kartları ile, diğer üniversitelerin öğretim elemanları ve lisansüstü öğrencileri çıkarılacak üyelik kartı ile, Üniversite Yönetim Kurulu (ÜYK) tarafından belirlenen kurallar çerçevesinde misafir üye olarak İTÜ Kütüphanelerinden yararlanabilirler.</li></ul></li><li><b>Üye Olamayacaklar:</b><ul><li>Diğer üniversitelerin lisans öğrencileri kütüphaneden yararlanamazlar.</li></ul></li></ul><br><p><b>Genel Bilgi:</b> Kütüphaneye giriş ve ödünç verme işlemi, üniversite kimlik kartı ile yapılmaktadır.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 89040,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffdrcpna71gyz10s05",
+    "timestamp": "2025-09-11T12:24:08.987Z",
+    "userId": "web-user-1757593439217",
+    "userMessage": "literatür taraması nasıl yapılır ?",
+    "aiResponse": "<p>Etkili bir literatür taraması yapmak için aşağıdaki adımları izleyebilirsiniz:</p><h3>Adımlar:</h3><ul><li><b>Araştırma Konusunu Belirleme:</b> Araştırmak istediğiniz konuyu net bir şekilde belirleyin. Bu, literatür taramanızın odak noktasını oluşturacaktır.</li><li><b>Anahtar Kelimeleri Belirleme:</b> Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin. Bu kelimeler, literatür taramanızda kullanacağınız arama terimleri olacaktır.</li><li><b>Kaynakları Seçme:</b> Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın.</li><li><b>Arama Yapma:</b> Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz.</li><li><b>Kaynakları Değerlendirme:</b> Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin. İlgili kaynakların tam metinlerini inceleyin.</li><li><b>Bilgileri Organize Etme:</b> Okuduğunuz makalelerden önemli bilgileri not alın ve referans yönetim araçları kullanarak kaynaklarınızı organize edin.</li><li><b>Analiz ve Yazım:</b> Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın ve literatür taramanızı yazılı hale getirerek bulgularınızı ve analizlerinizi sunun.</li></ul><p><b>İlgili Bilgiler:</b></p><ul><li>Literatür taraması için Scopus, Web of Science, EBSCO gibi veritabanlarını kullanabilirsiniz.</li><li>En güncel makaleleri bulmak için İTÜ Kütüphane anasayfasındaki \"Tarıyorum\" arama motorunu kullanabilirsiniz.</li><li>Genel literatür taraması için <a href=\"https://www.proquest.com/central/index\">ProQuest Central</a> ve <a href=\"https://www.scopus.com/\">Scopus</a> gibi veritabanları kaliteli akademik yayınlar içerir.</li><li>Referans yönetim araçları olarak Mendeley ve EndNote kullanılabilir.</li><li>Daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz. Kütüphane, ihtiyaç duyulması halinde literatür tarama hizmeti sunmaktadır.</li></ul>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Etkili bir literatür taraması yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  **Araştırma Konusunu Belirleme:** Araştırmak istediğiniz konuyu net bir şekilde belirleyin. Bu, literatür taramanızın odak noktasını oluşturacaktır.\n2.  **Anahtar Kelimeleri Belirleme:** Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin. Bu kelimeler, literatür taramanızda kullanacağınız arama terimleri olacaktır.\n3.  **Kaynakları Seçme:** Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın.\n4.  **Arama Yapma:** Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz.\n5.  **Kaynakları Değerlendirme:** Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin. İlgili kaynakların tam metinlerini inceleyin.\n6.  **Bilgileri Organize Etme:** Okuduğunuz makalelerden önemli bilgileri not alın ve referans yönetim araçları kullanarak kaynaklarınızı organize edin.\n7.  **Analiz ve Yazım:** Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın ve literatür taramanızı yazılı hale getirerek bulgularınızı ve analizlerinizi sunun.\n\n**İlgili bilgi:**\n*   Literatür taraması için Scopus, Web of Science, EBSCO gibi veritabanlarını kullanabilirsiniz.\n*   En güncel makaleleri bulmak için İTÜ Kütüphane anasayfasındaki \"Tarıyorum\" arama motorunu kullanabilirsiniz.\n*   Genel literatür taraması için <a href=\"https://www.proquest.com/central/index\">ProQuest Central</a> ve <a href=\"https://www.scopus.com/\">Scopus</a> gibi veritabanları kaliteli akademik yayınlar içerir.\n*   Referans yönetim araçları olarak Mendeley ve EndNote kullanılabilir.\n*   Daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz. Kütüphane, ihtiyaç duyulması halinde literatür tarama hizmeti sunmaktadır.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 8\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 53\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "literatür taraması nasıl yapılır ?"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "literatür taraması nasıl yapılır"
+                }
+              },
+              "thoughtSignature": "CusBAdHtim9/J8u+T/fmp36plreUBLTGpduka35gYPPnz2Qs+nfBZnDcsr7sEoBxCUZQ79AXjvJZH3Z42HU/YnKS4+OimS9SNfTf/CoTDqVEtvSjnaYkHFvjZaMni6Y6h6MneAqm3yVBX0vjiMUNQWs7dVqslEGtcOBHwUfgX495i4T42y9pIUtu5iXsmcMaZTgr55MNTLmLBNuzXsu4cqmDhQaypikV1fkO5jopKcgywSiVa/OEj1m6VT5MPzpbJzpk8ogvI/Y+sFdpJpEaeqjwW/7Blb/7IZq1GasfGsAOhXM3HUeJaVfJ801XbQ=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "literatür taraması nasıl yapılır ?"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "literatür taraması nasıl yapılır"
+                  }
+                },
+                "thoughtSignature": "CusBAdHtim9/J8u+T/fmp36plreUBLTGpduka35gYPPnz2Qs+nfBZnDcsr7sEoBxCUZQ79AXjvJZH3Z42HU/YnKS4+OimS9SNfTf/CoTDqVEtvSjnaYkHFvjZaMni6Y6h6MneAqm3yVBX0vjiMUNQWs7dVqslEGtcOBHwUfgX495i4T42y9pIUtu5iXsmcMaZTgr55MNTLmLBNuzXsu4cqmDhQaypikV1fkO5jopKcgywSiVa/OEj1m6VT5MPzpbJzpk8ogvI/Y+sFdpJpEaeqjwW/7Blb/7IZq1GasfGsAOhXM3HUeJaVfJ801XbQ=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Etkili bir literatür taraması yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  **Araştırma Konusunu Belirleme:** Araştırmak istediğiniz konuyu net bir şekilde belirleyin. Bu, literatür taramanızın odak noktasını oluşturacaktır.\n2.  **Anahtar Kelimeleri Belirleme:** Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin. Bu kelimeler, literatür taramanızda kullanacağınız arama terimleri olacaktır.\n3.  **Kaynakları Seçme:** Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın.\n4.  **Arama Yapma:** Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz.\n5.  **Kaynakları Değerlendirme:** Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin. İlgili kaynakların tam metinlerini inceleyin.\n6.  **Bilgileri Organize Etme:** Okuduğunuz makalelerden önemli bilgileri not alın ve referans yönetim araçları kullanarak kaynaklarınızı organize edin.\n7.  **Analiz ve Yazım:** Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın ve literatür taramanızı yazılı hale getirerek bulgularınızı ve analizlerinizi sunun.\n\n**İlgili bilgi:**\n*   Literatür taraması için Scopus, Web of Science, EBSCO gibi veritabanlarını kullanabilirsiniz.\n*   En güncel makaleleri bulmak için İTÜ Kütüphane anasayfasındaki \"Tarıyorum\" arama motorunu kullanabilirsiniz.\n*   Genel literatür taraması için <a href=\"https://www.proquest.com/central/index\">ProQuest Central</a> ve <a href=\"https://www.scopus.com/\">Scopus</a> gibi veritabanları kaliteli akademik yayınlar içerir.\n*   Referans yönetim araçları olarak Mendeley ve EndNote kullanılabilir.\n*   Daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz. Kütüphane, ihtiyaç duyulması halinde literatür tarama hizmeti sunmaktadır.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 8\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 53\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Etkili bir literatür taraması yapmak için aşağıdaki adımları izleyebilirsiniz:</p><h3>Adımlar:</h3><ul><li><b>Araştırma Konusunu Belirleme:</b> Araştırmak istediğiniz konuyu net bir şekilde belirleyin. Bu, literatür taramanızın odak noktasını oluşturacaktır.</li><li><b>Anahtar Kelimeleri Belirleme:</b> Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin. Bu kelimeler, literatür taramanızda kullanacağınız arama terimleri olacaktır.</li><li><b>Kaynakları Seçme:</b> Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın.</li><li><b>Arama Yapma:</b> Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz.</li><li><b>Kaynakları Değerlendirme:</b> Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin. İlgili kaynakların tam metinlerini inceleyin.</li><li><b>Bilgileri Organize Etme:</b> Okuduğunuz makalelerden önemli bilgileri not alın ve referans yönetim araçları kullanarak kaynaklarınızı organize edin.</li><li><b>Analiz ve Yazım:</b> Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın ve literatür taramanızı yazılı hale getirerek bulgularınızı ve analizlerinizi sunun.</li></ul><p><b>İlgili Bilgiler:</b></p><ul><li>Literatür taraması için Scopus, Web of Science, EBSCO gibi veritabanlarını kullanabilirsiniz.</li><li>En güncel makaleleri bulmak için İTÜ Kütüphane anasayfasındaki \"Tarıyorum\" arama motorunu kullanabilirsiniz.</li><li>Genel literatür taraması için <a href=\"https://www.proquest.com/central/index\">ProQuest Central</a> ve <a href=\"https://www.scopus.com/\">Scopus</a> gibi veritabanları kaliteli akademik yayınlar içerir.</li><li>Referans yönetim araçları olarak Mendeley ve EndNote kullanılabilir.</li><li>Daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz. Kütüphane, ihtiyaç duyulması halinde literatür tarama hizmeti sunmaktadır.</li></ul>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 12405,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffi5j690idarcxqjm4",
+    "timestamp": "2025-09-11T14:27:09.009Z",
+    "userId": "web-user-1757600812120",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphanelerin genel çalışma saatleri ve tatil günleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CuUBAdHtim9oNNfKv4uZN0+YU201mjKjiDVO8xgFYiWI/M7NeihoK4lnxM6HZ6U7wfa5tzz1XT1wg3CiK7zeCg+92Nbrqn26HyDbpeDJv6HUtVMnHjOFpTbyEsWkBiZJZEI4KI9q8vZasyjFZRDgR65eqiIZ37kJar+KIB5GTW0RsPw612DpEo1VejOFsZDTKM1pgeRnL9YKUIzI0wwQRW03wrIhNPOvp//+VBIj5qUlj4xH0VQkyVFSPKat1XZtipjgWRYM90oIjSNkZxkFGRGlxuGgow/Dk2pwrso+KmH/T566RQi0Xw=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CuUBAdHtim9oNNfKv4uZN0+YU201mjKjiDVO8xgFYiWI/M7NeihoK4lnxM6HZ6U7wfa5tzz1XT1wg3CiK7zeCg+92Nbrqn26HyDbpeDJv6HUtVMnHjOFpTbyEsWkBiZJZEI4KI9q8vZasyjFZRDgR65eqiIZ37kJar+KIB5GTW0RsPw612DpEo1VejOFsZDTKM1pgeRnL9YKUIzI0wwQRW03wrIhNPOvp//+VBIj5qUlj4xH0VQkyVFSPKat1XZtipjgWRYM90oIjSNkZxkFGRGlxuGgow/Dk2pwrso+KmH/T566RQi0Xw=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphanelerin genel çalışma saatleri ve tatil günleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Mustafa İnan Merkez Kütüphanesi, resmi tatiller dışında 7/24 açıktır.<br>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 18836,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mffi97w8sg13215m5v",
+    "timestamp": "2025-09-11T14:30:01.016Z",
+    "userId": "web-user-1757600983086",
+    "userMessage": "nasil arasitirma yapabilirim",
+    "aiResponse": "<p>Etkili bir araştırma yapmak için aşağıdaki adımları izleyebilirsiniz:</p><h3>Araştırma Adımları:</h3><ul><li><b>Araştırma Konusunu Belirleme:</b> Araştırmak istediğiniz konuyu net bir şekilde belirleyin.</li><li><b>Anahtar Kelimeleri Belirleme:</b> Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin.</li><li><b>Kaynakları Seçme:</b> Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın.</li><li><b>Arama Yapma:</b> Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz.</li><li><b>Kaynakları Değerlendirme:</b> Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin.</li><li><b>Bilgileri Organize Etme:</b> Önemli bilgileri not alın ve referans yönetim araçları (Mendeley, EndNote gibi) kullanarak kaynaklarınızı organize edin.</li><li><b>Analiz ve Yazım:</b> Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın ve araştırmanızı yazılı hale getirin.</li></ul><p>İTÜ Kütüphanesi web sitesi anasayfasında araştırdığınız konuyu \"Tarıyorum\" arama motoruna girerek ya da o konu ile ilgili veri tabanlarını kullanarak en güncel akademik yayınlara erişebilirsiniz. Ayrıca <b>ProQuest Central</b> (<a href=\"https://www.proquest.com/central/index\">https://www.proquest.com/central/index</a>) ve <b>Scopus</b> (<a href=\"https://www.scopus.com/\">https://www.scopus.com/</a>) genel literatür taraması yapmak için oldukça fazla akademik yayını içeren kaliteli veritabanlarıdır.</p><p>Eğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Etkili bir araştırma yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  **Araştırma Konusunu Belirleme:** Araştırmak istediğiniz konuyu net bir şekilde belirleyin. Bu, araştırmanızın odak noktasını oluşturacaktır.\n2.  **Anahtar Kelimeleri Belirleme:** Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin. Bu kelimeler, arama terimleriniz olacaktır.\n3.  **Kaynakları Seçme:** Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın. Scopus, Web of Science, EBSCO gibi veritabanları genellikle akademik makalelere erişim sağlar.\n4.  **Arama Yapma:** Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz. Konu taramasında çok fazla yayına ulaşırsanız, aradığınız konuyu tam olarak ifade edecek, konuyu daraltıp sınırlayacak başlıklar belirleyerek araştırmanızı sürdürmeniz önerilir.\n5.  **Kaynakları Değerlendirme:** Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin. İlgili kaynakların tam metinlerini inceleyin.\n6.  **Bilgileri Organize Etme:** Okuduğunuz makalelerden önemli bilgileri not alın ve referans yönetim araçları (Mendeley, EndNote gibi) kullanarak kaynaklarınızı organize edin.\n7.  **Analiz ve Yazım:** Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın. Araştırmanızı yazılı hale getirerek, bulgularınızı ve analizlerinizi sunun.\n\nEğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz.\n\n**İlgili bilgi:**\nİTÜ Kütüphanesi web sitesi anasayfasında araştırdığınız konuyu \"Tarıyorum\" arama motoruna girerek ya da o konu ile ilgili veri tabanlarını kullanarak en güncel akademik yayınlara erişebilirsiniz. Ayrıca ProQuest Central (<a href=\"https://www.proquest.com/central/index\">https://www.proquest.com/central/index</a>) ve Scopus (<a href=\"https://www.scopus.com/\">https://www.scopus.com/</a>) genel literatür taraması yapmak için oldukça fazla akademik yayını içeren kaliteli veritabanlarıdır.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 8\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 16\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 51\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 53\n*   ARAŞTIRMA (metin bloğu)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "nasil arasitirma yapabilirim"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "nasıl araştırma yapabilirim"
+                }
+              },
+              "thoughtSignature": "CpACAdHtim+wNye4EA6SJmsvonkFgvH0yPbm6ZC3ukOzP0HcmzRyymR+K1wYEagBszh6h/hmwNm+rNkgh7nCbqmDTuTDpJSq7CPT44pPWIeG8/R5txvPMi2eHRrmVTXdzvE+AEFo/pLzZpBwkw2f919xnRz613EHvqdyl7evQU8iSF5q+ooGEfdeUvKxslTXHueR5njjpARAhn+kHQ0sGkPc3Gk1mCJ+wV8zomE0s4m7DZ9RSzrh/maSfK4PyF+ZfCSoCeS0U4SRG6fB9NMNpaOXaPHX1RN0v0EUYlH8qClV4w56GOiz71sn4d1K+2pqlDBi415PiSoAjYZiwKMa00R7NOGA47CaTkqLVtnx9Pve38Y="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "nasil arasitirma yapabilirim"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "nasıl araştırma yapabilirim"
+                  }
+                },
+                "thoughtSignature": "CpACAdHtim+wNye4EA6SJmsvonkFgvH0yPbm6ZC3ukOzP0HcmzRyymR+K1wYEagBszh6h/hmwNm+rNkgh7nCbqmDTuTDpJSq7CPT44pPWIeG8/R5txvPMi2eHRrmVTXdzvE+AEFo/pLzZpBwkw2f919xnRz613EHvqdyl7evQU8iSF5q+ooGEfdeUvKxslTXHueR5njjpARAhn+kHQ0sGkPc3Gk1mCJ+wV8zomE0s4m7DZ9RSzrh/maSfK4PyF+ZfCSoCeS0U4SRG6fB9NMNpaOXaPHX1RN0v0EUYlH8qClV4w56GOiz71sn4d1K+2pqlDBi415PiSoAjYZiwKMa00R7NOGA47CaTkqLVtnx9Pve38Y="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Etkili bir araştırma yapmak için aşağıdaki adımları izleyebilirsiniz:\n\n1.  **Araştırma Konusunu Belirleme:** Araştırmak istediğiniz konuyu net bir şekilde belirleyin. Bu, araştırmanızın odak noktasını oluşturacaktır.\n2.  **Anahtar Kelimeleri Belirleme:** Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin. Bu kelimeler, arama terimleriniz olacaktır.\n3.  **Kaynakları Seçme:** Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın. Scopus, Web of Science, EBSCO gibi veritabanları genellikle akademik makalelere erişim sağlar.\n4.  **Arama Yapma:** Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz. Konu taramasında çok fazla yayına ulaşırsanız, aradığınız konuyu tam olarak ifade edecek, konuyu daraltıp sınırlayacak başlıklar belirleyerek araştırmanızı sürdürmeniz önerilir.\n5.  **Kaynakları Değerlendirme:** Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin. İlgili kaynakların tam metinlerini inceleyin.\n6.  **Bilgileri Organize Etme:** Okuduğunuz makalelerden önemli bilgileri not alın ve referans yönetim araçları (Mendeley, EndNote gibi) kullanarak kaynaklarınızı organize edin.\n7.  **Analiz ve Yazım:** Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın. Araştırmanızı yazılı hale getirerek, bulgularınızı ve analizlerinizi sunun.\n\nEğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz.\n\n**İlgili bilgi:**\nİTÜ Kütüphanesi web sitesi anasayfasında araştırdığınız konuyu \"Tarıyorum\" arama motoruna girerek ya da o konu ile ilgili veri tabanlarını kullanarak en güncel akademik yayınlara erişebilirsiniz. Ayrıca ProQuest Central (<a href=\"https://www.proquest.com/central/index\">https://www.proquest.com/central/index</a>) ve Scopus (<a href=\"https://www.scopus.com/\">https://www.scopus.com/</a>) genel literatür taraması yapmak için oldukça fazla akademik yayını içeren kaliteli veritabanlarıdır.\n\n**Kaynaklar:**\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 8\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 16\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 51\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 53\n*   ARAŞTIRMA (metin bloğu)\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Etkili bir araştırma yapmak için aşağıdaki adımları izleyebilirsiniz:</p><h3>Araştırma Adımları:</h3><ul><li><b>Araştırma Konusunu Belirleme:</b> Araştırmak istediğiniz konuyu net bir şekilde belirleyin.</li><li><b>Anahtar Kelimeleri Belirleme:</b> Konunuzla ilgili anahtar kelimeleri ve terimleri belirleyin.</li><li><b>Kaynakları Seçme:</b> Üniversitenizin kütüphanesi tarafından sağlanan veritabanları ve kaynakları kullanarak arama yapın.</li><li><b>Arama Yapma:</b> Anahtar kelimeleri kullanarak veritabanlarında arama yapın. Boolean operatörleri (AND, OR, NOT) kullanarak aramalarınızı daraltabilir veya genişletebilirsiniz.</li><li><b>Kaynakları Değerlendirme:</b> Bulduğunuz kaynakların özetlerini okuyarak konunuzla ilgili olup olmadığını değerlendirin.</li><li><b>Bilgileri Organize Etme:</b> Önemli bilgileri not alın ve referans yönetim araçları (Mendeley, EndNote gibi) kullanarak kaynaklarınızı organize edin.</li><li><b>Analiz ve Yazım:</b> Topladığınız bilgileri analiz ederek, araştırma sorularınıza yanıt bulmaya çalışın ve araştırmanızı yazılı hale getirin.</li></ul><p>İTÜ Kütüphanesi web sitesi anasayfasında araştırdığınız konuyu \"Tarıyorum\" arama motoruna girerek ya da o konu ile ilgili veri tabanlarını kullanarak en güncel akademik yayınlara erişebilirsiniz. Ayrıca <b>ProQuest Central</b> (<a href=\"https://www.proquest.com/central/index\">https://www.proquest.com/central/index</a>) ve <b>Scopus</b> (<a href=\"https://www.scopus.com/\">https://www.scopus.com/</a>) genel literatür taraması yapmak için oldukça fazla akademik yayını içeren kaliteli veritabanlarıdır.</p><p>Eğer daha fazla bilgi veya rehberlik isterseniz, kütüphane personelinden destek alabilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 20764,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  }
+]

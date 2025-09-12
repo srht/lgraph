@@ -37,5 +37,32 @@
       "context": null,
       "type": "Object"
     }
+  },
+  {
+    "timestamp": "2025-09-10T08:03:56.139Z",
+    "data": {
+      "message": "[object Object]",
+      "stack": "Error: 401 Incorrect API key provided. \n\nTroubleshooting URL: https://js.langchain.com/docs/troubleshooting/errors/MODEL_AUTHENTICATION/\n\n    at APIError.generate (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/core/error.mjs:44:20)\n    at OpenAI.makeStatusError (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/client.mjs:156:32)\n    at OpenAI.makeRequest (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/client.mjs:301:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/dist/chat_models.js:2004:28\n    at async RetryOperation._fn (E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\node_modules\\p-retry\\index.js:50:12)",
+      "context": null,
+      "type": "Object"
+    }
+  },
+  {
+    "timestamp": "2025-09-10T08:18:44.062Z",
+    "data": {
+      "message": "[object Object]",
+      "stack": "Error: 401 Incorrect API key provided. \n\nTroubleshooting URL: https://js.langchain.com/docs/troubleshooting/errors/MODEL_AUTHENTICATION/\n\n    at APIError.generate (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/core/error.mjs:44:20)\n    at OpenAI.makeStatusError (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/client.mjs:156:32)\n    at OpenAI.makeRequest (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/client.mjs:301:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/dist/chat_models.js:2004:28\n    at async RetryOperation._fn (E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\node_modules\\p-retry\\index.js:50:12)",
+      "context": null,
+      "type": "Object"
+    }
+  },
+  {
+    "timestamp": "2025-09-10T08:19:19.235Z",
+    "data": {
+      "message": "[object Object]",
+      "stack": "Error: 401 Incorrect API key provided. \n\nTroubleshooting URL: https://js.langchain.com/docs/troubleshooting/errors/MODEL_AUTHENTICATION/\n\n    at APIError.generate (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/core/error.mjs:44:20)\n    at OpenAI.makeStatusError (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/client.mjs:156:32)\n    at OpenAI.makeRequest (file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/node_modules/openai/client.mjs:301:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///E:/Custom%20Documents/Projects/Proje%20Deneme/lgraph/node_modules/@langchain/openai/dist/chat_models.js:2004:28\n    at async RetryOperation._fn (E:\\Custom Documents\\Projects\\Proje Deneme\\lgraph\\node_modules\\p-retry\\index.js:50:12)",
+      "context": null,
+      "type": "Object"
+    }
   }
 ]

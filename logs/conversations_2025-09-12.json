@@ -1,0 +1,477 @@
+[
+  {
+    "id": "mfgusgyppb819zcmsnq",
+    "timestamp": "2025-09-12T13:08:40.801Z",
+    "userId": "web-user-1757682514850",
+    "userMessage": "LC Sınıflama sistemi nedir",
+    "aiResponse": "<p><b>LC Sınıflama Sistemi (Library of Congress Sınıflama Sistemi)</b>, kütüphane koleksiyonunun yerleşiminde kullanılan bir sistemdir. Bu sistemde konuların harf ve rakamlardan oluşan karşılıklarına <b>yer numarası</b> adı verilir. Yer numarası, her bilgi kaynağı için tektir, konusal düzende ve kaynağın koleksiyonda bulunduğu yeri göstermektedir. İTÜ Kütüphaneleri'nde yayınlar, açık raf düzeninde ve bu sınıflama sistemine göre konusal olarak yerleştirilmiştir.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "LC Sınıflama Sistemi (Library of Congress Sınıflama Sistemi), kütüphane koleksiyonunun yerleşiminde kullanılan bir sistemdir. Bu sistemde konuların harf ve rakamlardan oluşan karşılıklarına yer numarası adı verilir. Yer numarası her bilgi kaynağı için tektir, konusal düzende ve kaynağın koleksiyonda bulunduğu yeri göstermektedir. İTÜ Kütüphaneleri'nde yayınlar, açık raf düzeninde ve bu sınıflama sistemine göre konusal olarak yerleştirilmiştir.\n\nKaynaklar:\n- Koleksiyonun Yerleşimi\n- MUSTAFA İNAN KÜTÜPHANESİ’NDE NE NEREDE?\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 66\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "LC Sınıflama sistemi nedir"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "LC Sınıflama sistemi nedir"
+                }
+              },
+              "thoughtSignature": "CswCAdHtim96EVL/7xAzwNy2BlTCsIK8sMfg9i/vzHTCXKnYwfVxY7lpLFXPaJgZiXq3XJPMZ26fOgcBFoi6pqDdrGvXnl05UKXvqiju7NYghhbrgUwgQo0fqiweRJ1YfoJ+muGHrPamBunhCcf3fyoxhCXzszm4ELE5Cofd8Kqp4SG7srBTCqwzqp3/7OUGmfDHIq6CLEUGKHsNFkI3AWCj/A8n4l0yqA+POzxq9HOuoTAPa2qO/QREEnHJcpJHW6OSZV4A/A/CPdhQYTywfUu47sxGo8bZs0wCxnPj663MUOF84VJ+NLdI/y6m4Z43VhpjprOpcwIfftqYWLCtd29fXeltMHcU+JEd3+APdA+ls7VQpvpS/lWPkFk0VvarQa0ae3GEBDiyvHU9tgqQWiNNAURxA7RlkCZgKrwXlzPbsDWP2iVQgAMDfuLhDho="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "LC Sınıflama sistemi nedir"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "LC Sınıflama sistemi nedir"
+                  }
+                },
+                "thoughtSignature": "CswCAdHtim96EVL/7xAzwNy2BlTCsIK8sMfg9i/vzHTCXKnYwfVxY7lpLFXPaJgZiXq3XJPMZ26fOgcBFoi6pqDdrGvXnl05UKXvqiju7NYghhbrgUwgQo0fqiweRJ1YfoJ+muGHrPamBunhCcf3fyoxhCXzszm4ELE5Cofd8Kqp4SG7srBTCqwzqp3/7OUGmfDHIq6CLEUGKHsNFkI3AWCj/A8n4l0yqA+POzxq9HOuoTAPa2qO/QREEnHJcpJHW6OSZV4A/A/CPdhQYTywfUu47sxGo8bZs0wCxnPj663MUOF84VJ+NLdI/y6m4Z43VhpjprOpcwIfftqYWLCtd29fXeltMHcU+JEd3+APdA+ls7VQpvpS/lWPkFk0VvarQa0ae3GEBDiyvHU9tgqQWiNNAURxA7RlkCZgKrwXlzPbsDWP2iVQgAMDfuLhDho="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "LC Sınıflama Sistemi (Library of Congress Sınıflama Sistemi), kütüphane koleksiyonunun yerleşiminde kullanılan bir sistemdir. Bu sistemde konuların harf ve rakamlardan oluşan karşılıklarına yer numarası adı verilir. Yer numarası her bilgi kaynağı için tektir, konusal düzende ve kaynağın koleksiyonda bulunduğu yeri göstermektedir. İTÜ Kütüphaneleri'nde yayınlar, açık raf düzeninde ve bu sınıflama sistemine göre konusal olarak yerleştirilmiştir.\n\nKaynaklar:\n- Koleksiyonun Yerleşimi\n- MUSTAFA İNAN KÜTÜPHANESİ’NDE NE NEREDE?\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 66\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>LC Sınıflama Sistemi (Library of Congress Sınıflama Sistemi)</b>, kütüphane koleksiyonunun yerleşiminde kullanılan bir sistemdir. Bu sistemde konuların harf ve rakamlardan oluşan karşılıklarına <b>yer numarası</b> adı verilir. Yer numarası, her bilgi kaynağı için tektir, konusal düzende ve kaynağın koleksiyonda bulunduğu yeri göstermektedir. İTÜ Kütüphaneleri'nde yayınlar, açık raf düzeninde ve bu sınıflama sistemine göre konusal olarak yerleştirilmiştir.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 7645,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mfgutqimqs6air0kt3f",
+    "timestamp": "2025-09-12T13:09:39.838Z",
+    "userId": "web-user-1757682575074",
+    "userMessage": "Kütüphaneden kaç kitap ödünç alınabilir",
+    "aiResponse": "<p>Kütüphaneden ödünç alınabilecek kitap sayısı kullanıcı tipine göre değişiklik göstermektedir:</p><ul><li><b>Öğretim Elemanı:</b> 30 kitap</li><li><b>İdari Personel:</b> 10 kitap</li><li><b>Y.Lisans/Doktora Öğrencisi:</b> 15 kitap</li><li><b>Lisans Öğrencisi:</b> 10 kitap</li></ul>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Ödünç alınabilecek kitap sayısı kullanıcı tipine göre aşağıdaki gibidir:\n\n*   **Öğretim Elemanı:** 30 kitap\n*   **İdari Personel:** 10 kitap\n*   **Y.Lisans/Doktora Öğrencisi:** 15 kitap\n*   **Lisans Öğrencisi:** 10 kitap\n\nKaynaklar:\n*   3.2.2 Ödünç yayın alma sayısı tablosu",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Kütüphaneden kaç kitap ödünç alınabilir"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "ödünç alınabilecek kitap sayısı"
+                }
+              },
+              "thoughtSignature": "CrIDAdHtim/yyC4Qtl0fEr1d6R1Y3FtCQnol0fw2hi9RUrsBqAFS2d8t4KgntvoseikKheou8BQQoUzTrUsP0VethUC9C7sX9ZroV4x0k5VSuBDxlWFig8NLLOWVBQ53VjbFVXuwSt7K0Zrcv5UbdxrF2YGO3mv5xBteMbgqKzMxBSaQ1/5zYasGfclNJqXF26bL/aP1oRqPvrlQJyEjMUGZTJvwRwcbEv23UngZLbK/zPdS5O38wSfLpZ/VhntTGMw8mT30KX2bSEDxH5xkG3t836JnND5qhsuJZWksf7+SEA5II1/cc9tQdD6oEManA8ODUHJzCvFxMAGgKvF0yXS8Z2aahka5wIKLAmMM8VDpWlzlqSkuAFZedseTJTpocpEabXDgIII/iz79pH4mNfN/MLDZfNdWiNRitcyiIm/IHSOGwUTvZonKweHWGd2S+gTeTOK7Tao6ZelFwRKZudaUJq4ckAXx/WwsiYd3KvOQuGuRuiAyqFJ1GhOYAdkMQJwDhsHxpjFgeii6mVtjlbKVRLtNyUJg0iw1sm4uBkhtdX61AOREbf8I0GZbafq9kJZcVow="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Kütüphaneden kaç kitap ödünç alınabilir"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "ödünç alınabilecek kitap sayısı"
+                  }
+                },
+                "thoughtSignature": "CrIDAdHtim/yyC4Qtl0fEr1d6R1Y3FtCQnol0fw2hi9RUrsBqAFS2d8t4KgntvoseikKheou8BQQoUzTrUsP0VethUC9C7sX9ZroV4x0k5VSuBDxlWFig8NLLOWVBQ53VjbFVXuwSt7K0Zrcv5UbdxrF2YGO3mv5xBteMbgqKzMxBSaQ1/5zYasGfclNJqXF26bL/aP1oRqPvrlQJyEjMUGZTJvwRwcbEv23UngZLbK/zPdS5O38wSfLpZ/VhntTGMw8mT30KX2bSEDxH5xkG3t836JnND5qhsuJZWksf7+SEA5II1/cc9tQdD6oEManA8ODUHJzCvFxMAGgKvF0yXS8Z2aahka5wIKLAmMM8VDpWlzlqSkuAFZedseTJTpocpEabXDgIII/iz79pH4mNfN/MLDZfNdWiNRitcyiIm/IHSOGwUTvZonKweHWGd2S+gTeTOK7Tao6ZelFwRKZudaUJq4ckAXx/WwsiYd3KvOQuGuRuiAyqFJ1GhOYAdkMQJwDhsHxpjFgeii6mVtjlbKVRLtNyUJg0iw1sm4uBkhtdX61AOREbf8I0GZbafq9kJZcVow="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Ödünç alınabilecek kitap sayısı kullanıcı tipine göre aşağıdaki gibidir:\n\n*   **Öğretim Elemanı:** 30 kitap\n*   **İdari Personel:** 10 kitap\n*   **Y.Lisans/Doktora Öğrencisi:** 15 kitap\n*   **Lisans Öğrencisi:** 10 kitap\n\nKaynaklar:\n*   3.2.2 Ödünç yayın alma sayısı tablosu"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p>Kütüphaneden ödünç alınabilecek kitap sayısı kullanıcı tipine göre değişiklik göstermektedir:</p><ul><li><b>Öğretim Elemanı:</b> 30 kitap</li><li><b>İdari Personel:</b> 10 kitap</li><li><b>Y.Lisans/Doktora Öğrencisi:</b> 15 kitap</li><li><b>Lisans Öğrencisi:</b> 10 kitap</li></ul>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 7128,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mfguug1x0tf5vdrsxjwm",
+    "timestamp": "2025-09-12T13:10:12.933Z",
+    "userId": "web-user-1757682595634",
+    "userMessage": "Ceza sistemi ???",
+    "aiResponse": "<p><b>Kütüphanede uygulanan ceza sistemi aşağıdaki gibidir:</b></p><h3>Üyelik Askıya Alma ve İptali</h3><ul><li>Disiplin kurullarından ceza alan kullanıcıların üyeliği 2 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.</li><li>İTÜ kimlik kartını başkasına kullandıran veya üzerinde tahrifat yapanların üyeliği 1 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.</li><li>Gecikme ceza miktarı belli bir miktara ulaştığında üyelik hakkına kısıtlama konulur ve geçici olarak kütüphane hizmetlerinden yararlanılamaz.</li><li>İTÜ emekli personelinin ödünç alınan yayını iki kez geciktirmesi ve cezasını ödemediği takdirde üyeliği iptal edilir.</li></ul><h3>Geciken Yayınlar İçin Para Cezası</h3><ul><li>Zamanında iade edilmeyen yayınlar için para cezası uygulanır.</li><li>İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara para cezası uygulanmaz.</li><li>Gününde iade edilmeyen her yayın için alınan gecikme cezası aşağıdaki tabloya göre hesaplanır:<br><b>Kullanıcı Tipi:</b> Tüm Kullanıcılar<br><b>1-7 gün arası:</b> 5 TL<br><b>8 gün ve sonrası:</b> 10 TL</li><li>Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur. Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.</li><li>Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.</li><li>Para cezasını ödemeyenlere ödünç yayın verilmez.</li></ul><h3>Diğer Cezalar ve Yaptırımlar</h3><ul><li>Kütüphane tesislerine ve materyallerine zarar veren veya izinsiz materyal çıkaran kullanıcılar hakkında ilgili birimlere bilgilendirme yapılarak, ilgili birimlerin yasal işlem yapması sağlanır.</li><li>İzin alınmadan kütüphane dışına materyal çıkarmaya teşebbüs edenler hakkında yasal işlem yapılır.</li><li>Gecikme Notlarına rağmen ödünç aldığı yayını iade etmeyen;<br>Öğrencilerin öğrenci otomasyon sistemindeki kayıtlarına blok/kısıntı konulur.<br>Öğretim elemanı ve idari personelin görev yaptığı birime yazı yazılır.</li><li>Zamanında teslim edilmeyen grup çalışma odaları için para cezası uygulanır.</li></ul>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Kütüphanede uygulanan ceza sistemi aşağıdaki gibidir:\n\n**Üyelik Askıya Alma ve İptali**\n*   Disiplin kurullarından ceza alan kullanıcıların üyeliği 2 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.\n*   İTÜ kimlik kartını başkasına kullandıran veya üzerinde tahrifat yapanların üyeliği 1 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.\n*   Gecikme ceza miktarı belli bir miktara ulaştığında üyelik hakkına kısıtlama konulur ve geçici olarak kütüphane hizmetlerinden yararlanılamaz.\n*   İTÜ emekli personelinin ödünç alınan yayını iki kez geciktirmesi ve cezasını ödemediği takdirde üyeliği iptal edilir.\n\n**Geciken Yayınlar İçin Para Cezası**\n*   Zamanında iade edilmeyen yayınlar için para cezası uygulanır.\n*   İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara para cezası uygulanmaz.\n*   Gününde iade edilmeyen her yayın için alınan gecikme cezası aşağıdaki tabloya göre hesaplanır:\n    *   **Kullanıcı Tipi:** Tüm Kullanıcılar\n    *   **1-7 gün arası:** 5 TL\n    *   **8 gün ve sonrası:** 10 TL\n*   Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur. Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.\n*   Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.\n*   Para cezasını ödemeyenlere ödünç yayın verilmez.\n\n**Diğer Cezalar ve Yaptırımlar**\n*   Kütüphane tesislerine ve materyallerine zarar veren veya izinsiz materyal çıkaran kullanıcılar hakkında ilgili birimlere bilgilendirme yapılarak, ilgili birimlerin yasal işlem yapması sağlanır.\n*   İzin alınmadan kütüphane dışına materyal çıkarmaya teşebbüs edenler hakkında yasal işlem yapılır.\n*   Gecikme Notlarına rağmen ödünç aldığı yayını iade etmeyen;\n    *   Öğrencilerin öğrenci otomasyon sistemindeki kayıtlarına blok/kısıntı konulur.\n    *   Öğretim elemanı ve idari personelin görev yaptığı birime yazı yazılır.\n*   Zamanında teslim edilmeyen grup çalışma odaları için para cezası uygulanır.\n\n**Kaynaklar:**\n*   Sayfa: 12\n*   Sayfa: 34\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Ceza sistemi ???"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Ceza sistemi"
+                }
+              },
+              "thoughtSignature": "Cu0DAdHtim+Dvt3k5z6xK+X39CRfpnv7XIBKecMZcbtW8/RUXY5Jr1k1XyXIh6UDuDixTDymPW3+Vey18fehfE99KhySxqhMBYvomgizvs1ddgYz4JBfgPkgSe4/puaK3uoiFNvayCN3THTxUGXOtBHDy9PI/FKd+3VT7S7TbGkpTv+DZt1Gurxpvs4WAvcDq9m/fD98yTLriahknzGgPxj6pZCGIztBG4t+7G0LGDXnUhMunlC8RZmsK7Ztp1oNoudZYlz59HU5ibjke7CI2/aeGkMnosqWAF2dscilmD0VwMAqOB7Ems9JAkO0KTpVgX7p/Jg/3o+f5oEK/8AUqQTTI7A23gDziX99ffzPl/DwU2ip913dre5w4pbDsstE/NvhulgrGXn8j8RZg9UT+p6xodYzbI1TFtBGteh9oJBXKvRXiaUe+awI2G2cpOTeynjDDQ8dzxS2ukmqsjS81QfdJlJW/vJx1r2w3r5m8LoZANAngrxItTjPTimFadUHEGahO2GtEFfm3kLBmauR0vxrGyDV9Gt36dCntBlDEvu48DWamN6ajzr1dipKpQAzu6YW8WmxwfKK0bIL6r8MOtylkupvt5VMyJPlPv8lU5ZLm2P9UrZgevDVPSiRNjHlyI+++e/Hmm4rfa1v2+YapA=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "Ceza sistemi ???"
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Ceza sistemi"
+                  }
+                },
+                "thoughtSignature": "Cu0DAdHtim+Dvt3k5z6xK+X39CRfpnv7XIBKecMZcbtW8/RUXY5Jr1k1XyXIh6UDuDixTDymPW3+Vey18fehfE99KhySxqhMBYvomgizvs1ddgYz4JBfgPkgSe4/puaK3uoiFNvayCN3THTxUGXOtBHDy9PI/FKd+3VT7S7TbGkpTv+DZt1Gurxpvs4WAvcDq9m/fD98yTLriahknzGgPxj6pZCGIztBG4t+7G0LGDXnUhMunlC8RZmsK7Ztp1oNoudZYlz59HU5ibjke7CI2/aeGkMnosqWAF2dscilmD0VwMAqOB7Ems9JAkO0KTpVgX7p/Jg/3o+f5oEK/8AUqQTTI7A23gDziX99ffzPl/DwU2ip913dre5w4pbDsstE/NvhulgrGXn8j8RZg9UT+p6xodYzbI1TFtBGteh9oJBXKvRXiaUe+awI2G2cpOTeynjDDQ8dzxS2ukmqsjS81QfdJlJW/vJx1r2w3r5m8LoZANAngrxItTjPTimFadUHEGahO2GtEFfm3kLBmauR0vxrGyDV9Gt36dCntBlDEvu48DWamN6ajzr1dipKpQAzu6YW8WmxwfKK0bIL6r8MOtylkupvt5VMyJPlPv8lU5ZLm2P9UrZgevDVPSiRNjHlyI+++e/Hmm4rfa1v2+YapA=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Kütüphanede uygulanan ceza sistemi aşağıdaki gibidir:\n\n**Üyelik Askıya Alma ve İptali**\n*   Disiplin kurullarından ceza alan kullanıcıların üyeliği 2 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.\n*   İTÜ kimlik kartını başkasına kullandıran veya üzerinde tahrifat yapanların üyeliği 1 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.\n*   Gecikme ceza miktarı belli bir miktara ulaştığında üyelik hakkına kısıtlama konulur ve geçici olarak kütüphane hizmetlerinden yararlanılamaz.\n*   İTÜ emekli personelinin ödünç alınan yayını iki kez geciktirmesi ve cezasını ödemediği takdirde üyeliği iptal edilir.\n\n**Geciken Yayınlar İçin Para Cezası**\n*   Zamanında iade edilmeyen yayınlar için para cezası uygulanır.\n*   İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara para cezası uygulanmaz.\n*   Gününde iade edilmeyen her yayın için alınan gecikme cezası aşağıdaki tabloya göre hesaplanır:\n    *   **Kullanıcı Tipi:** Tüm Kullanıcılar\n    *   **1-7 gün arası:** 5 TL\n    *   **8 gün ve sonrası:** 10 TL\n*   Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur. Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.\n*   Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.\n*   Para cezasını ödemeyenlere ödünç yayın verilmez.\n\n**Diğer Cezalar ve Yaptırımlar**\n*   Kütüphane tesislerine ve materyallerine zarar veren veya izinsiz materyal çıkaran kullanıcılar hakkında ilgili birimlere bilgilendirme yapılarak, ilgili birimlerin yasal işlem yapması sağlanır.\n*   İzin alınmadan kütüphane dışına materyal çıkarmaya teşebbüs edenler hakkında yasal işlem yapılır.\n*   Gecikme Notlarına rağmen ödünç aldığı yayını iade etmeyen;\n    *   Öğrencilerin öğrenci otomasyon sistemindeki kayıtlarına blok/kısıntı konulur.\n    *   Öğretim elemanı ve idari personelin görev yaptığı birime yazı yazılır.\n*   Zamanında teslim edilmeyen grup çalışma odaları için para cezası uygulanır.\n\n**Kaynaklar:**\n*   Sayfa: 12\n*   Sayfa: 34\n*   Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Kütüphanede uygulanan ceza sistemi aşağıdaki gibidir:</b></p><h3>Üyelik Askıya Alma ve İptali</h3><ul><li>Disiplin kurullarından ceza alan kullanıcıların üyeliği 2 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.</li><li>İTÜ kimlik kartını başkasına kullandıran veya üzerinde tahrifat yapanların üyeliği 1 ay süre ile askıya alınır ve hizmetlerden yararlanamaz.</li><li>Gecikme ceza miktarı belli bir miktara ulaştığında üyelik hakkına kısıtlama konulur ve geçici olarak kütüphane hizmetlerinden yararlanılamaz.</li><li>İTÜ emekli personelinin ödünç alınan yayını iki kez geciktirmesi ve cezasını ödemediği takdirde üyeliği iptal edilir.</li></ul><h3>Geciken Yayınlar İçin Para Cezası</h3><ul><li>Zamanında iade edilmeyen yayınlar için para cezası uygulanır.</li><li>İade tarihinden itibaren ilk üç gün içinde iade edilen yayınlara para cezası uygulanmaz.</li><li>Gününde iade edilmeyen her yayın için alınan gecikme cezası aşağıdaki tabloya göre hesaplanır:<br><b>Kullanıcı Tipi:</b> Tüm Kullanıcılar<br><b>1-7 gün arası:</b> 5 TL<br><b>8 gün ve sonrası:</b> 10 TL</li><li>Para cezaları Daire Başkanlığının önerisi üzerine Rektörlük oluruna sunulur. Ceza parası artışları her yıl yıllık TEFE/TÜFE oranlarına göre yapılır.</li><li>Toplanan paralar Üniversitenin hesabına yatırılır ve kütüphane ihtiyaçları için kullanılır.</li><li>Para cezasını ödemeyenlere ödünç yayın verilmez.</li></ul><h3>Diğer Cezalar ve Yaptırımlar</h3><ul><li>Kütüphane tesislerine ve materyallerine zarar veren veya izinsiz materyal çıkaran kullanıcılar hakkında ilgili birimlere bilgilendirme yapılarak, ilgili birimlerin yasal işlem yapması sağlanır.</li><li>İzin alınmadan kütüphane dışına materyal çıkarmaya teşebbüs edenler hakkında yasal işlem yapılır.</li><li>Gecikme Notlarına rağmen ödünç aldığı yayını iade etmeyen;<br>Öğrencilerin öğrenci otomasyon sistemindeki kayıtlarına blok/kısıntı konulur.<br>Öğretim elemanı ve idari personelin görev yaptığı birime yazı yazılır.</li><li>Zamanında teslim edilmeyen grup çalışma odaları için para cezası uygulanır.</li></ul>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 19144,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mfgv54hbyce05misk8b",
+    "timestamp": "2025-09-12T13:18:31.151Z",
+    "userId": "web-user-1757683090649",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><p>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Sayfa: yararlanma kosullari\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CvIBAdHtim8RZNfuGwTzdGOiq0eNXnJ/DENiSw44Hob9kQIvYznMlON7lDC1CYW/IwHjeH4YKwXCc9CMzFflL1Tj+v3JvIOjgYV7vqYRR7qkiQLJgciC8ZGhwfguC94CiKtLmoW+VkmgEkUjiJ+/sLw8/FXk26iwn5/ARnFtIWwXB6STBji9/parBeUIXQoIO6xX6ifobmSBawTyLiw7FStxprcqybfi6wnYbnJB8+iCmwXgllX8x2JP79bdGc/K3KxLx4CbWcoN44518L6svHVsBQyK83ATI931pIKdctZi3Rjca9YLVx7cgAJWTH3isNcfjHU="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CvIBAdHtim8RZNfuGwTzdGOiq0eNXnJ/DENiSw44Hob9kQIvYznMlON7lDC1CYW/IwHjeH4YKwXCc9CMzFflL1Tj+v3JvIOjgYV7vqYRR7qkiQLJgciC8ZGhwfguC94CiKtLmoW+VkmgEkUjiJ+/sLw8/FXk26iwn5/ARnFtIWwXB6STBji9/parBeUIXQoIO6xX6ifobmSBawTyLiw7FStxprcqybfi6wnYbnJB8+iCmwXgllX8x2JP79bdGc/K3KxLx4CbWcoN44518L6svHVsBQyK83ATI931pIKdctZi3Rjca9YLVx7cgAJWTH3isNcfjHU="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Sayfa: yararlanma kosullari\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 39\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><p>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 19862,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  },
+  {
+    "id": "mfgv6m0v2nsqmzexp4k",
+    "timestamp": "2025-09-12T13:19:40.543Z",
+    "userId": "web-user-1757683169498",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><p>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Sayfa: yararlanma kosullari\n* Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CvIBAdHtim/vLm4R+M6t/c+OFUe9AU2B3AlKVxB4ZKRmy6S/QDY5M5DparD8/tvmchpEiYFX+SX/2zVUDrH4hgTofQVgV8NV7fmnFHc7kGYkaUVdfoBHjBLzsgEactZb4uTnOXXhpR1Rxc0/qswYBzpuVM9s0asQsboQf0Vc31sMton9AnUY19EQLBhWN1IQjVvV3ixB1XmRO11pqL1P+6LbbyW6YMhcGBHubZY5EirdP2OM2wMWAjr2eibDzV51svyFPNJLjuiQe8ginkiOBl7aamUjPm8JE+O2nRPft+ig1FnI78MnlFcQLrYQUoF4I0aue6s="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CvIBAdHtim/vLm4R+M6t/c+OFUe9AU2B3AlKVxB4ZKRmy6S/QDY5M5DparD8/tvmchpEiYFX+SX/2zVUDrH4hgTofQVgV8NV7fmnFHc7kGYkaUVdfoBHjBLzsgEactZb4uTnOXXhpR1Rxc0/qswYBzpuVM9s0asQsboQf0Vc31sMton9AnUY19EQLBhWN1IQjVvV3ixB1XmRO11pqL1P+6LbbyW6YMhcGBHubZY5EirdP2OM2wMWAjr2eibDzV51svyFPNJLjuiQe8ginkiOBl7aamUjPm8JE+O2nRPft+ig1FnI78MnlFcQLrYQUoF4I0aue6s="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nŞube kütüphanelerde kapanış saatine 15 dakika kala kapanış işlemleri ve kapanış uyarıları başlatılır.\n\nKaynaklar:\n* Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 2\n* Sayfa: yararlanma kosullari\n* Sayfa: calisma saatleri\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><p>Şube kütüphanelerde ise kapanış saatine 15 dakika kala kapanış işlemleri ve uyarıları başlatılır.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 10487,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  }
+]

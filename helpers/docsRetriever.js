@@ -27,7 +27,7 @@ const DEFAULTS = {
     gemini: { model: "gemini-2.5-flash", temperature: 0 },
     openai: { model: "gpt-4o-mini", temperature: 0 },
   },
-  embeddingProvider: "gemini", // "gemini" | "openai"
+  embeddingProvider: "gemini", // "gemini" | "openai" - OpenAI limitler daha yüksek
   embeddingModel: {
     gemini: "gemini-embedding-001",          // çok dilli
     openai: "text-embedding-3-small",      // çok dilli
@@ -236,11 +236,22 @@ async function buildHybridRetriever({
   if (!VectorStore) {
     throw new Error("VectorStore tanımlı değil. Önce indeksleme yapın.");
   }
-  if (!AllDocs?.length) {
-    console.warn("BM25 için AllDocs boş görünüyor.");
-    const retriever = VectorStore.asRetriever({ k: 1000 });
-    AllDocs = await retriever.getRelevantDocuments("");
-    console.log("AllDocs:", AllDocs);
+  
+  // AllDocs'u lazy loading ile yükle
+  if (!AllDocs || AllDocs.length === 0) {
+    try {
+      console.log("🔄 BM25 için AllDocs yükleniyor...");
+      const retriever = VectorStore.asRetriever({ k: 10000 }); // Yüksek k değeri ile tüm dokümanları al
+      AllDocs = await retriever.getRelevantDocuments(""); // Boş string ile tüm dokümanları al
+      console.log(`✅ AllDocs yüklendi: ${AllDocs.length} doküman`);
+      
+      if (AllDocs.length === 0) {
+        console.warn("⚠️ VectorStore'da doküman bulunamadı!");
+      }
+    } catch (error) {
+      console.error("❌ AllDocs yüklenirken hata:", error);
+      AllDocs = [];
+    }
   }
 
   const vecRetriever = VectorStore.asRetriever({ k: kVec, searchType });
@@ -301,6 +312,9 @@ export function buildDocumentSearchTool({
   // Vector store'u ayarla
   if (vectorStore) {
     VectorStore = vectorStore;
+    // AllDocs'u sıfırla - buildHybridRetriever'da lazy loading yapılacak
+    AllDocs = [];
+    console.log("📋 VectorStore ayarlandı, AllDocs lazy loading ile yüklenecek");
   } else if (useCache) {
     // Cache'den yüklemeyi dene
     console.log("🔄 docsRetriever: Cache'den vector store yükleniyor...");
@@ -351,11 +365,18 @@ export function buildDocumentSearchTool({
 
       try {
 
-        // 1) HYBRID
+        // 1) VectorStore doküman kontrolü
+        const vectorStoreStats = await VectorStore.similaritySearch("", 1);
+        if (vectorStoreStats.length === 0) {
+          return `Üzgünüm, sistemde henüz doküman yüklenmemiş. Lütfen önce dokümanları yükleyin.`;
+        }
+
+        // 2) HYBRID
         const { hybrid } = await buildHybridRetriever({ kVec, kLex, searchType });
         let docs = await hybrid.getRelevantDocuments(userInput);
         console.log("hybrid docs:", docs);
-        // 2) Eğer hybrid boş kalırsa → BM25 deneyelim
+        
+        // 3) Eğer hybrid boş kalırsa → BM25 deneyelim
         if (!docs || docs.length === 0) {
           console.warn("Hybrid boş döndü. BM25 retriever deneniyor…");
           const { bm25Retriever } = await buildHybridRetriever({ kVec, kLex, searchType });
@@ -377,16 +398,7 @@ export function buildDocumentSearchTool({
             .map(([doc]) => doc);
           docs.push(...withScoresDocs);
 
-        // 3) Hâlâ boşsa → vektör skorlarına bak
-        /*
-        if (!docs || docs.length === 0) {
-          console.warn("BM25 de boş. similaritySearchWithScore deneniyor…");
-          
-        }
-
-        */
-
-        // 4) Yine boşsa → kullanıcıya net mesaj
+        // 4) Son kontrol - hâlâ boşsa → kullanıcıya net mesaj
         if (!docs || docs.length === 0) {
           return `Üzgünüm, "${userInput}" hakkında belgelerimde yeterli bilgi bulunamadı.`;
         }

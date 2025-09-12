@@ -1,0 +1,97 @@
+[
+  {
+    "id": "mfclz9mun0ggxy3brca",
+    "timestamp": "2025-09-09T13:50:56.646Z",
+    "userId": "web-user-1757425846330",
+    "userMessage": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                ",
+    "aiResponse": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><p>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>",
+    "toolsUsed": [
+      {
+        "toolName": "document_search",
+        "toolInput": "unknown",
+        "toolOutput": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri | URL: <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri>\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>",
+        "messageIndex": 2,
+        "messageType": "tool",
+        "status": "completed",
+        "executionTime": 0
+      }
+    ],
+    "llmCalls": [
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": [
+            {
+              "functionCall": {
+                "name": "document_search",
+                "args": {
+                  "input": "Kütüphanelerin çalışma saatleri"
+                }
+              },
+              "thoughtSignature": "CuUBAdHtim9ki/R7/9oi44cHbDCTe88g9cOmm55B5H0YHeXu05N4KGSrWHMjz7Ya2qa/r0k107aI4Zp5ntzNsnP8oBlXMReGe6nKMXVjSUZx82OVLzzPdhHpmf49a3FqdwmPmBXQwULaStcjWtpyPePJKrzf+BaRZObnudkmb1s0HOjnBhUqauGnZQLpy5QJrE7/rsuBsJog7tuCy77qMSBEFrc2B0k/9Tpvn5E5t+pptZvJ1+lL2VTkrd+7//WE3Plpg6c+rdtJ23FkBtxt88jZgKN1nhv2GCxsI3DYFobgwQVBifq0Gg=="
+            }
+          ]
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      },
+      {
+        "model": "RunnableBinding",
+        "input": [
+          {
+            "type": "human",
+            "content": "\n                    Kütüphanelerin çalışma saatleri hakkında bilgi verir misiniz?\n                "
+          },
+          {
+            "type": "ai",
+            "content": [
+              {
+                "functionCall": {
+                  "name": "document_search",
+                  "args": {
+                    "input": "Kütüphanelerin çalışma saatleri"
+                  }
+                },
+                "thoughtSignature": "CuUBAdHtim9ki/R7/9oi44cHbDCTe88g9cOmm55B5H0YHeXu05N4KGSrWHMjz7Ya2qa/r0k107aI4Zp5ntzNsnP8oBlXMReGe6nKMXVjSUZx82OVLzzPdhHpmf49a3FqdwmPmBXQwULaStcjWtpyPePJKrzf+BaRZObnudkmb1s0HOjnBhUqauGnZQLpy5QJrE7/rsuBsJog7tuCy77qMSBEFrc2B0k/9Tpvn5E5t+pptZvJ1+lL2VTkrd+7//WE3Plpg6c+rdtJ23FkBtxt88jZgKN1nhv2GCxsI3DYFobgwQVBifq0Gg=="
+              }
+            ]
+          },
+          {
+            "type": "tool",
+            "content": "Mustafa İnan Merkez Kütüphanesi, Resmi Tatiller dışında 7/24 açıktır.\n\nİlgili bilgi:\nKütüphane çalışma saatleri hakkında daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.\n\nKaynaklar:\n- Dosya: Chatbot Soruları ve Cevapları.xlsx | Sayfa: bu 100 soruyu tek bir sütunda t | Satır 3\n- Sayfa: calisma saatleri | URL: <https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri>\n\n<hr/>\n<b>Kaynaklar:</b>\n<ul>\n<li>Chatbot Soruları ve Cevapları.xlsx</li>\n</ul>"
+          }
+        ],
+        "output": {
+          "type": "ai",
+          "content": "<p><b>Mustafa İnan Merkez Kütüphanesi</b>, resmi tatiller dışında <b>7/24 açıktır</b>.</p><p>Daha fazla bilgi için <a href=\"https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri\">https://kutuphane.itu.edu.tr/hakkimizda/calisma-saatleri</a> adresini ziyaret edebilirsiniz.</p>"
+        },
+        "executionTime": 0,
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "totalTokens": 0
+      }
+    ],
+    "errors": [],
+    "metadata": {
+      "totalExecutionTime": 9832,
+      "totalMessages": 4,
+      "model": "RunnableBinding",
+      "temperature": 0,
+      "messageTypes": [
+        "human",
+        "ai",
+        "tool",
+        "ai"
+      ]
+    }
+  }
+]

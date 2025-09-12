@@ -38,15 +38,17 @@ export default class DocumentProcessor {
    */
   constructor(chunkSize = 1000, chunkOverlap = 300, useCache = true, cacheDir = null) {
 
-    /*
+    // OpenAI embeddings - daha yüksek limitler
     this.embeddings = new OpenAIEmbeddings({
       openAIApiKey: process.env.OPENAI_API_KEY,
+      model: "text-embedding-3-small", // Daha uygun maliyetli model
     });
-*/
     
+    /*
     this.embeddings = new GoogleGenerativeAIEmbeddings({
       apiKey: process.env.GEMINI_API_KEY,
     })
+    */
     
     // Persistence sistemi
     this.useCache = useCache;
@@ -507,7 +509,7 @@ export default class DocumentProcessor {
 
     try {
       console.log('📂 Cache\'den vector store yükleniyor...');
-      const result = await this.persistence.loadVectorStore('gemini', process.env.GEMINI_API_KEY);
+      const result = await this.persistence.loadVectorStore('openai', process.env.OPENAI_API_KEY);
       
       if (result) {
         this.vectorStore = result.vectorStore;
